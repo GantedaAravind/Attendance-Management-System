@@ -30,6 +30,9 @@ app.use("/api/admin", _admin["default"]);
 app.use("/api/teacher", _teacher["default"]);
 app.use("/api/student", _student["default"]);
 app.use("/api/", _utility["default"]);
+app.get("/", function (req, res) {
+  res.send("Welcome to Attendance Management System 👨‍🎓");
+});
 
 // Function to start the server
 var startServer = /*#__PURE__*/function () {

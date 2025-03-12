@@ -22,6 +22,9 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/teacher", teacherRoutes);
 app.use("/api/student", studentRoutes);
 app.use("/api/", utilityRoutes);
+app.get("/", (req, res) => {
+  res.send("Welcome to Attendance Management System 👨‍🎓");
+});
 
 // Function to start the server
 const startServer = async () => {
