@@ -122,7 +122,7 @@ router.post("/login", async (req, res) => {
       httpOnly: true,
       sameSite: "none",
       signed: true,
-      secure: false,
+      secure: true,
     });
 
     res

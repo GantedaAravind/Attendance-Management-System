@@ -234,7 +234,7 @@ router.post("/login", /*#__PURE__*/function () {
             httpOnly: true,
             sameSite: "none",
             signed: true,
-            secure: false
+            secure: true
           });
           res.status(200).json({
             message: "Login successful",
