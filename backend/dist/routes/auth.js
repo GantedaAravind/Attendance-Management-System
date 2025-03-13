@@ -152,25 +152,31 @@ router.post("/register", /*#__PURE__*/function () {
           token = generateToken(user._id, role); // Set the token in a cookie
           res.cookie("token", token, {
             httpOnly: true,
-            // Prevent client-side JavaScript from accessing the cookie // Ensure cookies are only sent over HTTPS in production
-            maxAge: 6 * 24 * 3600000 // 1 hour in milliseconds
+            secure: false,
+            // Change to true in production
+            maxAge: 60 * 60 * 1000,
+            sameSite: "lax",
+            path: "/"
+          });
+          res.status(200).json({
+            message: "Cookie set successfully"
           });
           res.status(201).json({
             message: "User registered successfully"
           });
-          _context2.next = 21;
+          _context2.next = 22;
           break;
-        case 18:
-          _context2.prev = 18;
+        case 19:
+          _context2.prev = 19;
           _context2.t0 = _context2["catch"](1);
           res.status(500).json({
             error: _context2.t0.message
           });
-        case 21:
+        case 22:
         case "end":
           return _context2.stop();
       }
-    }, _callee2, null, [[1, 18]]);
+    }, _callee2, null, [[1, 19]]);
   }));
   return function (_x3, _x4) {
     return _ref2.apply(this, arguments);

@@ -83,9 +83,13 @@ router.post("/register", async (req, res) => {
 
     // Set the token in a cookie
     res.cookie("token", token, {
-      httpOnly: true, // Prevent client-side JavaScript from accessing the cookie // Ensure cookies are only sent over HTTPS in production
-      maxAge: 6 * 24 * 3600000, // 1 hour in milliseconds
+      httpOnly: true,
+      secure: false, // Change to true in production
+      maxAge: 60 * 60 * 1000,
+      sameSite: "lax",
+      path: "/",
     });
+    res.status(200).json({ message: "Cookie set successfully" });
 
     res.status(201).json({ message: "User registered successfully" });
   } catch (err) {
