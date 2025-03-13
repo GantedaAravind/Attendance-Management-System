@@ -248,7 +248,7 @@ router.post("/login", /*#__PURE__*/function () {
           res.status(200).json({
             message: "Login successful",
             role: role,
-            userId: user._id,
+            user: user,
             token: token
           });
           _context3.next = 26;
