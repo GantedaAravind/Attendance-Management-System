@@ -5,6 +5,10 @@ attendance-frontend/
 │ ├── assets/ # Static assets (icons, images, etc.)
 │ ├── components/ # Reusable UI components
 │ │ ├── Navbar.jsx
+│ │ ├── Sidebar.jsx
+│ │ ├── Button.jsx
+│ │ ├── InputField.jsx
+│ │ ├── Table.jsx
 │ ├── context/ # React Context API for global state management
 │ ├── hooks/ # Custom hooks
 │ ├── pages/ # Page components

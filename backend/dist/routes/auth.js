@@ -152,12 +152,8 @@ router.post("/register", /*#__PURE__*/function () {
           token = generateToken(user._id, role); // Set the token in a cookie
           res.cookie("token", token, {
             httpOnly: true,
-            // Prevent client-side JavaScript from accessing the cookie
-            secure: process.env.NODE_ENV === "production",
-            // Ensure cookies are only sent over HTTPS in production
-            maxAge: 3600000,
-            // 1 hour in milliseconds
-            sameSite: "strict" // Prevent CSRF attacks
+            // Prevent client-side JavaScript from accessing the cookie // Ensure cookies are only sent over HTTPS in production
+            maxAge: 6 * 24 * 3600000 // 1 hour in milliseconds
           });
           res.status(201).json({
             message: "User registered successfully"
