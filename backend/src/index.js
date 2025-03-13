@@ -12,7 +12,10 @@ import utilityRoutes from "./routes/utility.js";
 dotenv.config(); // Load environment variables
 
 const app = express();
-app.use(cors({ origin: ["http://localhost:1234"] }));
+cors({
+  origin: "http://localhost:1234", // Allow local frontend
+  credentials: true, // Allow cookies to be sent
+});
 // Middleware
 app.use(express.json()); // Parse JSON request bodies
 app.use(cookieParser(process.env.COOKIE_SECRET)); // Use cookie-parser
