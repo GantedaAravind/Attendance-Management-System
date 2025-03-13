@@ -16,6 +16,7 @@
     "MONGODB_URI": "mongodb+srv://aravind:nir1YjDgU3Au17TJ@cluster0.30uhz.mongodb.net/ams?retryWrites=true&w=majority&appName=Cluster0",
     "PORT": "8000",
     "JWT_SECRET": "8o2h3jkdbd91oy2uhwjdkbl1o28",
-    "NODE_ENV": "devlopement"
+    "NODE_ENV": "devlopement",
+    "COOKIE_SECRET": "234ewdx234rfsioj2klnewd9pojkl2na"
   }
 }

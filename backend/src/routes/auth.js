@@ -83,11 +83,11 @@ router.post("/register", async (req, res) => {
 
     // Set the token in a cookie
     res.cookie("token", token, {
-      httpOnly: true,
-      secure: false, // Change to true in production
-      maxAge: 60 * 60 * 1000,
-      sameSite: "lax",
       path: "/",
+      httpOnly: true,
+      sameSite: "none",
+      signed: true,
+      secure: false,
     });
     res.status(200).json({ message: "Cookie set successfully" });
 

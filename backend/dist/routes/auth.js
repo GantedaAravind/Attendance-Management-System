@@ -151,12 +151,11 @@ router.post("/register", /*#__PURE__*/function () {
           // Generate JWT token
           token = generateToken(user._id, role); // Set the token in a cookie
           res.cookie("token", token, {
+            path: "/",
             httpOnly: true,
-            secure: false,
-            // Change to true in production
-            maxAge: 60 * 60 * 1000,
-            sameSite: "lax",
-            path: "/"
+            sameSite: "none",
+            signed: true,
+            secure: false
           });
           res.status(200).json({
             message: "Cookie set successfully"
