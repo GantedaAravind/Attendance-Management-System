@@ -18,11 +18,11 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
 _dotenv["default"].config(); // Load environment variables
 
 var app = (0, _express["default"])();
-(0, _cors["default"])({
+app.use((0, _cors["default"])({
   origin: ["http://localhost:1234"],
   // Allow local frontend
   credentials: true // Allow cookies to be sent
-});
+}));
 // Middleware
 app.use(_express["default"].json()); // Parse JSON request bodies
 app.use((0, _cookieParser["default"])(process.env.COOKIE_SECRET)); // Use cookie-parser
