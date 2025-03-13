@@ -23,7 +23,7 @@ app.use((0, _cors["default"])({
 }));
 // Middleware
 app.use(_express["default"].json()); // Parse JSON request bodies
-app.use((0, _cookieParser["default"])()); // Use cookie-parser
+app.use((0, _cookieParser["default"])(process.env.COOKIE_SECRET)); // Use cookie-parser
 
 app.use("/api/auth", _auth["default"]);
 app.use("/api/admin", _admin["default"]);
