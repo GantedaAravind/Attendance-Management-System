@@ -23,7 +23,7 @@ router.get("/students", async (req, res) => {
 // Get all teachers
 router.get("/teachers", async (req, res) => {
   try {
-    const teachers = await Teacher.find().select("name email");
+    const teachers = await Teacher.find().select("name email _id");
     res.status(200).json(teachers);
   } catch (err) {
     res.status(500).json({ error: err.message });

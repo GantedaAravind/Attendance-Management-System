@@ -2,8 +2,7 @@ import jwt from "jsonwebtoken";
 
 const authMiddleware = (req, res, next) => {
   // Get the token from the request headers or cookies
-  const token =
-    req.header("Authorization")?.replace("Bearer ", "") || req.cookies.token;
+  const token = req.cookies.token;
 
   if (!token) {
     return res.status(401).json({ error: "Access denied. No token provided." });

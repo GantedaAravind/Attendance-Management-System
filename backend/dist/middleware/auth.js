@@ -7,9 +7,8 @@ exports["default"] = void 0;
 var _jsonwebtoken = _interopRequireDefault(require("jsonwebtoken"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 var authMiddleware = function authMiddleware(req, res, next) {
-  var _req$header;
   // Get the token from the request headers or cookies
-  var token = ((_req$header = req.header("Authorization")) === null || _req$header === void 0 ? void 0 : _req$header.replace("Bearer ", "")) || req.cookies.token;
+  var token = req.cookies.token;
   if (!token) {
     return res.status(401).json({
       error: "Access denied. No token provided."

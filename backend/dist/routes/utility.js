@@ -61,7 +61,7 @@ router.get("/teachers", /*#__PURE__*/function () {
         case 0:
           _context2.prev = 0;
           _context2.next = 3;
-          return _Teacher["default"].find().select("name email");
+          return _Teacher["default"].find().select("name email _id");
         case 3:
           teachers = _context2.sent;
           res.status(200).json(teachers);
