@@ -19,7 +19,7 @@ _dotenv["default"].config(); // Load environment variables
 
 var app = (0, _express["default"])();
 (0, _cors["default"])({
-  origin: "http://localhost:1234",
+  origin: ["http://localhost:1234"],
   // Allow local frontend
   credentials: true // Allow cookies to be sent
 });

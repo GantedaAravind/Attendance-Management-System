@@ -13,7 +13,7 @@ dotenv.config(); // Load environment variables
 
 const app = express();
 cors({
-  origin: "http://localhost:1234", // Allow local frontend
+  origin: ["http://localhost:1234"], // Allow local frontend
   credentials: true, // Allow cookies to be sent
 });
 // Middleware
