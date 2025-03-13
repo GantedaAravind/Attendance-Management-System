@@ -232,8 +232,8 @@ router.post("/login", /*#__PURE__*/function () {
           // Generate JWT token
           token = generateToken(user._id, role); // Set the token in a cookie
           res.cookie("token", token, {
-            path: "/",
-            httpOnly: true,
+            // path: "/",
+            // httpOnly: true,
             sameSite: "none",
             signed: true,
             secure: false
@@ -241,7 +241,8 @@ router.post("/login", /*#__PURE__*/function () {
           res.status(200).json({
             message: "Login successful",
             role: role,
-            userId: user._id
+            userId: user._id,
+            token: token
           });
           _context3.next = 26;
           break;

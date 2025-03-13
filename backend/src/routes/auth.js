@@ -122,8 +122,8 @@ router.post("/login", async (req, res) => {
 
     // Set the token in a cookie
     res.cookie("token", token, {
-      path: "/",
-      httpOnly: true,
+      // path: "/",
+      // httpOnly: true,
       sameSite: "none",
       signed: true,
       secure: false,
@@ -131,7 +131,7 @@ router.post("/login", async (req, res) => {
 
     res
       .status(200)
-      .json({ message: "Login successful", role, userId: user._id });
+      .json({ message: "Login successful", role, userId: user._id, token });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
