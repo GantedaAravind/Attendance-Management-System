@@ -80,6 +80,13 @@ router.post("/register", async (req, res) => {
 
     // Generate JWT token
     const token = generateToken(user._id, role);
+    res.cookie("token", token, {
+      path: "/",
+      httpOnly: true,
+      sameSite: "none",
+      signed: true,
+      secure: false,
+    });
 
     res.status(201).json({ message: "User registered successfully" });
   } catch (err) {
@@ -122,8 +129,8 @@ router.post("/login", async (req, res) => {
 
     // Set the token in a cookie
     res.cookie("token", token, {
-      // path: "/",
-      // httpOnly: true,
+      path: "/",
+      httpOnly: true,
       sameSite: "none",
       signed: true,
       secure: false,
