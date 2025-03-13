@@ -11,8 +11,7 @@ var authMiddleware = function authMiddleware(req, res, next) {
   var token = req.cookies.token;
   if (!token) {
     return res.status(401).json({
-      error: "Access denied. No token provided.",
-      token: token
+      error: "Access denied. No token provided."
     });
   }
   try {
