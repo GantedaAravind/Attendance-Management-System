@@ -21,7 +21,8 @@ app.use(
 );
 // Middleware
 app.use(express.json()); // Parse JSON request bodies
-app.use(cookieParser(process.env.COOKIE_SECRET)); // Use cookie-parser
+
+app.use(cookieParser()); // Use cookie-parser
 
 app.use("/api/auth", authRoute);
 app.use("/api/admin", adminRoutes);
