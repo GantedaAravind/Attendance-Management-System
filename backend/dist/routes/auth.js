@@ -230,11 +230,11 @@ router.post("/login", /*#__PURE__*/function () {
           // Generate JWT token
           token = generateToken(user._id, role); // Set the token in a cookie
           res.cookie("token", token, {
+            path: "/",
             httpOnly: true,
             sameSite: "none",
-            secure: false,
-            path: "/",
-            maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days expiration
+            signed: true,
+            secure: false
           });
           res.status(200).json({
             message: "Login successful",

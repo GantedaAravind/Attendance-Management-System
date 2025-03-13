@@ -118,11 +118,11 @@ router.post("/login", async (req, res) => {
 
     // Set the token in a cookie
     res.cookie("token", token, {
+      path: "/",
       httpOnly: true,
       sameSite: "none",
+      signed: true,
       secure: false,
-      path: "/",
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days expiration
     });
 
     res

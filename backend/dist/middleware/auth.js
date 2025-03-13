@@ -8,7 +8,7 @@ var _jsonwebtoken = _interopRequireDefault(require("jsonwebtoken"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 var authMiddleware = function authMiddleware(req, res, next) {
   // Get the token from the request headers or cookies
-  var token = req.cookies.token;
+  var token = req.signedCookies["token"];
   if (!token) {
     return res.status(401).json({
       error: "Access denied. No token provided."
