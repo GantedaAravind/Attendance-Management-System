@@ -25,6 +25,10 @@ var studentSchema = new _mongoose["default"].Schema({
     type: String,
     required: true
   },
+  role: {
+    type: String,
+    "default": "student"
+  },
   courses: [{
     type: _mongoose["default"].Schema.Types.ObjectId,
     ref: "Course" // Reference to the Course model

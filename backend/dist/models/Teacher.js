@@ -21,6 +21,10 @@ var teacherSchema = new _mongoose["default"].Schema({
     required: true,
     unique: true
   },
+  role: {
+    type: String,
+    "default": "teacher"
+  },
   password: {
     type: String,
     required: true

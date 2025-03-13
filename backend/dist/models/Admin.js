@@ -21,6 +21,10 @@ var adminSchema = new _mongoose["default"].Schema({
     required: true,
     unique: true
   },
+  role: {
+    type: String,
+    "default": "admin"
+  },
   password: {
     type: String,
     required: true
