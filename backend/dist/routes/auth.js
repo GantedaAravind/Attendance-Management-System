@@ -149,33 +149,23 @@ router.post("/register", /*#__PURE__*/function () {
           return user.save();
         case 13:
           // Generate JWT token
-          token = generateToken(user._id, role); // Set the token in a cookie
-          res.cookie("token", token, {
-            path: "/",
-            httpOnly: true,
-            sameSite: "none",
-            signed: true,
-            secure: false
-          });
-          res.status(200).json({
-            message: "Cookie set successfully"
-          });
+          token = generateToken(user._id, role);
           res.status(201).json({
             message: "User registered successfully"
           });
-          _context2.next = 22;
+          _context2.next = 20;
           break;
-        case 19:
-          _context2.prev = 19;
+        case 17:
+          _context2.prev = 17;
           _context2.t0 = _context2["catch"](1);
           res.status(500).json({
             error: _context2.t0.message
           });
-        case 22:
+        case 20:
         case "end":
           return _context2.stop();
       }
-    }, _callee2, null, [[1, 19]]);
+    }, _callee2, null, [[1, 17]]);
   }));
   return function (_x3, _x4) {
     return _ref2.apply(this, arguments);
@@ -242,11 +232,11 @@ router.post("/login", /*#__PURE__*/function () {
           // Generate JWT token
           token = generateToken(user._id, role); // Set the token in a cookie
           res.cookie("token", token, {
+            path: "/",
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
-            maxAge: 3600000,
-            // 1 hour in milliseconds
-            sameSite: "strict"
+            sameSite: "none",
+            signed: true,
+            secure: false
           });
           res.status(200).json({
             message: "Login successful",
