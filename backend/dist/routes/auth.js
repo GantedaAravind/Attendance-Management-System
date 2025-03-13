@@ -100,7 +100,7 @@ var validateInput = function validateInput(name, email, password, role) {
 // Register a new user (Admin, Teacher, or Student)
 router.post("/register", /*#__PURE__*/function () {
   var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2(req, res) {
-    var _req$body, name, email, password, role, validationError, existingUser, user, token;
+    var _req$body, name, email, password, role, validationError, existingUser, user;
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
@@ -148,31 +148,22 @@ router.post("/register", /*#__PURE__*/function () {
           _context2.next = 13;
           return user.save();
         case 13:
-          // Generate JWT token
-          token = generateToken(user._id, role);
-          res.cookie("token", token, {
-            path: "/",
-            httpOnly: true,
-            sameSite: "none",
-            signed: true,
-            secure: false
-          });
           res.status(201).json({
             message: "User registered successfully"
           });
-          _context2.next = 21;
+          _context2.next = 19;
           break;
-        case 18:
-          _context2.prev = 18;
+        case 16:
+          _context2.prev = 16;
           _context2.t0 = _context2["catch"](1);
           res.status(500).json({
             error: _context2.t0.message
           });
-        case 21:
+        case 19:
         case "end":
           return _context2.stop();
       }
-    }, _callee2, null, [[1, 18]]);
+    }, _callee2, null, [[1, 16]]);
   }));
   return function (_x3, _x4) {
     return _ref2.apply(this, arguments);
