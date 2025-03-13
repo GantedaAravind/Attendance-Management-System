@@ -23,7 +23,6 @@ var router = _express["default"].Router();
 // Middleware to ensure the user is an admin
 router.use(_auth["default"]); // Ensure the user is authenticated
 router.use(_admin["default"]); // Ensure the user is an admin
-
 // Add a new student
 router.post("/add-student", /*#__PURE__*/function () {
   var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee(req, res) {
@@ -47,7 +46,6 @@ router.post("/add-student", /*#__PURE__*/function () {
             error: "Student already exists"
           }));
         case 7:
-          // Create a new student (password will be hashed by pre-save middleware)
           student = new _Student["default"]({
             name: name,
             email: email,
@@ -79,93 +77,82 @@ router.post("/add-student", /*#__PURE__*/function () {
   };
 }());
 
-// Add a new teacher
-router.post("/add-teacher", /*#__PURE__*/function () {
+// Delete a student
+router["delete"]("/delete-student/:id", /*#__PURE__*/function () {
   var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2(req, res) {
-    var _req$body2, name, email, password, existingTeacher, teacher;
+    var student;
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
-          _req$body2 = req.body, name = _req$body2.name, email = _req$body2.email, password = _req$body2.password;
-          _context2.prev = 1;
-          _context2.next = 4;
-          return _Teacher["default"].findOne({
-            email: email
-          });
-        case 4:
-          existingTeacher = _context2.sent;
-          if (!existingTeacher) {
-            _context2.next = 7;
+          _context2.prev = 0;
+          _context2.next = 3;
+          return _Student["default"].findByIdAndDelete(req.params.id);
+        case 3:
+          student = _context2.sent;
+          if (student) {
+            _context2.next = 6;
             break;
           }
-          return _context2.abrupt("return", res.status(400).json({
-            error: "Teacher already exists"
+          return _context2.abrupt("return", res.status(404).json({
+            error: "Student not found"
           }));
-        case 7:
-          // Create a new teacher (password will be hashed by pre-save middleware)
-          teacher = new _Teacher["default"]({
-            name: name,
-            email: email,
-            password: password
+        case 6:
+          res.status(200).json({
+            message: "Student deleted successfully"
           });
-          _context2.next = 10;
-          return teacher.save();
-        case 10:
-          res.status(201).json({
-            message: "Teacher added successfully",
-            teacher: teacher
-          });
-          _context2.next = 16;
+          _context2.next = 12;
           break;
-        case 13:
-          _context2.prev = 13;
-          _context2.t0 = _context2["catch"](1);
+        case 9:
+          _context2.prev = 9;
+          _context2.t0 = _context2["catch"](0);
           res.status(500).json({
             error: _context2.t0.message
           });
-        case 16:
+        case 12:
         case "end":
           return _context2.stop();
       }
-    }, _callee2, null, [[1, 13]]);
+    }, _callee2, null, [[0, 9]]);
   }));
   return function (_x3, _x4) {
     return _ref2.apply(this, arguments);
   };
 }());
 
-// Create a new course
-router.post("/create-course", /*#__PURE__*/function () {
+// Add a new teacher
+router.post("/add-teacher", /*#__PURE__*/function () {
   var _ref3 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee3(req, res) {
-    var _req$body3, course_name, teacher_id, teacher, course;
+    var _req$body2, name, email, password, existingTeacher, teacher;
     return _regeneratorRuntime().wrap(function _callee3$(_context3) {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
-          _req$body3 = req.body, course_name = _req$body3.course_name, teacher_id = _req$body3.teacher_id;
+          _req$body2 = req.body, name = _req$body2.name, email = _req$body2.email, password = _req$body2.password;
           _context3.prev = 1;
           _context3.next = 4;
-          return _Teacher["default"].findById(teacher_id);
+          return _Teacher["default"].findOne({
+            email: email
+          });
         case 4:
-          teacher = _context3.sent;
-          if (teacher) {
+          existingTeacher = _context3.sent;
+          if (!existingTeacher) {
             _context3.next = 7;
             break;
           }
-          return _context3.abrupt("return", res.status(404).json({
-            error: "Teacher not found"
+          return _context3.abrupt("return", res.status(400).json({
+            error: "Teacher already exists"
           }));
         case 7:
-          // Create a new course
-          course = new _Course["default"]({
-            course_name: course_name,
-            teacher_id: teacher_id
+          teacher = new _Teacher["default"]({
+            name: name,
+            email: email,
+            password: password
           });
           _context3.next = 10;
-          return course.save();
+          return teacher.save();
         case 10:
           res.status(201).json({
-            message: "Course created successfully",
-            course: course
+            message: "Teacher added successfully",
+            teacher: teacher
           });
           _context3.next = 16;
           break;
@@ -186,90 +173,225 @@ router.post("/create-course", /*#__PURE__*/function () {
   };
 }());
 
-// Assign a course to a teacher
-router.put("/assign-course", /*#__PURE__*/function () {
+// Delete a teacher
+router["delete"]("/delete-teacher/:id", /*#__PURE__*/function () {
   var _ref4 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee4(req, res) {
-    var _req$body4, course_id, teacher_id, course, teacher;
+    var teacher;
     return _regeneratorRuntime().wrap(function _callee4$(_context4) {
       while (1) switch (_context4.prev = _context4.next) {
         case 0:
-          _req$body4 = req.body, course_id = _req$body4.course_id, teacher_id = _req$body4.teacher_id;
-          _context4.prev = 1;
-          _context4.next = 4;
-          return _Course["default"].findById(course_id);
-        case 4:
-          course = _context4.sent;
-          _context4.next = 7;
-          return _Teacher["default"].findById(teacher_id);
-        case 7:
+          _context4.prev = 0;
+          _context4.next = 3;
+          return _Teacher["default"].findByIdAndDelete(req.params.id);
+        case 3:
           teacher = _context4.sent;
-          if (!(!course || !teacher)) {
-            _context4.next = 10;
+          if (teacher) {
+            _context4.next = 6;
             break;
           }
           return _context4.abrupt("return", res.status(404).json({
-            error: "Course or teacher not found"
+            error: "Teacher not found"
           }));
-        case 10:
-          // Assign the course to the teacher
-          course.teacher_id = teacher_id;
-          _context4.next = 13;
-          return course.save();
-        case 13:
+        case 6:
           res.status(200).json({
-            message: "Course assigned successfully",
-            course: course
+            message: "Teacher deleted successfully"
           });
-          _context4.next = 19;
+          _context4.next = 12;
           break;
-        case 16:
-          _context4.prev = 16;
-          _context4.t0 = _context4["catch"](1);
+        case 9:
+          _context4.prev = 9;
+          _context4.t0 = _context4["catch"](0);
           res.status(500).json({
             error: _context4.t0.message
           });
-        case 19:
+        case 12:
         case "end":
           return _context4.stop();
       }
-    }, _callee4, null, [[1, 16]]);
+    }, _callee4, null, [[0, 9]]);
   }));
   return function (_x7, _x8) {
     return _ref4.apply(this, arguments);
   };
 }());
 
-// Generate campus-wide attendance reports
-router.get("/reports", /*#__PURE__*/function () {
+// Create a new course
+router.post("/create-course", /*#__PURE__*/function () {
   var _ref5 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee5(req, res) {
-    var attendanceRecords;
+    var _req$body3, course_name, teacher_id, teacher, course;
     return _regeneratorRuntime().wrap(function _callee5$(_context5) {
       while (1) switch (_context5.prev = _context5.next) {
         case 0:
-          _context5.prev = 0;
-          _context5.next = 3;
-          return _Attendance["default"].find().populate("student_id", "name email").populate("course_id", "course_name");
-        case 3:
-          attendanceRecords = _context5.sent;
-          res.status(200).json({
-            attendanceRecords: attendanceRecords
+          _req$body3 = req.body, course_name = _req$body3.course_name, teacher_id = _req$body3.teacher_id;
+          _context5.prev = 1;
+          _context5.next = 4;
+          return _Teacher["default"].findById(teacher_id);
+        case 4:
+          teacher = _context5.sent;
+          if (teacher) {
+            _context5.next = 7;
+            break;
+          }
+          return _context5.abrupt("return", res.status(404).json({
+            error: "Teacher not found"
+          }));
+        case 7:
+          course = new _Course["default"]({
+            course_name: course_name,
+            teacher_id: teacher_id
           });
           _context5.next = 10;
+          return course.save();
+        case 10:
+          res.status(201).json({
+            message: "Course created successfully",
+            course: course
+          });
+          _context5.next = 16;
           break;
-        case 7:
-          _context5.prev = 7;
-          _context5.t0 = _context5["catch"](0);
+        case 13:
+          _context5.prev = 13;
+          _context5.t0 = _context5["catch"](1);
           res.status(500).json({
             error: _context5.t0.message
           });
-        case 10:
+        case 16:
         case "end":
           return _context5.stop();
       }
-    }, _callee5, null, [[0, 7]]);
+    }, _callee5, null, [[1, 13]]);
   }));
   return function (_x9, _x10) {
     return _ref5.apply(this, arguments);
+  };
+}());
+
+// Delete a course
+router["delete"]("/delete-course/:id", /*#__PURE__*/function () {
+  var _ref6 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee6(req, res) {
+    var course;
+    return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+      while (1) switch (_context6.prev = _context6.next) {
+        case 0:
+          _context6.prev = 0;
+          _context6.next = 3;
+          return _Course["default"].findByIdAndDelete(req.params.id);
+        case 3:
+          course = _context6.sent;
+          if (course) {
+            _context6.next = 6;
+            break;
+          }
+          return _context6.abrupt("return", res.status(404).json({
+            error: "Course not found"
+          }));
+        case 6:
+          res.status(200).json({
+            message: "Course deleted successfully"
+          });
+          _context6.next = 12;
+          break;
+        case 9:
+          _context6.prev = 9;
+          _context6.t0 = _context6["catch"](0);
+          res.status(500).json({
+            error: _context6.t0.message
+          });
+        case 12:
+        case "end":
+          return _context6.stop();
+      }
+    }, _callee6, null, [[0, 9]]);
+  }));
+  return function (_x11, _x12) {
+    return _ref6.apply(this, arguments);
+  };
+}());
+
+// Assign a course to a teacher
+router.put("/assign-course", /*#__PURE__*/function () {
+  var _ref7 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee7(req, res) {
+    var _req$body4, course_id, teacher_id, course, teacher;
+    return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+      while (1) switch (_context7.prev = _context7.next) {
+        case 0:
+          _req$body4 = req.body, course_id = _req$body4.course_id, teacher_id = _req$body4.teacher_id;
+          _context7.prev = 1;
+          _context7.next = 4;
+          return _Course["default"].findById(course_id);
+        case 4:
+          course = _context7.sent;
+          _context7.next = 7;
+          return _Teacher["default"].findById(teacher_id);
+        case 7:
+          teacher = _context7.sent;
+          if (!(!course || !teacher)) {
+            _context7.next = 10;
+            break;
+          }
+          return _context7.abrupt("return", res.status(404).json({
+            error: "Course or teacher not found"
+          }));
+        case 10:
+          // Assign the course to the teacher
+          course.teacher_id = teacher_id;
+          _context7.next = 13;
+          return course.save();
+        case 13:
+          res.status(200).json({
+            message: "Course assigned successfully",
+            course: course
+          });
+          _context7.next = 19;
+          break;
+        case 16:
+          _context7.prev = 16;
+          _context7.t0 = _context7["catch"](1);
+          res.status(500).json({
+            error: _context7.t0.message
+          });
+        case 19:
+        case "end":
+          return _context7.stop();
+      }
+    }, _callee7, null, [[1, 16]]);
+  }));
+  return function (_x13, _x14) {
+    return _ref7.apply(this, arguments);
+  };
+}());
+
+// Generate campus-wide attendance reports
+router.get("/reports", /*#__PURE__*/function () {
+  var _ref8 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee8(req, res) {
+    var attendanceRecords;
+    return _regeneratorRuntime().wrap(function _callee8$(_context8) {
+      while (1) switch (_context8.prev = _context8.next) {
+        case 0:
+          _context8.prev = 0;
+          _context8.next = 3;
+          return _Attendance["default"].find().populate("student_id", "name email").populate("course_id", "course_name");
+        case 3:
+          attendanceRecords = _context8.sent;
+          res.status(200).json({
+            attendanceRecords: attendanceRecords
+          });
+          _context8.next = 10;
+          break;
+        case 7:
+          _context8.prev = 7;
+          _context8.t0 = _context8["catch"](0);
+          res.status(500).json({
+            error: _context8.t0.message
+          });
+        case 10:
+        case "end":
+          return _context8.stop();
+      }
+    }, _callee8, null, [[0, 7]]);
+  }));
+  return function (_x15, _x16) {
+    return _ref8.apply(this, arguments);
   };
 }());
 var _default = exports["default"] = router;

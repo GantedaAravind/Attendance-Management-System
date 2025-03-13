@@ -84,7 +84,7 @@ router.get("/teachers", /*#__PURE__*/function () {
   };
 }());
 
-// Get all courses
+// Get all courses with teacher details
 router.get("/courses", /*#__PURE__*/function () {
   var _ref3 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee3(req, res) {
     var courses;
@@ -93,9 +93,11 @@ router.get("/courses", /*#__PURE__*/function () {
         case 0:
           _context3.prev = 0;
           _context3.next = 3;
-          return _Course["default"].find().select("course_name teacher_id");
+          return _Course["default"].find().populate("teacher_id");
         case 3:
           courses = _context3.sent;
+          // Populating teacher_id with name and email
+
           res.status(200).json(courses);
           _context3.next = 10;
           break;

@@ -30,10 +30,11 @@ router.get("/teachers", async (req, res) => {
   }
 });
 
-// Get all courses
+// Get all courses with teacher details
 router.get("/courses", async (req, res) => {
   try {
-    const courses = await Course.find().select("course_name teacher_id");
+    const courses = await Course.find().populate("teacher_id"); // Populating teacher_id with name and email
+
     res.status(200).json(courses);
   } catch (err) {
     res.status(500).json({ error: err.message });

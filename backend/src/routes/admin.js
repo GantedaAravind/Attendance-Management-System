@@ -11,23 +11,32 @@ const router = express.Router();
 // Middleware to ensure the user is an admin
 router.use(authMiddleware); // Ensure the user is authenticated
 router.use(adminMiddleware); // Ensure the user is an admin
-
 // Add a new student
 router.post("/add-student", async (req, res) => {
   const { name, email, password } = req.body;
-
   try {
-    // Check if the student already exists
     const existingStudent = await Student.findOne({ email });
     if (existingStudent) {
       return res.status(400).json({ error: "Student already exists" });
     }
 
-    // Create a new student (password will be hashed by pre-save middleware)
     const student = new Student({ name, email, password });
     await student.save();
 
     res.status(201).json({ message: "Student added successfully", student });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Delete a student
+router.delete("/delete-student/:id", async (req, res) => {
+  try {
+    const student = await Student.findByIdAndDelete(req.params.id);
+    if (!student) {
+      return res.status(404).json({ error: "Student not found" });
+    }
+    res.status(200).json({ message: "Student deleted successfully" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -38,14 +47,11 @@ router.post("/add-teacher", async (req, res) => {
   const { name, email, password } = req.body;
 
   try {
-    // Check if the teacher already exists
     const existingTeacher = await Teacher.findOne({ email });
-
     if (existingTeacher) {
       return res.status(400).json({ error: "Teacher already exists" });
     }
 
-    // Create a new teacher (password will be hashed by pre-save middleware)
     const teacher = new Teacher({ name, email, password });
     await teacher.save();
 
@@ -55,21 +61,45 @@ router.post("/add-teacher", async (req, res) => {
   }
 });
 
+// Delete a teacher
+router.delete("/delete-teacher/:id", async (req, res) => {
+  try {
+    const teacher = await Teacher.findByIdAndDelete(req.params.id);
+    if (!teacher) {
+      return res.status(404).json({ error: "Teacher not found" });
+    }
+    res.status(200).json({ message: "Teacher deleted successfully" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Create a new course
 router.post("/create-course", async (req, res) => {
   const { course_name, teacher_id } = req.body;
   try {
-    // Check if the teacher exists
     const teacher = await Teacher.findById(teacher_id);
     if (!teacher) {
       return res.status(404).json({ error: "Teacher not found" });
     }
 
-    // Create a new course
     const course = new Course({ course_name, teacher_id });
     await course.save();
 
     res.status(201).json({ message: "Course created successfully", course });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Delete a course
+router.delete("/delete-course/:id", async (req, res) => {
+  try {
+    const course = await Course.findByIdAndDelete(req.params.id);
+    if (!course) {
+      return res.status(404).json({ error: "Course not found" });
+    }
+    res.status(200).json({ message: "Course deleted successfully" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
