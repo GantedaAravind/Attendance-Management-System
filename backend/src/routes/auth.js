@@ -137,9 +137,11 @@ router.post("/login", async (req, res) => {
 router.post("/logout", (req, res) => {
   // Clear the token cookie
   res.clearCookie("token", {
+    path: "/",
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "strict",
+    sameSite: "none",
+    signed: true,
+    secure: true,
   });
 
   res.status(200).json({ message: "Logout successful" });

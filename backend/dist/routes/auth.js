@@ -265,9 +265,11 @@ router.post("/login", /*#__PURE__*/function () {
 router.post("/logout", function (req, res) {
   // Clear the token cookie
   res.clearCookie("token", {
+    path: "/",
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "strict"
+    sameSite: "none",
+    signed: true,
+    secure: true
   });
   res.status(200).json({
     message: "Logout successful"
