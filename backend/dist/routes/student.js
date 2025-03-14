@@ -101,10 +101,17 @@ router.get("/courses", /*#__PURE__*/function () {
     return _regeneratorRuntime().wrap(function _callee3$(_context3) {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
-          userId = req.userId;
+          userId = req.userId; // Extract userId from authentication middleware
           _context3.prev = 1;
           _context3.next = 4;
-          return _Student["default"].findById(userId).populate("courses", "course_name _id teacher_id");
+          return _Student["default"].findById(userId).populate({
+            path: "courses",
+            select: "course_name _id teacher_id",
+            populate: {
+              path: "teacher_id",
+              select: "name email" // Fetch only the teacher's name and email
+            }
+          });
         case 4:
           student = _context3.sent;
           if (student) {
@@ -115,7 +122,9 @@ router.get("/courses", /*#__PURE__*/function () {
             error: "Student not found"
           }));
         case 7:
-          res.status(200).json(student.courses);
+          res.status(200).json({
+            courses: student.courses
+          });
           _context3.next = 13;
           break;
         case 10:
@@ -134,6 +143,7 @@ router.get("/courses", /*#__PURE__*/function () {
     return _ref3.apply(this, arguments);
   };
 }());
+
 // Enroll a student in a course
 router.post("/enroll/:courseId", /*#__PURE__*/function () {
   var _ref4 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee4(req, res) {

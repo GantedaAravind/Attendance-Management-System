@@ -42,24 +42,29 @@ router.get("/notifications", async (req, res) => {
 
 // Get all courses enrolled by the logged-in student
 router.get("/courses", async (req, res) => {
-  const { userId } = req;
+  const { userId } = req; // Extract userId from authentication middleware
 
   try {
-    // Find the student and populate the courses field
-    const student = await Student.findById(userId).populate(
-      "courses",
-      "course_name _id teacher_id"
-    );
+    // Find the student and populate the courses field with teacher details
+    const student = await Student.findById(userId).populate({
+      path: "courses",
+      select: "course_name _id teacher_id",
+      populate: {
+        path: "teacher_id",
+        select: "name email", // Fetch only the teacher's name and email
+      },
+    });
 
     if (!student) {
       return res.status(404).json({ error: "Student not found" });
     }
 
-    res.status(200).json(student.courses);
+    res.status(200).json({ courses: student.courses });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
+
 // Enroll a student in a course
 router.post("/enroll/:courseId", async (req, res) => {
   const { courseId } = req.params;
