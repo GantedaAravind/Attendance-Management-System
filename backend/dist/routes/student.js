@@ -134,63 +134,76 @@ router.get("/courses", /*#__PURE__*/function () {
     return _ref3.apply(this, arguments);
   };
 }());
-
 // Enroll a student in a course
 router.post("/enroll/:courseId", /*#__PURE__*/function () {
   var _ref4 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee4(req, res) {
-    var courseId, userId, course, student;
+    var courseId, userId, student, course;
     return _regeneratorRuntime().wrap(function _callee4$(_context4) {
       while (1) switch (_context4.prev = _context4.next) {
         case 0:
           courseId = req.params.courseId;
-          userId = req.userId;
+          userId = req.userId; // Assuming userId is extracted from auth middleware
           _context4.prev = 2;
           _context4.next = 5;
-          return _Course["default"].findById(courseId);
+          return _Student["default"].findById(userId);
         case 5:
+          student = _context4.sent;
+          if (student) {
+            _context4.next = 8;
+            break;
+          }
+          return _context4.abrupt("return", res.status(404).json({
+            error: "Student not found"
+          }));
+        case 8:
+          _context4.next = 10;
+          return _Course["default"].findById(courseId);
+        case 10:
           course = _context4.sent;
           if (course) {
-            _context4.next = 8;
+            _context4.next = 13;
             break;
           }
           return _context4.abrupt("return", res.status(404).json({
             error: "Course not found"
           }));
-        case 8:
-          _context4.next = 10;
-          return _Student["default"].findById(userId);
-        case 10:
-          student = _context4.sent;
-          if (!student.courses.includes(courseId)) {
-            _context4.next = 13;
+        case 13:
+          if (!course.students.includes(userId)) {
+            _context4.next = 15;
             break;
           }
           return _context4.abrupt("return", res.status(400).json({
             error: "Student is already enrolled in this course"
           }));
-        case 13:
+        case 15:
           // Add the course to the student's courses array
           student.courses.push(courseId);
-          _context4.next = 16;
+          _context4.next = 18;
           return student.save();
-        case 16:
+        case 18:
+          // Add the student to the course's students array
+          course.students.push(userId);
+          _context4.next = 21;
+          return course.save();
+        case 21:
           res.status(200).json({
             message: "Enrolled successfully",
-            student: student
+            student: student,
+            course: course
           });
-          _context4.next = 22;
+          _context4.next = 27;
           break;
-        case 19:
-          _context4.prev = 19;
+        case 24:
+          _context4.prev = 24;
           _context4.t0 = _context4["catch"](2);
           res.status(500).json({
             error: _context4.t0.message
           });
-        case 22:
+        case 27:
         case "end":
           return _context4.stop();
       }
-    }, _callee4, null, [[2, 19]]);
+    }, _callee4, null, [[2, 24]]);
   }));
   return function (_x7, _x8) {
     return _ref4.apply(this, arguments);

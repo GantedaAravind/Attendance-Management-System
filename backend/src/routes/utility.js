@@ -35,7 +35,7 @@ router.get("/courses", async (req, res) => {
   try {
     const courses = await Course.find().populate("teacher_id"); // Populating teacher_id with name and email
 
-    res.status(200).json(courses);
+    res.status(200).json({ courses });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

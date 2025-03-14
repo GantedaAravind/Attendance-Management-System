@@ -60,13 +60,18 @@ router.get("/courses", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
 // Enroll a student in a course
 router.post("/enroll/:courseId", async (req, res) => {
   const { courseId } = req.params;
-  const { userId } = req;
+  const { userId } = req; // Assuming userId is extracted from auth middleware
 
   try {
+    // Check if the student exists
+    const student = await Student.findById(userId);
+    if (!student) {
+      return res.status(404).json({ error: "Student not found" });
+    }
+
     // Check if the course exists
     const course = await Course.findById(courseId);
     if (!course) {
@@ -74,8 +79,7 @@ router.post("/enroll/:courseId", async (req, res) => {
     }
 
     // Check if the student is already enrolled in the course
-    const student = await Student.findById(userId);
-    if (student.courses.includes(courseId)) {
+    if (course.students.includes(userId)) {
       return res
         .status(400)
         .json({ error: "Student is already enrolled in this course" });
@@ -85,7 +89,11 @@ router.post("/enroll/:courseId", async (req, res) => {
     student.courses.push(courseId);
     await student.save();
 
-    res.status(200).json({ message: "Enrolled successfully", student });
+    // Add the student to the course's students array
+    course.students.push(userId);
+    await course.save();
+
+    res.status(200).json({ message: "Enrolled successfully", student, course });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

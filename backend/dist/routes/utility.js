@@ -98,7 +98,9 @@ router.get("/courses", /*#__PURE__*/function () {
           courses = _context3.sent;
           // Populating teacher_id with name and email
 
-          res.status(200).json(courses);
+          res.status(200).json({
+            courses: courses
+          });
           _context3.next = 10;
           break;
         case 7:
