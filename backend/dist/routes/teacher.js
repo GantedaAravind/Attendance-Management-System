@@ -25,33 +25,45 @@ router.use(_auth["default"]); // Ensure the user is authenticated
 router.use(_teacher["default"]); // Ensure the user is a teacher
 
 // Get all courses assigned to the logged-in teacher
-router.get("/courses", /*#__PURE__*/function () {
+// Get all courses taught by the logged-in teacher
+router.get("/my-courses", /*#__PURE__*/function () {
   var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee(req, res) {
-    var courses;
+    var userId, courses;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          _context.prev = 0;
-          _context.next = 3;
+          userId = req.userId; // Extract teacher ID from authentication middleware
+          _context.prev = 1;
+          _context.next = 4;
           return _Course["default"].find({
-            teacher_id: req.userId
-          }).select("course_name teacher_id");
-        case 3:
+            teacher_id: userId
+          }).populate("students", "name email");
+        case 4:
           courses = _context.sent;
-          res.status(200).json(courses);
-          _context.next = 10;
-          break;
+          if (courses.length) {
+            _context.next = 7;
+            break;
+          }
+          return _context.abrupt("return", res.status(404).json({
+            error: "No courses found for this teacher"
+          }));
         case 7:
-          _context.prev = 7;
-          _context.t0 = _context["catch"](0);
+          res.status(200).json({
+            courses: courses
+          });
+          _context.next = 13;
+          break;
+        case 10:
+          _context.prev = 10;
+          _context.t0 = _context["catch"](1);
           res.status(500).json({
             error: _context.t0.message
           });
-        case 10:
+        case 13:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[0, 7]]);
+    }, _callee, null, [[1, 10]]);
   }));
   return function (_x, _x2) {
     return _ref.apply(this, arguments);

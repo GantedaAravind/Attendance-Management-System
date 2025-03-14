@@ -12,14 +12,24 @@ router.use(authMiddleware); // Ensure the user is authenticated
 router.use(teacherMiddleware); // Ensure the user is a teacher
 
 // Get all courses assigned to the logged-in teacher
-router.get("/courses", async (req, res) => {
+// Get all courses taught by the logged-in teacher
+router.get("/my-courses", async (req, res) => {
+  const { userId } = req; // Extract teacher ID from authentication middleware
+
   try {
-    // Fetch all courses assigned to the logged-in teacher
-    const courses = await Course.find({ teacher_id: req.userId }).select(
-      "course_name teacher_id"
+    // Find courses where the logged-in teacher is assigned
+    const courses = await Course.find({ teacher_id: userId }).populate(
+      "students",
+      "name email"
     );
 
-    res.status(200).json(courses);
+    if (!courses.length) {
+      return res
+        .status(404)
+        .json({ error: "No courses found for this teacher" });
+    }
+
+    res.status(200).json({ courses });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
