@@ -396,7 +396,7 @@ router.put("/assign-course", /*#__PURE__*/function () {
     return _ref7.apply(this, arguments);
   };
 }());
-router.get("/admin/dashboard", /*#__PURE__*/function () {
+router.get("/dashboard", /*#__PURE__*/function () {
   var _ref8 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee8(req, res) {
     var totalStudents, totalTeachers, totalCourses, totalAttendance, attendanceByCourse, attendanceDistribution, recentAttendance;
     return _regeneratorRuntime().wrap(function _callee8$(_context8) {

@@ -164,7 +164,7 @@ router.put("/assign-course", async (req, res) => {
   }
 });
 
-router.get("/admin/dashboard", async (req, res) => {
+router.get("/dashboard", async (req, res) => {
   try {
     const totalStudents = await Student.countDocuments();
     const totalTeachers = await Teacher.countDocuments();
