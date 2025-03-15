@@ -87,50 +87,55 @@ router.get("/attendance/:courseId/:date", async (req, res) => {
   }
 });
 
-// Generate attendance report for a course
 router.get("/reports/:courseId", async (req, res) => {
-  const { courseId } = req.params;
-
   try {
-    // Check if the course exists and is assigned to the teacher
+    const { courseId } = req.params;
+
+    // Ensure the course belongs to the logged-in teacher
     const course = await Course.findOne({
       _id: courseId,
-      teacher_id: req.userId, // Ensure the course is assigned to the logged-in teacher
+      teacher_id: req.userId,
     });
 
     if (!course) {
       return res.status(404).json({ error: "Course not found" });
     }
 
-    // Fetch attendance records for the course
+    // Fetch all attendance records
     const attendanceRecords = await Attendance.find({ course_id: courseId })
       .populate("student_id", "name email")
       .select("student_id date status");
 
-    // Calculate attendance summary
-    const summary = attendanceRecords.reduce((acc, record) => {
-      const studentId = record.student_id._id.toString();
-      if (!acc[studentId]) {
-        acc[studentId] = {
-          name: record.student_id.name,
-          email: record.student_id.email,
-          present: 0,
-          absent: 0,
+    // Group attendance by student
+    const studentAttendance = {};
+    attendanceRecords.forEach(({ student_id, status }) => {
+      if (!studentAttendance[student_id._id]) {
+        studentAttendance[student_id._id] = {
+          name: student_id.name,
+          email: student_id.email,
+          attended: 0,
+          total: 0,
         };
       }
-
-      if (record.status === "Present") {
-        acc[studentId].present++;
-      } else if (record.status === "Absent") {
-        acc[studentId].absent++;
+      studentAttendance[student_id._id].total += 1;
+      if (status === "Present") {
+        studentAttendance[student_id._id].attended += 1;
       }
+    });
 
-      return acc;
-    }, {});
+    // Generate report data
+    const report = {
+      course: course.name,
+      totalClasses: attendanceRecords.length,
+      students: Object.values(studentAttendance).map((student) => ({
+        ...student,
+        percentage: ((student.attended / student.total) * 100).toFixed(2) + "%",
+      })),
+    };
 
-    res.status(200).json({ summary });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(200).json({ report });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 });
 

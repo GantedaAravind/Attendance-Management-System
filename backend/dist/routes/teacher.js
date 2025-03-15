@@ -12,6 +12,11 @@ var _Attendance = _interopRequireDefault(require("../models/Attendance.js"));
 var _Course = _interopRequireDefault(require("../models/Course.js"));
 var _Student = _interopRequireDefault(require("../models/Student.js"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
@@ -187,20 +192,18 @@ router.get("/attendance/:courseId/:date", /*#__PURE__*/function () {
     return _ref3.apply(this, arguments);
   };
 }());
-
-// Generate attendance report for a course
 router.get("/reports/:courseId", /*#__PURE__*/function () {
   var _ref4 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee4(req, res) {
-    var courseId, course, attendanceRecords, summary;
+    var courseId, course, attendanceRecords, studentAttendance, report;
     return _regeneratorRuntime().wrap(function _callee4$(_context4) {
       while (1) switch (_context4.prev = _context4.next) {
         case 0:
-          courseId = req.params.courseId;
-          _context4.prev = 1;
+          _context4.prev = 0;
+          courseId = req.params.courseId; // Ensure the course belongs to the logged-in teacher
           _context4.next = 4;
           return _Course["default"].findOne({
             _id: courseId,
-            teacher_id: req.userId // Ensure the course is assigned to the logged-in teacher
+            teacher_id: req.userId
           });
         case 4:
           course = _context4.sent;
@@ -218,47 +221,58 @@ router.get("/reports/:courseId", /*#__PURE__*/function () {
           }).populate("student_id", "name email").select("student_id date status");
         case 9:
           attendanceRecords = _context4.sent;
-          // Calculate attendance summary
-          summary = attendanceRecords.reduce(function (acc, record) {
-            var studentId = record.student_id._id.toString();
-            if (!acc[studentId]) {
-              acc[studentId] = {
-                name: record.student_id.name,
-                email: record.student_id.email,
-                present: 0,
-                absent: 0
+          // Group attendance by student
+          studentAttendance = {};
+          attendanceRecords.forEach(function (_ref5) {
+            var student_id = _ref5.student_id,
+              status = _ref5.status;
+            if (!studentAttendance[student_id._id]) {
+              studentAttendance[student_id._id] = {
+                name: student_id.name,
+                email: student_id.email,
+                attended: 0,
+                total: 0
               };
             }
-            if (record.status === "Present") {
-              acc[studentId].present++;
-            } else if (record.status === "Absent") {
-              acc[studentId].absent++;
+            studentAttendance[student_id._id].total += 1;
+            if (status === "Present") {
+              studentAttendance[student_id._id].attended += 1;
             }
-            return acc;
-          }, {});
-          res.status(200).json({
-            summary: summary
           });
-          _context4.next = 17;
+
+          // Generate report data
+          report = {
+            course: course.name,
+            totalClasses: attendanceRecords.length,
+            students: Object.values(studentAttendance).map(function (student) {
+              return _objectSpread(_objectSpread({}, student), {}, {
+                percentage: (student.attended / student.total * 100).toFixed(2) + "%"
+              });
+            })
+          };
+          res.status(200).json({
+            report: report
+          });
+          _context4.next = 19;
           break;
-        case 14:
-          _context4.prev = 14;
-          _context4.t0 = _context4["catch"](1);
+        case 16:
+          _context4.prev = 16;
+          _context4.t0 = _context4["catch"](0);
           res.status(500).json({
             error: _context4.t0.message
           });
-        case 17:
+        case 19:
         case "end":
           return _context4.stop();
       }
-    }, _callee4, null, [[1, 14]]);
+    }, _callee4, null, [[0, 16]]);
   }));
   return function (_x7, _x8) {
     return _ref4.apply(this, arguments);
   };
 }());
 router.get("/course/:courseId", /*#__PURE__*/function () {
-  var _ref5 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee5(req, res) {
+  var _ref6 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee5(req, res) {
     var courseId, course;
     return _regeneratorRuntime().wrap(function _callee5$(_context5) {
       while (1) switch (_context5.prev = _context5.next) {
@@ -296,11 +310,11 @@ router.get("/course/:courseId", /*#__PURE__*/function () {
     }, _callee5, null, [[0, 10]]);
   }));
   return function (_x9, _x10) {
-    return _ref5.apply(this, arguments);
+    return _ref6.apply(this, arguments);
   };
 }());
 router.get("/courses/:courseId/students", /*#__PURE__*/function () {
-  var _ref6 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee6(req, res) {
+  var _ref7 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee6(req, res) {
     var courseId, course;
     return _regeneratorRuntime().wrap(function _callee6$(_context6) {
       while (1) switch (_context6.prev = _context6.next) {
@@ -338,7 +352,7 @@ router.get("/courses/:courseId/students", /*#__PURE__*/function () {
     }, _callee6, null, [[0, 10]]);
   }));
   return function (_x11, _x12) {
-    return _ref6.apply(this, arguments);
+    return _ref7.apply(this, arguments);
   };
 }());
 var _default = exports["default"] = router;
