@@ -302,4 +302,46 @@ router.get("/reports/:courseId", /*#__PURE__*/function () {
     return _ref4.apply(this, arguments);
   };
 }());
+router.get("/course/:courseId", /*#__PURE__*/function () {
+  var _ref5 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee5(req, res) {
+    var courseId, course;
+    return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+      while (1) switch (_context5.prev = _context5.next) {
+        case 0:
+          _context5.prev = 0;
+          courseId = req.params.courseId; // Fetch the course and populate teacher details
+          _context5.next = 4;
+          return _Course["default"].findById(courseId).populate("teacher_id", "name email");
+        case 4:
+          course = _context5.sent;
+          if (course) {
+            _context5.next = 7;
+            break;
+          }
+          return _context5.abrupt("return", res.status(404).json({
+            error: "Course not found"
+          }));
+        case 7:
+          res.status(200).json({
+            course: course
+          });
+          _context5.next = 13;
+          break;
+        case 10:
+          _context5.prev = 10;
+          _context5.t0 = _context5["catch"](0);
+          res.status(500).json({
+            error: "Server error",
+            details: _context5.t0.message
+          });
+        case 13:
+        case "end":
+          return _context5.stop();
+      }
+    }, _callee5, null, [[0, 10]]);
+  }));
+  return function (_x9, _x10) {
+    return _ref5.apply(this, arguments);
+  };
+}());
 var _default = exports["default"] = router;
