@@ -72,49 +72,58 @@ router.get("/profile", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
+// Show Profile API
 router.get("/show-profile", async (req, res) => {
   try {
-    console.log("User ID:", req.userId); // Check if req.userId is set
-
-    // Fetch basic user details
-    const user = await User.findById(req.userId).select(
-      "name email role imageUrl"
-    );
-
-    if (!user) {
-      console.log("User not found");
-      return res.status(404).json({ error: "User not found" });
-    }
-
+    let user = null;
     let extraData = {};
 
-    if (user.role === "teacher") {
-      console.log("Fetching teacher's courses...");
+    // 🔹 Fetch user details based on role
+    if (req.role === "admin") {
+      user = await Admin.findById(req.userId).select(
+        "name email role imageUrl"
+      );
+    } else if (req.role === "teacher") {
+      user = await Teacher.findById(req.userId).select(
+        "name email role imageUrl"
+      );
+      if (!user) return res.status(404).json({ error: "Teacher not found" });
+
+      // Fetch assigned courses for the teacher
       const courses = await Course.find({ teacher_id: user._id }).select(
         "name"
       );
       extraData = { courses };
-    } else if (user.role === "student") {
-      console.log("Fetching student's courses...");
+    } else if (req.role === "student") {
+      user = await Student.findById(req.userId).select(
+        "name email role imageUrl"
+      );
+      if (!user) return res.status(404).json({ error: "Student not found" });
+
+      // Fetch enrolled courses for the student
       const courses = await Course.find({ students: user._id }).select("name");
+
+      // Fetch attendance percentage
       const attendanceRecords = await Attendance.find({ student_id: user._id });
       const totalClasses = attendanceRecords.length;
       const attendedClasses = attendanceRecords.filter(
         (r) => r.status === "Present"
       ).length;
+
       extraData = {
         courses,
         attendancePercentage: totalClasses
           ? ((attendedClasses / totalClasses) * 100).toFixed(2)
-          : null,
+          : "N/A",
       };
+    } else {
+      return res.status(400).json({ error: "Invalid user role" });
     }
 
-    console.log("Profile data fetched successfully");
+    console.log("Profile fetched successfully!");
     res.status(200).json({ user: { ...user.toObject(), ...extraData } });
   } catch (error) {
-    console.error("Error fetching profile:", error); // Log error details
+    console.error("Error fetching profile:", error);
     res
       .status(500)
       .json({ error: "Failed to fetch profile", details: error.message });
