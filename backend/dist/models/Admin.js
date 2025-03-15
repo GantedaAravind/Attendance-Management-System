@@ -32,7 +32,7 @@ var adminSchema = new _mongoose["default"].Schema({
   imageUrl: {
     type: String,
     // Store the URL of the teacher's profile image
-    "default": "https://w7.pngwing.com/pngs/3/495/png-transparent-avatar-of-a-teacher-male.pnghttps://img.freepik.com/premium-photo/anime-male-avatar_950633-956.jpg" // Default image if none is provided
+    "default": "https://static.vecteezy.com/system/resources/previews/022/038/819/large_2x/cute-girl-hacker-with-laptop-avatar-in-cartoon-style-balck-backdrop-generative-ai-photo.jpg"
   }
 });
 
