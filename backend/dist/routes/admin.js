@@ -26,11 +26,11 @@ router.use(_admin["default"]); // Ensure the user is an admin
 // Add a new student
 router.post("/add-student", /*#__PURE__*/function () {
   var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee(req, res) {
-    var _req$body, name, email, password, existingStudent, student;
+    var _req$body, name, email, password, imageUrl, existingStudent, student;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          _req$body = req.body, name = _req$body.name, email = _req$body.email, password = _req$body.password;
+          _req$body = req.body, name = _req$body.name, email = _req$body.email, password = _req$body.password, imageUrl = _req$body.imageUrl;
           _context.prev = 1;
           _context.next = 4;
           return _Student["default"].findOne({
@@ -49,7 +49,8 @@ router.post("/add-student", /*#__PURE__*/function () {
           student = new _Student["default"]({
             name: name,
             email: email,
-            password: password
+            password: password,
+            imageUrl: imageUrl
           });
           _context.next = 10;
           return student.save();
@@ -122,11 +123,11 @@ router["delete"]("/delete-student/:id", /*#__PURE__*/function () {
 // Add a new teacher
 router.post("/add-teacher", /*#__PURE__*/function () {
   var _ref3 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee3(req, res) {
-    var _req$body2, name, email, password, existingTeacher, teacher;
+    var _req$body2, name, email, password, imageUrl, existingTeacher, teacher;
     return _regeneratorRuntime().wrap(function _callee3$(_context3) {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
-          _req$body2 = req.body, name = _req$body2.name, email = _req$body2.email, password = _req$body2.password;
+          _req$body2 = req.body, name = _req$body2.name, email = _req$body2.email, password = _req$body2.password, imageUrl = _req$body2.imageUrl;
           _context3.prev = 1;
           _context3.next = 4;
           return _Teacher["default"].findOne({
@@ -145,7 +146,8 @@ router.post("/add-teacher", /*#__PURE__*/function () {
           teacher = new _Teacher["default"]({
             name: name,
             email: email,
-            password: password
+            password: password,
+            imageUrl: imageUrl
           });
           _context3.next = 10;
           return teacher.save();

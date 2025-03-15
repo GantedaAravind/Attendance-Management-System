@@ -51,7 +51,7 @@ const validateInput = (name, email, password, role) => {
 
 // Register a new user (Admin, Teacher, or Student)
 router.post("/register", async (req, res) => {
-  const { name, email, password, role } = req.body;
+  const { name, email, password, role, imageUrl } = req.body; // Accept imageUrl
 
   try {
     // Validate input
@@ -69,15 +69,25 @@ router.post("/register", async (req, res) => {
     // Create a new user based on the role
     let user;
     if (role === "admin") {
-      user = new Admin({ name, email, password });
+      user = new Admin({ name, email, password, imageUrl });
     } else if (role === "teacher") {
-      user = new Teacher({ name, email, password });
+      user = new Teacher({
+        name,
+        email,
+        password,
+        imageUrl: imageUrl, // Default image if not provided
+      });
     } else if (role === "student") {
-      user = new Student({ name, email, password });
+      user = new Student({
+        name,
+        email,
+        password,
+        imageUrl: imageUrl, // Default image if not provided
+      });
     }
 
     await user.save();
-    res.status(201).json({ message: "User registered successfully" });
+    res.status(201).json({ message: "User registered successfully", user });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

@@ -19,6 +19,11 @@ const teacherSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  imageUrl: {
+    type: String, // Store the URL of the teacher's profile image
+    default:
+      "https://w7.pngwing.com/pngs/3/495/png-transparent-avatar-of-a-teacher-male.png", // Default image if none is provided
+  },
 });
 
 // Pre-save middleware to hash the password before saving

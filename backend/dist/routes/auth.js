@@ -100,11 +100,11 @@ var validateInput = function validateInput(name, email, password, role) {
 // Register a new user (Admin, Teacher, or Student)
 router.post("/register", /*#__PURE__*/function () {
   var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2(req, res) {
-    var _req$body, name, email, password, role, validationError, existingUser, user;
+    var _req$body, name, email, password, role, imageUrl, validationError, existingUser, user;
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
-          _req$body = req.body, name = _req$body.name, email = _req$body.email, password = _req$body.password, role = _req$body.role;
+          _req$body = req.body, name = _req$body.name, email = _req$body.email, password = _req$body.password, role = _req$body.role, imageUrl = _req$body.imageUrl; // Accept imageUrl
           _context2.prev = 1;
           // Validate input
           validationError = validateInput(name, email, password, role);
@@ -130,26 +130,30 @@ router.post("/register", /*#__PURE__*/function () {
             user = new _Admin["default"]({
               name: name,
               email: email,
-              password: password
+              password: password,
+              imageUrl: imageUrl
             });
           } else if (role === "teacher") {
             user = new _Teacher["default"]({
               name: name,
               email: email,
-              password: password
+              password: password,
+              imageUrl: imageUrl // Default image if not provided
             });
           } else if (role === "student") {
             user = new _Student["default"]({
               name: name,
               email: email,
-              password: password
+              password: password,
+              imageUrl: imageUrl // Default image if not provided
             });
           }
           _context2.next = 13;
           return user.save();
         case 13:
           res.status(201).json({
-            message: "User registered successfully"
+            message: "User registered successfully",
+            user: user
           });
           _context2.next = 19;
           break;

@@ -32,7 +32,12 @@ var studentSchema = new _mongoose["default"].Schema({
   courses: [{
     type: _mongoose["default"].Schema.Types.ObjectId,
     ref: "Course" // Reference to the Course model
-  }]
+  }],
+  imageUrl: {
+    type: String,
+    // Store the URL of the teacher's profile image
+    "default": "https://img2.cgtrader.com/items/4259562/fcc1f1114a/3d-avatar-profession-as-graduate-student-3d-model-fcc1f1114a.jpg" // Default image if none is provided
+  }
 });
 
 // Pre-save middleware to hash the password before saving

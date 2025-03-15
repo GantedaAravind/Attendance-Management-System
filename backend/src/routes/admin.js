@@ -13,14 +13,14 @@ router.use(authMiddleware); // Ensure the user is authenticated
 router.use(adminMiddleware); // Ensure the user is an admin
 // Add a new student
 router.post("/add-student", async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, imageUrl } = req.body;
   try {
     const existingStudent = await Student.findOne({ email });
     if (existingStudent) {
       return res.status(400).json({ error: "Student already exists" });
     }
 
-    const student = new Student({ name, email, password });
+    const student = new Student({ name, email, password, imageUrl });
     await student.save();
 
     res.status(201).json({ message: "Student added successfully", student });
@@ -44,7 +44,7 @@ router.delete("/delete-student/:id", async (req, res) => {
 
 // Add a new teacher
 router.post("/add-teacher", async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, imageUrl } = req.body;
 
   try {
     const existingTeacher = await Teacher.findOne({ email });
@@ -52,7 +52,7 @@ router.post("/add-teacher", async (req, res) => {
       return res.status(400).json({ error: "Teacher already exists" });
     }
 
-    const teacher = new Teacher({ name, email, password });
+    const teacher = new Teacher({ name, email, password, imageUrl });
     await teacher.save();
 
     res.status(201).json({ message: "Teacher added successfully", teacher });
@@ -119,12 +119,10 @@ router.post("/create-course", async (req, res) => {
       "name email"
     );
 
-    res
-      .status(201)
-      .json({
-        message: "Course created successfully",
-        course: populatedCourse,
-      });
+    res.status(201).json({
+      message: "Course created successfully",
+      course: populatedCourse,
+    });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
