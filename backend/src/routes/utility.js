@@ -75,25 +75,29 @@ router.get("/profile", async (req, res) => {
 
 router.get("/show-profile", async (req, res) => {
   try {
+    console.log("User ID:", req.userId); // Check if req.userId is set
+
     // Fetch basic user details
     const user = await User.findById(req.userId).select(
       "name email role imageUrl"
     );
 
-    if (!user) return res.status(404).json({ error: "User not found" });
+    if (!user) {
+      console.log("User not found");
+      return res.status(404).json({ error: "User not found" });
+    }
 
     let extraData = {};
 
     if (user.role === "teacher") {
-      // Fetch assigned courses for the teacher
+      console.log("Fetching teacher's courses...");
       const courses = await Course.find({ teacher_id: user._id }).select(
         "name"
       );
       extraData = { courses };
     } else if (user.role === "student") {
-      // Fetch enrolled courses for the student
+      console.log("Fetching student's courses...");
       const courses = await Course.find({ students: user._id }).select("name");
-      // Fetch attendance percentage
       const attendanceRecords = await Attendance.find({ student_id: user._id });
       const totalClasses = attendanceRecords.length;
       const attendedClasses = attendanceRecords.filter(
@@ -107,9 +111,13 @@ router.get("/show-profile", async (req, res) => {
       };
     }
 
+    console.log("Profile data fetched successfully");
     res.status(200).json({ user: { ...user.toObject(), ...extraData } });
   } catch (error) {
-    res.status(500).json({ error: "Failed to fetch profile" });
+    console.error("Error fetching profile:", error); // Log error details
+    res
+      .status(500)
+      .json({ error: "Failed to fetch profile", details: error.message });
   }
 });
 

@@ -193,50 +193,56 @@ router.get("/show-profile", /*#__PURE__*/function () {
       while (1) switch (_context5.prev = _context5.next) {
         case 0:
           _context5.prev = 0;
-          _context5.next = 3;
+          console.log("User ID:", req.userId); // Check if req.userId is set
+
+          // Fetch basic user details
+          _context5.next = 4;
           return User.findById(req.userId).select("name email role imageUrl");
-        case 3:
+        case 4:
           user = _context5.sent;
           if (user) {
-            _context5.next = 6;
+            _context5.next = 8;
             break;
           }
+          console.log("User not found");
           return _context5.abrupt("return", res.status(404).json({
             error: "User not found"
           }));
-        case 6:
+        case 8:
           extraData = {};
           if (!(user.role === "teacher")) {
-            _context5.next = 14;
+            _context5.next = 17;
             break;
           }
-          _context5.next = 10;
+          console.log("Fetching teacher's courses...");
+          _context5.next = 13;
           return _Course["default"].find({
             teacher_id: user._id
           }).select("name");
-        case 10:
+        case 13:
           courses = _context5.sent;
           extraData = {
             courses: courses
           };
-          _context5.next = 24;
+          _context5.next = 28;
           break;
-        case 14:
+        case 17:
           if (!(user.role === "student")) {
-            _context5.next = 24;
+            _context5.next = 28;
             break;
           }
-          _context5.next = 17;
+          console.log("Fetching student's courses...");
+          _context5.next = 21;
           return _Course["default"].find({
             students: user._id
           }).select("name");
-        case 17:
+        case 21:
           _courses = _context5.sent;
-          _context5.next = 20;
+          _context5.next = 24;
           return Attendance.find({
             student_id: user._id
           });
-        case 20:
+        case 24:
           attendanceRecords = _context5.sent;
           totalClasses = attendanceRecords.length;
           attendedClasses = attendanceRecords.filter(function (r) {
@@ -246,23 +252,26 @@ router.get("/show-profile", /*#__PURE__*/function () {
             courses: _courses,
             attendancePercentage: totalClasses ? (attendedClasses / totalClasses * 100).toFixed(2) : null
           };
-        case 24:
+        case 28:
+          console.log("Profile data fetched successfully");
           res.status(200).json({
             user: _objectSpread(_objectSpread({}, user.toObject()), extraData)
           });
-          _context5.next = 30;
+          _context5.next = 36;
           break;
-        case 27:
-          _context5.prev = 27;
+        case 32:
+          _context5.prev = 32;
           _context5.t0 = _context5["catch"](0);
+          console.error("Error fetching profile:", _context5.t0); // Log error details
           res.status(500).json({
-            error: "Failed to fetch profile"
+            error: "Failed to fetch profile",
+            details: _context5.t0.message
           });
-        case 30:
+        case 36:
         case "end":
           return _context5.stop();
       }
-    }, _callee5, null, [[0, 27]]);
+    }, _callee5, null, [[0, 32]]);
   }));
   return function (_x9, _x10) {
     return _ref5.apply(this, arguments);
