@@ -76,14 +76,41 @@ router.delete("/delete-teacher/:id", async (req, res) => {
 
 // Create a new course
 router.post("/create-course", async (req, res) => {
-  const { course_name, teacher_id } = req.body;
+  const { course_name, teacher_id, start_date, end_date } = req.body;
+
+  // Validate required fields
+  if (!course_name || !teacher_id || !start_date || !end_date) {
+    return res.status(400).json({ error: "All fields are required" });
+  }
+
   try {
+    // Check if the teacher exists
     const teacher = await Teacher.findById(teacher_id);
     if (!teacher) {
       return res.status(404).json({ error: "Teacher not found" });
     }
 
-    const course = new Course({ course_name, teacher_id });
+    // Validate date format
+    const startDate = new Date(start_date);
+    const endDate = new Date(end_date);
+    if (isNaN(startDate) || isNaN(endDate)) {
+      return res.status(400).json({ error: "Invalid date format" });
+    }
+
+    // Ensure start date is before end date
+    if (startDate >= endDate) {
+      return res
+        .status(400)
+        .json({ error: "Start date must be before end date" });
+    }
+
+    // Create the course
+    const course = new Course({
+      course_name,
+      teacher_id,
+      start_date,
+      end_date,
+    });
     await course.save();
 
     res.status(201).json({ message: "Course created successfully", course });

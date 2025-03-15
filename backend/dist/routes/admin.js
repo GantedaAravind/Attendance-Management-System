@@ -218,48 +218,78 @@ router["delete"]("/delete-teacher/:id", /*#__PURE__*/function () {
 // Create a new course
 router.post("/create-course", /*#__PURE__*/function () {
   var _ref5 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee5(req, res) {
-    var _req$body3, course_name, teacher_id, teacher, course;
+    var _req$body3, course_name, teacher_id, start_date, end_date, teacher, startDate, endDate, course;
     return _regeneratorRuntime().wrap(function _callee5$(_context5) {
       while (1) switch (_context5.prev = _context5.next) {
         case 0:
-          _req$body3 = req.body, course_name = _req$body3.course_name, teacher_id = _req$body3.teacher_id;
-          _context5.prev = 1;
-          _context5.next = 4;
+          _req$body3 = req.body, course_name = _req$body3.course_name, teacher_id = _req$body3.teacher_id, start_date = _req$body3.start_date, end_date = _req$body3.end_date; // Validate required fields
+          if (!(!course_name || !teacher_id || !start_date || !end_date)) {
+            _context5.next = 3;
+            break;
+          }
+          return _context5.abrupt("return", res.status(400).json({
+            error: "All fields are required"
+          }));
+        case 3:
+          _context5.prev = 3;
+          _context5.next = 6;
           return _Teacher["default"].findById(teacher_id);
-        case 4:
+        case 6:
           teacher = _context5.sent;
           if (teacher) {
-            _context5.next = 7;
+            _context5.next = 9;
             break;
           }
           return _context5.abrupt("return", res.status(404).json({
             error: "Teacher not found"
           }));
-        case 7:
+        case 9:
+          // Validate date format
+          startDate = new Date(start_date);
+          endDate = new Date(end_date);
+          if (!(isNaN(startDate) || isNaN(endDate))) {
+            _context5.next = 13;
+            break;
+          }
+          return _context5.abrupt("return", res.status(400).json({
+            error: "Invalid date format"
+          }));
+        case 13:
+          if (!(startDate >= endDate)) {
+            _context5.next = 15;
+            break;
+          }
+          return _context5.abrupt("return", res.status(400).json({
+            error: "Start date must be before end date"
+          }));
+        case 15:
+          // Create the course
           course = new _Course["default"]({
             course_name: course_name,
-            teacher_id: teacher_id
+            teacher_id: teacher_id,
+            start_date: start_date,
+            end_date: end_date
           });
-          _context5.next = 10;
+          _context5.next = 18;
           return course.save();
-        case 10:
+        case 18:
           res.status(201).json({
             message: "Course created successfully",
             course: course
           });
-          _context5.next = 16;
+          _context5.next = 24;
           break;
-        case 13:
-          _context5.prev = 13;
-          _context5.t0 = _context5["catch"](1);
+        case 21:
+          _context5.prev = 21;
+          _context5.t0 = _context5["catch"](3);
           res.status(500).json({
             error: _context5.t0.message
           });
-        case 16:
+        case 24:
         case "end":
           return _context5.stop();
       }
-    }, _callee5, null, [[1, 13]]);
+    }, _callee5, null, [[3, 21]]);
   }));
   return function (_x9, _x10) {
     return _ref5.apply(this, arguments);
