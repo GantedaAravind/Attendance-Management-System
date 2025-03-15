@@ -100,9 +100,9 @@ router.get("/attendance/:courseId", async (req, res) => {
       return res.status(404).json({ error: "Course not found" });
     }
 
-    // Fetch attendance records for the course
+    // Fetch attendance records for the course with student details
     const attendanceRecords = await Attendance.find({ course_id: courseId })
-      .populate("student_id", "name email")
+      .populate("student_id", "name email imageUrl") // Fetch name, email & imageUrl
       .select("student_id date status");
 
     res.status(200).json({ attendanceRecords });

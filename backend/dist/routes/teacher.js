@@ -208,7 +208,8 @@ router.get("/attendance/:courseId", /*#__PURE__*/function () {
           _context3.next = 9;
           return _Attendance["default"].find({
             course_id: courseId
-          }).populate("student_id", "name email").select("student_id date status");
+          }).populate("student_id", "name email imageUrl") // Fetch name, email & imageUrl
+          .select("student_id date status");
         case 9:
           attendanceRecords = _context3.sent;
           res.status(200).json({
