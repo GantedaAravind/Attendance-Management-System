@@ -199,7 +199,7 @@ router.get("/reports/:courseId", /*#__PURE__*/function () {
       while (1) switch (_context4.prev = _context4.next) {
         case 0:
           _context4.prev = 0;
-          courseId = req.params.courseId; // Ensure the course belongs to the logged-in teacher
+          courseId = req.params.courseId; // Find course assigned to teacher
           _context4.next = 4;
           return _Course["default"].findOne({
             _id: courseId,
@@ -221,7 +221,7 @@ router.get("/reports/:courseId", /*#__PURE__*/function () {
           }).populate("student_id", "name email").select("student_id date status");
         case 9:
           attendanceRecords = _context4.sent;
-          // Group attendance by student
+          // Process attendance data
           studentAttendance = {};
           attendanceRecords.forEach(function (_ref5) {
             var student_id = _ref5.student_id,
@@ -229,15 +229,12 @@ router.get("/reports/:courseId", /*#__PURE__*/function () {
             if (!studentAttendance[student_id._id]) {
               studentAttendance[student_id._id] = {
                 name: student_id.name,
-                email: student_id.email,
                 attended: 0,
                 total: 0
               };
             }
             studentAttendance[student_id._id].total += 1;
-            if (status === "Present") {
-              studentAttendance[student_id._id].attended += 1;
-            }
+            if (status === "Present") studentAttendance[student_id._id].attended += 1;
           });
 
           // Generate report data

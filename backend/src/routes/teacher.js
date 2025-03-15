@@ -91,36 +91,30 @@ router.get("/reports/:courseId", async (req, res) => {
   try {
     const { courseId } = req.params;
 
-    // Ensure the course belongs to the logged-in teacher
+    // Find course assigned to teacher
     const course = await Course.findOne({
       _id: courseId,
       teacher_id: req.userId,
     });
+    if (!course) return res.status(404).json({ error: "Course not found" });
 
-    if (!course) {
-      return res.status(404).json({ error: "Course not found" });
-    }
-
-    // Fetch all attendance records
+    // Fetch attendance records
     const attendanceRecords = await Attendance.find({ course_id: courseId })
       .populate("student_id", "name email")
       .select("student_id date status");
 
-    // Group attendance by student
+    // Process attendance data
     const studentAttendance = {};
     attendanceRecords.forEach(({ student_id, status }) => {
       if (!studentAttendance[student_id._id]) {
         studentAttendance[student_id._id] = {
           name: student_id.name,
-          email: student_id.email,
           attended: 0,
           total: 0,
         };
       }
       studentAttendance[student_id._id].total += 1;
-      if (status === "Present") {
-        studentAttendance[student_id._id].attended += 1;
-      }
+      if (status === "Present") studentAttendance[student_id._id].attended += 1;
     });
 
     // Generate report data
