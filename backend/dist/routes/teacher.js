@@ -181,14 +181,14 @@ router.post("/mark-attendance", /*#__PURE__*/function () {
   };
 }());
 
-// View attendance for a course
-router.get("/attendance/:courseId", /*#__PURE__*/function () {
+// View attendance for a course on a specific date
+router.get("/attendance/:courseId/:date", /*#__PURE__*/function () {
   var _ref3 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee3(req, res) {
-    var courseId, course, attendanceRecords;
+    var _req$params, courseId, date, course, attendanceRecords;
     return _regeneratorRuntime().wrap(function _callee3$(_context3) {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
-          courseId = req.params.courseId;
+          _req$params = req.params, courseId = _req$params.courseId, date = _req$params.date;
           _context3.prev = 1;
           _context3.next = 4;
           return _Course["default"].findOne({
@@ -207,8 +207,9 @@ router.get("/attendance/:courseId", /*#__PURE__*/function () {
         case 7:
           _context3.next = 9;
           return _Attendance["default"].find({
-            course_id: courseId
-          }).populate("student_id", "name email imageUrl") // Fetch name, email & imageUrl
+            course_id: courseId,
+            date: new Date(date) // Ensure date matches exactly
+          }).populate("student_id", "name email imageUrl") // Fetch student details
           .select("student_id date status");
         case 9:
           attendanceRecords = _context3.sent;

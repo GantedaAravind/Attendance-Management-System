@@ -85,9 +85,9 @@ router.post("/mark-attendance", async (req, res) => {
   }
 });
 
-// View attendance for a course
-router.get("/attendance/:courseId", async (req, res) => {
-  const { courseId } = req.params;
+// View attendance for a course on a specific date
+router.get("/attendance/:courseId/:date", async (req, res) => {
+  const { courseId, date } = req.params;
 
   try {
     // Check if the course exists and is assigned to the teacher
@@ -100,9 +100,12 @@ router.get("/attendance/:courseId", async (req, res) => {
       return res.status(404).json({ error: "Course not found" });
     }
 
-    // Fetch attendance records for the course with student details
-    const attendanceRecords = await Attendance.find({ course_id: courseId })
-      .populate("student_id", "name email imageUrl") // Fetch name, email & imageUrl
+    // Fetch attendance records for the course on the given date
+    const attendanceRecords = await Attendance.find({
+      course_id: courseId,
+      date: new Date(date), // Ensure date matches exactly
+    })
+      .populate("student_id", "name email imageUrl") // Fetch student details
       .select("student_id date status");
 
     res.status(200).json({ attendanceRecords });
