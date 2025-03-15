@@ -42,34 +42,38 @@ router.get("/courses", async (req, res) => {
 });
 
 router.get("/profile", async (req, res) => {
-  const { userId, role } = req;
-
   try {
-    let user;
+    const user = await User.findById(req.userId).select(
+      "name email role imageUrl"
+    );
 
-    // Fetch user profile based on role
-    switch (role) {
-      case "admin":
-        user = await Admin.findById(userId).select("-password").lean();
-        break;
-      case "teacher":
-        user = await Teacher.findById(userId).select("-password").lean();
-        break;
-      case "student":
-        user = await Student.findById(userId).select("-password").lean();
-        break;
-      default:
-        return res.status(400).json({ error: "Invalid role" });
+    if (!user) return res.status(404).json({ error: "User not found" });
+
+    let extraData = {};
+
+    if (user.role === "teacher") {
+      const courses = await Course.find({ teacher_id: user._id }).select(
+        "name"
+      );
+      extraData = { courses };
+    } else if (user.role === "student") {
+      const courses = await Course.find({ students: user._id }).select("name");
+      const attendanceRecords = await Attendance.find({ student_id: user._id });
+      const totalClasses = attendanceRecords.length;
+      const attendedClasses = attendanceRecords.filter(
+        (r) => r.status === "Present"
+      ).length;
+      extraData = {
+        courses,
+        attendancePercentage: totalClasses
+          ? ((attendedClasses / totalClasses) * 100).toFixed(2)
+          : "N/A",
+      };
     }
 
-    if (!user) {
-      return res.status(404).json({ error: "User not found" });
-    }
-
-    user.role = role; // Add role to the user object
-    res.status(200).json(user);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(200).json({ user: { ...user.toObject(), ...extraData } });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch profile" });
   }
 });
 
