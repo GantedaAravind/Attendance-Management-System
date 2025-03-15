@@ -178,4 +178,21 @@ router.get("/course/:courseId", async (req, res) => {
   }
 });
 
+router.get("/courses/:courseId/students", async (req, res) => {
+  try {
+    const { courseId } = req.params;
+
+    // Find the course and populate students
+    const course = await Course.findById(courseId).populate("students");
+
+    if (!course) {
+      return res.status(404).json({ message: "Course not found" });
+    }
+
+    res.status(200).json({ students: course.students });
+  } catch (error) {
+    res.status(500).json({ message: "Server Error", error: error.message });
+  }
+});
+
 export default router;
