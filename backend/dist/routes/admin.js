@@ -396,38 +396,144 @@ router.put("/assign-course", /*#__PURE__*/function () {
     return _ref7.apply(this, arguments);
   };
 }());
-
-// Generate campus-wide attendance reports
-router.get("/reports", /*#__PURE__*/function () {
+router.get("/admin/dashboard", /*#__PURE__*/function () {
   var _ref8 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee8(req, res) {
-    var attendanceRecords;
+    var totalStudents, totalTeachers, totalCourses, totalAttendance, attendanceByCourse, attendanceDistribution, recentAttendance;
     return _regeneratorRuntime().wrap(function _callee8$(_context8) {
       while (1) switch (_context8.prev = _context8.next) {
         case 0:
           _context8.prev = 0;
           _context8.next = 3;
-          return _Attendance["default"].find().populate("student_id", "name email").populate("course_id", "course_name");
+          return _Student["default"].countDocuments();
         case 3:
-          attendanceRecords = _context8.sent;
-          res.status(200).json({
-            attendanceRecords: attendanceRecords
+          totalStudents = _context8.sent;
+          _context8.next = 6;
+          return _Teacher["default"].countDocuments();
+        case 6:
+          totalTeachers = _context8.sent;
+          _context8.next = 9;
+          return _Course["default"].countDocuments();
+        case 9:
+          totalCourses = _context8.sent;
+          _context8.next = 12;
+          return _Attendance["default"].countDocuments();
+        case 12:
+          totalAttendance = _context8.sent;
+          _context8.next = 15;
+          return _Attendance["default"].aggregate([{
+            $group: {
+              _id: "$course_id",
+              attendanceCount: {
+                $sum: 1
+              }
+            }
+          }, {
+            $lookup: {
+              from: "courses",
+              localField: "_id",
+              foreignField: "_id",
+              as: "course"
+            }
+          }, {
+            $unwind: "$course"
+          }, {
+            $project: {
+              courseName: "$course.name",
+              attendanceCount: 1
+            }
+          }]);
+        case 15:
+          attendanceByCourse = _context8.sent;
+          _context8.next = 18;
+          return _Attendance["default"].aggregate([{
+            $group: {
+              _id: "$status",
+              count: {
+                $sum: 1
+              }
+            }
+          }]).then(function (data) {
+            return data.map(function (item) {
+              return {
+                name: item._id,
+                value: item.count
+              };
+            });
           });
-          _context8.next = 10;
+        case 18:
+          attendanceDistribution = _context8.sent;
+          _context8.next = 21;
+          return _Attendance["default"].find().sort({
+            date: -1
+          }).limit(5).populate("student_id", "name").populate("course_id", "name").select("student_id course_id date status");
+        case 21:
+          recentAttendance = _context8.sent;
+          res.status(200).json({
+            totalStudents: totalStudents,
+            totalTeachers: totalTeachers,
+            totalCourses: totalCourses,
+            totalAttendance: totalAttendance,
+            attendanceByCourse: attendanceByCourse,
+            attendanceDistribution: attendanceDistribution,
+            recentAttendance: recentAttendance.map(function (record) {
+              return {
+                studentName: record.student_id.name,
+                courseName: record.course_id.name,
+                date: record.date.toISOString().split("T")[0],
+                status: record.status
+              };
+            })
+          });
+          _context8.next = 28;
           break;
-        case 7:
-          _context8.prev = 7;
+        case 25:
+          _context8.prev = 25;
           _context8.t0 = _context8["catch"](0);
           res.status(500).json({
-            error: _context8.t0.message
+            error: "Failed to fetch dashboard data"
           });
-        case 10:
+        case 28:
         case "end":
           return _context8.stop();
       }
-    }, _callee8, null, [[0, 7]]);
+    }, _callee8, null, [[0, 25]]);
   }));
   return function (_x15, _x16) {
     return _ref8.apply(this, arguments);
+  };
+}());
+
+// Generate campus-wide attendance reports
+router.get("/reports", /*#__PURE__*/function () {
+  var _ref9 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee9(req, res) {
+    var attendanceRecords;
+    return _regeneratorRuntime().wrap(function _callee9$(_context9) {
+      while (1) switch (_context9.prev = _context9.next) {
+        case 0:
+          _context9.prev = 0;
+          _context9.next = 3;
+          return _Attendance["default"].find().populate("student_id", "name email").populate("course_id", "course_name");
+        case 3:
+          attendanceRecords = _context9.sent;
+          res.status(200).json({
+            attendanceRecords: attendanceRecords
+          });
+          _context9.next = 10;
+          break;
+        case 7:
+          _context9.prev = 7;
+          _context9.t0 = _context9["catch"](0);
+          res.status(500).json({
+            error: _context9.t0.message
+          });
+        case 10:
+        case "end":
+          return _context9.stop();
+      }
+    }, _callee9, null, [[0, 7]]);
+  }));
+  return function (_x17, _x18) {
+    return _ref9.apply(this, arguments);
   };
 }());
 var _default = exports["default"] = router;

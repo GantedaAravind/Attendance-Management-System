@@ -164,6 +164,62 @@ router.put("/assign-course", async (req, res) => {
   }
 });
 
+router.get("/admin/dashboard", async (req, res) => {
+  try {
+    const totalStudents = await Student.countDocuments();
+    const totalTeachers = await Teacher.countDocuments();
+    const totalCourses = await Course.countDocuments();
+    const totalAttendance = await Attendance.countDocuments();
+
+    // Attendance by Course
+    const attendanceByCourse = await Attendance.aggregate([
+      { $group: { _id: "$course_id", attendanceCount: { $sum: 1 } } },
+      {
+        $lookup: {
+          from: "courses",
+          localField: "_id",
+          foreignField: "_id",
+          as: "course",
+        },
+      },
+      { $unwind: "$course" },
+      { $project: { courseName: "$course.name", attendanceCount: 1 } },
+    ]);
+
+    // Attendance Distribution (Present vs Absent)
+    const attendanceDistribution = await Attendance.aggregate([
+      { $group: { _id: "$status", count: { $sum: 1 } } },
+    ]).then((data) =>
+      data.map((item) => ({ name: item._id, value: item.count }))
+    );
+
+    // Recent Attendance Records
+    const recentAttendance = await Attendance.find()
+      .sort({ date: -1 })
+      .limit(5)
+      .populate("student_id", "name")
+      .populate("course_id", "name")
+      .select("student_id course_id date status");
+
+    res.status(200).json({
+      totalStudents,
+      totalTeachers,
+      totalCourses,
+      totalAttendance,
+      attendanceByCourse,
+      attendanceDistribution,
+      recentAttendance: recentAttendance.map((record) => ({
+        studentName: record.student_id.name,
+        courseName: record.course_id.name,
+        date: record.date.toISOString().split("T")[0],
+        status: record.status,
+      })),
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch dashboard data" });
+  }
+});
+
 // Generate campus-wide attendance reports
 router.get("/reports", async (req, res) => {
   try {
