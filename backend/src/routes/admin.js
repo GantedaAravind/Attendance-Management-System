@@ -113,7 +113,18 @@ router.post("/create-course", async (req, res) => {
     });
     await course.save();
 
-    res.status(201).json({ message: "Course created successfully", course });
+    // Populate the teacher_id field before sending the response
+    const populatedCourse = await Course.findById(course._id).populate(
+      "teacher_id",
+      "name email"
+    );
+
+    res
+      .status(201)
+      .json({
+        message: "Course created successfully",
+        course: populatedCourse,
+      });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

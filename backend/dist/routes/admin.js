@@ -218,7 +218,7 @@ router["delete"]("/delete-teacher/:id", /*#__PURE__*/function () {
 // Create a new course
 router.post("/create-course", /*#__PURE__*/function () {
   var _ref5 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee5(req, res) {
-    var _req$body3, course_name, teacher_id, start_date, end_date, teacher, startDate, endDate, course;
+    var _req$body3, course_name, teacher_id, start_date, end_date, teacher, startDate, endDate, course, populatedCourse;
     return _regeneratorRuntime().wrap(function _callee5$(_context5) {
       while (1) switch (_context5.prev = _context5.next) {
         case 0:
@@ -273,23 +273,27 @@ router.post("/create-course", /*#__PURE__*/function () {
           _context5.next = 18;
           return course.save();
         case 18:
+          _context5.next = 20;
+          return _Course["default"].findById(course._id).populate("teacher_id", "name email");
+        case 20:
+          populatedCourse = _context5.sent;
           res.status(201).json({
             message: "Course created successfully",
-            course: course
+            course: populatedCourse
           });
-          _context5.next = 24;
+          _context5.next = 27;
           break;
-        case 21:
-          _context5.prev = 21;
+        case 24:
+          _context5.prev = 24;
           _context5.t0 = _context5["catch"](3);
           res.status(500).json({
             error: _context5.t0.message
           });
-        case 24:
+        case 27:
         case "end":
           return _context5.stop();
       }
-    }, _callee5, null, [[3, 21]]);
+    }, _callee5, null, [[3, 24]]);
   }));
   return function (_x9, _x10) {
     return _ref5.apply(this, arguments);
