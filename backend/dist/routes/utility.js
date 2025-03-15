@@ -29,7 +29,7 @@ router.get("/students", /*#__PURE__*/function () {
         case 0:
           _context.prev = 0;
           _context.next = 3;
-          return _Student["default"].find().select("name email");
+          return _Student["default"].find().select("-password");
         case 3:
           students = _context.sent;
           res.status(200).json(students);
@@ -61,7 +61,7 @@ router.get("/teachers", /*#__PURE__*/function () {
         case 0:
           _context2.prev = 0;
           _context2.next = 3;
-          return _Teacher["default"].find().select("name email _id");
+          return _Teacher["default"].find().select("-password");
         case 3:
           teachers = _context2.sent;
           res.status(200).json(teachers);
@@ -194,7 +194,7 @@ router.get("/:courseId/students", /*#__PURE__*/function () {
           _context5.next = 4;
           return _Student["default"].find({
             courses: courseId
-          }).select("name email _id");
+          }).select("-password");
         case 4:
           students = _context5.sent;
           res.status(200).json(students);

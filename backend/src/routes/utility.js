@@ -13,7 +13,7 @@ router.use(authMiddleware);
 // Get all students
 router.get("/students", async (req, res) => {
   try {
-    const students = await Student.find().select("name email");
+    const students = await Student.find().select("-password");
     res.status(200).json(students);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -23,7 +23,7 @@ router.get("/students", async (req, res) => {
 // Get all teachers
 router.get("/teachers", async (req, res) => {
   try {
-    const teachers = await Teacher.find().select("name email _id");
+    const teachers = await Teacher.find().select("-password");
     res.status(200).json(teachers);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -80,7 +80,7 @@ router.get("/:courseId/students", async (req, res) => {
   try {
     // Find students whose `courses` array contains the `courseId`
     const students = await Student.find({ courses: courseId }).select(
-      "name email _id"
+      "-password"
     );
 
     res.status(200).json(students);
