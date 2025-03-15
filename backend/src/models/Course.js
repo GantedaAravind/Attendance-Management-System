@@ -15,6 +15,14 @@ const courseSchema = new mongoose.Schema({
       ref: "Student",
     },
   ],
+  start_date: {
+    type: Date,
+    required: true,
+  },
+  end_date: {
+    type: Date,
+    required: true,
+  },
 });
 
 export default mongoose.model("Course", courseSchema);

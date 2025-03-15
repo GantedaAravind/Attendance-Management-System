@@ -18,6 +18,14 @@ var courseSchema = new _mongoose["default"].Schema({
   students: [{
     type: _mongoose["default"].Schema.Types.ObjectId,
     ref: "Student"
-  }]
+  }],
+  start_date: {
+    type: Date,
+    required: true
+  },
+  end_date: {
+    type: Date,
+    required: true
+  }
 });
 var _default = exports["default"] = _mongoose["default"].model("Course", courseSchema);
