@@ -69,112 +69,65 @@ router.get("/my-courses", /*#__PURE__*/function () {
     return _ref.apply(this, arguments);
   };
 }());
-
-// Mark attendance for a course
-router.post("/mark-attendance", /*#__PURE__*/function () {
+router.post("/attendance/save", /*#__PURE__*/function () {
   var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2(req, res) {
-    var _req$body, course_id, date, attendance, course, _iterator, _step, record, student_id, status, student;
+    var attendance, _iterator, _step, record;
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
-          _req$body = req.body, course_id = _req$body.course_id, date = _req$body.date, attendance = _req$body.attendance;
-          _context2.prev = 1;
-          if (!(!course_id || !date || !attendance || !Array.isArray(attendance))) {
-            _context2.next = 4;
-            break;
-          }
-          return _context2.abrupt("return", res.status(400).json({
-            error: "Invalid input"
-          }));
-        case 4:
-          _context2.next = 6;
-          return _Course["default"].findOne({
-            _id: course_id,
-            teacher_id: req.userId // Ensure the course is assigned to the logged-in teacher
-          });
-        case 6:
-          course = _context2.sent;
-          if (course) {
-            _context2.next = 9;
-            break;
-          }
-          return _context2.abrupt("return", res.status(404).json({
-            error: "Course not found"
-          }));
-        case 9:
-          // Save attendance records
+          _context2.prev = 0;
+          attendance = req.body.attendance; // Insert or update attendance records
           _iterator = _createForOfIteratorHelper(attendance);
-          _context2.prev = 10;
+          _context2.prev = 3;
           _iterator.s();
-        case 12:
+        case 5:
           if ((_step = _iterator.n()).done) {
-            _context2.next = 26;
+            _context2.next = 11;
             break;
           }
           record = _step.value;
-          student_id = record.student_id, status = record.status; // Check if the student exists and is enrolled in the course
-          _context2.next = 17;
-          return _Student["default"].findById(student_id).populate("courses");
-        case 17:
-          student = _context2.sent;
-          if (student) {
-            _context2.next = 20;
-            break;
-          }
-          return _context2.abrupt("return", res.status(404).json({
-            error: "Student not found"
-          }));
-        case 20:
-          if (!(!student.courses || !student.courses.includes(course_id))) {
-            _context2.next = 22;
-            break;
-          }
-          return _context2.abrupt("return", res.status(400).json({
-            error: "Student not enrolled in the course"
-          }));
-        case 22:
-          _context2.next = 24;
+          _context2.next = 9;
           return _Attendance["default"].findOneAndUpdate({
-            student_id: student_id,
-            course_id: course_id,
-            date: date
+            student_id: record.student_id,
+            course_id: record.course_id,
+            date: record.date
           }, {
-            status: status
+            status: record.status
           }, {
             upsert: true,
             "new": true
           });
-        case 24:
-          _context2.next = 12;
+        case 9:
+          _context2.next = 5;
           break;
-        case 26:
-          _context2.next = 31;
+        case 11:
+          _context2.next = 16;
           break;
-        case 28:
-          _context2.prev = 28;
-          _context2.t0 = _context2["catch"](10);
+        case 13:
+          _context2.prev = 13;
+          _context2.t0 = _context2["catch"](3);
           _iterator.e(_context2.t0);
-        case 31:
-          _context2.prev = 31;
+        case 16:
+          _context2.prev = 16;
           _iterator.f();
-          return _context2.finish(31);
-        case 34:
-          res.status(201).json({
-            message: "Attendance marked successfully"
+          return _context2.finish(16);
+        case 19:
+          res.status(200).json({
+            message: "Attendance saved successfully"
           });
-          _context2.next = 40;
+          _context2.next = 25;
           break;
-        case 37:
-          _context2.prev = 37;
-          _context2.t1 = _context2["catch"](1);
+        case 22:
+          _context2.prev = 22;
+          _context2.t1 = _context2["catch"](0);
           res.status(500).json({
-            error: _context2.t1.message
+            error: "Failed to save attendance"
           });
-        case 40:
+        case 25:
         case "end":
           return _context2.stop();
       }
-    }, _callee2, null, [[1, 37], [10, 28, 31, 34]]);
+    }, _callee2, null, [[0, 22], [3, 13, 16, 19]]);
   }));
   return function (_x3, _x4) {
     return _ref2.apply(this, arguments);

@@ -35,53 +35,26 @@ router.get("/my-courses", async (req, res) => {
   }
 });
 
-// Mark attendance for a course
-router.post("/mark-attendance", async (req, res) => {
-  const { course_id, date, attendance } = req.body;
-
+router.post("/attendance/save", async (req, res) => {
   try {
-    // Validate input
-    if (!course_id || !date || !attendance || !Array.isArray(attendance)) {
-      return res.status(400).json({ error: "Invalid input" });
-    }
+    const { attendance } = req.body;
 
-    // Check if the course exists and is assigned to the teacher
-    const course = await Course.findOne({
-      _id: course_id,
-      teacher_id: req.userId, // Ensure the course is assigned to the logged-in teacher
-    });
-
-    if (!course) {
-      return res.status(404).json({ error: "Course not found" });
-    }
-
-    // Save attendance records
+    // Insert or update attendance records
     for (const record of attendance) {
-      const { student_id, status } = record;
-
-      // Check if the student exists and is enrolled in the course
-      const student = await Student.findById(student_id).populate("courses");
-      if (!student) {
-        return res.status(404).json({ error: "Student not found" });
-      }
-
-      if (!student.courses || !student.courses.includes(course_id)) {
-        return res
-          .status(400)
-          .json({ error: "Student not enrolled in the course" });
-      }
-
-      // Create or update the attendance record
       await Attendance.findOneAndUpdate(
-        { student_id, course_id, date },
-        { status },
+        {
+          student_id: record.student_id,
+          course_id: record.course_id,
+          date: record.date,
+        },
+        { status: record.status },
         { upsert: true, new: true }
       );
     }
 
-    res.status(201).json({ message: "Attendance marked successfully" });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(200).json({ message: "Attendance saved successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to save attendance" });
   }
 });
 
