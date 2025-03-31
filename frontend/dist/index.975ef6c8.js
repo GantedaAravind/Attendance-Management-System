@@ -122928,7 +122928,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const StudentCard = ({ name, email, _id, onDelete, imageUrl })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "card m-4 border-2 border-blue-400/20 hover:border-blue-400/40 shadow-lg shadow-blue-400/20 hover:shadow-blue-400/30 w-72 md:w-80 lg:w-96 bg-base-100 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] group",
+        className: "card m-4 border-2 border-blue-400/20 overflow-hidden hover:border-blue-400/40 shadow-lg shadow-blue-400/20 hover:shadow-blue-400/30 w-72 md:w-80 lg:w-96 bg-base-100 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] group",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "card-body p-5 md:p-6",
             children: [
@@ -122965,7 +122965,7 @@ const StudentCard = ({ name, email, _id, onDelete, imageUrl })=>{
                             className: "flex-1",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    className: "text-base md:text-lg font-bold text-gray-800 dark:text-white truncate",
+                                    className: "text-base md:text-lg font-bold text-gray-800 truncate dark:text-white whitespace-nowrap overflow-hidden text-ellipsis",
                                     children: name
                                 }, void 0, false, {
                                     fileName: "src/components/Admin/StudentCard.jsx",
@@ -123520,57 +123520,167 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const CourseCard = ({ course_name, teacher_id, students, _id, onDelete })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "card m-4 border border-green-400 shadow-xl shadow-green-400  w-72 md:w-80 lg:w-96 bg-base-100 card-lg",
+        className: "card m-4 border-2 border-green-400/20 hover:border-green-400/40 shadow-lg shadow-green-400/20 hover:shadow-green-400/30 w-72 md:w-80 lg:w-96 bg-base-100 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] group",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "card-body",
+            className: "card-body p-5 md:p-6",
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                    className: "w-16 md:w-20 lg:w-24 font-semibold",
-                    children: course_name
-                }, void 0, false, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex items-start justify-between",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "flex-1 min-w-0",
+                            children: [
+                                " ",
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                    className: "text-xl font-bold text-gray-800 dark:text-white mb-2 line-clamp-2 truncate",
+                                    title: course_name,
+                                    children: course_name
+                                }, void 0, false, {
+                                    fileName: "src/components/Admin/CourseCard.jsx",
+                                    lineNumber: 9,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center gap-2 mb-3",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "avatar placeholder",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "w-8 rounded-full text-center align-middle bg-green-100 text-green-800",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "text-lg  font-bold align-middle",
+                                                    children: "T"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/Admin/CourseCard.jsx",
+                                                    lineNumber: 18,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/components/Admin/CourseCard.jsx",
+                                                lineNumber: 17,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/components/Admin/CourseCard.jsx",
+                                            lineNumber: 16,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "min-w-0",
+                                            children: [
+                                                " ",
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    className: "text-sm font-medium text-gray-700 dark:text-gray-300 truncate",
+                                                    title: teacher_id?.name,
+                                                    children: teacher_id?.name || "No teacher assigned"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/Admin/CourseCard.jsx",
+                                                    lineNumber: 24,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    className: "text-xs text-gray-500 dark:text-gray-400 truncate",
+                                                    title: teacher_id?.email,
+                                                    children: teacher_id?.email || ""
+                                                }, void 0, false, {
+                                                    fileName: "src/components/Admin/CourseCard.jsx",
+                                                    lineNumber: 30,
+                                                    columnNumber: 17
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/Admin/CourseCard.jsx",
+                                            lineNumber: 21,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/Admin/CourseCard.jsx",
+                                    lineNumber: 15,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Admin/CourseCard.jsx",
+                            lineNumber: 6,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "badge badge-lg badge-outline badge-success gap-1 flex-shrink-0 ml-2",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    className: "h-4 w-4",
+                                    fill: "none",
+                                    viewBox: "0 0 24 24",
+                                    stroke: "currentColor",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        strokeWidth: 2,
+                                        d: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Admin/CourseCard.jsx",
+                                        lineNumber: 48,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/Admin/CourseCard.jsx",
+                                    lineNumber: 41,
+                                    columnNumber: 13
+                                }, undefined),
+                                students.length,
+                                " ",
+                                students.length === 1 ? "Student" : "Students"
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Admin/CourseCard.jsx",
+                            lineNumber: 40,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
                     fileName: "src/components/Admin/CourseCard.jsx",
                     lineNumber: 5,
                     columnNumber: 9
                 }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    className: "text-sm text-zinc-400",
-                    children: [
-                        "Teacher: ",
-                        teacher_id?.name,
-                        " (",
-                        teacher_id?.email,
-                        ")"
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/Admin/CourseCard.jsx",
-                    lineNumber: 6,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    className: "text-sm text-zinc-400",
-                    children: [
-                        "Students Enrolled: ",
-                        students.length
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/Admin/CourseCard.jsx",
-                    lineNumber: 9,
-                    columnNumber: 9
-                }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "justify-end card-actions",
+                    className: "card-actions justify-end mt-4",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "btn btn-outline btn-secondary",
+                        className: "btn btn-outline btn-success btn-sm px-5 hover:bg-green-500 hover:border-green-500 hover:text-white transition-all duration-300",
                         onClick: ()=>onDelete(_id),
-                        children: "Delete"
-                    }, void 0, false, {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                className: "h-4 w-4 mr-1",
+                                fill: "none",
+                                viewBox: "0 0 24 24",
+                                stroke: "currentColor",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    strokeWidth: 2,
+                                    d: "M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                                }, void 0, false, {
+                                    fileName: "src/components/Admin/CourseCard.jsx",
+                                    lineNumber: 71,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/Admin/CourseCard.jsx",
+                                lineNumber: 64,
+                                columnNumber: 13
+                            }, undefined),
+                            "Delete"
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/Admin/CourseCard.jsx",
-                        lineNumber: 14,
+                        lineNumber: 60,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/Admin/CourseCard.jsx",
-                    lineNumber: 13,
+                    lineNumber: 59,
                     columnNumber: 9
                 }, undefined)
             ]

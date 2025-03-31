@@ -1,6 +1,6 @@
 const StudentCard = ({ name, email, _id, onDelete, imageUrl }) => {
   return (
-    <div className="card m-4 border-2 border-blue-400/20 hover:border-blue-400/40 shadow-lg shadow-blue-400/20 hover:shadow-blue-400/30 w-72 md:w-80 lg:w-96 bg-base-100 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] group">
+    <div className="card m-4 border-2 border-blue-400/20 overflow-hidden hover:border-blue-400/40 shadow-lg shadow-blue-400/20 hover:shadow-blue-400/30 w-72 md:w-80 lg:w-96 bg-base-100 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] group">
       <div className="card-body p-5 md:p-6">
         <div className="flex items-center gap-4 md:gap-6">
           <div className="avatar">
@@ -16,7 +16,7 @@ const StudentCard = ({ name, email, _id, onDelete, imageUrl }) => {
             </div>
           </div>
           <div className="flex-1">
-            <h2 className="text-base md:text-lg font-bold text-gray-800 dark:text-white truncate">
+            <h2 className="text-base md:text-lg font-bold text-gray-800 truncate dark:text-white whitespace-nowrap overflow-hidden text-ellipsis">
               {name}
             </h2>
             <p className="text-xs md:text-sm text-zinc-500 dark:text-zinc-300 mt-1 truncate">
