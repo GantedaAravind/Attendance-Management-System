@@ -1,9 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Lottie from "lottie-react";
-import { Link } from "react-router"; // ✅ Fixed incorrect import
+import { Link, useNavigate } from "react-router"; // ✅ Fixed incorrect import
 import login_animation from "../assets/login.json";
+import { useDispatch } from "react-redux";
+import { setUser } from "../redux/authSlice";
+import toast from "react-hot-toast";
+import API from "../config/axiosInstance.js";
+import { useSelector } from "react-redux";
 
 const Login = () => {
+  const { user } = useSelector((state) => state.auth);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      if (user.role === "student") {
+        navigate("/student/my-courses");
+      } else if (user.role === "teacher") {
+        navigate("/teacher/courses");
+      } else {
+        navigate("/dashboard"); // Example: Redirect to admin/teacher dashboard
+      }
+    }
+  });
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -21,6 +42,7 @@ const Login = () => {
   };
 
   const [loading, setLoading] = useState(false); // Loading state
+  const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent page reload
@@ -28,35 +50,33 @@ const Login = () => {
     console.log(formData);
 
     try {
-      const response = await fetch(
-        "https://attendancemanagementsystemapi.vercel.app/api/auth/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData), // Send form data including role
-        }
-      );
+      const { data } = await API.post("/api/auth/login", formData, {
+        withCredentials: true,
+      });
 
-      const data = await response.json(); // Parse the response
+      dispatch(setUser(data.user)); // Set user in Redux state
+      toast.success(data.message); // Show success message
 
-      if (response.ok) {
-        console.log("Login successful:", data);
-        // Handle successful login (e.g., store token, redirect user)
+      // Redirect based on user role
+      if (data.user.role === "student") {
+        navigate("/student/my-courses");
+      } else if (data.user.role === "teacher") {
+        navigate("/teacher/courses");
       } else {
-        console.error("Login failed:", data);
-        // Handle login failure
+        navigate("/dashboard"); // Example: Redirect to admin/teacher dashboard
       }
     } catch (error) {
-      console.error("Error during login:", error);
+      console.error("Login failed:", error.response?.data || error.message);
+      toast.error(
+        error.response?.data?.message || "Login failed. Please try again."
+      );
     } finally {
       setLoading(false); // Stop loading after request completes
     }
   };
 
   return (
-    <div className="flex shadow-2xl items-center mt-16 justify-center w-[75%] mx-auto">
+    <div className="flex shadow-2xl rounded-2xl bg-gray-800 items-center mt-16 justify-center w-[75%] mx-auto">
       {/* Left Side - Animation */}
       <div className="w-1/2 hidden md:block">
         <Lottie animationData={login_animation} />
@@ -64,9 +84,9 @@ const Login = () => {
 
       {/* Right Side - Form */}
       <div className="w-full md:w-1/2 flex flex-col px-10 lg:px-16">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="mx-auto ">
           {/* Email Input */}
-          <label className="input validator">
+          <label className="input validator ">
             <svg
               className="h-[1em] opacity-50"
               xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +138,7 @@ const Login = () => {
               placeholder="Password"
               value={formData.password}
               onChange={handleChange}
-              minlength="8"
+              minLength="8"
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
               title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
             />
@@ -135,10 +155,9 @@ const Login = () => {
           {/* Role Selection */}
           <select
             name="role"
-            value={formData.role}
+            value={formData.role} // Controlled component
             onChange={handleRoleChange}
             required
-            defaultValue="Who are You?"
             className="select mt-4"
           >
             <option value="" disabled>
@@ -150,7 +169,7 @@ const Login = () => {
           </select>
 
           {/* Submit Button */}
-          <div className="flex justify-center border-base-100 border-2">
+          <div className="flex justify-center ">
             <button
               type="submit"
               className="text-base md:text-md lg:text-lg btn btn-outline btn-secondary w-fit mt-5 px-5"

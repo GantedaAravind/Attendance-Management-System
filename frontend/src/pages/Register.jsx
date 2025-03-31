@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import Lottie from "lottie-react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import SignUp_animation from "../assets/rigister.json";
+import toast from "react-hot-toast";
+import API from "../config/axiosInstance";
 
-const Rigister = () => {
-  const [loading, setLoading] = useState(false); // Add loading state
+const Register = () => {
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
     role: "",
+    imageUrl: undefined, // New field for image URL
   });
 
   // Handle Input Change
@@ -18,41 +22,31 @@ const Rigister = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent default form submission
-    setLoading(true); // Start loading
+    e.preventDefault();
+    setLoading(true);
     console.log(formData);
 
     try {
-      const response = await fetch(
-        "https://attendancemanagementsystemapi.vercel.app/api/auth/register",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData), // Convert form data to JSON
-        }
-      );
-
-      const data = await response.json(); // Parse the response
-
-      if (response.ok) {
-        console.log("Registration successful:", data);
-        alert("Registration successful!"); // Show success message
-      } else {
-        console.error("Registration failed:", data);
-        alert("Registration failed: " + (data.message || "Unknown error")); // Show error message
-      }
+      const { data } = await API.post("/api/auth/register", formData);
+      console.log("Registration successful:", data);
+      toast.success(data.message);
+      navigate("/login");
     } catch (error) {
-      console.error("Error during registration:", error);
-      alert("An error occurred. Please try again.");
+      console.error(
+        "Registration failed:",
+        error.response?.data || error.message
+      );
+      toast.error(
+        "Registration failed: " +
+          (error.response?.data?.message || "Unknown error")
+      );
     } finally {
-      setLoading(false); // Stop loading
+      setLoading(false);
     }
   };
 
   return (
-    <div className="flex shadow-2xl items-center mt-16 justify-center w-[75%] mx-auto">
+    <div className="flex shadow-2xl  rounded-2xl bg-gray-800 items-center mt-16 justify-center w-[75%] mx-auto">
       <div className="w-1/2 hidden md:block">
         <Lottie animationData={SignUp_animation} />
       </div>
@@ -69,14 +63,14 @@ const Rigister = () => {
                 minLength="3"
                 maxLength="30"
                 title="Only letters, numbers or dash"
-                value={formData.username}
+                value={formData.name} // Fixed issue (was formData.username)
                 onChange={handleChange}
               />
             </label>
           </div>
 
           <div className="mt-4">
-            <label className="input validator ">
+            <label className="input validator">
               <input
                 type="email"
                 name="email"
@@ -89,7 +83,7 @@ const Rigister = () => {
           </div>
 
           <div className="mt-4">
-            <label className="input validator ">
+            <label className="input validator">
               <input
                 type="password"
                 name="password"
@@ -99,6 +93,19 @@ const Rigister = () => {
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
                 value={formData.password}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+
+          {/* New Image URL Input */}
+          <div className="mt-4">
+            <label className="input validator">
+              <input
+                type="text"
+                name="imageUrl"
+                placeholder="Profile Image URL (optional)"
+                value={formData.imageUrl}
                 onChange={handleChange}
               />
             </label>
@@ -117,7 +124,6 @@ const Rigister = () => {
               </option>
               <option value="student">Student</option>
               <option value="teacher">Teacher</option>
-              <option value="admin">Admin</option>
             </select>
           </div>
 
@@ -146,4 +152,4 @@ const Rigister = () => {
   );
 };
 
-export default Rigister;
+export default Register;

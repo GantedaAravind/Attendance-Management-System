@@ -12,10 +12,6 @@ const navbarConfig = {
         { name: "Manage Courses", path: "/admin/courses" },
       ],
     },
-    {
-      name: "Reports",
-      subMenu: [{ name: "View Reports", path: "/admin/reports" }],
-    },
     { name: "Dashboard", path: "/dashboard" },
     { name: "Profile", path: "/profile" },
     { name: "Logout", path: "/logout" },
@@ -23,15 +19,11 @@ const navbarConfig = {
   teacher: [
     {
       name: "Courses",
-      subMenu: [
-        { name: "My Courses", path: "/teacher/courses" },
-        { name: "Mark Attendance", path: "/teacher/mark-attendance" },
-        { name: "View Attendance", path: "/teacher/view-attendance" },
-      ],
+      path: "/teacher/courses",
     },
     {
       name: "Reports",
-      subMenu: [{ name: "View Reports", path: "/teacher/reports" }],
+      path: "/teacher/reports",
     },
     { name: "Profile", path: "/profile" },
     { name: "Logout", path: "/logout" },
@@ -43,7 +35,10 @@ const navbarConfig = {
     },
     {
       name: "Courses",
-      subMenu: [{ name: "Enroll in Course", path: "/student/enroll" }],
+      subMenu: [
+        { name: "Enroll in Course", path: "/student/enroll" },
+        { name: "My Course", path: "/student/my-courses" },
+      ],
     },
     {
       name: "Notifications",

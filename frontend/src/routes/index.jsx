@@ -6,24 +6,27 @@ import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 
 // Admin Pages
-import AddTeacher from "../pages/Admin/AddTeacher";
-import AddStudent from "../pages/Admin/AddStudent";
-import CreateCourse from "../pages/Admin/CreateCourse";
+import ManageTeacher from "../pages/Admin/ManageTeacher";
+import ManageStudent from "../pages/Admin/ManageStudent";
+import ManageCourse from "../pages/Admin/ManageCourse";
 import AssignCourse from "../pages/Admin/AssignCourse";
-import Reports from "../pages/Admin/Reports";
 
 // Teacher Pages
 import MyCourses from "../pages/Teacher/MyCourses";
 import MarkAttendance from "../pages/Teacher/MarkAttendance";
-import ViewAttendance from "../pages/Teacher/ViewAttendance";
-import GenerateReports from "../pages/Teacher/GenerateReports";
+import DateSelector from "../pages/Teacher/DateSelector";
+import Reports from "../pages/Teacher/Reports";
+import CourseReport from "../pages/Teacher/CourseReport";
 
 // Student Pages
+import MyStudentCourses from "../pages/Student/MyCourses";
 import MyAttendance from "../pages/Student/MyAttendance";
 import Notifications from "../pages/Student/Notifications";
 import EnrollCourse from "../pages/Student/EnrollCourse";
 
 import ProtectedRoute from "../components/ProtectedRoute"; // For role-based access
+import NotFound from "../pages/NotFound";
+import Profile from "../pages/Profile";
 
 const router = createBrowserRouter([
   {
@@ -44,26 +47,26 @@ const router = createBrowserRouter([
 
       // Admin Routes
       {
-        path: "admin/add-teacher",
+        path: "admin/teachers",
         element: (
           <ProtectedRoute role="admin">
-            <AddTeacher />
+            <ManageTeacher />
           </ProtectedRoute>
         ),
       },
       {
-        path: "admin/add-student",
+        path: "admin/students",
         element: (
           <ProtectedRoute role="admin">
-            <AddStudent />
+            <ManageStudent />
           </ProtectedRoute>
         ),
       },
       {
-        path: "admin/create-course",
+        path: "admin/courses",
         element: (
           <ProtectedRoute role="admin">
-            <CreateCourse />
+            <ManageCourse />
           </ProtectedRoute>
         ),
       },
@@ -72,14 +75,6 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoute role="admin">
             <AssignCourse />
-          </ProtectedRoute>
-        ),
-      },
-      {
-        path: "admin/reports",
-        element: (
-          <ProtectedRoute role="admin">
-            <Reports />
           </ProtectedRoute>
         ),
       },
@@ -94,7 +89,15 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "teacher/mark-attendance",
+        path: "teacher/courses/:courseid/date",
+        element: (
+          <ProtectedRoute role="teacher">
+            <DateSelector />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "teacher/courses/:courseid/date/:date/mark-attendance/",
         element: (
           <ProtectedRoute role="teacher">
             <MarkAttendance />
@@ -102,10 +105,10 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "teacher/view-attendance",
+        path: "teacher/reports/:courseId",
         element: (
           <ProtectedRoute role="teacher">
-            <ViewAttendance />
+            <CourseReport />
           </ProtectedRoute>
         ),
       },
@@ -113,7 +116,7 @@ const router = createBrowserRouter([
         path: "teacher/reports",
         element: (
           <ProtectedRoute role="teacher">
-            <GenerateReports />
+            <Reports />
           </ProtectedRoute>
         ),
       },
@@ -124,6 +127,14 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoute role="student">
             <MyAttendance />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "student/my-courses",
+        element: (
+          <ProtectedRoute role="student">
+            <MyStudentCourses />
           </ProtectedRoute>
         ),
       },
@@ -142,6 +153,14 @@ const router = createBrowserRouter([
             <Notifications />
           </ProtectedRoute>
         ),
+      },
+      {
+        path: "profile",
+        element: <Profile />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },
