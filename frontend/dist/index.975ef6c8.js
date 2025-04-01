@@ -122676,15 +122676,453 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _recharts = require("recharts");
+var _axiosInstance = require("../../config/axiosInstance");
+var _axiosInstanceDefault = parcelHelpers.interopDefault(_axiosInstance);
+var _s = $RefreshSig$();
+const COLORS = [
+    "#0088FE",
+    "#00C49F",
+    "#FFBB28",
+    "#FF8042",
+    "#8884D8"
+];
 const MyAttendance = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: "MyAttendance"
+    _s();
+    const [attendanceData, setAttendanceData] = (0, _react.useState)(null);
+    const [loading, setLoading] = (0, _react.useState)(true);
+    const [error, setError] = (0, _react.useState)(null);
+    (0, _react.useEffect)(()=>{
+        const fetchAttendanceData = async ()=>{
+            try {
+                const response = await (0, _axiosInstanceDefault.default).get("/api/attendance/student", {
+                    withCredentials: true
+                });
+                if (!response.ok) throw new Error("Failed to fetch attendance data");
+                const data = await response.json();
+                setAttendanceData(data);
+            } catch (err) {
+                setError(err.message);
+            } finally{
+                setLoading(false);
+            }
+        };
+        fetchAttendanceData();
+    }, []);
+    if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "text-center py-8",
+        children: "Loading attendance data..."
     }, void 0, false, {
         fileName: "src/pages/Student/MyAttendance.jsx",
-        lineNumber: 2,
-        columnNumber: 10
+        lineNumber: 48,
+        columnNumber: 12
+    }, undefined);
+    if (error) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "text-center py-8 text-red-500",
+        children: [
+            "Error: ",
+            error
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/Student/MyAttendance.jsx",
+        lineNumber: 50,
+        columnNumber: 12
+    }, undefined);
+    if (!attendanceData) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "text-center py-8",
+        children: "No attendance data available"
+    }, void 0, false, {
+        fileName: "src/pages/Student/MyAttendance.jsx",
+        lineNumber: 52,
+        columnNumber: 12
+    }, undefined);
+    // Prepare data for Recharts
+    const monthlyChartData = attendanceData.monthly.labels.map((label, index)=>({
+            name: label,
+            attendance: attendanceData.monthly.percentages[index]
+        }));
+    const overallPieData = [
+        {
+            name: "Present",
+            value: attendanceData.totalPresent
+        },
+        {
+            name: "Absent",
+            value: attendanceData.totalClasses - attendanceData.totalPresent
+        }
+    ];
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "container mx-auto px-4 py-8",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "text-3xl font-bold text-gray-800 mb-8",
+                children: "My Attendance Dashboard"
+            }, void 0, false, {
+                fileName: "src/pages/Student/MyAttendance.jsx",
+                lineNumber: 72,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "grid grid-cols-1 md:grid-cols-2 gap-8 mb-8",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "bg-white p-6 rounded-lg shadow-md",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                className: "text-xl font-semibold mb-4 text-gray-700",
+                                children: "Overall Attendance"
+                            }, void 0, false, {
+                                fileName: "src/pages/Student/MyAttendance.jsx",
+                                lineNumber: 79,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex flex-col md:flex-row items-center justify-between",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "mb-4 md:mb-0",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "text-4xl font-bold text-blue-600",
+                                                children: [
+                                                    attendanceData.overallPercentage,
+                                                    "%"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Student/MyAttendance.jsx",
+                                                lineNumber: 84,
+                                                columnNumber: 15
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "text-gray-600 mt-2",
+                                                children: [
+                                                    attendanceData.totalPresent,
+                                                    " present out of",
+                                                    " ",
+                                                    attendanceData.totalClasses,
+                                                    " classes"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Student/MyAttendance.jsx",
+                                                lineNumber: 87,
+                                                columnNumber: 15
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                        lineNumber: 83,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "w-full md:w-48 h-48",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.ResponsiveContainer), {
+                                            width: "100%",
+                                            height: "100%",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.PieChart), {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Pie), {
+                                                        data: overallPieData,
+                                                        cx: "50%",
+                                                        cy: "50%",
+                                                        innerRadius: 60,
+                                                        outerRadius: 80,
+                                                        fill: "#8884d8",
+                                                        paddingAngle: 5,
+                                                        dataKey: "value",
+                                                        label: ({ name, percent })=>`${name} ${(percent * 100).toFixed(0)}%`,
+                                                        children: overallPieData.map((entry, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Cell), {
+                                                                fill: index === 0 ? "#4ade80" : "#f87171"
+                                                            }, `cell-${index}`, false, {
+                                                                fileName: "src/pages/Student/MyAttendance.jsx",
+                                                                lineNumber: 109,
+                                                                columnNumber: 23
+                                                            }, undefined))
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                                        lineNumber: 95,
+                                                        columnNumber: 19
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
+                                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                                        lineNumber: 115,
+                                                        columnNumber: 19
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Student/MyAttendance.jsx",
+                                                lineNumber: 94,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Student/MyAttendance.jsx",
+                                            lineNumber: 93,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                        lineNumber: 92,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Student/MyAttendance.jsx",
+                                lineNumber: 82,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/pages/Student/MyAttendance.jsx",
+                        lineNumber: 78,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "bg-white p-6 rounded-lg shadow-md",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                className: "text-xl font-semibold mb-4 text-gray-700",
+                                children: "Recent Attendance"
+                            }, void 0, false, {
+                                fileName: "src/pages/Student/MyAttendance.jsx",
+                                lineNumber: 124,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                                className: "space-y-3",
+                                children: attendanceData.recentRecords.map((record, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                        className: "flex justify-between items-center border-b pb-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "font-medium",
+                                                        children: record.courseName
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                                        lineNumber: 134,
+                                                        columnNumber: 19
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm text-gray-500",
+                                                        children: new Date(record.date).toLocaleDateString()
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                                        lineNumber: 135,
+                                                        columnNumber: 19
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Student/MyAttendance.jsx",
+                                                lineNumber: 133,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                className: `px-3 py-1 rounded-full text-sm font-medium ${record.status === "present" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`,
+                                                children: record.status
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Student/MyAttendance.jsx",
+                                                lineNumber: 139,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        ]
+                                    }, index, true, {
+                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                        lineNumber: 129,
+                                        columnNumber: 15
+                                    }, undefined))
+                            }, void 0, false, {
+                                fileName: "src/pages/Student/MyAttendance.jsx",
+                                lineNumber: 127,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/pages/Student/MyAttendance.jsx",
+                        lineNumber: 123,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/Student/MyAttendance.jsx",
+                lineNumber: 76,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "bg-white p-6 rounded-lg shadow-md mb-8",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "text-xl font-semibold mb-4 text-gray-700",
+                        children: "Monthly Attendance Trend"
+                    }, void 0, false, {
+                        fileName: "src/pages/Student/MyAttendance.jsx",
+                        lineNumber: 156,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "h-80",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.ResponsiveContainer), {
+                            width: "100%",
+                            height: "100%",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.BarChart), {
+                                data: monthlyChartData,
+                                margin: {
+                                    top: 5,
+                                    right: 30,
+                                    left: 20,
+                                    bottom: 5
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.CartesianGrid), {
+                                        strokeDasharray: "3 3"
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                        lineNumber: 170,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.XAxis), {
+                                        dataKey: "name"
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                        lineNumber: 171,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {
+                                        domain: [
+                                            0,
+                                            100
+                                        ]
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                        lineNumber: 172,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
+                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                        lineNumber: 173,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Legend), {}, void 0, false, {
+                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                        lineNumber: 174,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Bar), {
+                                        dataKey: "attendance",
+                                        name: "Attendance %",
+                                        fill: "#8884d8"
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                        lineNumber: 175,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Student/MyAttendance.jsx",
+                                lineNumber: 161,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/pages/Student/MyAttendance.jsx",
+                            lineNumber: 160,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/pages/Student/MyAttendance.jsx",
+                        lineNumber: 159,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/Student/MyAttendance.jsx",
+                lineNumber: 155,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "bg-white p-6 rounded-lg shadow-md",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "text-xl font-semibold mb-4 text-gray-700",
+                        children: "Course-wise Attendance"
+                    }, void 0, false, {
+                        fileName: "src/pages/Student/MyAttendance.jsx",
+                        lineNumber: 183,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "h-80",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.ResponsiveContainer), {
+                            width: "100%",
+                            height: "100%",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.PieChart), {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Pie), {
+                                        data: attendanceData.byCourse,
+                                        cx: "50%",
+                                        cy: "50%",
+                                        labelLine: false,
+                                        outerRadius: 80,
+                                        fill: "#8884d8",
+                                        dataKey: "attendancePercentage",
+                                        nameKey: "courseName",
+                                        label: ({ name, percent })=>`${name}: ${(percent * 100).toFixed(0)}%`,
+                                        children: attendanceData.byCourse.map((entry, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Cell), {
+                                                fill: COLORS[index % COLORS.length]
+                                            }, `cell-${index}`, false, {
+                                                fileName: "src/pages/Student/MyAttendance.jsx",
+                                                lineNumber: 203,
+                                                columnNumber: 19
+                                            }, undefined))
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                        lineNumber: 189,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {
+                                        formatter: (value)=>[
+                                                `${value}%`,
+                                                "Attendance"
+                                            ]
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                        lineNumber: 209,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Legend), {}, void 0, false, {
+                                        fileName: "src/pages/Student/MyAttendance.jsx",
+                                        lineNumber: 210,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Student/MyAttendance.jsx",
+                                lineNumber: 188,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/pages/Student/MyAttendance.jsx",
+                            lineNumber: 187,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/pages/Student/MyAttendance.jsx",
+                        lineNumber: 186,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/Student/MyAttendance.jsx",
+                lineNumber: 182,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/Student/MyAttendance.jsx",
+        lineNumber: 71,
+        columnNumber: 5
     }, undefined);
 };
+_s(MyAttendance, "nAWaA4ufdwqrgGpRdGjgzWPigXg=");
 _c = MyAttendance;
 exports.default = MyAttendance;
 var _c;
@@ -122695,7 +123133,7 @@ $RefreshReg$(_c, "MyAttendance");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eGb0D":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","recharts":"7DnXL","../../config/axiosInstance":"gJ5tu"}],"eGb0D":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$d28b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -130599,7 +131037,6 @@ const Profile = ()=>{
         try {
             const response = await (0, _axiosInstanceJsDefault.default).get("/api/show-profile"); // Fetch user data with extra details
             setUser(response.data.user);
-            console.log(response.data.user);
         } catch (error) {
             console.error(error);
             (0, _reactHotToastDefault.default).error("Failed to load profile.");
@@ -130615,12 +131052,12 @@ const Profile = ()=>{
                 children: "My Profile"
             }, void 0, false, {
                 fileName: "src/pages/Profile.jsx",
-                lineNumber: 29,
+                lineNumber: 28,
                 columnNumber: 7
             }, undefined),
             loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationJsxDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Profile.jsx",
-                lineNumber: 32,
+                lineNumber: 31,
                 columnNumber: 9
             }, undefined) : user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "max-w-lg mx-auto  rounded-xl shadow-lg overflow-hidden",
@@ -130639,12 +131076,12 @@ const Profile = ()=>{
                                     }
                                 }, void 0, false, {
                                     fileName: "src/pages/Profile.jsx",
-                                    lineNumber: 38,
+                                    lineNumber: 37,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 37,
+                                lineNumber: 36,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -130652,7 +131089,7 @@ const Profile = ()=>{
                                 children: user.name
                             }, void 0, false, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 51,
+                                lineNumber: 50,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -130660,7 +131097,7 @@ const Profile = ()=>{
                                 children: user.email
                             }, void 0, false, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 52,
+                                lineNumber: 51,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -130668,17 +131105,17 @@ const Profile = ()=>{
                                 children: user.role
                             }, void 0, false, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 53,
+                                lineNumber: 52,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/Profile.jsx",
-                        lineNumber: 36,
+                        lineNumber: 35,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "p-6",
+                        className: "p-6 bg-blue-950",
                         children: [
                             user.role === "teacher" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "mb-6",
@@ -130695,19 +131132,19 @@ const Profile = ()=>{
                                                     d: "M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Profile.jsx",
-                                                    lineNumber: 70,
+                                                    lineNumber: 69,
                                                     columnNumber: 21
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/pages/Profile.jsx",
-                                                lineNumber: 64,
+                                                lineNumber: 63,
                                                 columnNumber: 19
                                             }, undefined),
                                             "Assigned Courses"
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 63,
+                                        lineNumber: 62,
                                         columnNumber: 17
                                     }, undefined),
                                     user.courses.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -130726,12 +131163,12 @@ const Profile = ()=>{
                                                             clipRule: "evenodd"
                                                         }, void 0, false, {
                                                             fileName: "src/pages/Profile.jsx",
-                                                            lineNumber: 87,
+                                                            lineNumber: 86,
                                                             columnNumber: 27
                                                         }, undefined)
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Profile.jsx",
-                                                        lineNumber: 81,
+                                                        lineNumber: 80,
                                                         columnNumber: 25
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -130739,31 +131176,31 @@ const Profile = ()=>{
                                                         children: course.name
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Profile.jsx",
-                                                        lineNumber: 93,
+                                                        lineNumber: 92,
                                                         columnNumber: 25
                                                     }, undefined)
                                                 ]
                                             }, course._id, true, {
                                                 fileName: "src/pages/Profile.jsx",
-                                                lineNumber: 77,
+                                                lineNumber: 76,
                                                 columnNumber: 23
                                             }, undefined))
                                     }, void 0, false, {
                                         fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 75,
+                                        lineNumber: 74,
                                         columnNumber: 19
                                     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         className: "text-gray-500 italic",
                                         children: "No assigned courses"
                                     }, void 0, false, {
                                         fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 98,
+                                        lineNumber: 97,
                                         columnNumber: 19
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 62,
+                                lineNumber: 61,
                                 columnNumber: 15
                             }, undefined),
                             user.role === "student" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -130781,19 +131218,19 @@ const Profile = ()=>{
                                                     d: "M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Profile.jsx",
-                                                    lineNumber: 112,
+                                                    lineNumber: 111,
                                                     columnNumber: 21
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/pages/Profile.jsx",
-                                                lineNumber: 106,
+                                                lineNumber: 105,
                                                 columnNumber: 19
                                             }, undefined),
                                             "Enrolled Courses"
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 105,
+                                        lineNumber: 104,
                                         columnNumber: 17
                                     }, undefined),
                                     user.courses.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -130814,17 +131251,17 @@ const Profile = ()=>{
                                                                 clipRule: "evenodd"
                                                             }, void 0, false, {
                                                                 fileName: "src/pages/Profile.jsx",
-                                                                lineNumber: 130,
+                                                                lineNumber: 129,
                                                                 columnNumber: 29
                                                             }, undefined)
                                                         }, void 0, false, {
                                                             fileName: "src/pages/Profile.jsx",
-                                                            lineNumber: 124,
+                                                            lineNumber: 123,
                                                             columnNumber: 27
                                                         }, undefined)
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Profile.jsx",
-                                                        lineNumber: 123,
+                                                        lineNumber: 122,
                                                         columnNumber: 25
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -130832,18 +131269,18 @@ const Profile = ()=>{
                                                         children: course.course_name
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Profile.jsx",
-                                                        lineNumber: 137,
+                                                        lineNumber: 136,
                                                         columnNumber: 25
                                                     }, undefined)
                                                 ]
                                             }, course._id, true, {
                                                 fileName: "src/pages/Profile.jsx",
-                                                lineNumber: 119,
+                                                lineNumber: 118,
                                                 columnNumber: 23
                                             }, undefined))
                                     }, void 0, false, {
                                         fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 117,
+                                        lineNumber: 116,
                                         columnNumber: 19
                                     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "p-4 text-center border border-gray-200 rounded-lg",
@@ -130853,7 +131290,7 @@ const Profile = ()=>{
                                                 children: "You haven't enrolled in any courses yet."
                                             }, void 0, false, {
                                                 fileName: "src/pages/Profile.jsx",
-                                                lineNumber: 145,
+                                                lineNumber: 144,
                                                 columnNumber: 21
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -130861,13 +131298,13 @@ const Profile = ()=>{
                                                 children: "Browse Courses"
                                             }, void 0, false, {
                                                 fileName: "src/pages/Profile.jsx",
-                                                lineNumber: 148,
+                                                lineNumber: 147,
                                                 columnNumber: 21
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 144,
+                                        lineNumber: 143,
                                         columnNumber: 19
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -130884,7 +131321,7 @@ const Profile = ()=>{
                                                                 children: "Overall Attendance:"
                                                             }, void 0, false, {
                                                                 fileName: "src/pages/Profile.jsx",
-                                                                lineNumber: 156,
+                                                                lineNumber: 155,
                                                                 columnNumber: 23
                                                             }, undefined),
                                                             " ",
@@ -130892,7 +131329,7 @@ const Profile = ()=>{
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "src/pages/Profile.jsx",
-                                                        lineNumber: 155,
+                                                        lineNumber: 154,
                                                         columnNumber: 21
                                                     }, undefined),
                                                     user.attendancePercentage !== null && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -130905,18 +131342,18 @@ const Profile = ()=>{
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "src/pages/Profile.jsx",
-                                                            lineNumber: 163,
+                                                            lineNumber: 162,
                                                             columnNumber: 25
                                                         }, undefined)
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Profile.jsx",
-                                                        lineNumber: 162,
+                                                        lineNumber: 161,
                                                         columnNumber: 23
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/Profile.jsx",
-                                                lineNumber: 154,
+                                                lineNumber: 153,
                                                 columnNumber: 19
                                             }, undefined),
                                             user.attendancePercentage !== null && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -130928,24 +131365,24 @@ const Profile = ()=>{
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Profile.jsx",
-                                                    lineNumber: 171,
+                                                    lineNumber: 170,
                                                     columnNumber: 23
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/pages/Profile.jsx",
-                                                lineNumber: 170,
+                                                lineNumber: 169,
                                                 columnNumber: 21
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 153,
+                                        lineNumber: 152,
                                         columnNumber: 17
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 104,
+                                lineNumber: 103,
                                 columnNumber: 15
                             }, undefined),
                             user.role === "admin" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -130965,19 +131402,19 @@ const Profile = ()=>{
                                                     clipRule: "evenodd"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Profile.jsx",
-                                                    lineNumber: 190,
+                                                    lineNumber: 189,
                                                     columnNumber: 21
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/pages/Profile.jsx",
-                                                lineNumber: 184,
+                                                lineNumber: 183,
                                                 columnNumber: 19
                                             }, undefined),
                                             "Admin Controls"
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 183,
+                                        lineNumber: 182,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -130985,40 +131422,25 @@ const Profile = ()=>{
                                         children: "You have full access to manage users, courses, and system settings."
                                     }, void 0, false, {
                                         fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 198,
+                                        lineNumber: 197,
                                         columnNumber: 17
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 182,
+                                lineNumber: 181,
                                 columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "mt-6 text-center",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    className: "px-6 py-2 bg-blue-600  font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md",
-                                    children: "Edit Profile"
-                                }, void 0, false, {
-                                    fileName: "src/pages/Profile.jsx",
-                                    lineNumber: 207,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/pages/Profile.jsx",
-                                lineNumber: 206,
-                                columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/Profile.jsx",
-                        lineNumber: 59,
+                        lineNumber: 58,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Profile.jsx",
-                lineNumber: 34,
+                lineNumber: 33,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "text-center py-12",
@@ -131036,12 +131458,12 @@ const Profile = ()=>{
                             d: "M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                         }, void 0, false, {
                             fileName: "src/pages/Profile.jsx",
-                            lineNumber: 222,
+                            lineNumber: 214,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/pages/Profile.jsx",
-                        lineNumber: 215,
+                        lineNumber: 207,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -131049,7 +131471,7 @@ const Profile = ()=>{
                         children: "No profile data available"
                     }, void 0, false, {
                         fileName: "src/pages/Profile.jsx",
-                        lineNumber: 229,
+                        lineNumber: 221,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -131057,19 +131479,19 @@ const Profile = ()=>{
                         children: "Please try again later or contact support"
                     }, void 0, false, {
                         fileName: "src/pages/Profile.jsx",
-                        lineNumber: 232,
+                        lineNumber: 224,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Profile.jsx",
-                lineNumber: 214,
+                lineNumber: 206,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/Profile.jsx",
-        lineNumber: 28,
+        lineNumber: 27,
         columnNumber: 5
     }, undefined);
 };

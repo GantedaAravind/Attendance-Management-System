@@ -15,7 +15,6 @@ const Profile = () => {
     try {
       const response = await API.get("/api/show-profile"); // Fetch user data with extra details
       setUser(response.data.user);
-      console.log(response.data.user);
     } catch (error) {
       console.error(error);
       toast.error("Failed to load profile.");
@@ -56,7 +55,7 @@ const Profile = () => {
           </div>
 
           {/* Profile Details */}
-          <div className="p-6">
+          <div className="p-6 bg-blue-950">
             {/* Role-Specific Details */}
             {user.role === "teacher" && (
               <div className="mb-6">
@@ -201,13 +200,6 @@ const Profile = () => {
                 </p>
               </div>
             )}
-
-            {/* Edit Profile Button */}
-            <div className="mt-6 text-center">
-              <button className="px-6 py-2 bg-blue-600  font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md">
-                Edit Profile
-              </button>
-            </div>
           </div>
         </div>
       ) : (
