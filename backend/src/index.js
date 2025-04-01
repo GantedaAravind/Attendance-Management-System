@@ -8,6 +8,7 @@ import adminRoutes from "./routes/admin.js";
 import teacherRoutes from "./routes/teacher.js";
 import studentRoutes from "./routes/student.js";
 import utilityRoutes from "./routes/utility.js";
+import attendanceRoutes from "./routes/attendence.js";
 
 dotenv.config(); // Load environment variables
 
