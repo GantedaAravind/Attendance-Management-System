@@ -144,7 +144,10 @@ router.get("/profile", /*#__PURE__*/function () {
           return _context4.abrupt("break", 18);
         case 9:
           _context4.next = 11;
-          return _Teacher["default"].findById(userId).select("-password").lean();
+          return _Teacher["default"].findById(userId).select("-password").populate({
+            path: "courses",
+            select: "courseName attendancePercentage" // Add necessary fields
+          });
         case 11:
           user = _context4.sent;
           return _context4.abrupt("break", 18);

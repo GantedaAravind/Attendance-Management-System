@@ -54,7 +54,10 @@ router.get("/profile", async (req, res) => {
         user = await Admin.findById(userId).select("-password").lean();
         break;
       case "teacher":
-        user = await Teacher.findById(userId).select("-password").lean();
+        user = await Teacher.findById(userId).select("-password").populate({
+          path: "courses",
+          select: "courseName attendancePercentage", // Add necessary fields
+        });
         break;
       case "student":
         user = await Student.findById(userId)
