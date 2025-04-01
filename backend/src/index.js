@@ -29,6 +29,7 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/teacher", teacherRoutes);
 app.use("/api/student", studentRoutes);
 app.use("/api/", utilityRoutes);
+app.use("/api/attendance", attendanceRoutes);
 app.get("/", (req, res) => {
   res.send("Welcome to Attendance Management System 👨‍🎓");
 });
