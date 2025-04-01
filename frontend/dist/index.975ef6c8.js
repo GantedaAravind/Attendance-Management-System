@@ -34067,12 +34067,7 @@ const navbarConfig = {
     student: [
         {
             name: "Attendance",
-            subMenu: [
-                {
-                    name: "My Attendance",
-                    path: "/student/attendance"
-                }
-            ]
+            path: "/student/attendance"
         },
         {
             name: "Courses",
@@ -34089,12 +34084,7 @@ const navbarConfig = {
         },
         {
             name: "Notifications",
-            subMenu: [
-                {
-                    name: "View Notifications",
-                    path: "/student/notifications"
-                }
-            ]
+            path: "/student/notifications"
         },
         {
             name: "Profile",
@@ -122681,6 +122671,8 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _recharts = require("recharts");
 var _axiosInstance = require("../../config/axiosInstance");
 var _axiosInstanceDefault = parcelHelpers.interopDefault(_axiosInstance);
+var _loadingAnimation = require("../../components/LoadingAnimation");
+var _loadingAnimationDefault = parcelHelpers.interopDefault(_loadingAnimation);
 var _s = $RefreshSig$();
 const COLORS = [
     "#0088FE",
@@ -122711,13 +122703,10 @@ const MyAttendance = ()=>{
         };
         fetchAttendanceData();
     }, []);
-    if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "text-center py-8",
-        children: "Loading attendance data..."
-    }, void 0, false, {
+    if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationDefault.default), {}, void 0, false, {
         fileName: "src/pages/Student/MyAttendance.jsx",
         lineNumber: 48,
-        columnNumber: 12
+        columnNumber: 23
     }, undefined);
     if (error) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "text-center py-8 text-red-500",
@@ -123133,7 +123122,7 @@ $RefreshReg$(_c, "MyAttendance");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","recharts":"7DnXL","../../config/axiosInstance":"gJ5tu"}],"eGb0D":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","recharts":"7DnXL","../../config/axiosInstance":"gJ5tu","../../components/LoadingAnimation":"1omCq"}],"eGb0D":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$d28b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -130856,10 +130845,10 @@ const ViewAttendance = ()=>{
                                         className: "flex items-center gap-2 mb-4",
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaChartPie), {
-                                                className: "text-purple-400"
+                                                className: "text-purple-400 text-xl"
                                             }, void 0, false, {
                                                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                lineNumber: 179,
+                                                lineNumber: 178,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -130867,13 +130856,13 @@ const ViewAttendance = ()=>{
                                                 children: "Attendance Percentage"
                                             }, void 0, false, {
                                                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                lineNumber: 180,
+                                                lineNumber: 179,
                                                 columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Teacher/CourseReport.jsx",
-                                        lineNumber: 178,
+                                        lineNumber: 177,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -130883,82 +130872,164 @@ const ViewAttendance = ()=>{
                                             height: "100%",
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.PieChart), {
                                                 children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("defs", {
+                                                        children: COLORS.map((color, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("filter", {
+                                                                id: `glow-${index}`,
+                                                                x: "-30%",
+                                                                y: "-30%",
+                                                                width: "160%",
+                                                                height: "160%",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("feGaussianBlur", {
+                                                                        stdDeviation: "5",
+                                                                        result: "blur"
+                                                                    }, void 0, false, {
+                                                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                                        lineNumber: 196,
+                                                                        columnNumber: 27
+                                                                    }, undefined),
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("feComposite", {
+                                                                        in: "SourceGraphic",
+                                                                        in2: "blur",
+                                                                        operator: "over"
+                                                                    }, void 0, false, {
+                                                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                                        lineNumber: 197,
+                                                                        columnNumber: 27
+                                                                    }, undefined)
+                                                                ]
+                                                            }, `glow-${index}`, true, {
+                                                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                                lineNumber: 188,
+                                                                columnNumber: 25
+                                                            }, undefined))
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                        lineNumber: 186,
+                                                        columnNumber: 21
+                                                    }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Pie), {
                                                         data: report.students.map((s)=>({
                                                                 name: s.name,
+                                                                class: s.class || "N/A",
                                                                 value: Math.round(s.attended / s.total * 100)
                                                             })),
                                                         cx: "50%",
                                                         cy: "50%",
                                                         labelLine: false,
                                                         outerRadius: 120,
+                                                        innerRadius: 60,
                                                         fill: "#8884d8",
                                                         dataKey: "value",
-                                                        label: ({ name, percent })=>`${name}: ${(percent * 100).toFixed(0)}%`,
+                                                        animationDuration: 500,
+                                                        label: ({ name, percent })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("text", {
+                                                                x: 0,
+                                                                y: 0,
+                                                                fill: "white",
+                                                                textAnchor: "middle",
+                                                                dominantBaseline: "central",
+                                                                fontSize: 12,
+                                                                fontWeight: 500,
+                                                                children: [
+                                                                    name.split(" ")[0],
+                                                                    " "
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                                lineNumber: 221,
+                                                                columnNumber: 25
+                                                            }, void 0),
                                                         children: report.students.map((entry, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Cell), {
                                                                 fill: COLORS[index % COLORS.length],
                                                                 stroke: "#1F2937",
-                                                                strokeWidth: 1
+                                                                strokeWidth: 1,
+                                                                style: {
+                                                                    cursor: "pointer"
+                                                                },
+                                                                onMouseEnter: (e)=>{
+                                                                    e.target.setAttribute("filter", `url(#glow-${index})`);
+                                                                    e.target.setAttribute("stroke-width", "2");
+                                                                },
+                                                                onMouseLeave: (e)=>{
+                                                                    e.target.removeAttribute("filter");
+                                                                    e.target.setAttribute("stroke-width", "1");
+                                                                }
                                                             }, `cell-${index}`, false, {
                                                                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                                lineNumber: 203,
+                                                                lineNumber: 235,
                                                                 columnNumber: 25
                                                             }, undefined))
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                        lineNumber: 187,
+                                                        lineNumber: 206,
                                                         columnNumber: 21
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {
-                                                        formatter: (value)=>[
-                                                                `${value}%`,
-                                                                "Attendance"
-                                                            ],
                                                         contentStyle: {
-                                                            background: "rgba(31, 41, 55, 0.9)",
+                                                            background: "rgba(17, 24, 39, 0.9)",
                                                             border: "1px solid #4B5563",
                                                             borderRadius: "8px",
                                                             padding: "12px",
-                                                            color: "#F3F4F6"
+                                                            color: "#F3F4F6",
+                                                            backdropFilter: "blur(4px)"
+                                                        },
+                                                        formatter: (value, name, props)=>{
+                                                            return [
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                                    className: "space-y-1",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                                            className: "font-bold text-purple-300",
+                                                                            children: props.payload.name
+                                                                        }, void 0, false, {
+                                                                            fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                                            lineNumber: 268,
+                                                                            columnNumber: 29
+                                                                        }, void 0),
+                                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                                            className: "text-lg font-semibold text-white",
+                                                                            children: [
+                                                                                value,
+                                                                                "%"
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                                            lineNumber: 271,
+                                                                            columnNumber: 29
+                                                                        }, void 0)
+                                                                    ]
+                                                                }, "tooltip-content", true, {
+                                                                    fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                                    lineNumber: 267,
+                                                                    columnNumber: 27
+                                                                }, void 0)
+                                                            ];
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                        lineNumber: 211,
-                                                        columnNumber: 21
-                                                    }, undefined),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Legend), {
-                                                        layout: "vertical",
-                                                        align: "right",
-                                                        verticalAlign: "middle",
-                                                        wrapperStyle: {
-                                                            paddingLeft: "20px",
-                                                            color: "#F3F4F6"
-                                                        }
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                        lineNumber: 221,
+                                                        lineNumber: 256,
                                                         columnNumber: 21
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                lineNumber: 186,
+                                                lineNumber: 185,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/pages/Teacher/CourseReport.jsx",
-                                            lineNumber: 185,
+                                            lineNumber: 184,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/pages/Teacher/CourseReport.jsx",
-                                        lineNumber: 184,
+                                        lineNumber: 183,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                                lineNumber: 177,
+                                lineNumber: 176,
                                 columnNumber: 13
                             }, undefined)
                         ]
@@ -130978,12 +131049,12 @@ const ViewAttendance = ()=>{
                     children: "No attendance data available for this course."
                 }, void 0, false, {
                     fileName: "src/pages/Teacher/CourseReport.jsx",
-                    lineNumber: 238,
+                    lineNumber: 286,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                lineNumber: 237,
+                lineNumber: 285,
                 columnNumber: 9
             }, undefined)
         ]

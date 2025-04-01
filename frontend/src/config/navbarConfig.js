@@ -31,7 +31,7 @@ const navbarConfig = {
   student: [
     {
       name: "Attendance",
-      subMenu: [{ name: "My Attendance", path: "/student/attendance" }],
+      path: "/student/attendance",
     },
     {
       name: "Courses",
@@ -42,7 +42,7 @@ const navbarConfig = {
     },
     {
       name: "Notifications",
-      subMenu: [{ name: "View Notifications", path: "/student/notifications" }],
+      path: "/student/notifications",
     },
     { name: "Profile", path: "/profile" },
     { name: "Logout", path: "/logout" },

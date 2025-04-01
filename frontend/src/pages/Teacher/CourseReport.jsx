@@ -173,10 +173,9 @@ const ViewAttendance = () => {
               </div>
             </div>
 
-            {/* Pie Chart */}
             <div className="bg-gray-800/70 p-6 rounded-xl shadow-md border border-gray-700 backdrop-blur-sm">
               <div className="flex items-center gap-2 mb-4">
-                <FaChartPie className="text-purple-400" />
+                <FaChartPie className="text-purple-400 text-xl" />
                 <h3 className="text-lg font-semibold text-white">
                   Attendance Percentage
                 </h3>
@@ -184,20 +183,53 @@ const ViewAttendance = () => {
               <div className="h-[350px]">
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
+                    <defs>
+                      {COLORS.map((color, index) => (
+                        <filter
+                          id={`glow-${index}`}
+                          key={`glow-${index}`}
+                          x="-30%"
+                          y="-30%"
+                          width="160%"
+                          height="160%"
+                        >
+                          <feGaussianBlur stdDeviation="5" result="blur" />
+                          <feComposite
+                            in="SourceGraphic"
+                            in2="blur"
+                            operator="over"
+                          />
+                        </filter>
+                      ))}
+                    </defs>
+
                     <Pie
                       data={report.students.map((s) => ({
                         name: s.name,
+                        class: s.class || "N/A",
                         value: Math.round((s.attended / s.total) * 100),
                       }))}
                       cx="50%"
                       cy="50%"
                       labelLine={false}
                       outerRadius={120}
+                      innerRadius={60}
                       fill="#8884d8"
                       dataKey="value"
-                      label={({ name, percent }) =>
-                        `${name}: ${(percent * 100).toFixed(0)}%`
-                      }
+                      animationDuration={500}
+                      label={({ name, percent }) => (
+                        <text
+                          x={0}
+                          y={0}
+                          fill="white"
+                          textAnchor="middle"
+                          dominantBaseline="central"
+                          fontSize={12}
+                          fontWeight={500}
+                        >
+                          {name.split(" ")[0]} {/* Show only first name */}
+                        </text>
+                      )}
                     >
                       {report.students.map((entry, index) => (
                         <Cell
@@ -205,26 +237,42 @@ const ViewAttendance = () => {
                           fill={COLORS[index % COLORS.length]}
                           stroke="#1F2937"
                           strokeWidth={1}
+                          style={{ cursor: "pointer" }}
+                          onMouseEnter={(e) => {
+                            e.target.setAttribute(
+                              "filter",
+                              `url(#glow-${index})`
+                            );
+                            e.target.setAttribute("stroke-width", "2");
+                          }}
+                          onMouseLeave={(e) => {
+                            e.target.removeAttribute("filter");
+                            e.target.setAttribute("stroke-width", "1");
+                          }}
                         />
                       ))}
                     </Pie>
+
                     <Tooltip
-                      formatter={(value) => [`${value}%`, "Attendance"]}
                       contentStyle={{
-                        background: "rgba(31, 41, 55, 0.9)",
+                        background: "rgba(17, 24, 39, 0.9)",
                         border: "1px solid #4B5563",
                         borderRadius: "8px",
                         padding: "12px",
                         color: "#F3F4F6",
+                        backdropFilter: "blur(4px)",
                       }}
-                    />
-                    <Legend
-                      layout="vertical"
-                      align="right"
-                      verticalAlign="middle"
-                      wrapperStyle={{
-                        paddingLeft: "20px",
-                        color: "#F3F4F6",
+                      formatter={(value, name, props) => {
+                        return [
+                          <div key="tooltip-content" className="space-y-1">
+                            <div className="font-bold text-purple-300">
+                              {props.payload.name}
+                            </div>
+                            <div className="text-lg font-semibold text-white">
+                              {value}%
+                            </div>
+                          </div>,
+                        ];
                       }}
                     />
                   </PieChart>

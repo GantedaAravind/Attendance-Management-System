@@ -48,7 +48,7 @@ router.get("/courses", async (req, res) => {
     // Find the student and populate the courses field with teacher details
     const student = await Student.findById(userId).populate({
       path: "courses",
-      select: "course_name _id teacher_id",
+      select: "course_name _id teacher_id start_date end_date", // Include start_date and end_date
       populate: {
         path: "teacher_id",
         select: "name email", // Fetch only the teacher's name and email

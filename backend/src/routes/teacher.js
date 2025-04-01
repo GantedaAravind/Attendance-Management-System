@@ -142,6 +142,7 @@ router.get("/reports/:courseId", async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+
 router.get("/course/:courseId", async (req, res) => {
   try {
     const { courseId } = req.params;

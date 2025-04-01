@@ -13,6 +13,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import API from "../../config/axiosInstance";
+import LoadingAnimation from "../../components/LoadingAnimation";
 
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884D8"];
 
@@ -44,8 +45,7 @@ const MyAttendance = () => {
     fetchAttendanceData();
   }, []);
 
-  if (loading)
-    return <div className="text-center py-8">Loading attendance data...</div>;
+  if (loading) return <LoadingAnimation />;
   if (error)
     return <div className="text-center py-8 text-red-500">Error: {error}</div>;
   if (!attendanceData)

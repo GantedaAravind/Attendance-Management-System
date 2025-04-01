@@ -106,7 +106,8 @@ router.get("/courses", /*#__PURE__*/function () {
           _context3.next = 4;
           return _Student["default"].findById(userId).populate({
             path: "courses",
-            select: "course_name _id teacher_id",
+            select: "course_name _id teacher_id start_date end_date",
+            // Include start_date and end_date
             populate: {
               path: "teacher_id",
               select: "name email" // Fetch only the teacher's name and email
