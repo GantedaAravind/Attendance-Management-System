@@ -144,19 +144,13 @@ router.get("/profile", /*#__PURE__*/function () {
           return _context4.abrupt("break", 18);
         case 9:
           _context4.next = 11;
-          return _Teacher["default"].findById(userId).select("-password").populate({
-            path: "courses",
-            select: "courseName attendancePercentage" // Add necessary fields
-          });
+          return _Teacher["default"].findById(userId).select("-password");
         case 11:
           user = _context4.sent;
           return _context4.abrupt("break", 18);
         case 13:
           _context4.next = 15;
-          return _Student["default"].findById(userId).select("-password").populate({
-            path: "courses",
-            select: "courseName attendancePercentage" // Add necessary fields
-          }).lean();
+          return _Student["default"].findById(userId).select("-password").lean();
         case 15:
           user = _context4.sent;
           return _context4.abrupt("break", 18);
@@ -196,7 +190,7 @@ router.get("/profile", /*#__PURE__*/function () {
 // Show Profile API
 router.get("/show-profile", /*#__PURE__*/function () {
   var _ref5 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee5(req, res) {
-    var user, extraData, courses, _courses, attendanceRecords, totalClasses, attendedClasses;
+    var user, extraData, attendanceRecords, totalClasses, attendedClasses;
     return _regeneratorRuntime().wrap(function _callee5$(_context5) {
       while (1) switch (_context5.prev = _context5.next) {
         case 0:
@@ -211,15 +205,18 @@ router.get("/show-profile", /*#__PURE__*/function () {
           return _Admin["default"].findById(req.userId).select("name email role imageUrl");
         case 6:
           user = _context5.sent;
-          _context5.next = 39;
+          _context5.next = 33;
           break;
         case 9:
           if (!(req.role === "teacher")) {
-            _context5.next = 21;
+            _context5.next = 18;
             break;
           }
           _context5.next = 12;
-          return _Teacher["default"].findById(req.userId).select("name email role imageUrl");
+          return _Teacher["default"].findById(req.userId).select("name email role imageUrl").populate({
+            path: "courses",
+            select: "courseName"
+          });
         case 12:
           user = _context5.sent;
           if (user) {
@@ -230,80 +227,70 @@ router.get("/show-profile", /*#__PURE__*/function () {
             error: "Teacher not found"
           }));
         case 15:
-          _context5.next = 17;
-          return _Course["default"].find({
-            teacher_id: user._id
-          }).select("name");
-        case 17:
-          courses = _context5.sent;
           extraData = {
-            courses: courses
-          };
-          _context5.next = 39;
+            courses: user.courses
+          }; // ✅ Corrected
+          _context5.next = 33;
           break;
-        case 21:
+        case 18:
           if (!(req.role === "student")) {
-            _context5.next = 38;
+            _context5.next = 32;
             break;
           }
-          _context5.next = 24;
-          return _Student["default"].findById(req.userId).select("name email role imageUrl");
-        case 24:
+          _context5.next = 21;
+          return _Student["default"].findById(req.userId).select("name email role imageUrl").populate({
+            path: "courses",
+            select: "courseName "
+          });
+        case 21:
           user = _context5.sent;
           if (user) {
-            _context5.next = 27;
+            _context5.next = 24;
             break;
           }
           return _context5.abrupt("return", res.status(404).json({
             error: "Student not found"
           }));
-        case 27:
-          _context5.next = 29;
-          return _Course["default"].find({
-            students: user._id
-          }).select("name");
-        case 29:
-          _courses = _context5.sent;
-          _context5.next = 32;
+        case 24:
+          _context5.next = 26;
           return _Attendance["default"].find({
             student_id: user._id
           });
-        case 32:
+        case 26:
           attendanceRecords = _context5.sent;
           totalClasses = attendanceRecords.length;
           attendedClasses = attendanceRecords.filter(function (r) {
             return r.status === "Present";
           }).length;
           extraData = {
-            courses: _courses,
             attendancePercentage: totalClasses ? (attendedClasses / totalClasses * 100).toFixed(2) : "N/A"
           };
-          _context5.next = 39;
+          _context5.next = 33;
           break;
-        case 38:
+        case 32:
           return _context5.abrupt("return", res.status(400).json({
             error: "Invalid user role"
           }));
-        case 39:
+        case 33:
           console.log("Profile fetched successfully!");
           res.status(200).json({
             user: _objectSpread(_objectSpread({}, user.toObject()), extraData)
           });
-          _context5.next = 47;
+          _context5.next = 41;
           break;
-        case 43:
-          _context5.prev = 43;
+        case 37:
+          _context5.prev = 37;
           _context5.t0 = _context5["catch"](0);
           console.error("Error fetching profile:", _context5.t0);
           res.status(500).json({
             error: "Failed to fetch profile",
             details: _context5.t0.message
           });
-        case 47:
+        case 41:
         case "end":
           return _context5.stop();
       }
-    }, _callee5, null, [[0, 43]]);
+    }, _callee5, null, [[0, 37]]);
   }));
   return function (_x9, _x10) {
     return _ref5.apply(this, arguments);

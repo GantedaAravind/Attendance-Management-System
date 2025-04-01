@@ -54,20 +54,13 @@ router.get("/profile", async (req, res) => {
         user = await Admin.findById(userId).select("-password").lean();
         break;
       case "teacher":
-        user = await Teacher.findById(userId).select("-password").populate({
-          path: "courses",
-          select: "courseName attendancePercentage", // Add necessary fields
-        });
+        user = await Teacher.findById(userId).select("-password");
         break;
       case "student":
         user = await Student.findById(userId)
           .select("-password")
-          .populate({
-            path: "courses",
-            select: "courseName attendancePercentage", // Add necessary fields
-          })
-          .lean();
 
+          .lean();
         break;
       default:
         return res.status(400).json({ error: "Invalid role" });
@@ -95,24 +88,25 @@ router.get("/show-profile", async (req, res) => {
         "name email role imageUrl"
       );
     } else if (req.role === "teacher") {
-      user = await Teacher.findById(req.userId).select(
-        "name email role imageUrl"
-      );
+      user = await Teacher.findById(req.userId)
+        .select("name email role imageUrl")
+        .populate({
+          path: "courses",
+          select: "courseName",
+        });
+
       if (!user) return res.status(404).json({ error: "Teacher not found" });
 
-      // Fetch assigned courses for the teacher
-      const courses = await Course.find({ teacher_id: user._id }).select(
-        "name"
-      );
-      extraData = { courses };
+      extraData = { courses: user.courses }; // ✅ Corrected
     } else if (req.role === "student") {
-      user = await Student.findById(req.userId).select(
-        "name email role imageUrl"
-      );
-      if (!user) return res.status(404).json({ error: "Student not found" });
+      user = await Student.findById(req.userId)
+        .select("name email role imageUrl")
+        .populate({
+          path: "courses",
+          select: "courseName ",
+        });
 
-      // Fetch enrolled courses for the student
-      const courses = await Course.find({ students: user._id }).select("name");
+      if (!user) return res.status(404).json({ error: "Student not found" });
 
       // Fetch attendance percentage
       const attendanceRecords = await Attendance.find({ student_id: user._id });
@@ -122,7 +116,6 @@ router.get("/show-profile", async (req, res) => {
       ).length;
 
       extraData = {
-        courses,
         attendancePercentage: totalClasses
           ? ((attendedClasses / totalClasses) * 100).toFixed(2)
           : "N/A",
