@@ -57,7 +57,14 @@ router.get("/profile", async (req, res) => {
         user = await Teacher.findById(userId).select("-password").lean();
         break;
       case "student":
-        user = await Student.findById(userId).select("-password").lean();
+        user = await Student.findById(userId)
+          .select("-password")
+          .populate({
+            path: "courses",
+            select: "courseName attendancePercentage", // Add necessary fields
+          })
+          .lean();
+
         break;
       default:
         return res.status(400).json({ error: "Invalid role" });
