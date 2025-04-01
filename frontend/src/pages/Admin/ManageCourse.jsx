@@ -106,7 +106,7 @@ const ManageCourse = () => {
           Manage Courses
         </h2>
         <button
-          className="btn text-sm sm:text-md md:text-lg lg:text-xl btn-secondary btn-outline"
+          className="btn btn-outline border-green-400/20 hover:border-green-400/40 shadow-lg shadow-green-400/20 hover:shadow-green-400/30 text-green-400 hover:text-white  text-sm sm:text-md md:text-lg lg:text-xl "
           onClick={() => document.getElementById("course_modal").showModal()}
         >
           Add Course

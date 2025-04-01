@@ -11,6 +11,7 @@ var _Admin = _interopRequireDefault(require("../models/Admin.js"));
 var _Teacher = _interopRequireDefault(require("../models/Teacher.js"));
 var _Student = _interopRequireDefault(require("../models/Student.js"));
 var _Course = _interopRequireDefault(require("../models/Course.js"));
+var _Attendance = _interopRequireDefault(require("../models/Attendance.js"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
@@ -258,7 +259,7 @@ router.get("/show-profile", /*#__PURE__*/function () {
         case 29:
           _courses = _context5.sent;
           _context5.next = 32;
-          return Attendance.find({
+          return _Attendance["default"].find({
             student_id: user._id
           });
         case 32:

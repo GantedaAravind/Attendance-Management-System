@@ -4,6 +4,7 @@ import Admin from "../models/Admin.js";
 import Teacher from "../models/Teacher.js";
 import Student from "../models/Student.js";
 import Course from "../models/Course.js";
+import Attendance from "../models/Attendance.js";
 
 const router = express.Router();
 

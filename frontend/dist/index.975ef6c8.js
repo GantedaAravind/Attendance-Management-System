@@ -33476,9 +33476,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Footer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: "Footer"
-    }, void 0, false, {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
         fileName: "src/components/Footer.jsx",
         lineNumber: 2,
         columnNumber: 10
@@ -85774,394 +85772,658 @@ const AdminDashboard = ()=>{
         }
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "p-5",
+        className: "p-6 min-h-screen",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                className: "text-2xl font-bold mb-4",
+                className: "text-3xl font-bold mb-6 ",
                 children: "Admin Dashboard"
             }, void 0, false, {
                 fileName: "src/pages/Dashboard.jsx",
-                lineNumber: 41,
+                lineNumber: 42,
                 columnNumber: 7
             }, undefined),
-            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "text-center",
-                children: "Loading..."
+            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-center items-center h-64",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"
+                }, void 0, false, {
+                    fileName: "src/pages/Dashboard.jsx",
+                    lineNumber: 46,
+                    columnNumber: 11
+                }, undefined)
             }, void 0, false, {
                 fileName: "src/pages/Dashboard.jsx",
-                lineNumber: 44,
+                lineNumber: 45,
                 columnNumber: 9
-            }, undefined) : stats ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            }, undefined) : stats ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "space-y-8",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "grid grid-cols-2 md:grid-cols-4 gap-4 mb-6",
+                        className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "p-4 bg-blue-500 text-white text-center rounded-lg",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                        className: "text-lg font-bold",
-                                        children: stats.totalStudents
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 50,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        className: "text-sm",
-                                        children: "Total Students"
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 51,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 49,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "p-4 bg-green-500 text-white text-center rounded-lg",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                        className: "text-lg font-bold",
-                                        children: stats.totalTeachers
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 54,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        className: "text-sm",
-                                        children: "Total Teachers"
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 55,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 53,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "p-4 bg-yellow-500 text-white text-center rounded-lg",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                        className: "text-lg font-bold",
-                                        children: stats.totalCourses
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 58,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        className: "text-sm",
-                                        children: "Total Courses"
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 59,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 57,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "p-4 bg-red-500 text-white text-center rounded-lg",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                        className: "text-lg font-bold",
-                                        children: stats.totalAttendance
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 62,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        className: "text-sm",
-                                        children: "Total Attendance Records"
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 63,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 61,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/pages/Dashboard.jsx",
-                        lineNumber: 48,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "mt-6",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                className: "text-lg font-semibold",
-                                children: "Attendance by Course"
-                            }, void 0, false, {
-                                fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 69,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.ResponsiveContainer), {
-                                width: "100%",
-                                height: 300,
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.BarChart), {
-                                    data: stats.attendanceByCourse,
+                                className: "bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-xl shadow-lg",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center justify-between",
                                     children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.XAxis), {
-                                            dataKey: "courseName"
-                                        }, void 0, false, {
-                                            fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 72,
-                                            columnNumber: 17
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {}, void 0, false, {
-                                            fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 73,
-                                            columnNumber: 17
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
-                                            fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 74,
-                                            columnNumber: 17
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Bar), {
-                                            dataKey: "attendanceCount",
-                                            fill: "#4CAF50",
-                                            name: "Attendance"
-                                        }, void 0, false, {
-                                            fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 75,
-                                            columnNumber: 17
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/pages/Dashboard.jsx",
-                                    lineNumber: 71,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 70,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/pages/Dashboard.jsx",
-                        lineNumber: 68,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "mt-6",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                className: "text-lg font-semibold",
-                                children: "Attendance Percentage Distribution"
-                            }, void 0, false, {
-                                fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 86,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.ResponsiveContainer), {
-                                width: "100%",
-                                height: 300,
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.PieChart), {
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Pie), {
-                                            data: stats.attendanceDistribution,
-                                            dataKey: "value",
-                                            cx: "50%",
-                                            cy: "50%",
-                                            outerRadius: 100,
-                                            fill: "#8884d8",
-                                            label: true,
-                                            children: stats.attendanceDistribution.map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Cell), {
-                                                    fill: [
-                                                        "#4CAF50",
-                                                        "#FF5733",
-                                                        "#FFC107",
-                                                        "#2196F3"
-                                                    ][index % 4]
-                                                }, index, false, {
-                                                    fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 101,
-                                                    columnNumber: 21
-                                                }, undefined))
-                                        }, void 0, false, {
-                                            fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 91,
-                                            columnNumber: 17
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
-                                            fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 109,
-                                            columnNumber: 17
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Legend), {}, void 0, false, {
-                                            fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 110,
-                                            columnNumber: 17
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/pages/Dashboard.jsx",
-                                    lineNumber: 90,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 89,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/pages/Dashboard.jsx",
-                        lineNumber: 85,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "mt-6",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                className: "text-lg font-semibold mb-3",
-                                children: "Recent Attendance Records"
-                            }, void 0, false, {
-                                fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 117,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
-                                className: "w-full border",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                            className: "bg-gray-200",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                                    className: "p-2",
-                                                    children: "Student"
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    className: "text-sm font-medium opacity-80",
+                                                    children: "Total Students"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 123,
+                                                    lineNumber: 56,
                                                     columnNumber: 19
                                                 }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                                    className: "p-2",
-                                                    children: "Course"
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                    className: "text-2xl font-bold mt-1",
+                                                    children: stats.totalStudents
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 124,
-                                                    columnNumber: 19
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                                    className: "p-2",
-                                                    children: "Date"
-                                                }, void 0, false, {
-                                                    fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 125,
-                                                    columnNumber: 19
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                                    className: "p-2",
-                                                    children: "Status"
-                                                }, void 0, false, {
-                                                    fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 126,
+                                                    lineNumber: 59,
                                                     columnNumber: 19
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 122,
+                                            lineNumber: 55,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "bg-blue-400/20 p-3 rounded-full",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                className: "h-6 w-6",
+                                                fill: "none",
+                                                viewBox: "0 0 24 24",
+                                                stroke: "currentColor",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                    strokeLinecap: "round",
+                                                    strokeLinejoin: "round",
+                                                    strokeWidth: 2,
+                                                    d: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Dashboard.jsx",
+                                                    lineNumber: 71,
+                                                    columnNumber: 21
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Dashboard.jsx",
+                                                lineNumber: 64,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Dashboard.jsx",
+                                            lineNumber: 63,
                                             columnNumber: 17
                                         }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 121,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
-                                        children: stats.recentAttendance.map((record)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                                className: "border-b",
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                        className: "p-2",
-                                                        children: record.studentName
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/Dashboard.jsx",
-                                                        lineNumber: 132,
-                                                        columnNumber: 21
-                                                    }, undefined),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                        className: "p-2",
-                                                        children: record.courseName
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/Dashboard.jsx",
-                                                        lineNumber: 133,
-                                                        columnNumber: 21
-                                                    }, undefined),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                        className: "p-2",
-                                                        children: record.date
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/Dashboard.jsx",
-                                                        lineNumber: 134,
-                                                        columnNumber: 21
-                                                    }, undefined),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                        className: `p-2 ${record.status === "Present" ? "text-green-600" : "text-red-600"}`,
-                                                        children: record.status
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/Dashboard.jsx",
-                                                        lineNumber: 135,
-                                                        columnNumber: 21
-                                                    }, undefined)
-                                                ]
-                                            }, record._id, true, {
-                                                fileName: "src/pages/Dashboard.jsx",
-                                                lineNumber: 131,
-                                                columnNumber: 19
-                                            }, undefined))
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 129,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Dashboard.jsx",
+                                    lineNumber: 54,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
                                 fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 120,
+                                lineNumber: 53,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-xl shadow-lg",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center justify-between",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    className: "text-sm font-medium opacity-80",
+                                                    children: "Total Teachers"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Dashboard.jsx",
+                                                    lineNumber: 86,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                    className: "text-2xl font-bold mt-1",
+                                                    children: stats.totalTeachers
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Dashboard.jsx",
+                                                    lineNumber: 89,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/pages/Dashboard.jsx",
+                                            lineNumber: 85,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "bg-green-400/20 p-3 rounded-full",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                className: "h-6 w-6",
+                                                fill: "none",
+                                                viewBox: "0 0 24 24",
+                                                stroke: "currentColor",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                    strokeLinecap: "round",
+                                                    strokeLinejoin: "round",
+                                                    strokeWidth: 2,
+                                                    d: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Dashboard.jsx",
+                                                    lineNumber: 101,
+                                                    columnNumber: 21
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Dashboard.jsx",
+                                                lineNumber: 94,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Dashboard.jsx",
+                                            lineNumber: 93,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Dashboard.jsx",
+                                    lineNumber: 84,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/pages/Dashboard.jsx",
+                                lineNumber: 83,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "bg-gradient-to-br from-amber-500 to-amber-600 text-white p-6 rounded-xl shadow-lg",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center justify-between",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    className: "text-sm font-medium opacity-80",
+                                                    children: "Total Courses"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Dashboard.jsx",
+                                                    lineNumber: 116,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                    className: "text-2xl font-bold mt-1",
+                                                    children: stats.totalCourses
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Dashboard.jsx",
+                                                    lineNumber: 119,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/pages/Dashboard.jsx",
+                                            lineNumber: 115,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "bg-amber-400/20 p-3 rounded-full",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                className: "h-6 w-6",
+                                                fill: "none",
+                                                viewBox: "0 0 24 24",
+                                                stroke: "currentColor",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                    strokeLinecap: "round",
+                                                    strokeLinejoin: "round",
+                                                    strokeWidth: 2,
+                                                    d: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Dashboard.jsx",
+                                                    lineNumber: 131,
+                                                    columnNumber: 21
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Dashboard.jsx",
+                                                lineNumber: 124,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Dashboard.jsx",
+                                            lineNumber: 123,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Dashboard.jsx",
+                                    lineNumber: 114,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/pages/Dashboard.jsx",
+                                lineNumber: 113,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "bg-gradient-to-br from-red-500 to-red-600 text-white p-6 rounded-xl shadow-lg",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center justify-between",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    className: "text-sm font-medium opacity-80",
+                                                    children: "Attendance Records"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Dashboard.jsx",
+                                                    lineNumber: 146,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                    className: "text-2xl font-bold mt-1",
+                                                    children: stats.totalAttendance
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Dashboard.jsx",
+                                                    lineNumber: 149,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/pages/Dashboard.jsx",
+                                            lineNumber: 145,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "bg-red-400/20 p-3 rounded-full",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                className: "h-6 w-6",
+                                                fill: "none",
+                                                viewBox: "0 0 24 24",
+                                                stroke: "currentColor",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                    strokeLinecap: "round",
+                                                    strokeLinejoin: "round",
+                                                    strokeWidth: 2,
+                                                    d: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Dashboard.jsx",
+                                                    lineNumber: 161,
+                                                    columnNumber: 21
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Dashboard.jsx",
+                                                lineNumber: 154,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Dashboard.jsx",
+                                            lineNumber: 153,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Dashboard.jsx",
+                                    lineNumber: 144,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/pages/Dashboard.jsx",
+                                lineNumber: 143,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/Dashboard.jsx",
-                        lineNumber: 116,
+                        lineNumber: 51,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "grid grid-cols-1 lg:grid-cols-2 gap-6",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "bg-gray-800 p-6 rounded-xl shadow-md",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                        className: "text-xl font-semibold mb-4",
+                                        children: "Attendance by Course"
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Dashboard.jsx",
+                                        lineNumber: 177,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "h-80",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.ResponsiveContainer), {
+                                            width: "100%",
+                                            height: "100%",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.BarChart), {
+                                                data: stats.attendanceByCourse,
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.XAxis), {
+                                                        dataKey: "courseName"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Dashboard.jsx",
+                                                        lineNumber: 183,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {}, void 0, false, {
+                                                        fileName: "src/pages/Dashboard.jsx",
+                                                        lineNumber: 184,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
+                                                        fileName: "src/pages/Dashboard.jsx",
+                                                        lineNumber: 185,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Bar), {
+                                                        dataKey: "attendanceCount",
+                                                        fill: "#4F46E5"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Dashboard.jsx",
+                                                        lineNumber: 186,
+                                                        columnNumber: 21
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Dashboard.jsx",
+                                                lineNumber: 182,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Dashboard.jsx",
+                                            lineNumber: 181,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Dashboard.jsx",
+                                        lineNumber: 180,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Dashboard.jsx",
+                                lineNumber: 176,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "bg-gray-800 p-6 rounded-xl shadow-md",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                        className: "text-xl font-semibold  mb-4",
+                                        children: "Attendance Distribution"
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Dashboard.jsx",
+                                        lineNumber: 194,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "h-80",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.ResponsiveContainer), {
+                                            width: "100%",
+                                            height: "100%",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.PieChart), {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Pie), {
+                                                        data: stats.attendanceDistribution,
+                                                        dataKey: "value",
+                                                        cx: "50%",
+                                                        cy: "50%",
+                                                        outerRadius: 100,
+                                                        fill: "#8884d8",
+                                                        label: true,
+                                                        children: stats.attendanceDistribution.map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Cell), {
+                                                                fill: [
+                                                                    "#4F46E5",
+                                                                    "#10B981",
+                                                                    "#F59E0B",
+                                                                    "#EF4444"
+                                                                ][index % 4]
+                                                            }, index, false, {
+                                                                fileName: "src/pages/Dashboard.jsx",
+                                                                lineNumber: 210,
+                                                                columnNumber: 25
+                                                            }, undefined))
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Dashboard.jsx",
+                                                        lineNumber: 200,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
+                                                        fileName: "src/pages/Dashboard.jsx",
+                                                        lineNumber: 220,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Legend), {}, void 0, false, {
+                                                        fileName: "src/pages/Dashboard.jsx",
+                                                        lineNumber: 221,
+                                                        columnNumber: 21
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Dashboard.jsx",
+                                                lineNumber: 199,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Dashboard.jsx",
+                                            lineNumber: 198,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Dashboard.jsx",
+                                        lineNumber: 197,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Dashboard.jsx",
+                                lineNumber: 193,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/pages/Dashboard.jsx",
+                        lineNumber: 174,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: " rounded-xl shadow-md overflow-hidden",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "p-6",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    className: "text-xl font-semibold  mb-4",
+                                    children: "Recent Attendance Records"
+                                }, void 0, false, {
+                                    fileName: "src/pages/Dashboard.jsx",
+                                    lineNumber: 231,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "overflow-x-auto",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                                        className: "w-full",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
+                                                className: "bg-gray-800",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                            className: "px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider",
+                                                            children: "Student"
+                                                        }, void 0, false, {
+                                                            fileName: "src/pages/Dashboard.jsx",
+                                                            lineNumber: 238,
+                                                            columnNumber: 23
+                                                        }, undefined),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                            className: "px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider",
+                                                            children: "Course"
+                                                        }, void 0, false, {
+                                                            fileName: "src/pages/Dashboard.jsx",
+                                                            lineNumber: 241,
+                                                            columnNumber: 23
+                                                        }, undefined),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                            className: "px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider",
+                                                            children: "Date"
+                                                        }, void 0, false, {
+                                                            fileName: "src/pages/Dashboard.jsx",
+                                                            lineNumber: 244,
+                                                            columnNumber: 23
+                                                        }, undefined),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                                            className: "px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider",
+                                                            children: "Status"
+                                                        }, void 0, false, {
+                                                            fileName: "src/pages/Dashboard.jsx",
+                                                            lineNumber: 247,
+                                                            columnNumber: 23
+                                                        }, undefined)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/pages/Dashboard.jsx",
+                                                    lineNumber: 237,
+                                                    columnNumber: 21
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Dashboard.jsx",
+                                                lineNumber: 236,
+                                                columnNumber: 19
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
+                                                className: "bg-white divide-y divide-gray-200",
+                                                children: stats.recentAttendance.map((record)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                                        children: [
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                className: "px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900",
+                                                                children: record.studentName
+                                                            }, void 0, false, {
+                                                                fileName: "src/pages/Dashboard.jsx",
+                                                                lineNumber: 255,
+                                                                columnNumber: 25
+                                                            }, undefined),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500",
+                                                                children: record.courseName
+                                                            }, void 0, false, {
+                                                                fileName: "src/pages/Dashboard.jsx",
+                                                                lineNumber: 258,
+                                                                columnNumber: 25
+                                                            }, undefined),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500",
+                                                                children: record.date
+                                                            }, void 0, false, {
+                                                                fileName: "src/pages/Dashboard.jsx",
+                                                                lineNumber: 261,
+                                                                columnNumber: 25
+                                                            }, undefined),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                className: "px-6 py-4 whitespace-nowrap",
+                                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                                    className: `px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${record.status === "Present" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`,
+                                                                    children: record.status
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/Dashboard.jsx",
+                                                                    lineNumber: 265,
+                                                                    columnNumber: 27
+                                                                }, undefined)
+                                                            }, void 0, false, {
+                                                                fileName: "src/pages/Dashboard.jsx",
+                                                                lineNumber: 264,
+                                                                columnNumber: 25
+                                                            }, undefined)
+                                                        ]
+                                                    }, record._id, true, {
+                                                        fileName: "src/pages/Dashboard.jsx",
+                                                        lineNumber: 254,
+                                                        columnNumber: 23
+                                                    }, undefined))
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Dashboard.jsx",
+                                                lineNumber: 252,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Dashboard.jsx",
+                                        lineNumber: 235,
+                                        columnNumber: 17
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/pages/Dashboard.jsx",
+                                    lineNumber: 234,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/pages/Dashboard.jsx",
+                            lineNumber: 230,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/pages/Dashboard.jsx",
+                        lineNumber: 229,
                         columnNumber: 11
                     }, undefined)
                 ]
-            }, void 0, true) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "No data available."
-            }, void 0, false, {
+            }, void 0, true, {
                 fileName: "src/pages/Dashboard.jsx",
-                lineNumber: 151,
+                lineNumber: 49,
+                columnNumber: 9
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "text-center py-12",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        className: "mx-auto h-12 w-12 text-gray-400",
+                        fill: "none",
+                        viewBox: "0 0 24 24",
+                        stroke: "currentColor",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round",
+                            strokeWidth: 2,
+                            d: "M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        }, void 0, false, {
+                            fileName: "src/pages/Dashboard.jsx",
+                            lineNumber: 291,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/pages/Dashboard.jsx",
+                        lineNumber: 285,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        className: "mt-2 text-lg font-medium text-gray-900",
+                        children: "No data available"
+                    }, void 0, false, {
+                        fileName: "src/pages/Dashboard.jsx",
+                        lineNumber: 298,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "mt-1 text-sm text-gray-500",
+                        children: "Please check back later or refresh the page."
+                    }, void 0, false, {
+                        fileName: "src/pages/Dashboard.jsx",
+                        lineNumber: 301,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/Dashboard.jsx",
+                lineNumber: 284,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/Dashboard.jsx",
-        lineNumber: 40,
+        lineNumber: 41,
         columnNumber: 5
     }, undefined);
 };
@@ -123198,7 +123460,7 @@ const ManageCourse = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "btn text-sm sm:text-md md:text-lg lg:text-xl btn-secondary btn-outline",
+                        className: "btn btn-outline border-green-400/20 hover:border-green-400/40 shadow-lg shadow-green-400/20 hover:shadow-green-400/30 text-green-400 hover:text-white  text-sm sm:text-md md:text-lg lg:text-xl ",
                         onClick: ()=>document.getElementById("course_modal").showModal(),
                         children: "Add Course"
                     }, void 0, false, {
@@ -128191,213 +128453,401 @@ const Profile = ()=>{
         }
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "p-5",
+        className: "p-6  min-h-screen",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                className: "text-2xl font-bold mb-4",
-                children: "Profile"
+                className: "text-3xl font-bold  mb-6 text-center",
+                children: "My Profile"
             }, void 0, false, {
                 fileName: "src/pages/Profile.jsx",
                 lineNumber: 27,
                 columnNumber: 7
             }, undefined),
-            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "text-center",
-                children: "Loading..."
+            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-center items-center h-64",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"
+                }, void 0, false, {
+                    fileName: "src/pages/Profile.jsx",
+                    lineNumber: 31,
+                    columnNumber: 11
+                }, undefined)
             }, void 0, false, {
                 fileName: "src/pages/Profile.jsx",
                 lineNumber: 30,
                 columnNumber: 9
             }, undefined) : user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "max-w-md mx-auto p-6 rounded-lg shadow-md",
+                className: "max-w-lg mx-auto  rounded-xl shadow-lg overflow-hidden",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "text-center",
+                        className: "bg-gradient-to-r from-blue-500 to-blue-600 p-6 text-center",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                src: user.imageUrl,
-                                alt: user.name,
-                                className: "w-24 h-24 mx-auto rounded-full mb-4 border border-gray-300"
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "relative w-32 h-32 mx-auto",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    src: user.imageUrl || "https://www.gravatar.com/avatar/default?s=200",
+                                    alt: user.name,
+                                    className: "w-full h-full rounded-full border-4 border-white shadow-md",
+                                    onError: (e)=>{
+                                        e.target.src = "https://www.gravatar.com/avatar/default?s=200";
+                                    }
+                                }, void 0, false, {
+                                    fileName: "src/pages/Profile.jsx",
+                                    lineNumber: 38,
+                                    columnNumber: 15
+                                }, undefined)
                             }, void 0, false, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 35,
+                                lineNumber: 37,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                className: "text-lg font-semibold",
+                                className: "text-2xl font-bold text-white mt-4",
                                 children: user.name
                             }, void 0, false, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 40,
+                                lineNumber: 51,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-gray-600",
+                                className: "text-blue-100",
                                 children: user.email
                             }, void 0, false, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 41,
+                                lineNumber: 52,
                                 columnNumber: 13
                             }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-blue-600 font-bold capitalize",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "inline-block mt-2 px-3 py-1 bg-white text-blue-600 rounded-full text-sm font-semibold capitalize",
                                 children: user.role
                             }, void 0, false, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 42,
+                                lineNumber: 53,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/Profile.jsx",
-                        lineNumber: 34,
+                        lineNumber: 36,
                         columnNumber: 11
                     }, undefined),
-                    user.role === "teacher" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "mt-4",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "p-6",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                                className: "text-lg font-semibold",
-                                children: "Assigned Courses:"
-                            }, void 0, false, {
-                                fileName: "src/pages/Profile.jsx",
-                                lineNumber: 48,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                                className: "list-disc ml-5",
-                                children: user.courses.length > 0 ? user.courses.map((course)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                        children: course.name
-                                    }, course._id, false, {
-                                        fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 52,
-                                        columnNumber: 21
-                                    }, undefined)) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    className: "text-sm text-gray-500",
-                                    children: "No assigned courses"
-                                }, void 0, false, {
-                                    fileName: "src/pages/Profile.jsx",
-                                    lineNumber: 55,
-                                    columnNumber: 19
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/pages/Profile.jsx",
-                                lineNumber: 49,
-                                columnNumber: 15
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/pages/Profile.jsx",
-                        lineNumber: 47,
-                        columnNumber: 13
-                    }, undefined),
-                    user.role === "student" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "mt-4",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                                className: "text-lg font-semibold",
-                                children: "Enrolled Courses:"
-                            }, void 0, false, {
-                                fileName: "src/pages/Profile.jsx",
-                                lineNumber: 63,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                                className: "list-disc ml-5",
-                                children: user.courses.length > 0 ? user.courses.map((course)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                        children: course.name
-                                    }, course._id, false, {
-                                        fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 67,
-                                        columnNumber: 21
-                                    }, undefined)) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    className: "text-sm text-gray-500",
-                                    children: "No enrolled courses"
-                                }, void 0, false, {
-                                    fileName: "src/pages/Profile.jsx",
-                                    lineNumber: 70,
-                                    columnNumber: 19
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/pages/Profile.jsx",
-                                lineNumber: 64,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "mt-2",
+                            user.role === "teacher" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "mb-6",
                                 children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                        children: "Overall Attendance:"
-                                    }, void 0, false, {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                        className: "text-xl font-semibold text-gray-800 mb-3 flex items-center",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                className: "h-5 w-5 mr-2 text-blue-500",
+                                                viewBox: "0 0 20 20",
+                                                fill: "currentColor",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                    d: "M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Profile.jsx",
+                                                    lineNumber: 70,
+                                                    columnNumber: 21
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Profile.jsx",
+                                                lineNumber: 64,
+                                                columnNumber: 19
+                                            }, undefined),
+                                            "Assigned Courses"
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 74,
+                                        lineNumber: 63,
                                         columnNumber: 17
                                     }, undefined),
-                                    " ",
-                                    user.attendancePercentage !== null ? `${user.attendancePercentage}%` : "N/A"
+                                    user.courses.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "space-y-2",
+                                        children: user.courses.map((course)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "flex items-center p-3  rounded-lg",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                        xmlns: "http://www.w3.org/2000/svg",
+                                                        className: "h-5 w-5 text-blue-500 mr-2",
+                                                        viewBox: "0 0 20 20",
+                                                        fill: "currentColor",
+                                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                            fillRule: "evenodd",
+                                                            d: "M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z",
+                                                            clipRule: "evenodd"
+                                                        }, void 0, false, {
+                                                            fileName: "src/pages/Profile.jsx",
+                                                            lineNumber: 87,
+                                                            columnNumber: 27
+                                                        }, undefined)
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Profile.jsx",
+                                                        lineNumber: 81,
+                                                        columnNumber: 25
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        className: "font-medium",
+                                                        children: course.name
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Profile.jsx",
+                                                        lineNumber: 93,
+                                                        columnNumber: 25
+                                                    }, undefined)
+                                                ]
+                                            }, course._id, true, {
+                                                fileName: "src/pages/Profile.jsx",
+                                                lineNumber: 77,
+                                                columnNumber: 23
+                                            }, undefined))
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Profile.jsx",
+                                        lineNumber: 75,
+                                        columnNumber: 19
+                                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "text-gray-500 italic",
+                                        children: "No assigned courses"
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Profile.jsx",
+                                        lineNumber: 98,
+                                        columnNumber: 19
+                                    }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 73,
-                                columnNumber: 15
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/pages/Profile.jsx",
-                        lineNumber: 62,
-                        columnNumber: 13
-                    }, undefined),
-                    user.role === "admin" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "mt-4",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                                className: "text-lg font-semibold",
-                                children: "Admin Controls"
-                            }, void 0, false, {
-                                fileName: "src/pages/Profile.jsx",
-                                lineNumber: 84,
+                                lineNumber: 62,
                                 columnNumber: 15
                             }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-gray-600",
-                                children: "You have full access to manage users and courses."
+                            user.role === "student" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "mb-6",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                        className: "text-xl font-semibold text-gray-800 mb-3 flex items-center",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                className: "h-5 w-5 mr-2 text-blue-500",
+                                                viewBox: "0 0 20 20",
+                                                fill: "currentColor",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                    d: "M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Profile.jsx",
+                                                    lineNumber: 112,
+                                                    columnNumber: 21
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Profile.jsx",
+                                                lineNumber: 106,
+                                                columnNumber: 19
+                                            }, undefined),
+                                            "Enrolled Courses"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Profile.jsx",
+                                        lineNumber: 105,
+                                        columnNumber: 17
+                                    }, undefined),
+                                    user.courses.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "space-y-2",
+                                        children: user.courses.map((course)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "flex items-center p-3  rounded-lg",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                        xmlns: "http://www.w3.org/2000/svg",
+                                                        className: "h-5 w-5 text-blue-500 mr-2",
+                                                        viewBox: "0 0 20 20",
+                                                        fill: "currentColor",
+                                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                            fillRule: "evenodd",
+                                                            d: "M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z",
+                                                            clipRule: "evenodd"
+                                                        }, void 0, false, {
+                                                            fileName: "src/pages/Profile.jsx",
+                                                            lineNumber: 129,
+                                                            columnNumber: 27
+                                                        }, undefined)
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Profile.jsx",
+                                                        lineNumber: 123,
+                                                        columnNumber: 25
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        className: "font-medium",
+                                                        children: course.name
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Profile.jsx",
+                                                        lineNumber: 135,
+                                                        columnNumber: 25
+                                                    }, undefined)
+                                                ]
+                                            }, course._id, true, {
+                                                fileName: "src/pages/Profile.jsx",
+                                                lineNumber: 119,
+                                                columnNumber: 23
+                                            }, undefined))
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Profile.jsx",
+                                        lineNumber: 117,
+                                        columnNumber: 19
+                                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "text-gray-500 italic",
+                                        children: "No enrolled courses"
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Profile.jsx",
+                                        lineNumber: 140,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "mt-4 p-4 bg-blue-50 rounded-lg",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: "text-blue-800 font-medium",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "font-bold",
+                                                    children: "Overall Attendance:"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Profile.jsx",
+                                                    lineNumber: 144,
+                                                    columnNumber: 21
+                                                }, undefined),
+                                                " ",
+                                                user.attendancePercentage !== null ? `${user.attendancePercentage}%` : "N/A"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/pages/Profile.jsx",
+                                            lineNumber: 143,
+                                            columnNumber: 19
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Profile.jsx",
+                                        lineNumber: 142,
+                                        columnNumber: 17
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Profile.jsx",
+                                lineNumber: 104,
+                                columnNumber: 15
+                            }, undefined),
+                            user.role === "admin" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "mb-6 p-4 rounded-lg",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                        className: "text-xl font-semibold  mb-2 flex items-center",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                className: "h-5 w-5 mr-2 text-blue-500",
+                                                viewBox: "0 0 20 20",
+                                                fill: "currentColor",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                    fillRule: "evenodd",
+                                                    d: "M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z",
+                                                    clipRule: "evenodd"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Profile.jsx",
+                                                    lineNumber: 162,
+                                                    columnNumber: 21
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Profile.jsx",
+                                                lineNumber: 156,
+                                                columnNumber: 19
+                                            }, undefined),
+                                            "Admin Controls"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Profile.jsx",
+                                        lineNumber: 155,
+                                        columnNumber: 17
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "text-gray-300",
+                                        children: "You have full access to manage users, courses, and system settings."
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Profile.jsx",
+                                        lineNumber: 170,
+                                        columnNumber: 17
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Profile.jsx",
+                                lineNumber: 154,
+                                columnNumber: 15
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "mt-6 text-center",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    className: "px-6 py-2 bg-blue-600  font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md",
+                                    children: "Edit Profile"
+                                }, void 0, false, {
+                                    fileName: "src/pages/Profile.jsx",
+                                    lineNumber: 179,
+                                    columnNumber: 15
+                                }, undefined)
                             }, void 0, false, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 85,
-                                columnNumber: 15
+                                lineNumber: 178,
+                                columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/Profile.jsx",
-                        lineNumber: 83,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "mt-6 text-center",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                            className: "btn btn-primary",
-                            children: "Edit Profile"
-                        }, void 0, false, {
-                            fileName: "src/pages/Profile.jsx",
-                            lineNumber: 93,
-                            columnNumber: 13
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/pages/Profile.jsx",
-                        lineNumber: 92,
+                        lineNumber: 59,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Profile.jsx",
-                lineNumber: 32,
+                lineNumber: 34,
                 columnNumber: 9
-            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "text-center",
-                children: "No profile data available."
-            }, void 0, false, {
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "text-center py-12",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        className: "h-12 w-12 mx-auto text-gray-400",
+                        fill: "none",
+                        viewBox: "0 0 24 24",
+                        stroke: "currentColor",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round",
+                            strokeWidth: 2,
+                            d: "M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        }, void 0, false, {
+                            fileName: "src/pages/Profile.jsx",
+                            lineNumber: 194,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/pages/Profile.jsx",
+                        lineNumber: 187,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        className: "mt-2 text-lg font-medium text-gray-900",
+                        children: "No profile data available"
+                    }, void 0, false, {
+                        fileName: "src/pages/Profile.jsx",
+                        lineNumber: 201,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "mt-1 text-sm text-gray-500",
+                        children: "Please try again later or contact support"
+                    }, void 0, false, {
+                        fileName: "src/pages/Profile.jsx",
+                        lineNumber: 204,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/pages/Profile.jsx",
-                lineNumber: 97,
+                lineNumber: 186,
                 columnNumber: 9
             }, undefined)
         ]
