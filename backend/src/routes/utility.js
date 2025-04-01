@@ -57,10 +57,7 @@ router.get("/profile", async (req, res) => {
         user = await Teacher.findById(userId).select("-password");
         break;
       case "student":
-        user = await Student.findById(userId)
-          .select("-password")
-
-          .lean();
+        user = await Student.findById(userId).select("-password").lean();
         break;
       default:
         return res.status(400).json({ error: "Invalid role" });
@@ -88,22 +85,25 @@ router.get("/show-profile", async (req, res) => {
         "name email role imageUrl"
       );
     } else if (req.role === "teacher") {
-      user = await Teacher.findById(req.userId)
-        .select("name email role imageUrl")
-        .populate({
-          path: "courses",
-          select: "courseName",
-        });
+      user = await Teacher.findById(req.userId).select(
+        "name email role imageUrl"
+      );
 
       if (!user) return res.status(404).json({ error: "Teacher not found" });
 
-      extraData = { courses: user.courses }; // ✅ Corrected
+      // ✅ Fetch courses separately for teachers
+      const courses = await Course.find({ teacher_id: user._id }).select(
+        "course_name"
+      );
+
+      extraData = { courses };
     } else if (req.role === "student") {
       user = await Student.findById(req.userId)
         .select("name email role imageUrl")
         .populate({
           path: "courses",
-          select: "courseName ",
+          select: "course_name",
+          strictPopulate: false, // ✅ Override strict populate to avoid schema issues
         });
 
       if (!user) return res.status(404).json({ error: "Student not found" });
