@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import API from "../config/axiosInstance.js";
 import toast from "react-hot-toast";
+import LoadingAnimation from "../components/LoadingAnimation.jsx";
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -14,6 +15,7 @@ const Profile = () => {
     try {
       const response = await API.get("/api/show-profile"); // Fetch user data with extra details
       setUser(response.data.user);
+      console.log(response.data.user);
     } catch (error) {
       console.error(error);
       toast.error("Failed to load profile.");
@@ -27,9 +29,7 @@ const Profile = () => {
       <h2 className="text-3xl font-bold  mb-6 text-center">My Profile</h2>
 
       {loading ? (
-        <div className="flex justify-center items-center h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-        </div>
+        <LoadingAnimation />
       ) : user ? (
         <div className="max-w-lg mx-auto  rounded-xl shadow-lg overflow-hidden">
           {/* Profile Header */}
@@ -60,7 +60,7 @@ const Profile = () => {
             {/* Role-Specific Details */}
             {user.role === "teacher" && (
               <div className="mb-6">
-                <h4 className="text-xl font-semibold text-gray-800 mb-3 flex items-center">
+                <h4 className="text-xl font-semibold  mb-3 flex items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 mr-2 text-blue-500"
@@ -102,10 +102,10 @@ const Profile = () => {
 
             {user.role === "student" && (
               <div className="mb-6">
-                <h4 className="text-xl font-semibold text-gray-800 mb-3 flex items-center">
+                <h4 className="text-xl font-semibold mb-4 flex items-center ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 mr-2 text-blue-500"
+                    className="h-6 w-6 mr-2 text-blue-600"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -114,38 +114,66 @@ const Profile = () => {
                   Enrolled Courses
                 </h4>
                 {user.courses.length > 0 ? (
-                  <div className="space-y-2">
+                  <div className="space-y-3">
                     {user.courses.map((course) => (
                       <div
                         key={course._id}
-                        className="flex items-center p-3  rounded-lg"
+                        className="flex  hover:text-blue-500 items-center p-3 border border-gray-200 rounded-lg hover:bg-blue-50 transition-colors duration-200 shadow-sm"
                       >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5 text-blue-500 mr-2"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                        <span className="font-medium">{course.name}</span>
+                        <div className="bg-blue-100 p-2 rounded-full mr-3  ">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5 text-blue-600"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                        <span className="font-medium ">
+                          {course.course_name}
+                        </span>
                       </div>
                     ))}
                   </div>
                 ) : (
-                  <p className="text-gray-500 italic">No enrolled courses</p>
+                  <div className="p-4 text-center border border-gray-200 rounded-lg">
+                    <p className="text-gray-500">
+                      You haven't enrolled in any courses yet.
+                    </p>
+                    <button className="mt-2 text-blue-600 font-medium text-sm hover:underline">
+                      Browse Courses
+                    </button>
+                  </div>
                 )}
-                <div className="mt-4 p-4 bg-blue-50 rounded-lg">
-                  <p className="text-blue-800 font-medium">
-                    <span className="font-bold">Overall Attendance:</span>{" "}
-                    {user.attendancePercentage !== null
-                      ? `${user.attendancePercentage}%`
-                      : "N/A"}
-                  </p>
+                <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
+                  <div className="flex items-center justify-between">
+                    <p className="text-blue-800 font-medium">
+                      <span className="font-bold">Overall Attendance:</span>{" "}
+                      {user.attendancePercentage !== null
+                        ? `${user.attendancePercentage}%`
+                        : "N/A"}
+                    </p>
+                    {user.attendancePercentage !== null && (
+                      <div className="w-12 h-12 rounded-full bg-white border-4 border-blue-100 flex items-center justify-center">
+                        <span className="text-blue-800 font-bold text-sm">
+                          {user.attendancePercentage}%
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                  {user.attendancePercentage !== null && (
+                    <div className="mt-3 w-full bg-blue-100 rounded-full h-2">
+                      <div
+                        className="bg-blue-600 h-2 rounded-full"
+                        style={{ width: `${user.attendancePercentage}%` }}
+                      ></div>
+                    </div>
+                  )}
                 </div>
               </div>
             )}

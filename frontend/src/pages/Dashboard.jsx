@@ -14,6 +14,7 @@ import {
   Cell,
   Legend,
 } from "recharts";
+import LoadingAnimation from "../components/LoadingAnimation.jsx";
 
 const AdminDashboard = () => {
   const [stats, setStats] = useState(null);
@@ -42,9 +43,7 @@ const AdminDashboard = () => {
       <h2 className="text-3xl font-bold mb-6 ">Admin Dashboard</h2>
 
       {loading ? (
-        <div className="flex justify-center items-center h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-        </div>
+        <LoadingAnimation />
       ) : stats ? (
         <div className="space-y-8">
           {/* Overview Cards */}

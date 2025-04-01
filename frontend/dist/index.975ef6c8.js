@@ -69062,78 +69062,245 @@ var _teacherStudentJson = require("../assets/teacher_student.json");
 var _teacherStudentJsonDefault = parcelHelpers.interopDefault(_teacherStudentJson);
 const Home = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex flex-col   h-[85vh]",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "flex flex-grow items-center justify-center",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center",
+        className: "flex flex-col  relative ",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "absolute top-0 left-0 w-full h-full overflow-hidden z-0",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "w-full md:w-1/2 text-center md:text-left",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "text-4xl md:text-5xl font-bold hover:text-red-500",
-                                children: "Welcome to Attendance Pro"
-                            }, void 0, false, {
-                                fileName: "src/pages/Home.jsx",
-                                lineNumber: 14,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "mt-4 text-gray-600 text-lg hover:text-white",
-                                children: "Effortlessly track and manage attendance with our smart solution."
-                            }, void 0, false, {
-                                fileName: "src/pages/Home.jsx",
-                                lineNumber: 17,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
-                                to: "/login",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    className: "btn btn-soft btn-secondary my-4",
-                                    children: "Get Started"
-                                }, void 0, false, {
-                                    fileName: "src/pages/Home.jsx",
-                                    lineNumber: 21,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/pages/Home.jsx",
-                                lineNumber: 20,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/pages/Home.jsx",
-                        lineNumber: 13,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "w-full md:w-1/2 flex justify-center mt-8 md:mt-0",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lottieReactDefault.default), {
-                            animationData: (0, _teacherStudentJsonDefault.default)
-                        }, void 0, false, {
-                            fileName: "src/pages/Home.jsx",
-                            lineNumber: 29,
-                            columnNumber: 13
-                        }, undefined)
+                        className: "absolute top-20 left-10 w-40 h-40 rounded-full bg-gray-200 opacity-40 blur-xl"
                     }, void 0, false, {
                         fileName: "src/pages/Home.jsx",
-                        lineNumber: 28,
-                        columnNumber: 11
+                        lineNumber: 11,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "absolute bottom-10 right-20 w-60 h-60 rounded-full bg-purple-100 opacity-20 blur-xl"
+                    }, void 0, false, {
+                        fileName: "src/pages/Home.jsx",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "absolute top-1/3 right-1/4 w-32 h-32 rounded-full bg-blue-100 opacity-15 blur-xl"
+                    }, void 0, false, {
+                        fileName: "src/pages/Home.jsx",
+                        lineNumber: 13,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Home.jsx",
-                lineNumber: 11,
-                columnNumber: 9
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-row flex-grow items-center justify-center z-10",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "container mx-auto px-6 md:px-12 lg:px-24 flex flex-col-reverse md:flex-row items-center",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "w-full md:w-1/2 text-center md:text-left space-y-6",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "inline-block px-4 py-2 bg-red-400 text-white rounded-full text-sm font-medium mb-4 shadow-sm",
+                                    children: "\uD83D\uDE80 New & Improved"
+                                }, void 0, false, {
+                                    fileName: "src/pages/Home.jsx",
+                                    lineNumber: 21,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                    className: "text-4xl md:text-5xl font-bold bg-gradient-to-r from-red-500 to-purple-600  py-2 bg-clip-text text-transparent",
+                                    children: [
+                                        "Transform Your ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "block",
+                                            children: "Attendance Tracking"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Home.jsx",
+                                            lineNumber: 26,
+                                            columnNumber: 30
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Home.jsx",
+                                    lineNumber: 25,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    className: "text-lg md:text-xl text-gray-600 leading-relaxed my-5 max-w-lg",
+                                    children: "Attendance Pro simplifies workforce management with AI-powered insights, real-time analytics, and automated reporting\u2014saving you hours every week."
+                                }, void 0, false, {
+                                    fileName: "src/pages/Home.jsx",
+                                    lineNumber: 29,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex flex-col sm:flex-row gap-4 mt-8",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                                        to: "/login",
+                                        className: "group relative",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "absolute -inset-0.5 bg-gradient-to-r from-red-500 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-200"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Home.jsx",
+                                                lineNumber: 37,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                className: "relative px-8 py-4 bg-red-500 hover:bg-white text-gray-300 font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group-hover:text-red-600",
+                                                children: "Get Started Free \u2192"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Home.jsx",
+                                                lineNumber: 38,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Home.jsx",
+                                        lineNumber: 36,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/pages/Home.jsx",
+                                    lineNumber: 35,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center justify-center md:justify-start gap-2",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "flex -space-x-2",
+                                            children: [
+                                                1,
+                                                2,
+                                                3,
+                                                4,
+                                                5
+                                            ].map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                                    src: `https://randomuser.me/api/portraits/${item % 2 === 0 ? "women" : "men"}/${item}0.jpg`,
+                                                    className: "w-10 h-10 rounded-full border-2 border-white",
+                                                    alt: "User"
+                                                }, item, false, {
+                                                    fileName: "src/pages/Home.jsx",
+                                                    lineNumber: 47,
+                                                    columnNumber: 19
+                                                }, undefined))
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Home.jsx",
+                                            lineNumber: 45,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "text-sm text-gray-500",
+                                            children: [
+                                                "Trusted by",
+                                                " ",
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "font-medium text-gray-700",
+                                                    children: "500+"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Home.jsx",
+                                                    lineNumber: 59,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                " ",
+                                                "organizations"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/pages/Home.jsx",
+                                            lineNumber: 57,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Home.jsx",
+                                    lineNumber: 44,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/pages/Home.jsx",
+                            lineNumber: 20,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "w-full md:w-1/2 mt-12 md:mt-0 relative",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "relative max-w-lg mx-auto",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "absolute top-10 -left-6 w-24 h-24 bg-red-100 rounded-full opacity-40 blur-lg"
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Home.jsx",
+                                        lineNumber: 68,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "relative z-10  p-2 rounded-2xl shadow-xl  ",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lottieReactDefault.default), {
+                                            animationData: (0, _teacherStudentJsonDefault.default),
+                                            className: "w-full h-auto"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Home.jsx",
+                                            lineNumber: 70,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Home.jsx",
+                                        lineNumber: 69,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center justify-end ",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "w-3 h-3 bg-green-400 rounded-full mr-2"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Home.jsx",
+                                                lineNumber: 76,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                className: "text-sm font-medium ",
+                                                children: "Live Tracking"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Home.jsx",
+                                                lineNumber: 77,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Home.jsx",
+                                        lineNumber: 75,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Home.jsx",
+                                lineNumber: 67,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/pages/Home.jsx",
+                            lineNumber: 66,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/pages/Home.jsx",
+                lineNumber: 17,
+                columnNumber: 7
             }, undefined)
-        }, void 0, false, {
-            fileName: "src/pages/Home.jsx",
-            lineNumber: 10,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
+        ]
+    }, void 0, true, {
         fileName: "src/pages/Home.jsx",
         lineNumber: 8,
         columnNumber: 5
@@ -85113,284 +85280,344 @@ const Login = ()=>{
         }
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex shadow-2xl rounded-2xl bg-gray-800 items-center mt-16 justify-center w-[75%] mx-auto",
+        className: "flex bg-gray-800/50 shadow-2xl rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 items-center mt-5 justify-center w-[85%] mx-auto overflow-hidden border border-gray-700",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-1/2 hidden md:block",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lottieReactDefault.default), {
-                    animationData: (0, _loginJsonDefault.default)
-                }, void 0, false, {
-                    fileName: "src/pages/Login.jsx",
-                    lineNumber: 82,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/pages/Login.jsx",
-                lineNumber: 81,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-full md:w-1/2 flex flex-col px-10 lg:px-16",
+                className: "absolute top-0 left-0 w-full h-full overflow-hidden z-0",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-                        onSubmit: handleSubmit,
-                        className: "mx-auto ",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                className: "input validator ",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                        className: "h-[1em] opacity-50",
-                                        xmlns: "http://www.w3.org/2000/svg",
-                                        viewBox: "0 0 24 24",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                                            strokeLinejoin: "round",
-                                            strokeLinecap: "round",
-                                            strokeWidth: "2.5",
-                                            fill: "none",
-                                            stroke: "currentColor",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("rect", {
-                                                    width: "20",
-                                                    height: "16",
-                                                    x: "2",
-                                                    y: "4",
-                                                    rx: "2"
-                                                }, void 0, false, {
-                                                    fileName: "src/pages/Login.jsx",
-                                                    lineNumber: 102,
-                                                    columnNumber: 17
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                    d: "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
-                                                }, void 0, false, {
-                                                    fileName: "src/pages/Login.jsx",
-                                                    lineNumber: 103,
-                                                    columnNumber: 17
-                                                }, undefined)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/pages/Login.jsx",
-                                            lineNumber: 95,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Login.jsx",
-                                        lineNumber: 90,
-                                        columnNumber: 13
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "email",
-                                        name: "email",
-                                        value: formData.email,
-                                        onChange: handleChange,
-                                        className: "text-base md:text-md lg:text-lg w-full",
-                                        placeholder: "mail@site.com",
-                                        required: true
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Login.jsx",
-                                        lineNumber: 106,
-                                        columnNumber: 13
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/pages/Login.jsx",
-                                lineNumber: 89,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                className: "input validator mt-4",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                        className: "h-[1em] opacity-50",
-                                        xmlns: "http://www.w3.org/2000/svg",
-                                        viewBox: "0 0 24 24",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                                            strokeLinejoin: "round",
-                                            strokeLinecap: "round",
-                                            strokeWidth: "2.5",
-                                            fill: "none",
-                                            stroke: "currentColor",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                    d: "M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"
-                                                }, void 0, false, {
-                                                    fileName: "src/pages/Login.jsx",
-                                                    lineNumber: 130,
-                                                    columnNumber: 17
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("circle", {
-                                                    cx: "16.5",
-                                                    cy: "7.5",
-                                                    r: ".5",
-                                                    fill: "currentColor"
-                                                }, void 0, false, {
-                                                    fileName: "src/pages/Login.jsx",
-                                                    lineNumber: 131,
-                                                    columnNumber: 17
-                                                }, undefined)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/pages/Login.jsx",
-                                            lineNumber: 123,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Login.jsx",
-                                        lineNumber: 118,
-                                        columnNumber: 13
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "password",
-                                        required: true,
-                                        name: "password",
-                                        placeholder: "Password",
-                                        value: formData.password,
-                                        onChange: handleChange,
-                                        minLength: "8",
-                                        pattern: "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}",
-                                        title: "Must be more than 8 characters, including number, lowercase letter, uppercase letter"
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Login.jsx",
-                                        lineNumber: 134,
-                                        columnNumber: 13
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/pages/Login.jsx",
-                                lineNumber: 117,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "validator-hint hidden",
-                                children: [
-                                    "Must be more than 8 characters, including",
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                        fileName: "src/pages/Login.jsx",
-                                        lineNumber: 148,
-                                        columnNumber: 13
-                                    }, undefined),
-                                    "At least one number",
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                        fileName: "src/pages/Login.jsx",
-                                        lineNumber: 150,
-                                        columnNumber: 13
-                                    }, undefined),
-                                    "At least one lowercase letter",
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                        fileName: "src/pages/Login.jsx",
-                                        lineNumber: 152,
-                                        columnNumber: 13
-                                    }, undefined),
-                                    "At least one uppercase letter"
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/pages/Login.jsx",
-                                lineNumber: 146,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
-                                name: "role",
-                                value: formData.role,
-                                onChange: handleRoleChange,
-                                required: true,
-                                className: "select mt-4",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                                        value: "",
-                                        disabled: true,
-                                        children: "Who Are You?"
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Login.jsx",
-                                        lineNumber: 163,
-                                        columnNumber: 13
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                                        value: "student",
-                                        children: "Student"
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Login.jsx",
-                                        lineNumber: 166,
-                                        columnNumber: 13
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                                        value: "teacher",
-                                        children: "Teacher"
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Login.jsx",
-                                        lineNumber: 167,
-                                        columnNumber: 13
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                                        value: "admin",
-                                        children: "Admin"
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Login.jsx",
-                                        lineNumber: 168,
-                                        columnNumber: 13
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/pages/Login.jsx",
-                                lineNumber: 156,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "flex justify-center ",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    type: "submit",
-                                    className: "text-base md:text-md lg:text-lg btn btn-outline btn-secondary w-fit mt-5 px-5",
-                                    disabled: loading,
-                                    children: [
-                                        loading && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                            className: "loading loading-dots loading-md p-1"
-                                        }, void 0, false, {
-                                            fileName: "src/pages/Login.jsx",
-                                            lineNumber: 179,
-                                            columnNumber: 17
-                                        }, undefined),
-                                        "Log In"
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/pages/Login.jsx",
-                                    lineNumber: 173,
-                                    columnNumber: 13
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/pages/Login.jsx",
-                                lineNumber: 172,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "absolute top-20 left-10 w-40 h-40 rounded-full bg-gray-200 opacity-40 blur-xl"
+                    }, void 0, false, {
                         fileName: "src/pages/Login.jsx",
-                        lineNumber: 87,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: "mt-5 text-base md:text-md lg:text-lg",
-                        children: [
-                            "Don't have an account?",
-                            " ",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
-                                to: "/register",
-                                className: "text-pink-500 hover:underline",
-                                children: "Sign Up"
-                            }, void 0, false, {
-                                fileName: "src/pages/Login.jsx",
-                                lineNumber: 189,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "absolute bottom-10 left-[50%] w-60 h-60 rounded-full bg-purple-100 opacity-30 blur-xl"
+                    }, void 0, false, {
                         fileName: "src/pages/Login.jsx",
-                        lineNumber: 187,
+                        lineNumber: 83,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "absolute top-1/3 right-1/4 w-32 h-32 rounded-full bg-blue-100 opacity-15 blur-xl"
+                    }, void 0, false, {
+                        fileName: "src/pages/Login.jsx",
+                        lineNumber: 84,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Login.jsx",
-                lineNumber: 86,
+                lineNumber: 81,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "w-1/2 hidden md:block",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "relative",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lottieReactDefault.default), {
+                        animationData: (0, _loginJsonDefault.default),
+                        className: "relative z-10 transform hover:scale-105 transition-transform duration-500"
+                    }, void 0, false, {
+                        fileName: "src/pages/Login.jsx",
+                        lineNumber: 89,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/pages/Login.jsx",
+                    lineNumber: 88,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/pages/Login.jsx",
+                lineNumber: 87,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "w-full md:w-1/2 flex flex-col px-8 py-12 lg:px-12  backdrop-blur-sm",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "text-3xl font-bold text-center mb-8 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent",
+                        children: "Welcome Back"
+                    }, void 0, false, {
+                        fileName: "src/pages/Login.jsx",
+                        lineNumber: 98,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                        onSubmit: handleSubmit,
+                        className: "mx-auto w-full max-w-md",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "mb-6",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                    className: "flex items-center gap-3 px-4 py-3 bg-gray-700/50 rounded-lg border border-gray-600 hover:border-purple-400 transition-colors duration-300",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                            className: "w-5 h-5 text-gray-400",
+                                            xmlns: "http://www.w3.org/2000/svg",
+                                            viewBox: "0 0 24 24",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
+                                                strokeLinejoin: "round",
+                                                strokeLinecap: "round",
+                                                strokeWidth: "2",
+                                                fill: "none",
+                                                stroke: "currentColor",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("rect", {
+                                                        width: "20",
+                                                        height: "16",
+                                                        x: "2",
+                                                        y: "4",
+                                                        rx: "2"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Login.jsx",
+                                                        lineNumber: 118,
+                                                        columnNumber: 19
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                        d: "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Login.jsx",
+                                                        lineNumber: 119,
+                                                        columnNumber: 19
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Login.jsx",
+                                                lineNumber: 111,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Login.jsx",
+                                            lineNumber: 106,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                            type: "email",
+                                            name: "email",
+                                            value: formData.email,
+                                            onChange: handleChange,
+                                            className: "flex-1 bg-transparent outline-none text-gray-200 placeholder-gray-500",
+                                            placeholder: "mail@site.com",
+                                            required: true
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Login.jsx",
+                                            lineNumber: 122,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Login.jsx",
+                                    lineNumber: 105,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/pages/Login.jsx",
+                                lineNumber: 104,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "mb-6",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                        className: "flex items-center gap-3 px-4 py-3 bg-gray-700/50 rounded-lg border border-gray-600 hover:border-purple-400 transition-colors duration-300",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                className: "w-5 h-5 text-gray-400",
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                viewBox: "0 0 24 24",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
+                                                    strokeLinejoin: "round",
+                                                    strokeLinecap: "round",
+                                                    strokeWidth: "2",
+                                                    fill: "none",
+                                                    stroke: "currentColor",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                            d: "M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"
+                                                        }, void 0, false, {
+                                                            fileName: "src/pages/Login.jsx",
+                                                            lineNumber: 149,
+                                                            columnNumber: 19
+                                                        }, undefined),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("circle", {
+                                                            cx: "16.5",
+                                                            cy: "7.5",
+                                                            r: ".5",
+                                                            fill: "currentColor"
+                                                        }, void 0, false, {
+                                                            fileName: "src/pages/Login.jsx",
+                                                            lineNumber: 150,
+                                                            columnNumber: 19
+                                                        }, undefined)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/pages/Login.jsx",
+                                                    lineNumber: 142,
+                                                    columnNumber: 17
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Login.jsx",
+                                                lineNumber: 137,
+                                                columnNumber: 15
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                type: "password",
+                                                required: true,
+                                                name: "password",
+                                                placeholder: "Password",
+                                                value: formData.password,
+                                                onChange: handleChange,
+                                                className: "flex-1 bg-transparent outline-none text-gray-200 placeholder-gray-500",
+                                                minLength: "8",
+                                                pattern: "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Login.jsx",
+                                                lineNumber: 158,
+                                                columnNumber: 15
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Login.jsx",
+                                        lineNumber: 136,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "mt-2 text-xs text-gray-400 px-4",
+                                        children: "Must include: uppercase, lowercase, number (8+ chars)"
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Login.jsx",
+                                        lineNumber: 170,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Login.jsx",
+                                lineNumber: 135,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "mb-8",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                                    name: "role",
+                                    value: formData.role,
+                                    onChange: handleRoleChange,
+                                    required: true,
+                                    className: "w-full px-4 py-3 bg-gray-700/50 rounded-lg border border-gray-600 hover:border-purple-400 text-gray-200 outline-none transition-colors duration-300",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                            value: "",
+                                            disabled: true,
+                                            className: "text-gray-500",
+                                            children: "Who Are You?"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Login.jsx",
+                                            lineNumber: 184,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                            value: "student",
+                                            className: "bg-gray-800",
+                                            children: "Student"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Login.jsx",
+                                            lineNumber: 187,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                            value: "teacher",
+                                            className: "bg-gray-800",
+                                            children: "Teacher"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Login.jsx",
+                                            lineNumber: 190,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                            value: "admin",
+                                            className: "bg-gray-800",
+                                            children: "Admin"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Login.jsx",
+                                            lineNumber: 193,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Login.jsx",
+                                    lineNumber: 177,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/pages/Login.jsx",
+                                lineNumber: 176,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                type: "submit",
+                                disabled: loading,
+                                className: "w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-red-500 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:from-purple-600 hover:to-pink-600 flex justify-center items-center",
+                                children: loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "loading loading-spinner loading-md"
+                                }, void 0, false, {
+                                    fileName: "src/pages/Login.jsx",
+                                    lineNumber: 206,
+                                    columnNumber: 15
+                                }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "flex items-center gap-2",
+                                    children: [
+                                        "Log In ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "text-xl",
+                                            children: "\u2192"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Login.jsx",
+                                            lineNumber: 209,
+                                            columnNumber: 24
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Login.jsx",
+                                    lineNumber: 208,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/pages/Login.jsx",
+                                lineNumber: 200,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/pages/Login.jsx",
+                        lineNumber: 102,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "mt-8 text-center text-gray-400",
+                        children: [
+                            "Don't have an account?",
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                                to: "/register",
+                                className: "text-red-400 hover:text-red-300 underline underline-offset-4 transition-colors duration-200",
+                                children: "Sign Up"
+                            }, void 0, false, {
+                                fileName: "src/pages/Login.jsx",
+                                lineNumber: 218,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/pages/Login.jsx",
+                        lineNumber: 216,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/Login.jsx",
+                lineNumber: 97,
                 columnNumber: 7
             }, undefined)
         ]
@@ -85752,6 +85979,8 @@ var _axiosInstanceJsDefault = parcelHelpers.interopDefault(_axiosInstanceJs);
 var _reactHotToast = require("react-hot-toast");
 var _reactHotToastDefault = parcelHelpers.interopDefault(_reactHotToast);
 var _recharts = require("recharts");
+var _loadingAnimationJsx = require("../components/LoadingAnimation.jsx");
+var _loadingAnimationJsxDefault = parcelHelpers.interopDefault(_loadingAnimationJsx);
 var _s = $RefreshSig$();
 const AdminDashboard = ()=>{
     _s();
@@ -85779,21 +86008,12 @@ const AdminDashboard = ()=>{
                 children: "Admin Dashboard"
             }, void 0, false, {
                 fileName: "src/pages/Dashboard.jsx",
-                lineNumber: 42,
+                lineNumber: 43,
                 columnNumber: 7
             }, undefined),
-            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-center items-center h-64",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"
-                }, void 0, false, {
-                    fileName: "src/pages/Dashboard.jsx",
-                    lineNumber: 46,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
+            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationJsxDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Dashboard.jsx",
-                lineNumber: 45,
+                lineNumber: 46,
                 columnNumber: 9
             }, undefined) : stats ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "space-y-8",
@@ -85813,7 +86033,7 @@ const AdminDashboard = ()=>{
                                                     children: "Total Students"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 56,
+                                                    lineNumber: 55,
                                                     columnNumber: 19
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -85821,13 +86041,13 @@ const AdminDashboard = ()=>{
                                                     children: stats.totalStudents
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 59,
+                                                    lineNumber: 58,
                                                     columnNumber: 19
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 55,
+                                            lineNumber: 54,
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -85845,28 +86065,28 @@ const AdminDashboard = ()=>{
                                                     d: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 71,
+                                                    lineNumber: 70,
                                                     columnNumber: 21
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/pages/Dashboard.jsx",
-                                                lineNumber: 64,
+                                                lineNumber: 63,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 63,
+                                            lineNumber: 62,
                                             columnNumber: 17
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/pages/Dashboard.jsx",
-                                    lineNumber: 54,
+                                    lineNumber: 53,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 53,
+                                lineNumber: 52,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -85881,7 +86101,7 @@ const AdminDashboard = ()=>{
                                                     children: "Total Teachers"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 86,
+                                                    lineNumber: 85,
                                                     columnNumber: 19
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -85889,13 +86109,13 @@ const AdminDashboard = ()=>{
                                                     children: stats.totalTeachers
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 89,
+                                                    lineNumber: 88,
                                                     columnNumber: 19
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 85,
+                                            lineNumber: 84,
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -85913,28 +86133,28 @@ const AdminDashboard = ()=>{
                                                     d: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 101,
+                                                    lineNumber: 100,
                                                     columnNumber: 21
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/pages/Dashboard.jsx",
-                                                lineNumber: 94,
+                                                lineNumber: 93,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 93,
+                                            lineNumber: 92,
                                             columnNumber: 17
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/pages/Dashboard.jsx",
-                                    lineNumber: 84,
+                                    lineNumber: 83,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 83,
+                                lineNumber: 82,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -85949,7 +86169,7 @@ const AdminDashboard = ()=>{
                                                     children: "Total Courses"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 116,
+                                                    lineNumber: 115,
                                                     columnNumber: 19
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -85957,13 +86177,13 @@ const AdminDashboard = ()=>{
                                                     children: stats.totalCourses
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 119,
+                                                    lineNumber: 118,
                                                     columnNumber: 19
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 115,
+                                            lineNumber: 114,
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -85981,28 +86201,28 @@ const AdminDashboard = ()=>{
                                                     d: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 131,
+                                                    lineNumber: 130,
                                                     columnNumber: 21
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/pages/Dashboard.jsx",
-                                                lineNumber: 124,
+                                                lineNumber: 123,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 123,
+                                            lineNumber: 122,
                                             columnNumber: 17
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/pages/Dashboard.jsx",
-                                    lineNumber: 114,
+                                    lineNumber: 113,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 113,
+                                lineNumber: 112,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -86017,7 +86237,7 @@ const AdminDashboard = ()=>{
                                                     children: "Attendance Records"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 146,
+                                                    lineNumber: 145,
                                                     columnNumber: 19
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -86025,13 +86245,13 @@ const AdminDashboard = ()=>{
                                                     children: stats.totalAttendance
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 149,
+                                                    lineNumber: 148,
                                                     columnNumber: 19
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 145,
+                                            lineNumber: 144,
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -86049,34 +86269,34 @@ const AdminDashboard = ()=>{
                                                     d: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 161,
+                                                    lineNumber: 160,
                                                     columnNumber: 21
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/pages/Dashboard.jsx",
-                                                lineNumber: 154,
+                                                lineNumber: 153,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 153,
+                                            lineNumber: 152,
                                             columnNumber: 17
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/pages/Dashboard.jsx",
-                                    lineNumber: 144,
+                                    lineNumber: 143,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 143,
+                                lineNumber: 142,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/Dashboard.jsx",
-                        lineNumber: 51,
+                        lineNumber: 50,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -86090,7 +86310,7 @@ const AdminDashboard = ()=>{
                                         children: "Attendance by Course"
                                     }, void 0, false, {
                                         fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 177,
+                                        lineNumber: 176,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -86105,17 +86325,17 @@ const AdminDashboard = ()=>{
                                                         dataKey: "courseName"
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Dashboard.jsx",
-                                                        lineNumber: 183,
+                                                        lineNumber: 182,
                                                         columnNumber: 21
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {}, void 0, false, {
                                                         fileName: "src/pages/Dashboard.jsx",
-                                                        lineNumber: 184,
+                                                        lineNumber: 183,
                                                         columnNumber: 21
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
                                                         fileName: "src/pages/Dashboard.jsx",
-                                                        lineNumber: 185,
+                                                        lineNumber: 184,
                                                         columnNumber: 21
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Bar), {
@@ -86123,29 +86343,29 @@ const AdminDashboard = ()=>{
                                                         fill: "#4F46E5"
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Dashboard.jsx",
-                                                        lineNumber: 186,
+                                                        lineNumber: 185,
                                                         columnNumber: 21
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/Dashboard.jsx",
-                                                lineNumber: 182,
+                                                lineNumber: 181,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 181,
+                                            lineNumber: 180,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 180,
+                                        lineNumber: 179,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 176,
+                                lineNumber: 175,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -86156,7 +86376,7 @@ const AdminDashboard = ()=>{
                                         children: "Attendance Distribution"
                                     }, void 0, false, {
                                         fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 194,
+                                        lineNumber: 193,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -86183,50 +86403,50 @@ const AdminDashboard = ()=>{
                                                                 ][index % 4]
                                                             }, index, false, {
                                                                 fileName: "src/pages/Dashboard.jsx",
-                                                                lineNumber: 210,
+                                                                lineNumber: 209,
                                                                 columnNumber: 25
                                                             }, undefined))
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Dashboard.jsx",
-                                                        lineNumber: 200,
+                                                        lineNumber: 199,
                                                         columnNumber: 21
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
                                                         fileName: "src/pages/Dashboard.jsx",
-                                                        lineNumber: 220,
+                                                        lineNumber: 219,
                                                         columnNumber: 21
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Legend), {}, void 0, false, {
                                                         fileName: "src/pages/Dashboard.jsx",
-                                                        lineNumber: 221,
+                                                        lineNumber: 220,
                                                         columnNumber: 21
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/Dashboard.jsx",
-                                                lineNumber: 199,
+                                                lineNumber: 198,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/pages/Dashboard.jsx",
-                                            lineNumber: 198,
+                                            lineNumber: 197,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 197,
+                                        lineNumber: 196,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Dashboard.jsx",
-                                lineNumber: 193,
+                                lineNumber: 192,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/Dashboard.jsx",
-                        lineNumber: 174,
+                        lineNumber: 173,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -86239,7 +86459,7 @@ const AdminDashboard = ()=>{
                                     children: "Recent Attendance Records"
                                 }, void 0, false, {
                                     fileName: "src/pages/Dashboard.jsx",
-                                    lineNumber: 231,
+                                    lineNumber: 230,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -86256,7 +86476,7 @@ const AdminDashboard = ()=>{
                                                             children: "Student"
                                                         }, void 0, false, {
                                                             fileName: "src/pages/Dashboard.jsx",
-                                                            lineNumber: 238,
+                                                            lineNumber: 237,
                                                             columnNumber: 23
                                                         }, undefined),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -86264,7 +86484,7 @@ const AdminDashboard = ()=>{
                                                             children: "Course"
                                                         }, void 0, false, {
                                                             fileName: "src/pages/Dashboard.jsx",
-                                                            lineNumber: 241,
+                                                            lineNumber: 240,
                                                             columnNumber: 23
                                                         }, undefined),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -86272,7 +86492,7 @@ const AdminDashboard = ()=>{
                                                             children: "Date"
                                                         }, void 0, false, {
                                                             fileName: "src/pages/Dashboard.jsx",
-                                                            lineNumber: 244,
+                                                            lineNumber: 243,
                                                             columnNumber: 23
                                                         }, undefined),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -86280,18 +86500,18 @@ const AdminDashboard = ()=>{
                                                             children: "Status"
                                                         }, void 0, false, {
                                                             fileName: "src/pages/Dashboard.jsx",
-                                                            lineNumber: 247,
+                                                            lineNumber: 246,
                                                             columnNumber: 23
                                                         }, undefined)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "src/pages/Dashboard.jsx",
-                                                    lineNumber: 237,
+                                                    lineNumber: 236,
                                                     columnNumber: 21
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/pages/Dashboard.jsx",
-                                                lineNumber: 236,
+                                                lineNumber: 235,
                                                 columnNumber: 19
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
@@ -86303,7 +86523,7 @@ const AdminDashboard = ()=>{
                                                                 children: record.studentName
                                                             }, void 0, false, {
                                                                 fileName: "src/pages/Dashboard.jsx",
-                                                                lineNumber: 255,
+                                                                lineNumber: 254,
                                                                 columnNumber: 25
                                                             }, undefined),
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -86311,7 +86531,7 @@ const AdminDashboard = ()=>{
                                                                 children: record.courseName
                                                             }, void 0, false, {
                                                                 fileName: "src/pages/Dashboard.jsx",
-                                                                lineNumber: 258,
+                                                                lineNumber: 257,
                                                                 columnNumber: 25
                                                             }, undefined),
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -86319,7 +86539,7 @@ const AdminDashboard = ()=>{
                                                                 children: record.date
                                                             }, void 0, false, {
                                                                 fileName: "src/pages/Dashboard.jsx",
-                                                                lineNumber: 261,
+                                                                lineNumber: 260,
                                                                 columnNumber: 25
                                                             }, undefined),
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -86329,51 +86549,51 @@ const AdminDashboard = ()=>{
                                                                     children: record.status
                                                                 }, void 0, false, {
                                                                     fileName: "src/pages/Dashboard.jsx",
-                                                                    lineNumber: 265,
+                                                                    lineNumber: 264,
                                                                     columnNumber: 27
                                                                 }, undefined)
                                                             }, void 0, false, {
                                                                 fileName: "src/pages/Dashboard.jsx",
-                                                                lineNumber: 264,
+                                                                lineNumber: 263,
                                                                 columnNumber: 25
                                                             }, undefined)
                                                         ]
                                                     }, record._id, true, {
                                                         fileName: "src/pages/Dashboard.jsx",
-                                                        lineNumber: 254,
+                                                        lineNumber: 253,
                                                         columnNumber: 23
                                                     }, undefined))
                                             }, void 0, false, {
                                                 fileName: "src/pages/Dashboard.jsx",
-                                                lineNumber: 252,
+                                                lineNumber: 251,
                                                 columnNumber: 19
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Dashboard.jsx",
-                                        lineNumber: 235,
+                                        lineNumber: 234,
                                         columnNumber: 17
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/pages/Dashboard.jsx",
-                                    lineNumber: 234,
+                                    lineNumber: 233,
                                     columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/pages/Dashboard.jsx",
-                            lineNumber: 230,
+                            lineNumber: 229,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/pages/Dashboard.jsx",
-                        lineNumber: 229,
+                        lineNumber: 228,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Dashboard.jsx",
-                lineNumber: 49,
+                lineNumber: 48,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "text-center py-12",
@@ -86390,12 +86610,12 @@ const AdminDashboard = ()=>{
                             d: "M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                         }, void 0, false, {
                             fileName: "src/pages/Dashboard.jsx",
-                            lineNumber: 291,
+                            lineNumber: 290,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/pages/Dashboard.jsx",
-                        lineNumber: 285,
+                        lineNumber: 284,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -86403,7 +86623,7 @@ const AdminDashboard = ()=>{
                         children: "No data available"
                     }, void 0, false, {
                         fileName: "src/pages/Dashboard.jsx",
-                        lineNumber: 298,
+                        lineNumber: 297,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -86411,19 +86631,19 @@ const AdminDashboard = ()=>{
                         children: "Please check back later or refresh the page."
                     }, void 0, false, {
                         fileName: "src/pages/Dashboard.jsx",
-                        lineNumber: 301,
+                        lineNumber: 300,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Dashboard.jsx",
-                lineNumber: 284,
+                lineNumber: 283,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/Dashboard.jsx",
-        lineNumber: 41,
+        lineNumber: 42,
         columnNumber: 5
     }, undefined);
 };
@@ -86438,7 +86658,7 @@ $RefreshReg$(_c, "AdminDashboard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-hot-toast":"gi0hv","recharts":"7DnXL","../config/axiosInstance.js":"gJ5tu"}],"7DnXL":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-hot-toast":"gi0hv","recharts":"7DnXL","../config/axiosInstance.js":"gJ5tu","../components/LoadingAnimation.jsx":"1omCq"}],"7DnXL":[function(require,module,exports,__globalThis) {
 // "export type" declarations on separate lines are in use
 // to workaround babel issue(s) 11465 12578
 //
@@ -86554,7 +86774,7 @@ var _funnelChart = require("./chart/FunnelChart");
 var _trapezoid = require("./shape/Trapezoid");
 var _global = require("./util/Global");
 
-},{"./container/Surface":false,"./container/Layer":false,"./component/Legend":"3qIzt","./component/DefaultLegendContent":false,"./component/Tooltip":"gEbNO","./component/DefaultTooltipContent":false,"./component/ResponsiveContainer":"jjAvV","./component/Cell":"cmpyN","./component/Text":false,"./component/Label":false,"./component/LabelList":false,"./component/Customized":false,"./shape/Sector":false,"./shape/Curve":false,"./shape/Rectangle":false,"./shape/Polygon":false,"./shape/Dot":false,"./shape/Cross":false,"./shape/Symbols":false,"./polar/PolarGrid":false,"./polar/PolarRadiusAxis":false,"./polar/PolarAngleAxis":false,"./polar/Pie":"4x9kw","./polar/Radar":false,"./polar/RadialBar":false,"./cartesian/Brush":false,"./cartesian/ReferenceLine":false,"./cartesian/ReferenceDot":false,"./cartesian/ReferenceArea":false,"./cartesian/CartesianAxis":false,"./cartesian/CartesianGrid":false,"./cartesian/Line":false,"./cartesian/Area":false,"./cartesian/Bar":"62moi","./cartesian/Scatter":false,"./cartesian/XAxis":"doQvk","./cartesian/YAxis":"h3RMd","./cartesian/ZAxis":false,"./cartesian/ErrorBar":false,"./chart/LineChart":false,"./chart/BarChart":"as5Yi","./chart/PieChart":"4LavF","./chart/Treemap":false,"./chart/Sankey":false,"./chart/RadarChart":false,"./chart/ScatterChart":false,"./chart/AreaChart":false,"./chart/RadialBarChart":false,"./chart/ComposedChart":false,"./chart/SunburstChart":false,"./numberAxis/Funnel":false,"./chart/FunnelChart":false,"./shape/Trapezoid":false,"./util/Global":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ldrIX":[function(require,module,exports,__globalThis) {
+},{"./container/Surface":false,"./container/Layer":false,"./component/Legend":"3qIzt","./component/DefaultLegendContent":false,"./component/Tooltip":"gEbNO","./component/DefaultTooltipContent":false,"./component/ResponsiveContainer":"jjAvV","./component/Cell":"cmpyN","./component/Text":false,"./component/Label":false,"./component/LabelList":false,"./component/Customized":false,"./shape/Sector":false,"./shape/Curve":false,"./shape/Rectangle":false,"./shape/Polygon":false,"./shape/Dot":false,"./shape/Cross":false,"./shape/Symbols":false,"./polar/PolarGrid":false,"./polar/PolarRadiusAxis":false,"./polar/PolarAngleAxis":false,"./polar/Pie":"4x9kw","./polar/Radar":false,"./polar/RadialBar":false,"./cartesian/Brush":false,"./cartesian/ReferenceLine":false,"./cartesian/ReferenceDot":false,"./cartesian/ReferenceArea":false,"./cartesian/CartesianAxis":false,"./cartesian/CartesianGrid":"P0swa","./cartesian/Line":false,"./cartesian/Area":false,"./cartesian/Bar":"62moi","./cartesian/Scatter":false,"./cartesian/XAxis":"doQvk","./cartesian/YAxis":"h3RMd","./cartesian/ZAxis":false,"./cartesian/ErrorBar":false,"./chart/LineChart":false,"./chart/BarChart":"as5Yi","./chart/PieChart":"4LavF","./chart/Treemap":false,"./chart/Sankey":false,"./chart/RadarChart":false,"./chart/ScatterChart":false,"./chart/AreaChart":false,"./chart/RadialBarChart":false,"./chart/ComposedChart":false,"./chart/SunburstChart":false,"./numberAxis/Funnel":false,"./chart/FunnelChart":false,"./shape/Trapezoid":false,"./util/Global":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ldrIX":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Surface", ()=>Surface);
@@ -118188,7 +118408,384 @@ function getEquidistantTicks(sign, boundaries, getTickSize, ticks, minTickGap) {
     return [];
 }
 
-},{"../util/TickUtils":"a7suL","../util/getEveryNthWithCondition":"jo0t8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"doQvk":[function(require,module,exports,__globalThis) {
+},{"../util/TickUtils":"a7suL","../util/getEveryNthWithCondition":"jo0t8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"P0swa":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CartesianGrid", ()=>CartesianGrid);
+/**
+ * @fileOverview Cartesian Grid
+ */ var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _isFunction = require("lodash/isFunction");
+var _isFunctionDefault = parcelHelpers.interopDefault(_isFunction);
+var _logUtils = require("../util/LogUtils");
+var _dataUtils = require("../util/DataUtils");
+var _reactUtils = require("../util/ReactUtils");
+var _chartUtils = require("../util/ChartUtils");
+var _getTicks = require("./getTicks");
+var _cartesianAxis = require("./CartesianAxis");
+var _chartLayoutContext = require("../context/chartLayoutContext");
+var _excluded = [
+    "x1",
+    "y1",
+    "x2",
+    "y2",
+    "key"
+], _excluded2 = [
+    "offset"
+];
+function _typeof(o) {
+    "@babel/helpers - typeof";
+    return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o) {
+        return typeof o;
+    } : function(o) {
+        return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+    }, _typeof(o);
+}
+function ownKeys(e, r) {
+    var t = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        r && (o = o.filter(function(r) {
+            return Object.getOwnPropertyDescriptor(e, r).enumerable;
+        })), t.push.apply(t, o);
+    }
+    return t;
+}
+function _objectSpread(e) {
+    for(var r = 1; r < arguments.length; r++){
+        var t = null != arguments[r] ? arguments[r] : {};
+        r % 2 ? ownKeys(Object(t), !0).forEach(function(r) {
+            _defineProperty(e, r, t[r]);
+        }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function(r) {
+            Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+        });
+    }
+    return e;
+}
+function _defineProperty(obj, key, value) {
+    key = _toPropertyKey(key);
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}
+function _toPropertyKey(t) {
+    var i = _toPrimitive(t, "string");
+    return "symbol" == _typeof(i) ? i : i + "";
+}
+function _toPrimitive(t, r) {
+    if ("object" != _typeof(t) || !t) return t;
+    var e = t[Symbol.toPrimitive];
+    if (void 0 !== e) {
+        var i = e.call(t, r || "default");
+        if ("object" != _typeof(i)) return i;
+        throw new TypeError("@@toPrimitive must return a primitive value.");
+    }
+    return ("string" === r ? String : Number)(t);
+}
+function _extends() {
+    _extends = Object.assign ? Object.assign.bind() : function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+        }
+        return target;
+    };
+    return _extends.apply(this, arguments);
+}
+function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {};
+    var target = _objectWithoutPropertiesLoose(source, excluded);
+    var key, i;
+    if (Object.getOwnPropertySymbols) {
+        var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+        for(i = 0; i < sourceSymbolKeys.length; i++){
+            key = sourceSymbolKeys[i];
+            if (excluded.indexOf(key) >= 0) continue;
+            if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+            target[key] = source[key];
+        }
+    }
+    return target;
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) {
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+/**
+ * The <CartesianGrid horizontal
+ */ var Background = function Background(props) {
+    var fill = props.fill;
+    if (!fill || fill === 'none') return null;
+    var fillOpacity = props.fillOpacity, x = props.x, y = props.y, width = props.width, height = props.height, ry = props.ry;
+    return /*#__PURE__*/ (0, _reactDefault.default).createElement("rect", {
+        x: x,
+        y: y,
+        ry: ry,
+        width: width,
+        height: height,
+        stroke: "none",
+        fill: fill,
+        fillOpacity: fillOpacity,
+        className: "recharts-cartesian-grid-bg"
+    });
+};
+function renderLineItem(option, props) {
+    var lineItem;
+    if (/*#__PURE__*/ (0, _reactDefault.default).isValidElement(option)) // @ts-expect-error typescript does not see the props type when cloning an element
+    lineItem = /*#__PURE__*/ (0, _reactDefault.default).cloneElement(option, props);
+    else if ((0, _isFunctionDefault.default)(option)) lineItem = option(props);
+    else {
+        var x1 = props.x1, y1 = props.y1, x2 = props.x2, y2 = props.y2, key = props.key, others = _objectWithoutProperties(props, _excluded);
+        var _filterProps = (0, _reactUtils.filterProps)(others, false), __ = _filterProps.offset, restOfFilteredProps = _objectWithoutProperties(_filterProps, _excluded2);
+        lineItem = /*#__PURE__*/ (0, _reactDefault.default).createElement("line", _extends({}, restOfFilteredProps, {
+            x1: x1,
+            y1: y1,
+            x2: x2,
+            y2: y2,
+            fill: "none",
+            key: key
+        }));
+    }
+    return lineItem;
+}
+function HorizontalGridLines(props) {
+    var x = props.x, width = props.width, _props$horizontal = props.horizontal, horizontal = _props$horizontal === void 0 ? true : _props$horizontal, horizontalPoints = props.horizontalPoints;
+    if (!horizontal || !horizontalPoints || !horizontalPoints.length) return null;
+    var items = horizontalPoints.map(function(entry, i) {
+        var lineItemProps = _objectSpread(_objectSpread({}, props), {}, {
+            x1: x,
+            y1: entry,
+            x2: x + width,
+            y2: entry,
+            key: "line-".concat(i),
+            index: i
+        });
+        return renderLineItem(horizontal, lineItemProps);
+    });
+    return /*#__PURE__*/ (0, _reactDefault.default).createElement("g", {
+        className: "recharts-cartesian-grid-horizontal"
+    }, items);
+}
+function VerticalGridLines(props) {
+    var y = props.y, height = props.height, _props$vertical = props.vertical, vertical = _props$vertical === void 0 ? true : _props$vertical, verticalPoints = props.verticalPoints;
+    if (!vertical || !verticalPoints || !verticalPoints.length) return null;
+    var items = verticalPoints.map(function(entry, i) {
+        var lineItemProps = _objectSpread(_objectSpread({}, props), {}, {
+            x1: entry,
+            y1: y,
+            x2: entry,
+            y2: y + height,
+            key: "line-".concat(i),
+            index: i
+        });
+        return renderLineItem(vertical, lineItemProps);
+    });
+    return /*#__PURE__*/ (0, _reactDefault.default).createElement("g", {
+        className: "recharts-cartesian-grid-vertical"
+    }, items);
+}
+function HorizontalStripes(props) {
+    var horizontalFill = props.horizontalFill, fillOpacity = props.fillOpacity, x = props.x, y = props.y, width = props.width, height = props.height, horizontalPoints = props.horizontalPoints, _props$horizontal2 = props.horizontal, horizontal = _props$horizontal2 === void 0 ? true : _props$horizontal2;
+    if (!horizontal || !horizontalFill || !horizontalFill.length) return null;
+    // Why =y -y? I was trying to find any difference that this makes, with floating point numbers and edge cases but ... nothing.
+    var roundedSortedHorizontalPoints = horizontalPoints.map(function(e) {
+        return Math.round(e + y - y);
+    }).sort(function(a, b) {
+        return a - b;
+    });
+    // Why is this condition `!==` instead of `<=` ?
+    if (y !== roundedSortedHorizontalPoints[0]) roundedSortedHorizontalPoints.unshift(0);
+    var items = roundedSortedHorizontalPoints.map(function(entry, i) {
+        // Why do we strip only the last stripe if it is invisible, and not all invisible stripes?
+        var lastStripe = !roundedSortedHorizontalPoints[i + 1];
+        var lineHeight = lastStripe ? y + height - entry : roundedSortedHorizontalPoints[i + 1] - entry;
+        if (lineHeight <= 0) return null;
+        var colorIndex = i % horizontalFill.length;
+        return /*#__PURE__*/ (0, _reactDefault.default).createElement("rect", {
+            key: "react-".concat(i) // eslint-disable-line react/no-array-index-key
+            ,
+            y: entry,
+            x: x,
+            height: lineHeight,
+            width: width,
+            stroke: "none",
+            fill: horizontalFill[colorIndex],
+            fillOpacity: fillOpacity,
+            className: "recharts-cartesian-grid-bg"
+        });
+    });
+    return /*#__PURE__*/ (0, _reactDefault.default).createElement("g", {
+        className: "recharts-cartesian-gridstripes-horizontal"
+    }, items);
+}
+function VerticalStripes(props) {
+    var _props$vertical2 = props.vertical, vertical = _props$vertical2 === void 0 ? true : _props$vertical2, verticalFill = props.verticalFill, fillOpacity = props.fillOpacity, x = props.x, y = props.y, width = props.width, height = props.height, verticalPoints = props.verticalPoints;
+    if (!vertical || !verticalFill || !verticalFill.length) return null;
+    var roundedSortedVerticalPoints = verticalPoints.map(function(e) {
+        return Math.round(e + x - x);
+    }).sort(function(a, b) {
+        return a - b;
+    });
+    if (x !== roundedSortedVerticalPoints[0]) roundedSortedVerticalPoints.unshift(0);
+    var items = roundedSortedVerticalPoints.map(function(entry, i) {
+        var lastStripe = !roundedSortedVerticalPoints[i + 1];
+        var lineWidth = lastStripe ? x + width - entry : roundedSortedVerticalPoints[i + 1] - entry;
+        if (lineWidth <= 0) return null;
+        var colorIndex = i % verticalFill.length;
+        return /*#__PURE__*/ (0, _reactDefault.default).createElement("rect", {
+            key: "react-".concat(i) // eslint-disable-line react/no-array-index-key
+            ,
+            x: entry,
+            y: y,
+            width: lineWidth,
+            height: height,
+            stroke: "none",
+            fill: verticalFill[colorIndex],
+            fillOpacity: fillOpacity,
+            className: "recharts-cartesian-grid-bg"
+        });
+    });
+    return /*#__PURE__*/ (0, _reactDefault.default).createElement("g", {
+        className: "recharts-cartesian-gridstripes-vertical"
+    }, items);
+}
+var defaultVerticalCoordinatesGenerator = function defaultVerticalCoordinatesGenerator(_ref, syncWithTicks) {
+    var xAxis = _ref.xAxis, width = _ref.width, height = _ref.height, offset = _ref.offset;
+    return (0, _chartUtils.getCoordinatesOfGrid)((0, _getTicks.getTicks)(_objectSpread(_objectSpread(_objectSpread({}, (0, _cartesianAxis.CartesianAxis).defaultProps), xAxis), {}, {
+        ticks: (0, _chartUtils.getTicksOfAxis)(xAxis, true),
+        viewBox: {
+            x: 0,
+            y: 0,
+            width: width,
+            height: height
+        }
+    })), offset.left, offset.left + offset.width, syncWithTicks);
+};
+var defaultHorizontalCoordinatesGenerator = function defaultHorizontalCoordinatesGenerator(_ref2, syncWithTicks) {
+    var yAxis = _ref2.yAxis, width = _ref2.width, height = _ref2.height, offset = _ref2.offset;
+    return (0, _chartUtils.getCoordinatesOfGrid)((0, _getTicks.getTicks)(_objectSpread(_objectSpread(_objectSpread({}, (0, _cartesianAxis.CartesianAxis).defaultProps), yAxis), {}, {
+        ticks: (0, _chartUtils.getTicksOfAxis)(yAxis, true),
+        viewBox: {
+            x: 0,
+            y: 0,
+            width: width,
+            height: height
+        }
+    })), offset.top, offset.top + offset.height, syncWithTicks);
+};
+var defaultProps = {
+    horizontal: true,
+    vertical: true,
+    // The ordinates of horizontal grid lines
+    horizontalPoints: [],
+    // The abscissas of vertical grid lines
+    verticalPoints: [],
+    stroke: '#ccc',
+    fill: 'none',
+    // The fill of colors of grid lines
+    verticalFill: [],
+    horizontalFill: []
+};
+function CartesianGrid(props) {
+    var _props$stroke, _props$fill, _props$horizontal3, _props$horizontalFill, _props$vertical3, _props$verticalFill;
+    var chartWidth = (0, _chartLayoutContext.useChartWidth)();
+    var chartHeight = (0, _chartLayoutContext.useChartHeight)();
+    var offset = (0, _chartLayoutContext.useOffset)();
+    var propsIncludingDefaults = _objectSpread(_objectSpread({}, props), {}, {
+        stroke: (_props$stroke = props.stroke) !== null && _props$stroke !== void 0 ? _props$stroke : defaultProps.stroke,
+        fill: (_props$fill = props.fill) !== null && _props$fill !== void 0 ? _props$fill : defaultProps.fill,
+        horizontal: (_props$horizontal3 = props.horizontal) !== null && _props$horizontal3 !== void 0 ? _props$horizontal3 : defaultProps.horizontal,
+        horizontalFill: (_props$horizontalFill = props.horizontalFill) !== null && _props$horizontalFill !== void 0 ? _props$horizontalFill : defaultProps.horizontalFill,
+        vertical: (_props$vertical3 = props.vertical) !== null && _props$vertical3 !== void 0 ? _props$vertical3 : defaultProps.vertical,
+        verticalFill: (_props$verticalFill = props.verticalFill) !== null && _props$verticalFill !== void 0 ? _props$verticalFill : defaultProps.verticalFill,
+        x: (0, _dataUtils.isNumber)(props.x) ? props.x : offset.left,
+        y: (0, _dataUtils.isNumber)(props.y) ? props.y : offset.top,
+        width: (0, _dataUtils.isNumber)(props.width) ? props.width : offset.width,
+        height: (0, _dataUtils.isNumber)(props.height) ? props.height : offset.height
+    });
+    var x = propsIncludingDefaults.x, y = propsIncludingDefaults.y, width = propsIncludingDefaults.width, height = propsIncludingDefaults.height, syncWithTicks = propsIncludingDefaults.syncWithTicks, horizontalValues = propsIncludingDefaults.horizontalValues, verticalValues = propsIncludingDefaults.verticalValues;
+    // @ts-expect-error the scale prop is mixed up - we need to untagle this at some point
+    var xAxis = (0, _chartLayoutContext.useArbitraryXAxis)();
+    // @ts-expect-error the scale prop is mixed up - we need to untagle this at some point
+    var yAxis = (0, _chartLayoutContext.useYAxisWithFiniteDomainOrRandom)();
+    if (!(0, _dataUtils.isNumber)(width) || width <= 0 || !(0, _dataUtils.isNumber)(height) || height <= 0 || !(0, _dataUtils.isNumber)(x) || x !== +x || !(0, _dataUtils.isNumber)(y) || y !== +y) return null;
+    /*
+   * verticalCoordinatesGenerator and horizontalCoordinatesGenerator are defined
+   * outside of the propsIncludingDefaults because they were never part of the original props
+   * and they were never passed as a prop down to horizontal/vertical custom elements.
+   * If we add these two to propsIncludingDefaults then we are changing public API.
+   * Not a bad thing per se but also not necessary.
+   */ var verticalCoordinatesGenerator = propsIncludingDefaults.verticalCoordinatesGenerator || defaultVerticalCoordinatesGenerator;
+    var horizontalCoordinatesGenerator = propsIncludingDefaults.horizontalCoordinatesGenerator || defaultHorizontalCoordinatesGenerator;
+    var horizontalPoints = propsIncludingDefaults.horizontalPoints, verticalPoints = propsIncludingDefaults.verticalPoints;
+    // No horizontal points are specified
+    if ((!horizontalPoints || !horizontalPoints.length) && (0, _isFunctionDefault.default)(horizontalCoordinatesGenerator)) {
+        var isHorizontalValues = horizontalValues && horizontalValues.length;
+        var generatorResult = horizontalCoordinatesGenerator({
+            yAxis: yAxis ? _objectSpread(_objectSpread({}, yAxis), {}, {
+                ticks: isHorizontalValues ? horizontalValues : yAxis.ticks
+            }) : undefined,
+            width: chartWidth,
+            height: chartHeight,
+            offset: offset
+        }, isHorizontalValues ? true : syncWithTicks);
+        (0, _logUtils.warn)(Array.isArray(generatorResult), "horizontalCoordinatesGenerator should return Array but instead it returned [".concat(_typeof(generatorResult), "]"));
+        if (Array.isArray(generatorResult)) horizontalPoints = generatorResult;
+    }
+    // No vertical points are specified
+    if ((!verticalPoints || !verticalPoints.length) && (0, _isFunctionDefault.default)(verticalCoordinatesGenerator)) {
+        var isVerticalValues = verticalValues && verticalValues.length;
+        var _generatorResult = verticalCoordinatesGenerator({
+            xAxis: xAxis ? _objectSpread(_objectSpread({}, xAxis), {}, {
+                ticks: isVerticalValues ? verticalValues : xAxis.ticks
+            }) : undefined,
+            width: chartWidth,
+            height: chartHeight,
+            offset: offset
+        }, isVerticalValues ? true : syncWithTicks);
+        (0, _logUtils.warn)(Array.isArray(_generatorResult), "verticalCoordinatesGenerator should return Array but instead it returned [".concat(_typeof(_generatorResult), "]"));
+        if (Array.isArray(_generatorResult)) verticalPoints = _generatorResult;
+    }
+    return /*#__PURE__*/ (0, _reactDefault.default).createElement("g", {
+        className: "recharts-cartesian-grid"
+    }, /*#__PURE__*/ (0, _reactDefault.default).createElement(Background, {
+        fill: propsIncludingDefaults.fill,
+        fillOpacity: propsIncludingDefaults.fillOpacity,
+        x: propsIncludingDefaults.x,
+        y: propsIncludingDefaults.y,
+        width: propsIncludingDefaults.width,
+        height: propsIncludingDefaults.height,
+        ry: propsIncludingDefaults.ry
+    }), /*#__PURE__*/ (0, _reactDefault.default).createElement(HorizontalGridLines, _extends({}, propsIncludingDefaults, {
+        offset: offset,
+        horizontalPoints: horizontalPoints,
+        xAxis: xAxis,
+        yAxis: yAxis
+    })), /*#__PURE__*/ (0, _reactDefault.default).createElement(VerticalGridLines, _extends({}, propsIncludingDefaults, {
+        offset: offset,
+        verticalPoints: verticalPoints,
+        xAxis: xAxis,
+        yAxis: yAxis
+    })), /*#__PURE__*/ (0, _reactDefault.default).createElement(HorizontalStripes, _extends({}, propsIncludingDefaults, {
+        horizontalPoints: horizontalPoints
+    })), /*#__PURE__*/ (0, _reactDefault.default).createElement(VerticalStripes, _extends({}, propsIncludingDefaults, {
+        verticalPoints: verticalPoints
+    })));
+}
+CartesianGrid.displayName = 'CartesianGrid';
+
+},{"react":"21dqq","lodash/isFunction":"cfti6","../util/LogUtils":"8xgWw","../util/DataUtils":"exzKF","../util/ReactUtils":"gDert","../util/ChartUtils":"2s4mV","./getTicks":"aQkNo","./CartesianAxis":"2GpfE","../context/chartLayoutContext":"bLou8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"doQvk":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "XAxis", ()=>XAxis);
@@ -121278,7 +121875,50 @@ var PieChart = (0, _generateCategoricalChart.generateCategoricalChart)({
     }
 });
 
-},{"./generateCategoricalChart":"4ZsfY","../polar/PolarAngleAxis":"7ZFSt","../polar/PolarRadiusAxis":"94jRq","../util/PolarUtils":"xMDoY","../polar/Pie":"4x9kw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fgGq0":[function(require,module,exports,__globalThis) {
+},{"./generateCategoricalChart":"4ZsfY","../polar/PolarAngleAxis":"7ZFSt","../polar/PolarRadiusAxis":"94jRq","../util/PolarUtils":"xMDoY","../polar/Pie":"4x9kw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1omCq":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$a009 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$a009.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _lottieReact = require("lottie-react");
+var _lottieReactDefault = parcelHelpers.interopDefault(_lottieReact);
+var _loadingJson = require("../assets/loading.json");
+var _loadingJsonDefault = parcelHelpers.interopDefault(_loadingJson);
+const LoadingAnimation = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "w-[40%] mx-auto",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lottieReactDefault.default), {
+            animationData: (0, _loadingJsonDefault.default)
+        }, void 0, false, {
+            fileName: "src/components/LoadingAnimation.jsx",
+            lineNumber: 6,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/LoadingAnimation.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = LoadingAnimation;
+exports.default = LoadingAnimation;
+var _c;
+$RefreshReg$(_c, "LoadingAnimation");
+
+  $parcel$ReactRefreshHelpers$a009.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../assets/loading.json":"4xszR","lottie-react":"kSXtH"}],"4xszR":[function(require,module,exports,__globalThis) {
+module.exports = JSON.parse("{\"v\":\"5.5.7\",\"meta\":{\"g\":\"LottieFiles AE 0.1.21\",\"a\":\"\",\"k\":\"\",\"d\":\"\",\"tc\":\"\"},\"fr\":60,\"ip\":0,\"op\":43,\"w\":512,\"h\":512,\"nm\":\"Loading Animation Bored Hand\",\"ddd\":0,\"assets\":[],\"layers\":[{\"ddd\":0,\"ind\":2,\"ty\":4,\"nm\":\"LOADING Outlines\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[255.892,367,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],\"v\":[[-33.44,0],[-33.44,-3.04],[-39.767,-3.04],[-39.767,-13.566],[-43.301,-13.566],[-43.301,0]],\"c\":true},\"ix\":2},\"nm\":\"L\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666666667,0.266666666667,0.266666666667,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":0,\"s\":[0,0],\"to\":[0,-0.569],\"ti\":[0,1.578]},{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":5,\"s\":[0,-3.686],\"to\":[0,-2.122],\"ti\":[0,-0.614]},{\"t\":9.34765625,\"s\":[0,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"L\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[-1.166,-1.304],[-2.078,0],[-1.216,1.368],[0,2.04],[1.165,1.305],[2.077,0],[1.216,-1.368],[0,-2.039]],\"o\":[[1.216,1.368],[2.077,0],[1.165,-1.304],[0,-2.039],[-1.216,-1.368],[-2.078,0],[-1.166,1.305],[0,2.04]],\"v\":[[-30.457,-1.767],[-25.517,0.285],[-20.577,-1.767],[-18.829,-6.783],[-20.577,-11.799],[-25.517,-13.851],[-30.457,-11.799],[-32.205,-6.783]],\"c\":true},\"ix\":2},\"nm\":\"O\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ind\":1,\"ty\":\"sh\",\"ix\":2,\"ks\":{\"a\":0,\"k\":{\"i\":[[-0.482,0.722],[-1.064,0],[-0.558,-0.836],[0,-1.127],[0.481,-0.722],[1.064,0],[0.557,0.836],[0,1.128]],\"o\":[[0.557,-0.836],[1.064,0],[0.481,0.722],[0,1.128],[-0.558,0.836],[-1.064,0],[-0.482,-0.722],[0,-1.127]],\"v\":[[-27.949,-9.557],[-25.517,-10.811],[-23.085,-9.557],[-22.363,-6.783],[-23.085,-4.009],[-25.517,-2.755],[-27.949,-4.009],[-28.671,-6.783]],\"c\":true},\"ix\":2},\"nm\":\"O\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666666667,0.266666666667,0.266666666667,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":5,\"s\":[0,0],\"to\":[0,-0.525],\"ti\":[0,1.447]},{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":11,\"s\":[0,-3.326],\"to\":[0,-2.226],\"ti\":[0,-0.554]},{\"t\":14.95703125,\"s\":[0,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"O\",\"np\":4,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0]],\"v\":[[-11.419,-9.804],[-9.918,-5.054],[-12.996,-5.054],[-11.457,-9.804]],\"c\":true},\"ix\":2},\"nm\":\"A\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ind\":1,\"ty\":\"sh\",\"ix\":2,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],\"v\":[[-14.668,0],[-13.813,-2.432],[-9.082,-2.432],[-8.246,0],[-4.56,0],[-9.633,-13.566],[-13.224,-13.566],[-18.297,0]],\"c\":true},\"ix\":2},\"nm\":\"A\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666666667,0.266666666667,0.266666666667,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":11,\"s\":[0,0],\"to\":[0,-0.552],\"ti\":[0,1.53]},{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":16,\"s\":[0,-3.55],\"to\":[0,-2.163],\"ti\":[0,-0.592]},{\"t\":20.564453125,\"s\":[0,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"A\",\"np\":4,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-1.172,1.178],[0,2.204],[1.178,1.191],[2.077,0],[0,0],[0,0]],\"o\":[[2.09,0],[1.171,-1.178],[0,-2.102],[-1.178,-1.19],[0,0],[0,0],[0,0]],\"v\":[[2.299,0],[7.192,-1.767],[8.949,-6.84],[7.182,-11.78],[2.299,-13.566],[-3.534,-13.566],[-3.534,0]],\"c\":true},\"ix\":2},\"nm\":\"D\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ind\":1,\"ty\":\"sh\",\"ix\":2,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,-2.444],[0.576,-0.595],[1.342,0],[0,0],[0,0]],\"o\":[[2.495,0],[0,1.356],[-0.577,0.596],[0,0],[0,0],[0,0]],\"v\":[[1.672,-10.526],[5.415,-6.859],[4.551,-3.933],[1.672,-3.04],[0,-3.04],[0,-10.526]],\"c\":true},\"ix\":2},\"nm\":\"D\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666666667,0.266666666667,0.266666666667,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":16,\"s\":[0,0],\"to\":[0,-0.512],\"ti\":[0,1.404]},{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":22,\"s\":[0,-3.212],\"to\":[0,-2.255],\"ti\":[0,-0.535]},{\"t\":26.173828125,\"s\":[0,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"D\",\"np\":4,\"cix\":2,\"bm\":0,\"ix\":4,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0]],\"v\":[[14.421,0],[14.421,-13.566],[10.887,-13.566],[10.887,0]],\"c\":true},\"ix\":2},\"nm\":\"I\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666666667,0.266666666667,0.266666666667,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":22,\"s\":[0,0],\"to\":[0,-0.537],\"ti\":[0,1.483]},{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":28,\"s\":[0,-3.423],\"to\":[0,-2.199],\"ti\":[0,-0.57]},{\"t\":31.783203125,\"s\":[0,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"I\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":5,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],\"v\":[[20.159,0],[20.159,-8.455],[24.892,0],[28.538,0],[28.538,-13.566],[25.213,-13.566],[25.213,-5.206],[20.479,-13.566],[16.834,-13.566],[16.834,0]],\"c\":true},\"ix\":2},\"nm\":\"N\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666666667,0.266666666667,0.266666666667,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":28,\"s\":[0,0],\"to\":[0,-0.565],\"ti\":[0,1.569]},{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":33,\"s\":[0,-3.659],\"to\":[0,-2.13],\"ti\":[0,-0.61]},{\"t\":37.390625,\"s\":[0,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"N\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":6,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0.557,-0.373],[0.861,0],[0.557,0.836],[0,1.128],[-0.482,0.722],[-1.064,0],[-0.507,-0.335],[-0.051,-0.57],[0,0],[1.266,0.887],[1.545,0],[1.247,-1.349],[0,-2.014],[-1.229,-1.33],[-2.014,0],[-0.836,1.178],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[-0.102,0.621],[-0.558,0.374],[-1.064,0],[-0.482,-0.722],[0,-1.127],[0.557,-0.836],[0.722,0],[0.506,0.336],[0,0],[-0.152,-1.596],[-1.128,-0.785],[-2.014,0],[-1.248,1.349],[0,2.014],[1.266,1.368],[1.684,0],[0,0],[0,0],[0,0],[0,0]],\"v\":[[37.772,-7.429],[37.772,-4.807],[40.242,-4.807],[39.254,-3.316],[37.126,-2.755],[34.694,-4.009],[33.972,-6.783],[34.694,-9.557],[37.126,-10.811],[38.969,-10.307],[39.805,-8.949],[43.339,-8.949],[41.211,-12.673],[37.202,-13.851],[32.309,-11.827],[30.438,-6.783],[32.281,-1.767],[37.202,0.285],[40.983,-1.482],[41.192,0],[43.472,0],[43.472,-7.429]],\"c\":true},\"ix\":2},\"nm\":\"G\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666666667,0.266666666667,0.266666666667,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":33,\"s\":[0,0],\"to\":[0,-0.522],\"ti\":[0,1.438]},{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":39,\"s\":[0,-3.302],\"to\":[0,-2.232],\"ti\":[0,-0.55]},{\"t\":43,\"s\":[0,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"G\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":7,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":80,\"st\":0,\"bm\":0},{\"ddd\":0,\"ind\":3,\"ty\":4,\"nm\":\"Index_finger\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[256,256,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-130.75],[17,-130.25],[6.75,-118],[8,-67.75],[22.25,-57.75],[38.75,-68],[40.5,-116.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":6,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-133.122],[17,-132.622],[6.75,-120.372],[8.279,-69.564],[22.529,-59.564],[39.029,-69.814],[40.5,-118.622]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-129.599],[17,-129.099],[6.75,-116.849],[8.512,-65.576],[22.762,-55.576],[39.262,-65.826],[40.5,-115.099]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":22,\"s\":[{\"i\":[[9.5,3.948],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-1.278,4.408],[0.25,0.25]],\"o\":[[-7.971,-3.312],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[3.727,-12.849],[-0.25,-0.25]],\"v\":[[30,-72.948],[15.5,-73.948],[5.25,-61.698],[30.523,35.599],[44.773,45.599],[61.273,35.349],[45.5,-45.948]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":30,\"s\":[{\"i\":[[9.5,3.948],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-1.278,4.408],[0.25,0.25]],\"o\":[[-7.971,-3.312],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[3.727,-12.849],[-0.25,-0.25]],\"v\":[[30,-72.948],[15.5,-73.948],[5.25,-61.698],[30.523,35.599],[44.773,45.599],[61.273,35.349],[45.5,-45.948]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-130.75],[17,-130.25],[6.75,-118],[8,-67.75],[22.25,-57.75],[38.75,-68],[40.5,-116.25]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.419607877731,0,0.454901993275,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":2,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":4,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 3\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[9.888,1.745],[0,0],[-3.25,-11.25],[1.637,-12.477],[-1.239,-0.169],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[3.492,12.089],[-0.826,6.293],[5.5,0.75],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-130.75],[17,-130.25],[29,-118.25],[29.75,-75.25],[26.75,-58.5],[38.75,-68],[40.5,-116.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":6,\"s\":[{\"i\":[[9.888,1.745],[0,0],[-3.25,-11.25],[1.637,-12.477],[-1.239,-0.169],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[3.492,12.089],[-0.826,6.293],[5.5,0.75],[2.25,-4],[-0.25,-0.25]],\"v\":[[29.75,-133],[16.75,-132.5],[28.75,-120.5],[29.5,-77.5],[26.5,-60.75],[38.5,-70.25],[40.25,-118.5]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[9.888,1.745],[0,0],[-3.25,-11.25],[1.637,-12.477],[-1.239,-0.169],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[3.492,12.089],[-0.826,6.293],[5.5,0.75],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-128.75],[17,-128.25],[29,-116.25],[29.75,-73.25],[26.75,-56.5],[38.75,-66],[40.5,-114.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":22,\"s\":[{\"i\":[[9.888,1.745],[0,0],[-3.25,-11.25],[-0.75,-13.25],[-1.235,-0.19],[-0.744,4.529],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[3.492,12.089],[0.359,6.336],[3.25,0.5],[2.75,-16.75],[-0.25,-0.25]],\"v\":[[28,-73.75],[13,-73.25],[29.5,-59.75],[52.75,28],[52.25,44],[61.75,35.25],[43.75,-52.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":30,\"s\":[{\"i\":[[9.888,1.745],[0,0],[-3.25,-11.25],[-0.75,-13.25],[-1.235,-0.19],[-0.744,4.529],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[3.492,12.089],[0.359,6.336],[3.25,0.5],[2.75,-16.75],[-0.25,-0.25]],\"v\":[[28,-73.75],[13,-73.25],[29.5,-59.75],[52.75,28],[52.25,44],[61.75,35.25],[43.75,-52.25]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[9.888,1.745],[0,0],[-3.25,-11.25],[1.637,-12.477],[-1.239,-0.169],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[3.492,12.089],[-0.826,6.293],[5.5,0.75],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-130.75],[17,-130.25],[29,-118.25],[29.75,-75.25],[26.75,-58.5],[38.75,-68],[40.5,-116.25]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.050980392156862744,0.4627450980392157,0.9450980392156862,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 2\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-130.75],[17,-130.25],[6.75,-118],[8,-67.75],[22.25,-57.75],[38.75,-68],[40.5,-116.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":6,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-133.122],[17,-132.622],[6.75,-120.372],[8.279,-69.564],[22.529,-59.564],[39.029,-69.814],[40.5,-118.622]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-129.599],[17,-129.099],[6.75,-116.849],[8.512,-65.576],[22.762,-55.576],[39.262,-65.826],[40.5,-115.099]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":22,\"s\":[{\"i\":[[9.5,3.948],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-1.278,4.408],[0.25,0.25]],\"o\":[[-7.971,-3.312],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[3.727,-12.849],[-0.25,-0.25]],\"v\":[[30,-72.948],[15.5,-73.948],[5.25,-61.698],[30.523,35.599],[44.773,45.599],[61.273,35.349],[45.5,-45.948]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":30,\"s\":[{\"i\":[[9.5,3.948],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-1.278,4.408],[0.25,0.25]],\"o\":[[-7.971,-3.312],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[3.727,-12.849],[-0.25,-0.25]],\"v\":[[30,-72.948],[15.5,-73.948],[5.25,-61.698],[30.523,35.599],[44.773,45.599],[61.273,35.349],[45.5,-45.948]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-130.75],[17,-130.25],[6.75,-118],[8,-67.75],[22.25,-57.75],[38.75,-68],[40.5,-116.25]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.2901960784313726,0.5647058823529412,0.8862745098039215,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 1\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":80,\"st\":0,\"bm\":0},{\"ddd\":0,\"ind\":4,\"ty\":4,\"nm\":\"Middle_finger\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[256,256,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[9.375,-1.616],[0,0],[-1.75,-10.75],[-1.25,-4.25],[-8.75,-0.5],[1,13],[3,5]],\"o\":[[-7.25,1.25],[0,0],[1.75,10.75],[1.25,4.25],[8.75,0.5],[-1,-13],[-3,-5]],\"v\":[[-24.5,-140.75],[-36,-130.75],[-35.5,-117.5],[-28,-74.5],[-15,-61],[5.5,-75.25],[-5.25,-132.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[9.375,-1.616],[0,0],[-1.75,-10.75],[-1.25,-4.25],[-8.75,-0.5],[1,13],[3,5]],\"o\":[[-7.25,1.25],[0,0],[1.75,10.75],[1.25,4.25],[8.75,0.5],[-1,-13],[-3,-5]],\"v\":[[-23.25,-115.75],[-34.75,-105.75],[-34.25,-92.5],[-20.5,-34.5],[-7.5,-21],[13,-35.25],[-4,-107.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":22,\"s\":[{\"i\":[[11.347,-1.939],[0,0],[-1.576,-9.505],[-1.513,-5.149],[-10.587,-0.606],[4.501,20.379],[3.63,6.058]],\"o\":[[-14.136,2.416],[0,0],[2.159,13.018],[1.512,5.149],[10.587,0.606],[-3.407,-15.426],[-3.63,-6.058]],\"v\":[[-19.572,-73.033],[-33.863,-59.542],[-32.383,-43.737],[-11.62,23.537],[5.985,48.019],[25.79,24.003],[1.47,-60.859]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":28,\"s\":[{\"i\":[[11.347,-1.939],[0,0],[-1.576,-9.505],[-1.513,-5.149],[-10.587,-0.606],[4.501,20.379],[3.63,6.058]],\"o\":[[-14.136,2.416],[0,0],[2.159,13.018],[1.512,5.149],[10.587,0.606],[-3.407,-15.426],[-3.63,-6.058]],\"v\":[[-19.572,-73.033],[-33.863,-59.542],[-32.383,-43.737],[-11.62,23.537],[5.985,48.019],[25.79,24.003],[1.47,-60.859]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[9.375,-1.616],[0,0],[-1.75,-10.75],[-1.25,-4.25],[-8.75,-0.5],[1,13],[3,5]],\"o\":[[-7.25,1.25],[0,0],[1.75,10.75],[1.25,4.25],[8.75,0.5],[-1,-13],[-3,-5]],\"v\":[[-24.5,-140.75],[-36,-130.75],[-35.5,-117.5],[-28,-74.5],[-15,-61],[5.5,-75.25],[-5.25,-132.25]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.419607877731,0,0.454901993275,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":2,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":4,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-0.916,-1.008],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 3\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[6.983,-0.66],[-3.834,-11.242],[-1.839,-8.422],[-0.584,-7.242],[-3.51,0.965],[0.266,4.988],[8.051,17.579]],\"o\":[[-9.334,0.883],[3.796,11.131],[2.338,10.709],[1.03,12.774],[4.816,-1.324],[-1.031,-19.307],[-2.921,-6.377]],\"v\":[[-24.5,-140.75],[-14.25,-125.75],[-8.75,-101.375],[-4,-74.5],[-1.875,-62.75],[5.5,-75.25],[-5.25,-132.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[-2.412,-1.507],[-2.855,-11.53],[-1.839,-8.422],[-0.584,-7.242],[-3.612,0.453],[0.266,4.988],[6.572,18.184]],\"o\":[[6.416,4.008],[2.416,9.758],[2.338,10.709],[1.03,12.774],[6.416,-0.805],[-1.031,-19.307],[-4.334,-11.992]],\"v\":[[-23,-114.75],[-6.25,-84.5],[-0.75,-60.125],[4,-33.25],[2.375,-21.25],[13.5,-34],[-3.75,-106.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":22,\"s\":[{\"i\":[[-2.412,-1.507],[-2.855,-11.53],[-1.839,-8.422],[-0.584,-7.242],[-3.612,0.453],[0.266,4.988],[6.572,18.184]],\"o\":[[6.416,4.008],[2.416,9.758],[2.338,10.709],[1.03,12.774],[6.416,-0.805],[-1.031,-19.307],[-4.334,-11.992]],\"v\":[[-22,-72.5],[-2.75,-41.75],[5,-15.125],[16,34],[14.375,46],[25.5,33.25],[-0.25,-63.5]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":28,\"s\":[{\"i\":[[-2.412,-1.507],[-2.855,-11.53],[-1.839,-8.422],[-0.584,-7.242],[-3.612,0.453],[0.266,4.988],[6.572,18.184]],\"o\":[[6.416,4.008],[2.416,9.758],[2.338,10.709],[1.03,12.774],[6.416,-0.805],[-1.031,-19.307],[-4.334,-11.992]],\"v\":[[-22,-72.5],[-2.75,-41.75],[5,-15.125],[16,34],[14.375,46],[25.5,33.25],[-0.25,-63.5]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[6.983,-0.66],[-3.834,-11.242],[-1.839,-8.422],[-0.584,-7.242],[-3.51,0.965],[0.266,4.988],[8.051,17.579]],\"o\":[[-9.334,0.883],[3.796,11.131],[2.338,10.709],[1.03,12.774],[4.816,-1.324],[-1.031,-19.307],[-2.921,-6.377]],\"v\":[[-24.5,-140.75],[-14.25,-125.75],[-8.75,-101.375],[-4,-74.5],[-1.875,-62.75],[5.5,-75.25],[-5.25,-132.25]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.050980392156862744,0.4627450980392157,0.9450980392156862,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-0.916,-1.008],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 2\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[9.375,-1.616],[0,0],[-1.75,-10.75],[-1.25,-4.25],[-8.75,-0.5],[1,13],[3,5]],\"o\":[[-7.25,1.25],[0,0],[1.75,10.75],[1.25,4.25],[8.75,0.5],[-1,-13],[-3,-5]],\"v\":[[-24.5,-140.75],[-36,-130.75],[-35.5,-117.5],[-28,-74.5],[-15,-61],[5.5,-75.25],[-5.25,-132.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[9.375,-1.616],[0,0],[-1.75,-10.75],[-1.25,-4.25],[-8.75,-0.5],[1,13],[3,5]],\"o\":[[-7.25,1.25],[0,0],[1.75,10.75],[1.25,4.25],[8.75,0.5],[-1,-13],[-3,-5]],\"v\":[[-23.25,-115.75],[-34.75,-105.75],[-34.25,-92.5],[-20.5,-34.5],[-7.5,-21],[13,-35.25],[-4,-107.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":22,\"s\":[{\"i\":[[11.347,-1.939],[0,0],[-1.576,-9.505],[-1.513,-5.149],[-10.587,-0.606],[4.501,20.379],[3.63,6.058]],\"o\":[[-14.136,2.416],[0,0],[2.159,13.018],[1.512,5.149],[10.587,0.606],[-3.407,-15.426],[-3.63,-6.058]],\"v\":[[-19.572,-73.033],[-33.863,-59.542],[-32.383,-43.737],[-11.62,23.537],[5.985,48.019],[25.79,24.003],[1.47,-60.859]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":28,\"s\":[{\"i\":[[11.347,-1.939],[0,0],[-1.576,-9.505],[-1.513,-5.149],[-10.587,-0.606],[4.501,20.379],[3.63,6.058]],\"o\":[[-14.136,2.416],[0,0],[2.159,13.018],[1.512,5.149],[10.587,0.606],[-3.407,-15.426],[-3.63,-6.058]],\"v\":[[-19.572,-73.033],[-33.863,-59.542],[-32.383,-43.737],[-11.62,23.537],[5.985,48.019],[25.79,24.003],[1.47,-60.859]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[9.375,-1.616],[0,0],[-1.75,-10.75],[-1.25,-4.25],[-8.75,-0.5],[1,13],[3,5]],\"o\":[[-7.25,1.25],[0,0],[1.75,10.75],[1.25,4.25],[8.75,0.5],[-1,-13],[-3,-5]],\"v\":[[-24.5,-140.75],[-36,-130.75],[-35.5,-117.5],[-28,-74.5],[-15,-61],[5.5,-75.25],[-5.25,-132.25]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.2901960784313726,0.5647058823529412,0.8862745098039215,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-0.916,-1.008],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 1\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":80,\"st\":0,\"bm\":0},{\"ddd\":0,\"ind\":5,\"ty\":4,\"nm\":\"Ring_finger\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[256,256,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[10,1],[0.392,-5.492],[-3.5,-9.25],[-7.75,-2.75],[4.636,19.412],[1,3.5]],\"o\":[[-10,-1],[-0.5,7],[6.128,16.195],[7.75,2.75],[-4,-16.75],[-1,-3.5]],\"v\":[[-55.5,-105],[-75.5,-93],[-71.5,-73.5],[-50,-28.5],[-26.75,-48],[-39.75,-87]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[11.181,1.09],[0.439,-5.987],[-3.913,-10.085],[-12.321,-5.496],[6.183,21.764],[1.118,3.816]],\"o\":[[-11.181,-1.09],[-0.559,7.632],[6.851,17.656],[9.694,4.324],[-5.138,-18.086],[-1.118,-3.816]],\"v\":[[-51.579,-63.91],[-73.941,-50.826],[-69.469,-29.566],[-34.429,44.746],[-12.683,21.736],[-33.969,-44.285]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[11.181,1.09],[0.439,-5.987],[-3.913,-10.085],[-12.321,-5.496],[6.183,21.764],[1.118,3.816]],\"o\":[[-11.181,-1.09],[-0.559,7.632],[6.851,17.656],[9.694,4.324],[-5.138,-18.086],[-1.118,-3.816]],\"v\":[[-51.579,-63.91],[-73.941,-50.826],[-69.469,-29.566],[-34.429,44.746],[-12.683,21.736],[-33.969,-44.285]],\"c\":true}]},{\"t\":36,\"s\":[{\"i\":[[10,1],[0.392,-5.492],[-3.5,-9.25],[-7.75,-2.75],[4.636,19.412],[1,3.5]],\"o\":[[-10,-1],[-0.5,7],[6.128,16.195],[7.75,2.75],[-4,-16.75],[-1,-3.5]],\"v\":[[-55.5,-105],[-75.5,-93],[-71.5,-73.5],[-50,-28.5],[-26.75,-48],[-39.75,-87]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.419607877731,0,0.454901993275,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":2,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":4,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 3\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[10.047,0.251],[-3.5,-2.25],[-3.5,-9.25],[5.75,-8.625],[4,14.875],[1,3.5]],\"o\":[[-5,-0.125],[10.073,6.476],[6.128,16.195],[-1.746,2.619],[-4.472,-16.63],[-1,-3.5]],\"v\":[[-55.5,-105],[-63.375,-102.125],[-47,-75.5],[-39.25,-28.625],[-26.75,-48],[-39.75,-87]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[10.047,0.251],[-3.811,-1.67],[-4.52,-8.796],[5.75,-8.625],[1.619,9.628],[1,3.5]],\"o\":[[-5,-0.125],[11.125,4.875],[9.25,18],[-1.746,2.619],[-4.75,-28.25],[-1,-3.5]],\"v\":[[-52.5,-63.75],[-60.375,-60.875],[-43.25,-40.25],[-22.75,43.625],[-11.5,30.25],[-36,-51.75]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[10.047,0.251],[-3.811,-1.67],[-4.52,-8.796],[5.75,-8.625],[1.619,9.628],[1,3.5]],\"o\":[[-5,-0.125],[11.125,4.875],[9.25,18],[-1.746,2.619],[-4.75,-28.25],[-1,-3.5]],\"v\":[[-52.5,-63.75],[-60.375,-60.875],[-43.25,-40.25],[-22.75,43.625],[-11.5,30.25],[-36,-51.75]],\"c\":true}]},{\"t\":36,\"s\":[{\"i\":[[10.047,0.251],[-3.5,-2.25],[-3.5,-9.25],[5.75,-8.625],[4,14.875],[1,3.5]],\"o\":[[-5,-0.125],[10.073,6.476],[6.128,16.195],[-1.746,2.619],[-4.472,-16.63],[-1,-3.5]],\"v\":[[-55.5,-105],[-63.375,-102.125],[-47,-75.5],[-39.25,-28.625],[-26.75,-48],[-39.75,-87]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.050980392156862744,0.4627450980392157,0.9450980392156862,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 2\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[10,1],[0.392,-5.492],[-3.5,-9.25],[-7.75,-2.75],[4.636,19.412],[1,3.5]],\"o\":[[-10,-1],[-0.5,7],[6.128,16.195],[7.75,2.75],[-4,-16.75],[-1,-3.5]],\"v\":[[-55.5,-105],[-75.5,-93],[-71.5,-73.5],[-50,-28.5],[-26.75,-48],[-39.75,-87]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[11.181,1.09],[0.439,-5.987],[-3.913,-10.085],[-12.321,-5.496],[6.183,21.764],[1.118,3.816]],\"o\":[[-11.181,-1.09],[-0.559,7.632],[6.851,17.656],[9.694,4.324],[-5.138,-18.086],[-1.118,-3.816]],\"v\":[[-51.579,-63.91],[-73.941,-50.826],[-69.469,-29.566],[-34.429,44.746],[-12.683,21.736],[-33.969,-44.285]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[11.181,1.09],[0.439,-5.987],[-3.913,-10.085],[-12.321,-5.496],[6.183,21.764],[1.118,3.816]],\"o\":[[-11.181,-1.09],[-0.559,7.632],[6.851,17.656],[9.694,4.324],[-5.138,-18.086],[-1.118,-3.816]],\"v\":[[-51.579,-63.91],[-73.941,-50.826],[-69.469,-29.566],[-34.429,44.746],[-12.683,21.736],[-33.969,-44.285]],\"c\":true}]},{\"t\":36,\"s\":[{\"i\":[[10,1],[0.392,-5.492],[-3.5,-9.25],[-7.75,-2.75],[4.636,19.412],[1,3.5]],\"o\":[[-10,-1],[-0.5,7],[6.128,16.195],[7.75,2.75],[-4,-16.75],[-1,-3.5]],\"v\":[[-55.5,-105],[-75.5,-93],[-71.5,-73.5],[-50,-28.5],[-26.75,-48],[-39.75,-87]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.2901960784313726,0.5647058823529412,0.8862745098039215,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 1\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":80,\"st\":0,\"bm\":0},{\"ddd\":0,\"ind\":6,\"ty\":4,\"nm\":\"little_finger\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[256,256,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[0,0],[8.75,-4.25],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-6.59,4.43],[-0.318,6.593],[4.5,12.75]],\"o\":[[0,0],[-8.75,4.25],[-1.75,2.75],[1.75,7],[4.264,5.288],[3.069,-2.063],[0,-0.5],[0.25,0.5]],\"v\":[[-67.375,-49.125],[-86.75,-54.75],[-98.25,-44.5],[-99.25,-25],[-83.5,9.5],[-62.097,14.598],[-56.5,2],[-66.75,-32.5]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[0,0],[7.796,-3.39],[1.75,-2.75],[-1.35,-7.088],[-2.25,-5],[-14.172,1.542],[1.375,10.625],[14.25,29.75]],\"o\":[[0,0],[-8.625,3.75],[-1.75,2.75],[3,15.75],[6.765,15.033],[4.691,-0.51],[0,-0.5],[0.25,0.5]],\"v\":[[-70.375,-33.875],[-85.5,-37.25],[-96.75,-27],[-97.75,-7.5],[-86.75,21.75],[-56.328,49.583],[-48.875,31.5],[-63.75,-12.75]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[0,0],[7.796,-3.39],[1.75,-2.75],[-1.35,-7.088],[-2.25,-5],[-14.172,1.542],[1.375,10.625],[14.25,29.75]],\"o\":[[0,0],[-8.625,3.75],[-1.75,2.75],[3,15.75],[6.765,15.033],[4.691,-0.51],[0,-0.5],[0.25,0.5]],\"v\":[[-70.375,-33.875],[-85.5,-37.25],[-96.75,-27],[-97.75,-7.5],[-86.75,21.75],[-56.328,49.583],[-48.875,31.5],[-63.75,-12.75]],\"c\":false}]},{\"t\":43,\"s\":[{\"i\":[[0,0],[8.75,-4.25],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-6.59,4.43],[-0.318,6.593],[4.5,12.75]],\"o\":[[0,0],[-8.75,4.25],[-1.75,2.75],[1.75,7],[4.264,5.288],[3.069,-2.063],[0,-0.5],[0.25,0.5]],\"v\":[[-67.375,-49.125],[-86.75,-54.75],[-98.25,-44.5],[-99.25,-25],[-83.5,9.5],[-62.097,14.598],[-56.5,2],[-66.75,-32.5]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.419607877731,0,0.454901993275,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":2,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":4,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 3\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[0,0],[4,1.5],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-1.028,3.652],[0.778,4.964],[2.806,7.435]],\"o\":[[0,0],[-3.511,-1.317],[-1.75,2.75],[1.75,7],[4.264,5.288],[1.126,-4.002],[-1.832,-11.695],[0,0]],\"v\":[[-66.375,-48.625],[-75.25,-53.5],[-82.75,-46.5],[-83.75,-26.75],[-66.125,7.375],[-57.472,10.348],[-57.125,-1.625],[-65.625,-35.625]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[0,0],[4,1.5],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-1.028,3.652],[0.778,4.964],[2.806,7.435]],\"o\":[[0,0],[-3.511,-1.317],[-1.75,2.75],[1.75,7],[4.264,5.288],[1.126,-4.002],[-1.832,-11.695],[0,0]],\"v\":[[-66.375,-30.125],[-73.5,-35],[-81,-28],[-82,-8.25],[-58.875,40.875],[-50.222,43.848],[-49.875,31.875],[-65.625,-17.125]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[0,0],[4,1.5],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-1.028,3.652],[0.778,4.964],[2.806,7.435]],\"o\":[[0,0],[-3.511,-1.317],[-1.75,2.75],[1.75,7],[4.264,5.288],[1.126,-4.002],[-1.832,-11.695],[0,0]],\"v\":[[-66.375,-30.125],[-73.5,-35],[-81,-28],[-82,-8.25],[-58.875,40.875],[-50.222,43.848],[-49.875,31.875],[-65.625,-17.125]],\"c\":false}]},{\"t\":43,\"s\":[{\"i\":[[0,0],[4,1.5],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-1.028,3.652],[0.778,4.964],[2.806,7.435]],\"o\":[[0,0],[-3.511,-1.317],[-1.75,2.75],[1.75,7],[4.264,5.288],[1.126,-4.002],[-1.832,-11.695],[0,0]],\"v\":[[-66.375,-48.625],[-75.25,-53.5],[-82.75,-46.5],[-83.75,-26.75],[-66.125,7.375],[-57.472,10.348],[-57.125,-1.625],[-65.625,-35.625]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.050980392156862744,0.4627450980392157,0.9450980392156862,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 2\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[0,0],[8.75,-4.25],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-6.59,4.43],[-0.318,6.593],[4.5,12.75]],\"o\":[[0,0],[-8.75,4.25],[-1.75,2.75],[1.75,7],[4.264,5.288],[3.069,-2.063],[0,-0.5],[0.25,0.5]],\"v\":[[-67.375,-49.125],[-86.75,-54.75],[-98.25,-44.5],[-99.25,-25],[-83.5,9.5],[-62.097,14.598],[-56.5,2],[-66.75,-32.5]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[0,0],[7.796,-3.39],[1.75,-2.75],[-1.35,-7.088],[-2.25,-5],[-14.172,1.542],[1.375,10.625],[14.25,29.75]],\"o\":[[0,0],[-8.625,3.75],[-1.75,2.75],[3,15.75],[6.765,15.033],[4.691,-0.51],[0,-0.5],[0.25,0.5]],\"v\":[[-70.375,-33.875],[-85.5,-37.25],[-96.75,-27],[-97.75,-7.5],[-86.75,21.75],[-56.328,49.583],[-48.875,31.5],[-63.75,-12.75]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[0,0],[7.796,-3.39],[1.75,-2.75],[-1.35,-7.088],[-2.25,-5],[-14.172,1.542],[1.375,10.625],[14.25,29.75]],\"o\":[[0,0],[-8.625,3.75],[-1.75,2.75],[3,15.75],[6.765,15.033],[4.691,-0.51],[0,-0.5],[0.25,0.5]],\"v\":[[-70.375,-33.875],[-85.5,-37.25],[-96.75,-27],[-97.75,-7.5],[-86.75,21.75],[-56.328,49.583],[-48.875,31.5],[-63.75,-12.75]],\"c\":false}]},{\"t\":43,\"s\":[{\"i\":[[0,0],[8.75,-4.25],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-6.59,4.43],[-0.318,6.593],[4.5,12.75]],\"o\":[[0,0],[-8.75,4.25],[-1.75,2.75],[1.75,7],[4.264,5.288],[3.069,-2.063],[0,-0.5],[0.25,0.5]],\"v\":[[-67.375,-49.125],[-86.75,-54.75],[-98.25,-44.5],[-99.25,-25],[-83.5,9.5],[-62.097,14.598],[-56.5,2],[-66.75,-32.5]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.2901960784313726,0.5647058823529412,0.8862745098039215,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 1\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":80,\"st\":0,\"bm\":0},{\"ddd\":0,\"ind\":7,\"ty\":4,\"nm\":\"Hand/Thump\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[256,256,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[0,0],[-6.5,-9.5],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[6.25,2.25],[0,0],[0.75,5],[3.75,5.5],[26,-13.5],[0.5,-1],[-23.5,-54.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[6.5,9.5],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-6.25,-2.25],[0,0],[-0.75,-5],[-3.75,-5.5],[-26,13.5],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.75,-1],[62.75,22],[90,37.75],[112.75,24.25],[96.25,-1.5],[59.5,-13.25],[42.5,-20],[35.25,-32],[28.875,-57.125],[-33.5,-72.5],[-68.5,-50.25],[-74.5,22],[-55,41],[-5,34],[39.25,32.5],[55.625,20.812],[52.375,20.812],[62.188,21.062]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[0,0],[-6.859,-11.174],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[6.005,2.775],[0,0],[1.826,5.12],[4.682,4.515],[26.076,-10.152],[0.5,-1],[-23.5,-54.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[6.073,9.765],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-4.696,-2.011],[0,0],[-1.591,-4.708],[-8.592,-6.875],[-29.924,14.848],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.511,-1.239],[61.315,22.837],[89.761,39.902],[110.478,25.565],[96.37,0.772],[55.315,-16.239],[44.533,-22.63],[39.12,-33.315],[28.538,-57.049],[-23.076,-62.848],[-67.957,-41.033],[-74.5,22],[-55,41],[-2.13,31.37],[39.25,32.5],[55.266,20.932],[52.375,20.812],[60.035,20.823]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":23,\"s\":[{\"i\":[[0,0],[-7.25,-13],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[5.738,3.347],[0,0],[3,5.25],[5.699,3.44],[22.088,-10.756],[0.5,-1],[-18.5,-44.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[5.607,10.053],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-3,-1.75],[0,0],[-2.508,-4.39],[-13.875,-8.375],[-28.75,14],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.25,-1.5],[59.75,23.75],[89.5,42.25],[108,27],[96.5,3.25],[50.75,-19.5],[46.75,-25.5],[41.25,-34.75],[27.125,-54.875],[-24.25,-56.5],[-70,-32.75],[-74.5,22],[-55,41],[1,28.5],[39.25,32.5],[54.875,21.062],[52.375,20.812],[57.688,20.562]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[0,0],[-7.25,-13],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[5.738,3.347],[0,0],[3,5.25],[5.699,3.44],[22.088,-10.756],[0.5,-1],[-18.5,-44.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[5.607,10.053],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-3,-1.75],[0,0],[-2.508,-4.39],[-13.875,-8.375],[-28.75,14],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.25,-1.5],[59.75,23.75],[89.5,42.25],[108,27],[96.5,3.25],[50.75,-19.5],[46.75,-25.5],[41.25,-34.75],[27.125,-54.875],[-24.25,-56.5],[-70,-32.75],[-74.5,22],[-55,41],[1,28.5],[39.25,32.5],[54.875,21.062],[52.375,20.812],[57.688,20.562]],\"c\":false}]},{\"t\":43,\"s\":[{\"i\":[[0,0],[-6.5,-9.5],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[6.25,2.25],[0,0],[0.75,5],[3.75,5.5],[26,-13.5],[0.5,-1],[-23.5,-54.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[6.5,9.5],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-6.25,-2.25],[0,0],[-0.75,-5],[-3.75,-5.5],[-26,13.5],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.75,-1],[62.75,22],[90,37.75],[112.75,24.25],[96.25,-1.5],[59.5,-13.25],[42.5,-20],[35.25,-32],[28.875,-57.125],[-33.5,-72.5],[-68.5,-50.25],[-74.5,22],[-55,41],[-5,34],[39.25,32.5],[55.625,20.812],[52.375,20.812],[62.188,21.062]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.419607877731,0,0.454901993275,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":2,\"ix\":5},\"lc\":2,\"lj\":2,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 3\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[26,-13.5],[0.5,-1],[-9.671,-39.373],[0,0],[-1.542,-3.576],[-12,-3],[-16,10],[-12.328,3.216],[0,0],[-2,0.312],[0,0],[0,0],[-7.625,-15.875],[-3,0.5],[-0.375,9.125],[8.75,3.5],[6.25,2.25],[0,0],[0.75,5],[3.75,5.5]],\"o\":[[-26,13.5],[-0.217,-0.217],[0.722,2.939],[0,0],[1,1.5],[12,3],[0.75,-0.5],[5.75,-1.5],[0,0],[-1.5,-11.562],[0,0],[0,0],[6.658,13.861],[4.378,-0.73],[0.6,-14.593],[-8.75,-3.5],[-6.25,-2.25],[0,0],[-0.75,-5],[-3.75,-5.5]],\"v\":[[-33.5,-72.5],[-60.25,-56.75],[-72.938,-4.015],[-35.467,-18.261],[-66.25,15.5],[-46.75,34.5],[3.5,28],[47.75,26.5],[55.625,20.812],[61.125,20.812],[67.062,0.562],[69.25,-1.5],[102.5,16],[99.5,38.25],[112.75,24.25],[96.25,-1.5],[59.5,-13.25],[42.5,-20],[35.25,-32],[28.875,-57.125]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[31,-14.75],[7.25,-6.25],[-2.812,-16.485],[0,0],[-1.542,-3.576],[-12,-3],[-16,10],[-14,1.75],[0,0],[-2,0.312],[0,0],[0,0],[-7.625,-15.875],[-3,0.5],[-0.375,9.125],[8.75,3.5],[6.25,2.25],[0,0],[2.5,6],[3.75,5.5]],\"o\":[[-31.818,15.139],[-3,5.25],[0.501,2.985],[0,0],[1,1.5],[12,3],[0.75,-0.5],[5.897,-0.737],[0,0],[-2.375,-12.312],[0,0],[0,0],[6.658,13.861],[4.378,-0.73],[0.6,-14.593],[-8.75,-3.5],[-6.25,-2.25],[0,0],[-1.945,-4.667],[-3.75,-5.5]],\"v\":[[-29.25,-60.25],[-71.375,-37.625],[-72.938,-4.015],[-35.467,-18.261],[-66.25,15.5],[-46.75,34.5],[7.75,24.25],[42.5,27],[52.125,20.312],[59.125,19.812],[67.062,0.562],[69.25,-1.5],[99.25,15.25],[98.5,40.5],[110.25,26.5],[97.75,2.75],[61.75,-12.75],[47.25,-20.25],[38.75,-35],[28.875,-57.125]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":23,\"s\":[{\"i\":[[31.75,-16.75],[5.25,-7.25],[-2.812,-16.485],[0,0],[-1.542,-3.576],[-12,-3],[-16,10],[-14,1.75],[0,0],[-2,0.312],[0,0],[0,0],[-2.979,-7.172],[-2.964,0.684],[-0.375,9.125],[8.75,3.5],[6.375,3.75],[0,0],[2.375,4.125],[3.75,5.5]],\"o\":[[-31.165,16.441],[-3,5.25],[0.501,2.985],[0,0],[1,1.5],[12,3],[0.75,-0.5],[5.897,-0.737],[0,0],[-2.375,-12.312],[0,0],[0,0],[6.75,16.25],[6.5,-1.5],[0.6,-14.593],[-8.75,-3.5],[-5.726,-3.368],[0,0],[-2.523,-4.382],[-3.75,-5.5]],\"v\":[[-22.75,-57.25],[-64,-28.75],[-65.938,4.485],[-28.467,-9.761],[-59.25,24],[-46.75,34.5],[7.75,24.25],[42.5,27],[52.125,20.312],[59.125,19.812],[67.062,0.562],[69.25,-1.5],[96.25,15],[98.5,40.5],[108.5,23.25],[88.25,-1.25],[58.75,-15.125],[51.75,-18.625],[45.75,-26.5],[34.125,-47.375]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[31.75,-16.75],[5.25,-7.25],[-2.812,-16.485],[0,0],[-1.542,-3.576],[-12,-3],[-16,10],[-14,1.75],[0,0],[-2,0.312],[0,0],[0,0],[-2.979,-7.172],[-2.964,0.684],[-0.375,9.125],[8.75,3.5],[6.375,3.75],[0,0],[2.375,4.125],[3.75,5.5]],\"o\":[[-31.165,16.441],[-3,5.25],[0.501,2.985],[0,0],[1,1.5],[12,3],[0.75,-0.5],[5.897,-0.737],[0,0],[-2.375,-12.312],[0,0],[0,0],[6.75,16.25],[6.5,-1.5],[0.6,-14.593],[-8.75,-3.5],[-5.726,-3.368],[0,0],[-2.523,-4.382],[-3.75,-5.5]],\"v\":[[-22.75,-57.25],[-64,-28.75],[-65.938,4.485],[-28.467,-9.761],[-59.25,24],[-46.75,34.5],[7.75,24.25],[42.5,27],[52.125,20.312],[59.125,19.812],[67.062,0.562],[69.25,-1.5],[96.25,15],[98.5,40.5],[108.5,23.25],[88.25,-1.25],[58.75,-15.125],[51.75,-18.625],[45.75,-26.5],[34.125,-47.375]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[26,-13.5],[0.5,-1],[-25.062,-31.735],[0,0],[-1.542,-3.576],[-12,-3],[-16,10],[-12.328,3.216],[0,0],[-2,0.312],[0,0],[0,0],[-7.625,-15.875],[-3,0.5],[-0.375,9.125],[8.75,3.5],[6.25,2.25],[0,0],[0.75,5],[3.75,5.5]],\"o\":[[-26,13.5],[-0.217,-0.217],[1.876,2.375],[0,0],[1,1.5],[12,3],[0.75,-0.5],[5.75,-1.5],[0,0],[-1.5,-11.562],[0,0],[0,0],[6.658,13.861],[4.378,-0.73],[0.6,-14.593],[-8.75,-3.5],[-6.25,-2.25],[0,0],[-0.75,-5],[-3.75,-5.5]],\"v\":[[-33.5,-72.5],[-59,-57.5],[-72.938,-4.015],[-35.467,-18.261],[-66.25,15.5],[-46.75,34.5],[3.5,28],[47.75,26.5],[55.625,20.812],[61.125,20.812],[67.062,0.562],[69.25,-1.5],[102.5,16],[99.5,38.25],[112.75,24.25],[96.25,-1.5],[59.5,-13.25],[42.5,-20],[35.25,-32],[28.875,-57.125]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.050980392156862744,0.4627450980392157,0.9450980392156862,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 2\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[0,0],[-6.5,-9.5],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[6.25,2.25],[0,0],[0.75,5],[3.75,5.5],[26,-13.5],[0.5,-1],[-23.5,-54.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[6.5,9.5],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-6.25,-2.25],[0,0],[-0.75,-5],[-3.75,-5.5],[-26,13.5],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.75,-1],[62.75,22],[90,37.75],[112.75,24.25],[96.25,-1.5],[59.5,-13.25],[42.5,-20],[35.25,-32],[28.875,-57.125],[-33.5,-72.5],[-68.5,-50.25],[-74.5,22],[-55,41],[-5,34],[39.25,32.5],[55.625,20.812],[52.375,20.812],[62.188,21.062]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[0,0],[-6.859,-11.174],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[6.005,2.775],[0,0],[1.826,5.12],[4.682,4.515],[26.076,-10.152],[0.5,-1],[-23.5,-54.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[6.073,9.765],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-4.696,-2.011],[0,0],[-1.591,-4.708],[-8.592,-6.875],[-29.924,14.848],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.511,-1.239],[61.315,22.837],[89.761,39.902],[110.478,25.565],[96.37,0.772],[55.315,-16.239],[44.533,-22.63],[39.12,-33.315],[28.538,-57.049],[-23.076,-62.848],[-67.957,-41.033],[-74.5,22],[-55,41],[-2.13,31.37],[39.25,32.5],[55.266,20.932],[52.375,20.812],[60.035,20.823]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":23,\"s\":[{\"i\":[[0,0],[-7.25,-13],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[5.738,3.347],[0,0],[3,5.25],[5.699,3.44],[22.088,-10.756],[0.5,-1],[-18.5,-44.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[5.607,10.053],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-3,-1.75],[0,0],[-2.508,-4.39],[-13.875,-8.375],[-28.75,14],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.25,-1.5],[59.75,23.75],[89.5,42.25],[108,27],[96.5,3.25],[50.75,-19.5],[46.75,-25.5],[41.25,-34.75],[27.125,-54.875],[-24.25,-56.5],[-70,-32.75],[-74.5,22],[-55,41],[1,28.5],[39.25,32.5],[54.875,21.062],[52.375,20.812],[57.688,20.562]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[0,0],[-7.25,-13],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[5.738,3.347],[0,0],[3,5.25],[5.699,3.44],[22.088,-10.756],[0.5,-1],[-18.5,-44.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[5.607,10.053],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-3,-1.75],[0,0],[-2.508,-4.39],[-13.875,-8.375],[-28.75,14],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.25,-1.5],[59.75,23.75],[89.5,42.25],[108,27],[96.5,3.25],[50.75,-19.5],[46.75,-25.5],[41.25,-34.75],[27.125,-54.875],[-24.25,-56.5],[-70,-32.75],[-74.5,22],[-55,41],[1,28.5],[39.25,32.5],[54.875,21.062],[52.375,20.812],[57.688,20.562]],\"c\":false}]},{\"t\":43,\"s\":[{\"i\":[[0,0],[-6.5,-9.5],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[6.25,2.25],[0,0],[0.75,5],[3.75,5.5],[26,-13.5],[0.5,-1],[-23.5,-54.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[6.5,9.5],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-6.25,-2.25],[0,0],[-0.75,-5],[-3.75,-5.5],[-26,13.5],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.75,-1],[62.75,22],[90,37.75],[112.75,24.25],[96.25,-1.5],[59.5,-13.25],[42.5,-20],[35.25,-32],[28.875,-57.125],[-33.5,-72.5],[-68.5,-50.25],[-74.5,22],[-55,41],[-5,34],[39.25,32.5],[55.625,20.812],[52.375,20.812],[62.188,21.062]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.2901960784313726,0.5647058823529412,0.8862745098039215,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 1\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":80,\"st\":0,\"bm\":0},{\"ddd\":0,\"ind\":8,\"ty\":4,\"nm\":\"shadow\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":50,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[256,256,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[95.5,4],[0,0],[-23.75,-2.25],[-23.5,1.25],[-5.25,3.25],[-5.36,-0.133],[-5.702,-0.129],[-6.5,-0.112],[-4.237,-0.051],[-11.143,5.65]],\"o\":[[-95.5,-4],[0,0],[0,-0.25],[0.25,0],[3.873,0.082],[4.819,0.119],[5.886,0.133],[4.1,0.07],[41.645,0.503],[0,-0.25]],\"v\":[[34.75,34.5],[-64,36.5],[-74,42.25],[-53.5,48.5],[-43.5,45.25],[-29.547,45.582],[-13.689,45.962],[4.972,46.338],[17.498,46.522],[116.5,40.75]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[75.5,3],[0,0],[-23.75,-2.25],[-23.5,1.25],[-0.75,5.25],[-6.787,-0.863],[-3.249,1.461],[-5.611,-0.094],[-3.459,-0.044],[-11.254,5.706]],\"o\":[[-95.508,-3.795],[0,0],[0,-0.25],[0.25,0],[4.708,0.099],[8.492,1.08],[4.732,-2.128],[3.368,0.057],[41.965,0.53],[0,-0.25]],\"v\":[[51.5,35.25],[-64,36.5],[-74,42.25],[-52.25,51],[-43.5,45.25],[-25.492,50.17],[-10.251,46.039],[5.998,46.855],[16.25,46.507],[116.5,40.75]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":23,\"s\":[{\"i\":[[75.5,3],[0,0],[-23.75,-2.25],[-23.5,1.25],[-0.75,5.25],[-6.787,-0.863],[-3.249,1.461],[-5.577,-0.624],[-3.75,1.243],[-11.254,5.706]],\"o\":[[-95.508,-3.795],[0,0],[0,-0.25],[0.25,0],[4.708,0.099],[8.492,1.08],[4.732,-2.128],[8.002,0.895],[42.25,1.493],[0,-0.25]],\"v\":[[51.5,35.25],[-64,36.5],[-74,42.25],[-52.25,51],[-43.5,45.25],[-25.492,50.17],[-10.251,46.039],[0.748,49.855],[18.75,46.757],[116.5,40.75]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[75.5,3],[0,0],[-23.75,-2.25],[-23.5,1.25],[-0.75,5.25],[-6.787,-0.863],[-3.249,1.461],[-5.577,-0.624],[-3.75,1.243],[-11.254,5.706]],\"o\":[[-95.508,-3.795],[0,0],[0,-0.25],[0.25,0],[4.708,0.099],[8.492,1.08],[4.732,-2.128],[8.002,0.895],[42.25,1.493],[0,-0.25]],\"v\":[[51.5,35.25],[-64,36.5],[-74,42.25],[-52.25,51],[-43.5,45.25],[-25.492,50.17],[-10.251,46.039],[0.748,49.855],[18.75,46.757],[116.5,40.75]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[95.5,4],[0,0],[-23.75,-2.25],[-23.5,1.25],[-5.25,3.25],[-5.36,-0.133],[-5.702,-0.129],[-6.5,-0.112],[-4.237,-0.051],[-11.143,5.65]],\"o\":[[-95.5,-4],[0,0],[0,-0.25],[0.25,0],[3.873,0.082],[4.819,0.119],[5.886,0.133],[4.1,0.07],[41.645,0.503],[0,-0.25]],\"v\":[[34.75,34.5],[-64,36.5],[-74,42.25],[-53.5,48.5],[-43.5,45.25],[-29.547,45.582],[-13.689,45.962],[4.972,46.338],[17.498,46.522],[116.5,40.75]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666680574,0.266666680574,0.266666680574,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 1\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":80,\"st\":0,\"bm\":0}],\"markers\":[]}");
+
+},{}],"fgGq0":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$a89d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -121332,6 +121972,8 @@ var _notFoundJson = require("../../assets/not_found.json");
 var _notFoundJsonDefault = parcelHelpers.interopDefault(_notFoundJson);
 var _fa = require("react-icons/fa"); // Icons for better UI
 var _reactRouter = require("react-router");
+var _loadingAnimation = require("../../components/LoadingAnimation");
+var _loadingAnimationDefault = parcelHelpers.interopDefault(_loadingAnimation);
 var _s = $RefreshSig$();
 const MyCourses = ()=>{
     _s();
@@ -121347,6 +121989,7 @@ const MyCourses = ()=>{
                     withCredentials: true
                 });
                 setCourses(data.courses || []); // Ensure courses is an array
+            // console.log(data.courses);
             } catch (error) {
                 console.error("Error fetching teacher courses:", error);
                 (0, _reactHotToastDefault.default).error("Failed to load your courses.");
@@ -121366,91 +122009,392 @@ const MyCourses = ()=>{
                 children: "Courses You Teach"
             }, void 0, false, {
                 fileName: "src/pages/Teacher/MyCourses.jsx",
-                lineNumber: 38,
+                lineNumber: 49,
                 columnNumber: 7
             }, undefined),
-            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-[40%] mx-auto",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lottieReactDefault.default), {
-                    animationData: (0, _loadingJsonDefault.default)
-                }, void 0, false, {
-                    fileName: "src/pages/Teacher/MyCourses.jsx",
-                    lineNumber: 44,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
+            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Teacher/MyCourses.jsx",
-                lineNumber: 43,
+                lineNumber: 54,
                 columnNumber: 9
             }, undefined) : courses.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-wrap gap-6 justify-center sm:justify-start",
-                children: courses.map((course)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                children: courses.map((course)=>{
+                    const startDate = new Date(course.start_date);
+                    const endDate = new Date(course.end_date);
+                    const durationInWeeks = Math.ceil((endDate - startDate) / 604800000);
+                    const today = new Date();
+                    const totalDuration = endDate - startDate;
+                    const elapsedDuration = today - startDate;
+                    const progressPercentage = Math.min(100, Math.max(0, Math.round(elapsedDuration / totalDuration * 100)));
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
                         to: `/teacher/courses/${course._id}/date`,
-                        className: "border border-blue-400 shadow-blue-400 p-5 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 duration-300",
+                        className: "group relative overflow-hidden border border-gray-700 bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-blue-400 hover:-translate-y-1",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                className: "text-md md:text-xl sm:text-lg lg:text-2xl font-bold text-blue-600 flex items-center gap-2",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex items-start justify-between mb-4",
                                 children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaBook), {
-                                        className: "text-blue-500"
-                                    }, void 0, false, {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "p-3 bg-gray-700 rounded-lg group-hover:bg-blue-900 transition-colors",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaBook), {
+                                                    className: "text-blue-400 text-xl"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                    lineNumber: 80,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                lineNumber: 79,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                        className: "text-xl font-bold text-white mx-2 group-hover:text-blue-400 transition-colors",
+                                                        children: course.course_name
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                        lineNumber: 83,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm text-gray-400 flex items-center gap-1 mt-1",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaChalkboardTeacher), {
+                                                                className: "text-blue-500"
+                                                            }, void 0, false, {
+                                                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                                lineNumber: 87,
+                                                                columnNumber: 25
+                                                            }, undefined),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                                children: [
+                                                                    "Teacher ID: ",
+                                                                    course.teacher_id.slice(-6)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                                lineNumber: 88,
+                                                                columnNumber: 25
+                                                            }, undefined)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                        lineNumber: 86,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                lineNumber: 82,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "src/pages/Teacher/MyCourses.jsx",
-                                        lineNumber: 55,
-                                        columnNumber: 17
+                                        lineNumber: 78,
+                                        columnNumber: 19
                                     }, undefined),
-                                    " ",
-                                    course.course_name
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/pages/Teacher/MyCourses.jsx",
-                                lineNumber: 54,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-sm sm:text-base md:text-md lg:text-lg flex items-center gap-2 mt-4",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaUsers), {
-                                        className: "text-green-500"
-                                    }, void 0, false, {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "bg-gray-700 text-blue-400 text-xs px-2 py-1 rounded-md",
+                                        children: [
+                                            "ID: ",
+                                            course._id.slice(-6).toUpperCase()
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "src/pages/Teacher/MyCourses.jsx",
-                                        lineNumber: 58,
-                                        columnNumber: 17
-                                    }, undefined),
-                                    " Enrolled Students:",
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: "font-medium",
-                                        children: course.students.length
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Teacher/MyCourses.jsx",
-                                        lineNumber: 59,
-                                        columnNumber: 17
+                                        lineNumber: 92,
+                                        columnNumber: 19
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Teacher/MyCourses.jsx",
-                                lineNumber: 57,
-                                columnNumber: 15
+                                lineNumber: 77,
+                                columnNumber: 17
                             }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-gray-500 text-sm mt-4",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "grid grid-cols-2 gap-4 mb-5",
                                 children: [
-                                    "Course ID: ",
-                                    course._id
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "p-2 bg-gray-700 rounded-full",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaCalendarAlt), {
+                                                    className: "text-blue-400"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                    lineNumber: 101,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                lineNumber: 100,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-xs text-gray-400",
+                                                        children: "Starts"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                        lineNumber: 104,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm font-medium text-white",
+                                                        children: startDate.toLocaleDateString()
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                        lineNumber: 105,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                lineNumber: 103,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                        lineNumber: 99,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "p-2 bg-gray-700 rounded-full",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaCalendarCheck), {
+                                                    className: "text-blue-400"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                    lineNumber: 113,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                lineNumber: 112,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-xs text-gray-400",
+                                                        children: "Ends"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                        lineNumber: 116,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm font-medium text-white",
+                                                        children: endDate.toLocaleDateString()
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                        lineNumber: 117,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                lineNumber: 115,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                        lineNumber: 111,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "p-2 bg-gray-700 rounded-full",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaClock), {
+                                                    className: "text-blue-400"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                    lineNumber: 125,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                lineNumber: 124,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-xs text-gray-400",
+                                                        children: "Duration"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                        lineNumber: 128,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm font-medium text-white",
+                                                        children: [
+                                                            durationInWeeks,
+                                                            " weeks"
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                        lineNumber: 129,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                lineNumber: 127,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                        lineNumber: 123,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "p-2 bg-gray-700 rounded-full",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaUsers), {
+                                                    className: "text-green-400"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                    lineNumber: 137,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                lineNumber: 136,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-xs text-gray-400",
+                                                        children: "Students"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                        lineNumber: 140,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm font-medium text-white",
+                                                        children: course.students.length
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                        lineNumber: 141,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                lineNumber: 139,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                        lineNumber: 135,
+                                        columnNumber: 19
+                                    }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Teacher/MyCourses.jsx",
-                                lineNumber: 61,
-                                columnNumber: 15
+                                lineNumber: 98,
+                                columnNumber: 17
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "space-y-2",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center justify-between text-sm",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                className: "text-gray-400 flex items-center gap-1",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaPercent), {
+                                                        className: "text-blue-400"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                        lineNumber: 152,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    "Progress"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                lineNumber: 151,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                className: "font-medium text-white",
+                                                children: [
+                                                    progressPercentage,
+                                                    "%"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                                lineNumber: 155,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                        lineNumber: 150,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "w-full bg-gray-700 rounded-full h-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full",
+                                            style: {
+                                                width: `${progressPercentage}%`
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Teacher/MyCourses.jsx",
+                                            lineNumber: 160,
+                                            columnNumber: 21
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Teacher/MyCourses.jsx",
+                                        lineNumber: 159,
+                                        columnNumber: 19
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                lineNumber: 149,
+                                columnNumber: 17
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "absolute inset-0 bg-gradient-to-br from-blue-900/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                            }, void 0, false, {
+                                fileName: "src/pages/Teacher/MyCourses.jsx",
+                                lineNumber: 168,
+                                columnNumber: 17
                             }, undefined)
                         ]
                     }, course._id, true, {
                         fileName: "src/pages/Teacher/MyCourses.jsx",
-                        lineNumber: 49,
-                        columnNumber: 13
-                    }, undefined))
+                        lineNumber: 71,
+                        columnNumber: 15
+                    }, undefined);
+                })
             }, void 0, false, {
                 fileName: "src/pages/Teacher/MyCourses.jsx",
-                lineNumber: 47,
+                lineNumber: 56,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "w-[40%] mx-auto text-center",
@@ -121459,7 +122403,7 @@ const MyCourses = ()=>{
                         animationData: (0, _notFoundJsonDefault.default)
                     }, void 0, false, {
                         fileName: "src/pages/Teacher/MyCourses.jsx",
-                        lineNumber: 69,
+                        lineNumber: 175,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -121467,19 +122411,19 @@ const MyCourses = ()=>{
                         children: "You are not teaching any courses."
                     }, void 0, false, {
                         fileName: "src/pages/Teacher/MyCourses.jsx",
-                        lineNumber: 70,
+                        lineNumber: 176,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Teacher/MyCourses.jsx",
-                lineNumber: 68,
+                lineNumber: 174,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/Teacher/MyCourses.jsx",
-        lineNumber: 37,
+        lineNumber: 48,
         columnNumber: 5
     }, undefined);
 };
@@ -121498,10 +122442,7 @@ $RefreshReg$(_c, "MyCourses");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../../config/axiosInstance":"gJ5tu","react-redux":"62sf7","react-hot-toast":"gi0hv","lottie-react":"kSXtH","../../assets/loading.json":"4xszR","../../assets/not_found.json":"eymrH","react-icons/fa":"4Bs28","react-router":"dXVwI"}],"4xszR":[function(require,module,exports,__globalThis) {
-module.exports = JSON.parse("{\"v\":\"5.5.7\",\"meta\":{\"g\":\"LottieFiles AE 0.1.21\",\"a\":\"\",\"k\":\"\",\"d\":\"\",\"tc\":\"\"},\"fr\":60,\"ip\":0,\"op\":43,\"w\":512,\"h\":512,\"nm\":\"Loading Animation Bored Hand\",\"ddd\":0,\"assets\":[],\"layers\":[{\"ddd\":0,\"ind\":2,\"ty\":4,\"nm\":\"LOADING Outlines\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[255.892,367,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],\"v\":[[-33.44,0],[-33.44,-3.04],[-39.767,-3.04],[-39.767,-13.566],[-43.301,-13.566],[-43.301,0]],\"c\":true},\"ix\":2},\"nm\":\"L\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666666667,0.266666666667,0.266666666667,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":0,\"s\":[0,0],\"to\":[0,-0.569],\"ti\":[0,1.578]},{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":5,\"s\":[0,-3.686],\"to\":[0,-2.122],\"ti\":[0,-0.614]},{\"t\":9.34765625,\"s\":[0,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"L\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[-1.166,-1.304],[-2.078,0],[-1.216,1.368],[0,2.04],[1.165,1.305],[2.077,0],[1.216,-1.368],[0,-2.039]],\"o\":[[1.216,1.368],[2.077,0],[1.165,-1.304],[0,-2.039],[-1.216,-1.368],[-2.078,0],[-1.166,1.305],[0,2.04]],\"v\":[[-30.457,-1.767],[-25.517,0.285],[-20.577,-1.767],[-18.829,-6.783],[-20.577,-11.799],[-25.517,-13.851],[-30.457,-11.799],[-32.205,-6.783]],\"c\":true},\"ix\":2},\"nm\":\"O\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ind\":1,\"ty\":\"sh\",\"ix\":2,\"ks\":{\"a\":0,\"k\":{\"i\":[[-0.482,0.722],[-1.064,0],[-0.558,-0.836],[0,-1.127],[0.481,-0.722],[1.064,0],[0.557,0.836],[0,1.128]],\"o\":[[0.557,-0.836],[1.064,0],[0.481,0.722],[0,1.128],[-0.558,0.836],[-1.064,0],[-0.482,-0.722],[0,-1.127]],\"v\":[[-27.949,-9.557],[-25.517,-10.811],[-23.085,-9.557],[-22.363,-6.783],[-23.085,-4.009],[-25.517,-2.755],[-27.949,-4.009],[-28.671,-6.783]],\"c\":true},\"ix\":2},\"nm\":\"O\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666666667,0.266666666667,0.266666666667,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":5,\"s\":[0,0],\"to\":[0,-0.525],\"ti\":[0,1.447]},{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":11,\"s\":[0,-3.326],\"to\":[0,-2.226],\"ti\":[0,-0.554]},{\"t\":14.95703125,\"s\":[0,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"O\",\"np\":4,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0]],\"v\":[[-11.419,-9.804],[-9.918,-5.054],[-12.996,-5.054],[-11.457,-9.804]],\"c\":true},\"ix\":2},\"nm\":\"A\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ind\":1,\"ty\":\"sh\",\"ix\":2,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],\"v\":[[-14.668,0],[-13.813,-2.432],[-9.082,-2.432],[-8.246,0],[-4.56,0],[-9.633,-13.566],[-13.224,-13.566],[-18.297,0]],\"c\":true},\"ix\":2},\"nm\":\"A\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666666667,0.266666666667,0.266666666667,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":11,\"s\":[0,0],\"to\":[0,-0.552],\"ti\":[0,1.53]},{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":16,\"s\":[0,-3.55],\"to\":[0,-2.163],\"ti\":[0,-0.592]},{\"t\":20.564453125,\"s\":[0,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"A\",\"np\":4,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-1.172,1.178],[0,2.204],[1.178,1.191],[2.077,0],[0,0],[0,0]],\"o\":[[2.09,0],[1.171,-1.178],[0,-2.102],[-1.178,-1.19],[0,0],[0,0],[0,0]],\"v\":[[2.299,0],[7.192,-1.767],[8.949,-6.84],[7.182,-11.78],[2.299,-13.566],[-3.534,-13.566],[-3.534,0]],\"c\":true},\"ix\":2},\"nm\":\"D\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ind\":1,\"ty\":\"sh\",\"ix\":2,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,-2.444],[0.576,-0.595],[1.342,0],[0,0],[0,0]],\"o\":[[2.495,0],[0,1.356],[-0.577,0.596],[0,0],[0,0],[0,0]],\"v\":[[1.672,-10.526],[5.415,-6.859],[4.551,-3.933],[1.672,-3.04],[0,-3.04],[0,-10.526]],\"c\":true},\"ix\":2},\"nm\":\"D\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666666667,0.266666666667,0.266666666667,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":16,\"s\":[0,0],\"to\":[0,-0.512],\"ti\":[0,1.404]},{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":22,\"s\":[0,-3.212],\"to\":[0,-2.255],\"ti\":[0,-0.535]},{\"t\":26.173828125,\"s\":[0,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"D\",\"np\":4,\"cix\":2,\"bm\":0,\"ix\":4,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0]],\"v\":[[14.421,0],[14.421,-13.566],[10.887,-13.566],[10.887,0]],\"c\":true},\"ix\":2},\"nm\":\"I\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666666667,0.266666666667,0.266666666667,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":22,\"s\":[0,0],\"to\":[0,-0.537],\"ti\":[0,1.483]},{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":28,\"s\":[0,-3.423],\"to\":[0,-2.199],\"ti\":[0,-0.57]},{\"t\":31.783203125,\"s\":[0,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"I\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":5,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],\"v\":[[20.159,0],[20.159,-8.455],[24.892,0],[28.538,0],[28.538,-13.566],[25.213,-13.566],[25.213,-5.206],[20.479,-13.566],[16.834,-13.566],[16.834,0]],\"c\":true},\"ix\":2},\"nm\":\"N\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666666667,0.266666666667,0.266666666667,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":28,\"s\":[0,0],\"to\":[0,-0.565],\"ti\":[0,1.569]},{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":33,\"s\":[0,-3.659],\"to\":[0,-2.13],\"ti\":[0,-0.61]},{\"t\":37.390625,\"s\":[0,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"N\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":6,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0.557,-0.373],[0.861,0],[0.557,0.836],[0,1.128],[-0.482,0.722],[-1.064,0],[-0.507,-0.335],[-0.051,-0.57],[0,0],[1.266,0.887],[1.545,0],[1.247,-1.349],[0,-2.014],[-1.229,-1.33],[-2.014,0],[-0.836,1.178],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[-0.102,0.621],[-0.558,0.374],[-1.064,0],[-0.482,-0.722],[0,-1.127],[0.557,-0.836],[0.722,0],[0.506,0.336],[0,0],[-0.152,-1.596],[-1.128,-0.785],[-2.014,0],[-1.248,1.349],[0,2.014],[1.266,1.368],[1.684,0],[0,0],[0,0],[0,0],[0,0]],\"v\":[[37.772,-7.429],[37.772,-4.807],[40.242,-4.807],[39.254,-3.316],[37.126,-2.755],[34.694,-4.009],[33.972,-6.783],[34.694,-9.557],[37.126,-10.811],[38.969,-10.307],[39.805,-8.949],[43.339,-8.949],[41.211,-12.673],[37.202,-13.851],[32.309,-11.827],[30.438,-6.783],[32.281,-1.767],[37.202,0.285],[40.983,-1.482],[41.192,0],[43.472,0],[43.472,-7.429]],\"c\":true},\"ix\":2},\"nm\":\"G\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666666667,0.266666666667,0.266666666667,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":33,\"s\":[0,0],\"to\":[0,-0.522],\"ti\":[0,1.438]},{\"i\":{\"x\":0,\"y\":1},\"o\":{\"x\":1,\"y\":0},\"t\":39,\"s\":[0,-3.302],\"to\":[0,-2.232],\"ti\":[0,-0.55]},{\"t\":43,\"s\":[0,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"G\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":7,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":80,\"st\":0,\"bm\":0},{\"ddd\":0,\"ind\":3,\"ty\":4,\"nm\":\"Index_finger\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[256,256,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-130.75],[17,-130.25],[6.75,-118],[8,-67.75],[22.25,-57.75],[38.75,-68],[40.5,-116.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":6,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-133.122],[17,-132.622],[6.75,-120.372],[8.279,-69.564],[22.529,-59.564],[39.029,-69.814],[40.5,-118.622]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-129.599],[17,-129.099],[6.75,-116.849],[8.512,-65.576],[22.762,-55.576],[39.262,-65.826],[40.5,-115.099]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":22,\"s\":[{\"i\":[[9.5,3.948],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-1.278,4.408],[0.25,0.25]],\"o\":[[-7.971,-3.312],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[3.727,-12.849],[-0.25,-0.25]],\"v\":[[30,-72.948],[15.5,-73.948],[5.25,-61.698],[30.523,35.599],[44.773,45.599],[61.273,35.349],[45.5,-45.948]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":30,\"s\":[{\"i\":[[9.5,3.948],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-1.278,4.408],[0.25,0.25]],\"o\":[[-7.971,-3.312],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[3.727,-12.849],[-0.25,-0.25]],\"v\":[[30,-72.948],[15.5,-73.948],[5.25,-61.698],[30.523,35.599],[44.773,45.599],[61.273,35.349],[45.5,-45.948]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-130.75],[17,-130.25],[6.75,-118],[8,-67.75],[22.25,-57.75],[38.75,-68],[40.5,-116.25]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.419607877731,0,0.454901993275,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":2,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":4,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 3\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[9.888,1.745],[0,0],[-3.25,-11.25],[1.637,-12.477],[-1.239,-0.169],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[3.492,12.089],[-0.826,6.293],[5.5,0.75],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-130.75],[17,-130.25],[29,-118.25],[29.75,-75.25],[26.75,-58.5],[38.75,-68],[40.5,-116.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":6,\"s\":[{\"i\":[[9.888,1.745],[0,0],[-3.25,-11.25],[1.637,-12.477],[-1.239,-0.169],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[3.492,12.089],[-0.826,6.293],[5.5,0.75],[2.25,-4],[-0.25,-0.25]],\"v\":[[29.75,-133],[16.75,-132.5],[28.75,-120.5],[29.5,-77.5],[26.5,-60.75],[38.5,-70.25],[40.25,-118.5]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[9.888,1.745],[0,0],[-3.25,-11.25],[1.637,-12.477],[-1.239,-0.169],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[3.492,12.089],[-0.826,6.293],[5.5,0.75],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-128.75],[17,-128.25],[29,-116.25],[29.75,-73.25],[26.75,-56.5],[38.75,-66],[40.5,-114.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":22,\"s\":[{\"i\":[[9.888,1.745],[0,0],[-3.25,-11.25],[-0.75,-13.25],[-1.235,-0.19],[-0.744,4.529],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[3.492,12.089],[0.359,6.336],[3.25,0.5],[2.75,-16.75],[-0.25,-0.25]],\"v\":[[28,-73.75],[13,-73.25],[29.5,-59.75],[52.75,28],[52.25,44],[61.75,35.25],[43.75,-52.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":30,\"s\":[{\"i\":[[9.888,1.745],[0,0],[-3.25,-11.25],[-0.75,-13.25],[-1.235,-0.19],[-0.744,4.529],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[3.492,12.089],[0.359,6.336],[3.25,0.5],[2.75,-16.75],[-0.25,-0.25]],\"v\":[[28,-73.75],[13,-73.25],[29.5,-59.75],[52.75,28],[52.25,44],[61.75,35.25],[43.75,-52.25]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[9.888,1.745],[0,0],[-3.25,-11.25],[1.637,-12.477],[-1.239,-0.169],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[3.492,12.089],[-0.826,6.293],[5.5,0.75],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-130.75],[17,-130.25],[29,-118.25],[29.75,-75.25],[26.75,-58.5],[38.75,-68],[40.5,-116.25]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.050980392156862744,0.4627450980392157,0.9450980392156862,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 2\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-130.75],[17,-130.25],[6.75,-118],[8,-67.75],[22.25,-57.75],[38.75,-68],[40.5,-116.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":6,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-133.122],[17,-132.622],[6.75,-120.372],[8.279,-69.564],[22.529,-59.564],[39.029,-69.814],[40.5,-118.622]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-129.599],[17,-129.099],[6.75,-116.849],[8.512,-65.576],[22.762,-55.576],[39.262,-65.826],[40.5,-115.099]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":22,\"s\":[{\"i\":[[9.5,3.948],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-1.278,4.408],[0.25,0.25]],\"o\":[[-7.971,-3.312],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[3.727,-12.849],[-0.25,-0.25]],\"v\":[[30,-72.948],[15.5,-73.948],[5.25,-61.698],[30.523,35.599],[44.773,45.599],[61.273,35.349],[45.5,-45.948]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":30,\"s\":[{\"i\":[[9.5,3.948],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-1.278,4.408],[0.25,0.25]],\"o\":[[-7.971,-3.312],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[3.727,-12.849],[-0.25,-0.25]],\"v\":[[30,-72.948],[15.5,-73.948],[5.25,-61.698],[30.523,35.599],[44.773,45.599],[61.273,35.349],[45.5,-45.948]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[9.888,1.745],[0,0],[1.5,-10.5],[-3.25,-6.75],[-10.75,-1],[-2.25,4],[0.25,0.25]],\"o\":[[-8.5,-1.5],[0,0],[-1.5,10.5],[3.25,6.75],[10.75,1],[2.25,-4],[-0.25,-0.25]],\"v\":[[30,-130.75],[17,-130.25],[6.75,-118],[8,-67.75],[22.25,-57.75],[38.75,-68],[40.5,-116.25]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.2901960784313726,0.5647058823529412,0.8862745098039215,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 1\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":80,\"st\":0,\"bm\":0},{\"ddd\":0,\"ind\":4,\"ty\":4,\"nm\":\"Middle_finger\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[256,256,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[9.375,-1.616],[0,0],[-1.75,-10.75],[-1.25,-4.25],[-8.75,-0.5],[1,13],[3,5]],\"o\":[[-7.25,1.25],[0,0],[1.75,10.75],[1.25,4.25],[8.75,0.5],[-1,-13],[-3,-5]],\"v\":[[-24.5,-140.75],[-36,-130.75],[-35.5,-117.5],[-28,-74.5],[-15,-61],[5.5,-75.25],[-5.25,-132.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[9.375,-1.616],[0,0],[-1.75,-10.75],[-1.25,-4.25],[-8.75,-0.5],[1,13],[3,5]],\"o\":[[-7.25,1.25],[0,0],[1.75,10.75],[1.25,4.25],[8.75,0.5],[-1,-13],[-3,-5]],\"v\":[[-23.25,-115.75],[-34.75,-105.75],[-34.25,-92.5],[-20.5,-34.5],[-7.5,-21],[13,-35.25],[-4,-107.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":22,\"s\":[{\"i\":[[11.347,-1.939],[0,0],[-1.576,-9.505],[-1.513,-5.149],[-10.587,-0.606],[4.501,20.379],[3.63,6.058]],\"o\":[[-14.136,2.416],[0,0],[2.159,13.018],[1.512,5.149],[10.587,0.606],[-3.407,-15.426],[-3.63,-6.058]],\"v\":[[-19.572,-73.033],[-33.863,-59.542],[-32.383,-43.737],[-11.62,23.537],[5.985,48.019],[25.79,24.003],[1.47,-60.859]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":28,\"s\":[{\"i\":[[11.347,-1.939],[0,0],[-1.576,-9.505],[-1.513,-5.149],[-10.587,-0.606],[4.501,20.379],[3.63,6.058]],\"o\":[[-14.136,2.416],[0,0],[2.159,13.018],[1.512,5.149],[10.587,0.606],[-3.407,-15.426],[-3.63,-6.058]],\"v\":[[-19.572,-73.033],[-33.863,-59.542],[-32.383,-43.737],[-11.62,23.537],[5.985,48.019],[25.79,24.003],[1.47,-60.859]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[9.375,-1.616],[0,0],[-1.75,-10.75],[-1.25,-4.25],[-8.75,-0.5],[1,13],[3,5]],\"o\":[[-7.25,1.25],[0,0],[1.75,10.75],[1.25,4.25],[8.75,0.5],[-1,-13],[-3,-5]],\"v\":[[-24.5,-140.75],[-36,-130.75],[-35.5,-117.5],[-28,-74.5],[-15,-61],[5.5,-75.25],[-5.25,-132.25]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.419607877731,0,0.454901993275,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":2,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":4,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-0.916,-1.008],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 3\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[6.983,-0.66],[-3.834,-11.242],[-1.839,-8.422],[-0.584,-7.242],[-3.51,0.965],[0.266,4.988],[8.051,17.579]],\"o\":[[-9.334,0.883],[3.796,11.131],[2.338,10.709],[1.03,12.774],[4.816,-1.324],[-1.031,-19.307],[-2.921,-6.377]],\"v\":[[-24.5,-140.75],[-14.25,-125.75],[-8.75,-101.375],[-4,-74.5],[-1.875,-62.75],[5.5,-75.25],[-5.25,-132.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[-2.412,-1.507],[-2.855,-11.53],[-1.839,-8.422],[-0.584,-7.242],[-3.612,0.453],[0.266,4.988],[6.572,18.184]],\"o\":[[6.416,4.008],[2.416,9.758],[2.338,10.709],[1.03,12.774],[6.416,-0.805],[-1.031,-19.307],[-4.334,-11.992]],\"v\":[[-23,-114.75],[-6.25,-84.5],[-0.75,-60.125],[4,-33.25],[2.375,-21.25],[13.5,-34],[-3.75,-106.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":22,\"s\":[{\"i\":[[-2.412,-1.507],[-2.855,-11.53],[-1.839,-8.422],[-0.584,-7.242],[-3.612,0.453],[0.266,4.988],[6.572,18.184]],\"o\":[[6.416,4.008],[2.416,9.758],[2.338,10.709],[1.03,12.774],[6.416,-0.805],[-1.031,-19.307],[-4.334,-11.992]],\"v\":[[-22,-72.5],[-2.75,-41.75],[5,-15.125],[16,34],[14.375,46],[25.5,33.25],[-0.25,-63.5]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":28,\"s\":[{\"i\":[[-2.412,-1.507],[-2.855,-11.53],[-1.839,-8.422],[-0.584,-7.242],[-3.612,0.453],[0.266,4.988],[6.572,18.184]],\"o\":[[6.416,4.008],[2.416,9.758],[2.338,10.709],[1.03,12.774],[6.416,-0.805],[-1.031,-19.307],[-4.334,-11.992]],\"v\":[[-22,-72.5],[-2.75,-41.75],[5,-15.125],[16,34],[14.375,46],[25.5,33.25],[-0.25,-63.5]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[6.983,-0.66],[-3.834,-11.242],[-1.839,-8.422],[-0.584,-7.242],[-3.51,0.965],[0.266,4.988],[8.051,17.579]],\"o\":[[-9.334,0.883],[3.796,11.131],[2.338,10.709],[1.03,12.774],[4.816,-1.324],[-1.031,-19.307],[-2.921,-6.377]],\"v\":[[-24.5,-140.75],[-14.25,-125.75],[-8.75,-101.375],[-4,-74.5],[-1.875,-62.75],[5.5,-75.25],[-5.25,-132.25]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.050980392156862744,0.4627450980392157,0.9450980392156862,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-0.916,-1.008],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 2\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[9.375,-1.616],[0,0],[-1.75,-10.75],[-1.25,-4.25],[-8.75,-0.5],[1,13],[3,5]],\"o\":[[-7.25,1.25],[0,0],[1.75,10.75],[1.25,4.25],[8.75,0.5],[-1,-13],[-3,-5]],\"v\":[[-24.5,-140.75],[-36,-130.75],[-35.5,-117.5],[-28,-74.5],[-15,-61],[5.5,-75.25],[-5.25,-132.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[9.375,-1.616],[0,0],[-1.75,-10.75],[-1.25,-4.25],[-8.75,-0.5],[1,13],[3,5]],\"o\":[[-7.25,1.25],[0,0],[1.75,10.75],[1.25,4.25],[8.75,0.5],[-1,-13],[-3,-5]],\"v\":[[-23.25,-115.75],[-34.75,-105.75],[-34.25,-92.5],[-20.5,-34.5],[-7.5,-21],[13,-35.25],[-4,-107.25]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":22,\"s\":[{\"i\":[[11.347,-1.939],[0,0],[-1.576,-9.505],[-1.513,-5.149],[-10.587,-0.606],[4.501,20.379],[3.63,6.058]],\"o\":[[-14.136,2.416],[0,0],[2.159,13.018],[1.512,5.149],[10.587,0.606],[-3.407,-15.426],[-3.63,-6.058]],\"v\":[[-19.572,-73.033],[-33.863,-59.542],[-32.383,-43.737],[-11.62,23.537],[5.985,48.019],[25.79,24.003],[1.47,-60.859]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":28,\"s\":[{\"i\":[[11.347,-1.939],[0,0],[-1.576,-9.505],[-1.513,-5.149],[-10.587,-0.606],[4.501,20.379],[3.63,6.058]],\"o\":[[-14.136,2.416],[0,0],[2.159,13.018],[1.512,5.149],[10.587,0.606],[-3.407,-15.426],[-3.63,-6.058]],\"v\":[[-19.572,-73.033],[-33.863,-59.542],[-32.383,-43.737],[-11.62,23.537],[5.985,48.019],[25.79,24.003],[1.47,-60.859]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[9.375,-1.616],[0,0],[-1.75,-10.75],[-1.25,-4.25],[-8.75,-0.5],[1,13],[3,5]],\"o\":[[-7.25,1.25],[0,0],[1.75,10.75],[1.25,4.25],[8.75,0.5],[-1,-13],[-3,-5]],\"v\":[[-24.5,-140.75],[-36,-130.75],[-35.5,-117.5],[-28,-74.5],[-15,-61],[5.5,-75.25],[-5.25,-132.25]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.2901960784313726,0.5647058823529412,0.8862745098039215,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-0.916,-1.008],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 1\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":80,\"st\":0,\"bm\":0},{\"ddd\":0,\"ind\":5,\"ty\":4,\"nm\":\"Ring_finger\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[256,256,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[10,1],[0.392,-5.492],[-3.5,-9.25],[-7.75,-2.75],[4.636,19.412],[1,3.5]],\"o\":[[-10,-1],[-0.5,7],[6.128,16.195],[7.75,2.75],[-4,-16.75],[-1,-3.5]],\"v\":[[-55.5,-105],[-75.5,-93],[-71.5,-73.5],[-50,-28.5],[-26.75,-48],[-39.75,-87]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[11.181,1.09],[0.439,-5.987],[-3.913,-10.085],[-12.321,-5.496],[6.183,21.764],[1.118,3.816]],\"o\":[[-11.181,-1.09],[-0.559,7.632],[6.851,17.656],[9.694,4.324],[-5.138,-18.086],[-1.118,-3.816]],\"v\":[[-51.579,-63.91],[-73.941,-50.826],[-69.469,-29.566],[-34.429,44.746],[-12.683,21.736],[-33.969,-44.285]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[11.181,1.09],[0.439,-5.987],[-3.913,-10.085],[-12.321,-5.496],[6.183,21.764],[1.118,3.816]],\"o\":[[-11.181,-1.09],[-0.559,7.632],[6.851,17.656],[9.694,4.324],[-5.138,-18.086],[-1.118,-3.816]],\"v\":[[-51.579,-63.91],[-73.941,-50.826],[-69.469,-29.566],[-34.429,44.746],[-12.683,21.736],[-33.969,-44.285]],\"c\":true}]},{\"t\":36,\"s\":[{\"i\":[[10,1],[0.392,-5.492],[-3.5,-9.25],[-7.75,-2.75],[4.636,19.412],[1,3.5]],\"o\":[[-10,-1],[-0.5,7],[6.128,16.195],[7.75,2.75],[-4,-16.75],[-1,-3.5]],\"v\":[[-55.5,-105],[-75.5,-93],[-71.5,-73.5],[-50,-28.5],[-26.75,-48],[-39.75,-87]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.419607877731,0,0.454901993275,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":2,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":4,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 3\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[10.047,0.251],[-3.5,-2.25],[-3.5,-9.25],[5.75,-8.625],[4,14.875],[1,3.5]],\"o\":[[-5,-0.125],[10.073,6.476],[6.128,16.195],[-1.746,2.619],[-4.472,-16.63],[-1,-3.5]],\"v\":[[-55.5,-105],[-63.375,-102.125],[-47,-75.5],[-39.25,-28.625],[-26.75,-48],[-39.75,-87]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[10.047,0.251],[-3.811,-1.67],[-4.52,-8.796],[5.75,-8.625],[1.619,9.628],[1,3.5]],\"o\":[[-5,-0.125],[11.125,4.875],[9.25,18],[-1.746,2.619],[-4.75,-28.25],[-1,-3.5]],\"v\":[[-52.5,-63.75],[-60.375,-60.875],[-43.25,-40.25],[-22.75,43.625],[-11.5,30.25],[-36,-51.75]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[10.047,0.251],[-3.811,-1.67],[-4.52,-8.796],[5.75,-8.625],[1.619,9.628],[1,3.5]],\"o\":[[-5,-0.125],[11.125,4.875],[9.25,18],[-1.746,2.619],[-4.75,-28.25],[-1,-3.5]],\"v\":[[-52.5,-63.75],[-60.375,-60.875],[-43.25,-40.25],[-22.75,43.625],[-11.5,30.25],[-36,-51.75]],\"c\":true}]},{\"t\":36,\"s\":[{\"i\":[[10.047,0.251],[-3.5,-2.25],[-3.5,-9.25],[5.75,-8.625],[4,14.875],[1,3.5]],\"o\":[[-5,-0.125],[10.073,6.476],[6.128,16.195],[-1.746,2.619],[-4.472,-16.63],[-1,-3.5]],\"v\":[[-55.5,-105],[-63.375,-102.125],[-47,-75.5],[-39.25,-28.625],[-26.75,-48],[-39.75,-87]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.050980392156862744,0.4627450980392157,0.9450980392156862,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 2\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[10,1],[0.392,-5.492],[-3.5,-9.25],[-7.75,-2.75],[4.636,19.412],[1,3.5]],\"o\":[[-10,-1],[-0.5,7],[6.128,16.195],[7.75,2.75],[-4,-16.75],[-1,-3.5]],\"v\":[[-55.5,-105],[-75.5,-93],[-71.5,-73.5],[-50,-28.5],[-26.75,-48],[-39.75,-87]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[11.181,1.09],[0.439,-5.987],[-3.913,-10.085],[-12.321,-5.496],[6.183,21.764],[1.118,3.816]],\"o\":[[-11.181,-1.09],[-0.559,7.632],[6.851,17.656],[9.694,4.324],[-5.138,-18.086],[-1.118,-3.816]],\"v\":[[-51.579,-63.91],[-73.941,-50.826],[-69.469,-29.566],[-34.429,44.746],[-12.683,21.736],[-33.969,-44.285]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[11.181,1.09],[0.439,-5.987],[-3.913,-10.085],[-12.321,-5.496],[6.183,21.764],[1.118,3.816]],\"o\":[[-11.181,-1.09],[-0.559,7.632],[6.851,17.656],[9.694,4.324],[-5.138,-18.086],[-1.118,-3.816]],\"v\":[[-51.579,-63.91],[-73.941,-50.826],[-69.469,-29.566],[-34.429,44.746],[-12.683,21.736],[-33.969,-44.285]],\"c\":true}]},{\"t\":36,\"s\":[{\"i\":[[10,1],[0.392,-5.492],[-3.5,-9.25],[-7.75,-2.75],[4.636,19.412],[1,3.5]],\"o\":[[-10,-1],[-0.5,7],[6.128,16.195],[7.75,2.75],[-4,-16.75],[-1,-3.5]],\"v\":[[-55.5,-105],[-75.5,-93],[-71.5,-73.5],[-50,-28.5],[-26.75,-48],[-39.75,-87]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.2901960784313726,0.5647058823529412,0.8862745098039215,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 1\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":80,\"st\":0,\"bm\":0},{\"ddd\":0,\"ind\":6,\"ty\":4,\"nm\":\"little_finger\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[256,256,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[0,0],[8.75,-4.25],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-6.59,4.43],[-0.318,6.593],[4.5,12.75]],\"o\":[[0,0],[-8.75,4.25],[-1.75,2.75],[1.75,7],[4.264,5.288],[3.069,-2.063],[0,-0.5],[0.25,0.5]],\"v\":[[-67.375,-49.125],[-86.75,-54.75],[-98.25,-44.5],[-99.25,-25],[-83.5,9.5],[-62.097,14.598],[-56.5,2],[-66.75,-32.5]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[0,0],[7.796,-3.39],[1.75,-2.75],[-1.35,-7.088],[-2.25,-5],[-14.172,1.542],[1.375,10.625],[14.25,29.75]],\"o\":[[0,0],[-8.625,3.75],[-1.75,2.75],[3,15.75],[6.765,15.033],[4.691,-0.51],[0,-0.5],[0.25,0.5]],\"v\":[[-70.375,-33.875],[-85.5,-37.25],[-96.75,-27],[-97.75,-7.5],[-86.75,21.75],[-56.328,49.583],[-48.875,31.5],[-63.75,-12.75]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[0,0],[7.796,-3.39],[1.75,-2.75],[-1.35,-7.088],[-2.25,-5],[-14.172,1.542],[1.375,10.625],[14.25,29.75]],\"o\":[[0,0],[-8.625,3.75],[-1.75,2.75],[3,15.75],[6.765,15.033],[4.691,-0.51],[0,-0.5],[0.25,0.5]],\"v\":[[-70.375,-33.875],[-85.5,-37.25],[-96.75,-27],[-97.75,-7.5],[-86.75,21.75],[-56.328,49.583],[-48.875,31.5],[-63.75,-12.75]],\"c\":false}]},{\"t\":43,\"s\":[{\"i\":[[0,0],[8.75,-4.25],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-6.59,4.43],[-0.318,6.593],[4.5,12.75]],\"o\":[[0,0],[-8.75,4.25],[-1.75,2.75],[1.75,7],[4.264,5.288],[3.069,-2.063],[0,-0.5],[0.25,0.5]],\"v\":[[-67.375,-49.125],[-86.75,-54.75],[-98.25,-44.5],[-99.25,-25],[-83.5,9.5],[-62.097,14.598],[-56.5,2],[-66.75,-32.5]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.419607877731,0,0.454901993275,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":2,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":4,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 3\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[0,0],[4,1.5],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-1.028,3.652],[0.778,4.964],[2.806,7.435]],\"o\":[[0,0],[-3.511,-1.317],[-1.75,2.75],[1.75,7],[4.264,5.288],[1.126,-4.002],[-1.832,-11.695],[0,0]],\"v\":[[-66.375,-48.625],[-75.25,-53.5],[-82.75,-46.5],[-83.75,-26.75],[-66.125,7.375],[-57.472,10.348],[-57.125,-1.625],[-65.625,-35.625]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[0,0],[4,1.5],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-1.028,3.652],[0.778,4.964],[2.806,7.435]],\"o\":[[0,0],[-3.511,-1.317],[-1.75,2.75],[1.75,7],[4.264,5.288],[1.126,-4.002],[-1.832,-11.695],[0,0]],\"v\":[[-66.375,-30.125],[-73.5,-35],[-81,-28],[-82,-8.25],[-58.875,40.875],[-50.222,43.848],[-49.875,31.875],[-65.625,-17.125]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[0,0],[4,1.5],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-1.028,3.652],[0.778,4.964],[2.806,7.435]],\"o\":[[0,0],[-3.511,-1.317],[-1.75,2.75],[1.75,7],[4.264,5.288],[1.126,-4.002],[-1.832,-11.695],[0,0]],\"v\":[[-66.375,-30.125],[-73.5,-35],[-81,-28],[-82,-8.25],[-58.875,40.875],[-50.222,43.848],[-49.875,31.875],[-65.625,-17.125]],\"c\":false}]},{\"t\":43,\"s\":[{\"i\":[[0,0],[4,1.5],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-1.028,3.652],[0.778,4.964],[2.806,7.435]],\"o\":[[0,0],[-3.511,-1.317],[-1.75,2.75],[1.75,7],[4.264,5.288],[1.126,-4.002],[-1.832,-11.695],[0,0]],\"v\":[[-66.375,-48.625],[-75.25,-53.5],[-82.75,-46.5],[-83.75,-26.75],[-66.125,7.375],[-57.472,10.348],[-57.125,-1.625],[-65.625,-35.625]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.050980392156862744,0.4627450980392157,0.9450980392156862,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 2\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[0,0],[8.75,-4.25],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-6.59,4.43],[-0.318,6.593],[4.5,12.75]],\"o\":[[0,0],[-8.75,4.25],[-1.75,2.75],[1.75,7],[4.264,5.288],[3.069,-2.063],[0,-0.5],[0.25,0.5]],\"v\":[[-67.375,-49.125],[-86.75,-54.75],[-98.25,-44.5],[-99.25,-25],[-83.5,9.5],[-62.097,14.598],[-56.5,2],[-66.75,-32.5]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[0,0],[7.796,-3.39],[1.75,-2.75],[-1.35,-7.088],[-2.25,-5],[-14.172,1.542],[1.375,10.625],[14.25,29.75]],\"o\":[[0,0],[-8.625,3.75],[-1.75,2.75],[3,15.75],[6.765,15.033],[4.691,-0.51],[0,-0.5],[0.25,0.5]],\"v\":[[-70.375,-33.875],[-85.5,-37.25],[-96.75,-27],[-97.75,-7.5],[-86.75,21.75],[-56.328,49.583],[-48.875,31.5],[-63.75,-12.75]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[0,0],[7.796,-3.39],[1.75,-2.75],[-1.35,-7.088],[-2.25,-5],[-14.172,1.542],[1.375,10.625],[14.25,29.75]],\"o\":[[0,0],[-8.625,3.75],[-1.75,2.75],[3,15.75],[6.765,15.033],[4.691,-0.51],[0,-0.5],[0.25,0.5]],\"v\":[[-70.375,-33.875],[-85.5,-37.25],[-96.75,-27],[-97.75,-7.5],[-86.75,21.75],[-56.328,49.583],[-48.875,31.5],[-63.75,-12.75]],\"c\":false}]},{\"t\":43,\"s\":[{\"i\":[[0,0],[8.75,-4.25],[1.75,-2.75],[-1.75,-7],[-5.439,-6.744],[-6.59,4.43],[-0.318,6.593],[4.5,12.75]],\"o\":[[0,0],[-8.75,4.25],[-1.75,2.75],[1.75,7],[4.264,5.288],[3.069,-2.063],[0,-0.5],[0.25,0.5]],\"v\":[[-67.375,-49.125],[-86.75,-54.75],[-98.25,-44.5],[-99.25,-25],[-83.5,9.5],[-62.097,14.598],[-56.5,2],[-66.75,-32.5]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.2901960784313726,0.5647058823529412,0.8862745098039215,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 1\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":80,\"st\":0,\"bm\":0},{\"ddd\":0,\"ind\":7,\"ty\":4,\"nm\":\"Hand/Thump\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[256,256,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[0,0],[-6.5,-9.5],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[6.25,2.25],[0,0],[0.75,5],[3.75,5.5],[26,-13.5],[0.5,-1],[-23.5,-54.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[6.5,9.5],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-6.25,-2.25],[0,0],[-0.75,-5],[-3.75,-5.5],[-26,13.5],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.75,-1],[62.75,22],[90,37.75],[112.75,24.25],[96.25,-1.5],[59.5,-13.25],[42.5,-20],[35.25,-32],[28.875,-57.125],[-33.5,-72.5],[-68.5,-50.25],[-74.5,22],[-55,41],[-5,34],[39.25,32.5],[55.625,20.812],[52.375,20.812],[62.188,21.062]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[0,0],[-6.859,-11.174],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[6.005,2.775],[0,0],[1.826,5.12],[4.682,4.515],[26.076,-10.152],[0.5,-1],[-23.5,-54.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[6.073,9.765],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-4.696,-2.011],[0,0],[-1.591,-4.708],[-8.592,-6.875],[-29.924,14.848],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.511,-1.239],[61.315,22.837],[89.761,39.902],[110.478,25.565],[96.37,0.772],[55.315,-16.239],[44.533,-22.63],[39.12,-33.315],[28.538,-57.049],[-23.076,-62.848],[-67.957,-41.033],[-74.5,22],[-55,41],[-2.13,31.37],[39.25,32.5],[55.266,20.932],[52.375,20.812],[60.035,20.823]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":23,\"s\":[{\"i\":[[0,0],[-7.25,-13],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[5.738,3.347],[0,0],[3,5.25],[5.699,3.44],[22.088,-10.756],[0.5,-1],[-18.5,-44.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[5.607,10.053],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-3,-1.75],[0,0],[-2.508,-4.39],[-13.875,-8.375],[-28.75,14],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.25,-1.5],[59.75,23.75],[89.5,42.25],[108,27],[96.5,3.25],[50.75,-19.5],[46.75,-25.5],[41.25,-34.75],[27.125,-54.875],[-24.25,-56.5],[-70,-32.75],[-74.5,22],[-55,41],[1,28.5],[39.25,32.5],[54.875,21.062],[52.375,20.812],[57.688,20.562]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[0,0],[-7.25,-13],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[5.738,3.347],[0,0],[3,5.25],[5.699,3.44],[22.088,-10.756],[0.5,-1],[-18.5,-44.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[5.607,10.053],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-3,-1.75],[0,0],[-2.508,-4.39],[-13.875,-8.375],[-28.75,14],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.25,-1.5],[59.75,23.75],[89.5,42.25],[108,27],[96.5,3.25],[50.75,-19.5],[46.75,-25.5],[41.25,-34.75],[27.125,-54.875],[-24.25,-56.5],[-70,-32.75],[-74.5,22],[-55,41],[1,28.5],[39.25,32.5],[54.875,21.062],[52.375,20.812],[57.688,20.562]],\"c\":false}]},{\"t\":43,\"s\":[{\"i\":[[0,0],[-6.5,-9.5],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[6.25,2.25],[0,0],[0.75,5],[3.75,5.5],[26,-13.5],[0.5,-1],[-23.5,-54.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[6.5,9.5],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-6.25,-2.25],[0,0],[-0.75,-5],[-3.75,-5.5],[-26,13.5],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.75,-1],[62.75,22],[90,37.75],[112.75,24.25],[96.25,-1.5],[59.5,-13.25],[42.5,-20],[35.25,-32],[28.875,-57.125],[-33.5,-72.5],[-68.5,-50.25],[-74.5,22],[-55,41],[-5,34],[39.25,32.5],[55.625,20.812],[52.375,20.812],[62.188,21.062]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.419607877731,0,0.454901993275,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":2,\"ix\":5},\"lc\":2,\"lj\":2,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 3\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[26,-13.5],[0.5,-1],[-9.671,-39.373],[0,0],[-1.542,-3.576],[-12,-3],[-16,10],[-12.328,3.216],[0,0],[-2,0.312],[0,0],[0,0],[-7.625,-15.875],[-3,0.5],[-0.375,9.125],[8.75,3.5],[6.25,2.25],[0,0],[0.75,5],[3.75,5.5]],\"o\":[[-26,13.5],[-0.217,-0.217],[0.722,2.939],[0,0],[1,1.5],[12,3],[0.75,-0.5],[5.75,-1.5],[0,0],[-1.5,-11.562],[0,0],[0,0],[6.658,13.861],[4.378,-0.73],[0.6,-14.593],[-8.75,-3.5],[-6.25,-2.25],[0,0],[-0.75,-5],[-3.75,-5.5]],\"v\":[[-33.5,-72.5],[-60.25,-56.75],[-72.938,-4.015],[-35.467,-18.261],[-66.25,15.5],[-46.75,34.5],[3.5,28],[47.75,26.5],[55.625,20.812],[61.125,20.812],[67.062,0.562],[69.25,-1.5],[102.5,16],[99.5,38.25],[112.75,24.25],[96.25,-1.5],[59.5,-13.25],[42.5,-20],[35.25,-32],[28.875,-57.125]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[31,-14.75],[7.25,-6.25],[-2.812,-16.485],[0,0],[-1.542,-3.576],[-12,-3],[-16,10],[-14,1.75],[0,0],[-2,0.312],[0,0],[0,0],[-7.625,-15.875],[-3,0.5],[-0.375,9.125],[8.75,3.5],[6.25,2.25],[0,0],[2.5,6],[3.75,5.5]],\"o\":[[-31.818,15.139],[-3,5.25],[0.501,2.985],[0,0],[1,1.5],[12,3],[0.75,-0.5],[5.897,-0.737],[0,0],[-2.375,-12.312],[0,0],[0,0],[6.658,13.861],[4.378,-0.73],[0.6,-14.593],[-8.75,-3.5],[-6.25,-2.25],[0,0],[-1.945,-4.667],[-3.75,-5.5]],\"v\":[[-29.25,-60.25],[-71.375,-37.625],[-72.938,-4.015],[-35.467,-18.261],[-66.25,15.5],[-46.75,34.5],[7.75,24.25],[42.5,27],[52.125,20.312],[59.125,19.812],[67.062,0.562],[69.25,-1.5],[99.25,15.25],[98.5,40.5],[110.25,26.5],[97.75,2.75],[61.75,-12.75],[47.25,-20.25],[38.75,-35],[28.875,-57.125]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":23,\"s\":[{\"i\":[[31.75,-16.75],[5.25,-7.25],[-2.812,-16.485],[0,0],[-1.542,-3.576],[-12,-3],[-16,10],[-14,1.75],[0,0],[-2,0.312],[0,0],[0,0],[-2.979,-7.172],[-2.964,0.684],[-0.375,9.125],[8.75,3.5],[6.375,3.75],[0,0],[2.375,4.125],[3.75,5.5]],\"o\":[[-31.165,16.441],[-3,5.25],[0.501,2.985],[0,0],[1,1.5],[12,3],[0.75,-0.5],[5.897,-0.737],[0,0],[-2.375,-12.312],[0,0],[0,0],[6.75,16.25],[6.5,-1.5],[0.6,-14.593],[-8.75,-3.5],[-5.726,-3.368],[0,0],[-2.523,-4.382],[-3.75,-5.5]],\"v\":[[-22.75,-57.25],[-64,-28.75],[-65.938,4.485],[-28.467,-9.761],[-59.25,24],[-46.75,34.5],[7.75,24.25],[42.5,27],[52.125,20.312],[59.125,19.812],[67.062,0.562],[69.25,-1.5],[96.25,15],[98.5,40.5],[108.5,23.25],[88.25,-1.25],[58.75,-15.125],[51.75,-18.625],[45.75,-26.5],[34.125,-47.375]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[31.75,-16.75],[5.25,-7.25],[-2.812,-16.485],[0,0],[-1.542,-3.576],[-12,-3],[-16,10],[-14,1.75],[0,0],[-2,0.312],[0,0],[0,0],[-2.979,-7.172],[-2.964,0.684],[-0.375,9.125],[8.75,3.5],[6.375,3.75],[0,0],[2.375,4.125],[3.75,5.5]],\"o\":[[-31.165,16.441],[-3,5.25],[0.501,2.985],[0,0],[1,1.5],[12,3],[0.75,-0.5],[5.897,-0.737],[0,0],[-2.375,-12.312],[0,0],[0,0],[6.75,16.25],[6.5,-1.5],[0.6,-14.593],[-8.75,-3.5],[-5.726,-3.368],[0,0],[-2.523,-4.382],[-3.75,-5.5]],\"v\":[[-22.75,-57.25],[-64,-28.75],[-65.938,4.485],[-28.467,-9.761],[-59.25,24],[-46.75,34.5],[7.75,24.25],[42.5,27],[52.125,20.312],[59.125,19.812],[67.062,0.562],[69.25,-1.5],[96.25,15],[98.5,40.5],[108.5,23.25],[88.25,-1.25],[58.75,-15.125],[51.75,-18.625],[45.75,-26.5],[34.125,-47.375]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[26,-13.5],[0.5,-1],[-25.062,-31.735],[0,0],[-1.542,-3.576],[-12,-3],[-16,10],[-12.328,3.216],[0,0],[-2,0.312],[0,0],[0,0],[-7.625,-15.875],[-3,0.5],[-0.375,9.125],[8.75,3.5],[6.25,2.25],[0,0],[0.75,5],[3.75,5.5]],\"o\":[[-26,13.5],[-0.217,-0.217],[1.876,2.375],[0,0],[1,1.5],[12,3],[0.75,-0.5],[5.75,-1.5],[0,0],[-1.5,-11.562],[0,0],[0,0],[6.658,13.861],[4.378,-0.73],[0.6,-14.593],[-8.75,-3.5],[-6.25,-2.25],[0,0],[-0.75,-5],[-3.75,-5.5]],\"v\":[[-33.5,-72.5],[-59,-57.5],[-72.938,-4.015],[-35.467,-18.261],[-66.25,15.5],[-46.75,34.5],[3.5,28],[47.75,26.5],[55.625,20.812],[61.125,20.812],[67.062,0.562],[69.25,-1.5],[102.5,16],[99.5,38.25],[112.75,24.25],[96.25,-1.5],[59.5,-13.25],[42.5,-20],[35.25,-32],[28.875,-57.125]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.050980392156862744,0.4627450980392157,0.9450980392156862,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 2\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[0,0],[-6.5,-9.5],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[6.25,2.25],[0,0],[0.75,5],[3.75,5.5],[26,-13.5],[0.5,-1],[-23.5,-54.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[6.5,9.5],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-6.25,-2.25],[0,0],[-0.75,-5],[-3.75,-5.5],[-26,13.5],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.75,-1],[62.75,22],[90,37.75],[112.75,24.25],[96.25,-1.5],[59.5,-13.25],[42.5,-20],[35.25,-32],[28.875,-57.125],[-33.5,-72.5],[-68.5,-50.25],[-74.5,22],[-55,41],[-5,34],[39.25,32.5],[55.625,20.812],[52.375,20.812],[62.188,21.062]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[0,0],[-6.859,-11.174],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[6.005,2.775],[0,0],[1.826,5.12],[4.682,4.515],[26.076,-10.152],[0.5,-1],[-23.5,-54.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[6.073,9.765],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-4.696,-2.011],[0,0],[-1.591,-4.708],[-8.592,-6.875],[-29.924,14.848],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.511,-1.239],[61.315,22.837],[89.761,39.902],[110.478,25.565],[96.37,0.772],[55.315,-16.239],[44.533,-22.63],[39.12,-33.315],[28.538,-57.049],[-23.076,-62.848],[-67.957,-41.033],[-74.5,22],[-55,41],[-2.13,31.37],[39.25,32.5],[55.266,20.932],[52.375,20.812],[60.035,20.823]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":23,\"s\":[{\"i\":[[0,0],[-7.25,-13],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[5.738,3.347],[0,0],[3,5.25],[5.699,3.44],[22.088,-10.756],[0.5,-1],[-18.5,-44.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[5.607,10.053],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-3,-1.75],[0,0],[-2.508,-4.39],[-13.875,-8.375],[-28.75,14],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.25,-1.5],[59.75,23.75],[89.5,42.25],[108,27],[96.5,3.25],[50.75,-19.5],[46.75,-25.5],[41.25,-34.75],[27.125,-54.875],[-24.25,-56.5],[-70,-32.75],[-74.5,22],[-55,41],[1,28.5],[39.25,32.5],[54.875,21.062],[52.375,20.812],[57.688,20.562]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[0,0],[-7.25,-13],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[5.738,3.347],[0,0],[3,5.25],[5.699,3.44],[22.088,-10.756],[0.5,-1],[-18.5,-44.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[5.607,10.053],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-3,-1.75],[0,0],[-2.508,-4.39],[-13.875,-8.375],[-28.75,14],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.25,-1.5],[59.75,23.75],[89.5,42.25],[108,27],[96.5,3.25],[50.75,-19.5],[46.75,-25.5],[41.25,-34.75],[27.125,-54.875],[-24.25,-56.5],[-70,-32.75],[-74.5,22],[-55,41],[1,28.5],[39.25,32.5],[54.875,21.062],[52.375,20.812],[57.688,20.562]],\"c\":false}]},{\"t\":43,\"s\":[{\"i\":[[0,0],[-6.5,-9.5],[-9,-0.75],[-1.75,14.5],[8.75,3.5],[6.25,2.25],[0,0],[0.75,5],[3.75,5.5],[26,-13.5],[0.5,-1],[-23.5,-54.5],[-12,-3],[-16,10],[-12.25,3.5],[0,0],[0,0],[0,0]],\"o\":[[0,0],[6.5,9.5],[9,0.75],[1.75,-14.5],[-8.75,-3.5],[-6.25,-2.25],[0,0],[-0.75,-5],[-3.75,-5.5],[-26,13.5],[-0.25,-0.25],[1,1.5],[12,3],[0.75,-0.5],[12.25,-3.5],[0,0],[0,0],[0,0]],\"v\":[[68.75,-1],[62.75,22],[90,37.75],[112.75,24.25],[96.25,-1.5],[59.5,-13.25],[42.5,-20],[35.25,-32],[28.875,-57.125],[-33.5,-72.5],[-68.5,-50.25],[-74.5,22],[-55,41],[-5,34],[39.25,32.5],[55.625,20.812],[52.375,20.812],[62.188,21.062]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.2901960784313726,0.5647058823529412,0.8862745098039215,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 1\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":80,\"st\":0,\"bm\":0},{\"ddd\":0,\"ind\":8,\"ty\":4,\"nm\":\"shadow\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":50,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[256,256,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[{\"i\":[[95.5,4],[0,0],[-23.75,-2.25],[-23.5,1.25],[-5.25,3.25],[-5.36,-0.133],[-5.702,-0.129],[-6.5,-0.112],[-4.237,-0.051],[-11.143,5.65]],\"o\":[[-95.5,-4],[0,0],[0,-0.25],[0.25,0],[3.873,0.082],[4.819,0.119],[5.886,0.133],[4.1,0.07],[41.645,0.503],[0,-0.25]],\"v\":[[34.75,34.5],[-64,36.5],[-74,42.25],[-53.5,48.5],[-43.5,45.25],[-29.547,45.582],[-13.689,45.962],[4.972,46.338],[17.498,46.522],[116.5,40.75]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":11,\"s\":[{\"i\":[[75.5,3],[0,0],[-23.75,-2.25],[-23.5,1.25],[-0.75,5.25],[-6.787,-0.863],[-3.249,1.461],[-5.611,-0.094],[-3.459,-0.044],[-11.254,5.706]],\"o\":[[-95.508,-3.795],[0,0],[0,-0.25],[0.25,0],[4.708,0.099],[8.492,1.08],[4.732,-2.128],[3.368,0.057],[41.965,0.53],[0,-0.25]],\"v\":[[51.5,35.25],[-64,36.5],[-74,42.25],[-52.25,51],[-43.5,45.25],[-25.492,50.17],[-10.251,46.039],[5.998,46.855],[16.25,46.507],[116.5,40.75]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":23,\"s\":[{\"i\":[[75.5,3],[0,0],[-23.75,-2.25],[-23.5,1.25],[-0.75,5.25],[-6.787,-0.863],[-3.249,1.461],[-5.577,-0.624],[-3.75,1.243],[-11.254,5.706]],\"o\":[[-95.508,-3.795],[0,0],[0,-0.25],[0.25,0],[4.708,0.099],[8.492,1.08],[4.732,-2.128],[8.002,0.895],[42.25,1.493],[0,-0.25]],\"v\":[[51.5,35.25],[-64,36.5],[-74,42.25],[-52.25,51],[-43.5,45.25],[-25.492,50.17],[-10.251,46.039],[0.748,49.855],[18.75,46.757],[116.5,40.75]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":25,\"s\":[{\"i\":[[75.5,3],[0,0],[-23.75,-2.25],[-23.5,1.25],[-0.75,5.25],[-6.787,-0.863],[-3.249,1.461],[-5.577,-0.624],[-3.75,1.243],[-11.254,5.706]],\"o\":[[-95.508,-3.795],[0,0],[0,-0.25],[0.25,0],[4.708,0.099],[8.492,1.08],[4.732,-2.128],[8.002,0.895],[42.25,1.493],[0,-0.25]],\"v\":[[51.5,35.25],[-64,36.5],[-74,42.25],[-52.25,51],[-43.5,45.25],[-25.492,50.17],[-10.251,46.039],[0.748,49.855],[18.75,46.757],[116.5,40.75]],\"c\":true}]},{\"t\":43,\"s\":[{\"i\":[[95.5,4],[0,0],[-23.75,-2.25],[-23.5,1.25],[-5.25,3.25],[-5.36,-0.133],[-5.702,-0.129],[-6.5,-0.112],[-4.237,-0.051],[-11.143,5.65]],\"o\":[[-95.5,-4],[0,0],[0,-0.25],[0.25,0],[3.873,0.082],[4.819,0.119],[5.886,0.133],[4.1,0.07],[41.645,0.503],[0,-0.25]],\"v\":[[34.75,34.5],[-64,36.5],[-74,42.25],[-53.5,48.5],[-43.5,45.25],[-29.547,45.582],[-13.689,45.962],[4.972,46.338],[17.498,46.522],[116.5,40.75]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.266666680574,0.266666680574,0.266666680574,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Shape 1\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":80,\"st\":0,\"bm\":0}],\"markers\":[]}");
-
-},{}],"eymrH":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../../config/axiosInstance":"gJ5tu","react-redux":"62sf7","react-hot-toast":"gi0hv","lottie-react":"kSXtH","../../assets/loading.json":"4xszR","../../assets/not_found.json":"eymrH","react-icons/fa":"4Bs28","react-router":"dXVwI","../../components/LoadingAnimation":"1omCq"}],"eymrH":[function(require,module,exports,__globalThis) {
 module.exports = JSON.parse("{\"v\":\"4.8.0\",\"meta\":{\"g\":\"LottieFiles AE \",\"a\":\"\",\"k\":\"\",\"d\":\"\",\"tc\":\"\"},\"fr\":25,\"ip\":0,\"op\":57,\"w\":800,\"h\":600,\"nm\":\"Comp 1\",\"ddd\":0,\"assets\":[],\"layers\":[{\"ddd\":0,\"ind\":1,\"ty\":4,\"nm\":\"Layer 10\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":2,\"s\":[447.863,-175.076,0],\"to\":[0,9.595,0],\"ti\":[0,-19.191,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":3,\"s\":[447.863,-117.503,0],\"to\":[0,19.191,0],\"ti\":[0,-19.19,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":4,\"s\":[447.863,-59.928,0],\"to\":[0,19.19,0],\"ti\":[0,-19.19,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":5,\"s\":[447.863,-2.361,0],\"to\":[0,19.19,0],\"ti\":[0,-19.19,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":6,\"s\":[447.863,55.209,0],\"to\":[0,19.19,0],\"ti\":[0,-19.19,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":7,\"s\":[447.863,112.78,0],\"to\":[0,19.19,0],\"ti\":[0,-19.191,0]},{\"i\":{\"x\":0.833,\"y\":0.893},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":8,\"s\":[447.863,170.351,0],\"to\":[0,19.191,0],\"ti\":[0,-12.353,0]},{\"i\":{\"x\":0.833,\"y\":0.876},\"o\":{\"x\":0.167,\"y\":0.373},\"t\":9,\"s\":[447.863,227.924,0],\"to\":[0,12.353,0],\"ti\":[0,-4.118,0]},{\"i\":{\"x\":0.833,\"y\":0.899},\"o\":{\"x\":0.167,\"y\":0.252},\"t\":10,\"s\":[447.863,244.467,0],\"to\":[0,4.118,0],\"ti\":[0,-1.391,0]},{\"i\":{\"x\":0.833,\"y\":0.644},\"o\":{\"x\":0.167,\"y\":0.477},\"t\":11,\"s\":[447.863,252.631,0],\"to\":[0,1.391,0],\"ti\":[0,0.913,0]},{\"i\":{\"x\":0.833,\"y\":0.79},\"o\":{\"x\":0.167,\"y\":0.109},\"t\":12,\"s\":[447.863,252.811,0],\"to\":[0,-0.913,0],\"ti\":[0,2.374,0]},{\"i\":{\"x\":0.833,\"y\":0.832},\"o\":{\"x\":0.167,\"y\":0.138},\"t\":13,\"s\":[447.863,247.151,0],\"to\":[0,-2.374,0],\"ti\":[0,2.882,0]},{\"i\":{\"x\":0.833,\"y\":0.852},\"o\":{\"x\":0.167,\"y\":0.165},\"t\":14,\"s\":[447.863,238.567,0],\"to\":[0,-2.882,0],\"ti\":[0,2.581,0]},{\"i\":{\"x\":0.833,\"y\":0.87},\"o\":{\"x\":0.167,\"y\":0.19},\"t\":15,\"s\":[447.863,229.858,0],\"to\":[0,-2.581,0],\"ti\":[0,1.761,0]},{\"i\":{\"x\":0.833,\"y\":0.898},\"o\":{\"x\":0.167,\"y\":0.232},\"t\":16,\"s\":[447.863,223.084,0],\"to\":[0,-1.761,0],\"ti\":[0,0.756,0]},{\"i\":{\"x\":0.833,\"y\":0.756},\"o\":{\"x\":0.167,\"y\":0.454},\"t\":17,\"s\":[447.863,219.291,0],\"to\":[0,-0.756,0],\"ti\":[0,-0.149,0]},{\"i\":{\"x\":0.833,\"y\":0.765},\"o\":{\"x\":0.167,\"y\":0.127},\"t\":18,\"s\":[447.863,218.545,0],\"to\":[0,0.149,0],\"ti\":[0,-0.772,0]},{\"i\":{\"x\":0.833,\"y\":0.825},\"o\":{\"x\":0.167,\"y\":0.129},\"t\":19,\"s\":[447.863,220.186,0],\"to\":[0,0.772,0],\"ti\":[0,-1.045,0]},{\"i\":{\"x\":0.833,\"y\":0.847},\"o\":{\"x\":0.167,\"y\":0.159},\"t\":20,\"s\":[447.863,223.178,0],\"to\":[0,1.045,0],\"ti\":[0,-1,0]},{\"i\":{\"x\":0.833,\"y\":0.865},\"o\":{\"x\":0.167,\"y\":0.184},\"t\":21,\"s\":[447.863,226.455,0],\"to\":[0,1,0],\"ti\":[0,-0.734,0]},{\"i\":{\"x\":0.833,\"y\":0.89},\"o\":{\"x\":0.167,\"y\":0.218},\"t\":22,\"s\":[447.863,229.176,0],\"to\":[0,0.734,0],\"ti\":[0,-0.371,0]},{\"i\":{\"x\":0.833,\"y\":0.852},\"o\":{\"x\":0.167,\"y\":0.343},\"t\":23,\"s\":[447.863,230.861,0],\"to\":[0,0.371,0],\"ti\":[0,-0.021,0]},{\"i\":{\"x\":0.833,\"y\":0.715},\"o\":{\"x\":0.167,\"y\":0.191},\"t\":24,\"s\":[447.863,231.401,0],\"to\":[0,0.021,0],\"ti\":[0,0.239,0]},{\"i\":{\"x\":0.833,\"y\":0.817},\"o\":{\"x\":0.167,\"y\":0.118},\"t\":25,\"s\":[447.863,230.984,0],\"to\":[0,-0.239,0],\"ti\":[0,0.371,0]},{\"i\":{\"x\":0.833,\"y\":0.843},\"o\":{\"x\":0.167,\"y\":0.153},\"t\":26,\"s\":[447.863,229.969,0],\"to\":[0,-0.371,0],\"ti\":[0,0.381,0]},{\"i\":{\"x\":0.833,\"y\":0.861},\"o\":{\"x\":0.167,\"y\":0.177},\"t\":27,\"s\":[447.863,228.757,0],\"to\":[0,-0.381,0],\"ti\":[0,0.3,0]},{\"i\":{\"x\":0.833,\"y\":0.882},\"o\":{\"x\":0.167,\"y\":0.207},\"t\":28,\"s\":[447.863,227.682,0],\"to\":[0,-0.3,0],\"ti\":[0,0.171,0]},{\"i\":{\"x\":0.833,\"y\":0.888},\"o\":{\"x\":0.167,\"y\":0.284},\"t\":29,\"s\":[447.863,226.958,0],\"to\":[0,-0.171,0],\"ti\":[0,0.037,0]},{\"i\":{\"x\":0.833,\"y\":0.647},\"o\":{\"x\":0.167,\"y\":0.328},\"t\":30,\"s\":[447.863,226.657,0],\"to\":[0,-0.037,0],\"ti\":[0,-0.068,0]},{\"i\":{\"x\":0.833,\"y\":0.806},\"o\":{\"x\":0.167,\"y\":0.109},\"t\":31,\"s\":[447.863,226.734,0],\"to\":[0,0.068,0],\"ti\":[0,-0.129,0]},{\"i\":{\"x\":0.833,\"y\":0.838},\"o\":{\"x\":0.167,\"y\":0.146},\"t\":32,\"s\":[447.863,227.066,0],\"to\":[0,0.129,0],\"ti\":[0,-0.143,0]},{\"i\":{\"x\":0.833,\"y\":0.856},\"o\":{\"x\":0.167,\"y\":0.171},\"t\":33,\"s\":[447.863,227.507,0],\"to\":[0,0.143,0],\"ti\":[0,-0.12,0]},{\"i\":{\"x\":0.833,\"y\":0.876},\"o\":{\"x\":0.167,\"y\":0.198},\"t\":34,\"s\":[447.863,227.924,0],\"to\":[0,0.12,0],\"ti\":[0,-0.075,0]},{\"i\":{\"x\":0.833,\"y\":0.899},\"o\":{\"x\":0.167,\"y\":0.252},\"t\":35,\"s\":[447.863,228.227,0],\"to\":[0,0.075,0],\"ti\":[0,-0.025,0]},{\"i\":{\"x\":0.833,\"y\":0.642},\"o\":{\"x\":0.167,\"y\":0.479},\"t\":36,\"s\":[447.863,228.377,0],\"to\":[0,0.025,0],\"ti\":[0,0.017,0]},{\"i\":{\"x\":0.833,\"y\":0.79},\"o\":{\"x\":0.167,\"y\":0.109},\"t\":37,\"s\":[447.863,228.38,0],\"to\":[0,-0.017,0],\"ti\":[0,0.043,0]},{\"i\":{\"x\":0.833,\"y\":0.832},\"o\":{\"x\":0.167,\"y\":0.138},\"t\":38,\"s\":[447.863,228.276,0],\"to\":[0,-0.043,0],\"ti\":[0,0.053,0]},{\"i\":{\"x\":0.833,\"y\":0.852},\"o\":{\"x\":0.167,\"y\":0.165},\"t\":39,\"s\":[447.863,228.119,0],\"to\":[0,-0.053,0],\"ti\":[0,0.047,0]},{\"i\":{\"x\":0.833,\"y\":0.87},\"o\":{\"x\":0.167,\"y\":0.19},\"t\":40,\"s\":[447.863,227.959,0],\"to\":[0,-0.047,0],\"ti\":[0,0.032,0]},{\"i\":{\"x\":0.833,\"y\":0.898},\"o\":{\"x\":0.167,\"y\":0.232},\"t\":41,\"s\":[447.863,227.835,0],\"to\":[0,-0.032,0],\"ti\":[0,0.014,0]},{\"i\":{\"x\":0.833,\"y\":0.76},\"o\":{\"x\":0.167,\"y\":0.447},\"t\":42,\"s\":[447.863,227.766,0],\"to\":[0,-0.014,0],\"ti\":[0,-0.003,0]},{\"i\":{\"x\":0.833,\"y\":0.765},\"o\":{\"x\":0.167,\"y\":0.127},\"t\":43,\"s\":[447.863,227.752,0],\"to\":[0,0.003,0],\"ti\":[0,-0.014,0]},{\"i\":{\"x\":0.833,\"y\":0.825},\"o\":{\"x\":0.167,\"y\":0.129},\"t\":44,\"s\":[447.863,227.782,0],\"to\":[0,0.014,0],\"ti\":[0,-0.019,0]},{\"i\":{\"x\":0.833,\"y\":0.847},\"o\":{\"x\":0.167,\"y\":0.159},\"t\":45,\"s\":[447.863,227.837,0],\"to\":[0,0.019,0],\"ti\":[0,-0.018,0]},{\"i\":{\"x\":0.833,\"y\":0.865},\"o\":{\"x\":0.167,\"y\":0.184},\"t\":46,\"s\":[447.863,227.897,0],\"to\":[0,0.018,0],\"ti\":[0,-0.013,0]},{\"i\":{\"x\":0.833,\"y\":0.89},\"o\":{\"x\":0.167,\"y\":0.218},\"t\":47,\"s\":[447.863,227.947,0],\"to\":[0,0.013,0],\"ti\":[0,-0.007,0]},{\"i\":{\"x\":0.833,\"y\":0.852},\"o\":{\"x\":0.167,\"y\":0.343},\"t\":48,\"s\":[447.863,227.978,0],\"to\":[0,0.007,0],\"ti\":[0,0,0]},{\"i\":{\"x\":0.833,\"y\":0.713},\"o\":{\"x\":0.167,\"y\":0.192},\"t\":49,\"s\":[447.863,227.988,0],\"to\":[0,0,0],\"ti\":[0,0.004,0]},{\"i\":{\"x\":0.833,\"y\":0.817},\"o\":{\"x\":0.167,\"y\":0.118},\"t\":50,\"s\":[447.863,227.98,0],\"to\":[0,-0.004,0],\"ti\":[0,0.007,0]},{\"i\":{\"x\":0.833,\"y\":0.843},\"o\":{\"x\":0.167,\"y\":0.153},\"t\":51,\"s\":[447.863,227.961,0],\"to\":[0,-0.007,0],\"ti\":[0,0.007,0]},{\"i\":{\"x\":0.833,\"y\":0.861},\"o\":{\"x\":0.167,\"y\":0.177},\"t\":52,\"s\":[447.863,227.939,0],\"to\":[0,-0.007,0],\"ti\":[0,0.005,0]},{\"i\":{\"x\":0.833,\"y\":0.882},\"o\":{\"x\":0.167,\"y\":0.207},\"t\":53,\"s\":[447.863,227.92,0],\"to\":[0,-0.005,0],\"ti\":[0,0.003,0]},{\"i\":{\"x\":0.833,\"y\":0.888},\"o\":{\"x\":0.167,\"y\":0.284},\"t\":54,\"s\":[447.863,227.906,0],\"to\":[0,-0.003,0],\"ti\":[0,0.001,0]},{\"i\":{\"x\":0.833,\"y\":0.681},\"o\":{\"x\":0.167,\"y\":0.296},\"t\":55,\"s\":[447.863,227.901,0],\"to\":[0,-0.001,0],\"ti\":[0,-0.001,0]},{\"i\":{\"x\":0.833,\"y\":0.806},\"o\":{\"x\":0.167,\"y\":0.109},\"t\":56,\"s\":[447.863,227.902,0],\"to\":[0,0.001,0],\"ti\":[0,-0.002,0]},{\"i\":{\"x\":0.833,\"y\":0.838},\"o\":{\"x\":0.167,\"y\":0.146},\"t\":57,\"s\":[447.863,227.908,0],\"to\":[0,0.002,0],\"ti\":[0,-0.003,0]},{\"i\":{\"x\":0.833,\"y\":0.856},\"o\":{\"x\":0.167,\"y\":0.171},\"t\":58,\"s\":[447.863,227.916,0],\"to\":[0,0.003,0],\"ti\":[0,-0.002,0]},{\"i\":{\"x\":0.833,\"y\":0.876},\"o\":{\"x\":0.167,\"y\":0.198},\"t\":59,\"s\":[447.863,227.924,0],\"to\":[0,0.002,0],\"ti\":[0,-0.001,0]},{\"i\":{\"x\":0.833,\"y\":0.899},\"o\":{\"x\":0.167,\"y\":0.252},\"t\":60,\"s\":[447.863,227.93,0],\"to\":[0,0.001,0],\"ti\":[0,0,0]},{\"i\":{\"x\":0.951,\"y\":0},\"o\":{\"x\":0.036,\"y\":1},\"t\":61,\"s\":[447.863,227.932,0],\"to\":[0,0,0],\"ti\":[0,0,0]},{\"i\":{\"x\":0.833,\"y\":0.79},\"o\":{\"x\":0.167,\"y\":0.109},\"t\":62,\"s\":[447.863,227.932,0],\"to\":[0,0,0],\"ti\":[0,0.001,0]},{\"i\":{\"x\":0.833,\"y\":0.832},\"o\":{\"x\":0.167,\"y\":0.138},\"t\":63,\"s\":[447.863,227.93,0],\"to\":[0,-0.001,0],\"ti\":[0,0.001,0]},{\"i\":{\"x\":0.833,\"y\":0.852},\"o\":{\"x\":0.167,\"y\":0.165},\"t\":64,\"s\":[447.863,227.928,0],\"to\":[0,-0.001,0],\"ti\":[0,0.001,0]},{\"i\":{\"x\":0.833,\"y\":0.87},\"o\":{\"x\":0.167,\"y\":0.19},\"t\":65,\"s\":[447.863,227.925,0],\"to\":[0,-0.001,0],\"ti\":[0,0.001,0]},{\"i\":{\"x\":0.833,\"y\":0.898},\"o\":{\"x\":0.167,\"y\":0.232},\"t\":66,\"s\":[447.863,227.922,0],\"to\":[0,-0.001,0],\"ti\":[0,0,0]},{\"i\":{\"x\":0.833,\"y\":0.721},\"o\":{\"x\":0.167,\"y\":0.519},\"t\":67,\"s\":[447.863,227.921,0],\"to\":[0,0,0],\"ti\":[0,0,0]},{\"i\":{\"x\":0.833,\"y\":0.765},\"o\":{\"x\":0.167,\"y\":0.127},\"t\":68,\"s\":[447.863,227.921,0],\"to\":[0,0,0],\"ti\":[0,0,0]},{\"i\":{\"x\":0.833,\"y\":0.825},\"o\":{\"x\":0.167,\"y\":0.129},\"t\":69,\"s\":[447.863,227.921,0],\"to\":[0,0,0],\"ti\":[0,0,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.159},\"t\":70,\"s\":[447.863,227.922,0],\"to\":[0,0,0],\"ti\":[0,0,0]},{\"t\":71,\"s\":[447.863,227.924,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[109,109,100],\"ix\":6}},\"ao\":0,\"ef\":[{\"ty\":5,\"nm\":\"Position - Overshoot\",\"np\":3,\"mn\":\"ADBE Slider Control\",\"ix\":1,\"en\":1,\"ef\":[{\"ty\":0,\"nm\":\"Slider\",\"mn\":\"ADBE Slider Control-0001\",\"ix\":1,\"v\":{\"a\":0,\"k\":7,\"ix\":1,\"x\":\"var $bm_rt;\\n$bm_rt = clamp(value, 0, 100);\"}}]},{\"ty\":5,\"nm\":\"Position - Bounce\",\"np\":3,\"mn\":\"ADBE Slider Control\",\"ix\":2,\"en\":1,\"ef\":[{\"ty\":0,\"nm\":\"Slider\",\"mn\":\"ADBE Slider Control-0001\",\"ix\":1,\"v\":{\"a\":0,\"k\":40,\"ix\":1,\"x\":\"var $bm_rt;\\n$bm_rt = clamp(value, 0, 100);\"}}]},{\"ty\":5,\"nm\":\"Position - Friction\",\"np\":3,\"mn\":\"ADBE Slider Control\",\"ix\":3,\"en\":1,\"ef\":[{\"ty\":0,\"nm\":\"Slider\",\"mn\":\"ADBE Slider Control-0001\",\"ix\":1,\"v\":{\"a\":0,\"k\":80,\"ix\":1,\"x\":\"var $bm_rt;\\n$bm_rt = clamp(value, 0, 100);\"}}]}],\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,2.092],[0,0]],\"o\":[[0,0],[0,0],[2.092,0],[0,0],[0,0]],\"v\":[[-77.031,68.089],[-77.031,75.635],[32.844,75.635],[36.633,71.846],[36.633,68.089]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.803921580315,0.858823537827,0.901960790157,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,2.092],[0,0]],\"o\":[[0,0],[0,0],[2.092,0],[0,0],[0,0]],\"v\":[[-77.031,68.089],[-77.031,75.635],[32.844,75.635],[36.633,71.846],[36.633,68.089]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.901960790157,0.901960790157,0.901960790157,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 2\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[2.44,0],[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0],[0.817,-2.3]],\"v\":[[56.46,-2.466],[-10.869,-2.466],[-35.926,68.089],[36.405,68.089],[59.788,2.249]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.803921580315,0.858823537827,0.901960790157,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 3\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0]],\"v\":[[31.983,68.089],[-40.349,68.089],[-15.291,-2.466],[57.041,-2.466]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.803921580315,0.858823537827,0.901960790157,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 4\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":4,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0]],\"v\":[[31.983,68.089],[-40.349,68.089],[-15.291,-2.466],[57.041,-2.466]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.901960790157,0.901960790157,0.901960790157,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 5\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":5,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 2\",\"np\":5,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":2,\"op\":72,\"st\":2,\"bm\":0},{\"ddd\":0,\"ind\":2,\"ty\":4,\"nm\":\"C 1\",\"sr\":1,\"ks\":{\"o\":{\"a\":0,\"k\":100,\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":0,\"s\":[447.863,750.924,0],\"to\":[0,-8.717,0],\"ti\":[0,17.434,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":1,\"s\":[447.863,698.623,0],\"to\":[0,-17.434,0],\"ti\":[0,17.435,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":2,\"s\":[447.863,646.322,0],\"to\":[0,-17.435,0],\"ti\":[0,17.433,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":3,\"s\":[447.863,594.015,0],\"to\":[0,-17.433,0],\"ti\":[0,17.432,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":4,\"s\":[447.863,541.724,0],\"to\":[0,-17.432,0],\"ti\":[0,17.433,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":5,\"s\":[447.863,489.424,0],\"to\":[0,-17.433,0],\"ti\":[0,17.433,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":6,\"s\":[447.863,437.124,0],\"to\":[0,-17.433,0],\"ti\":[0,17.433,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":7,\"s\":[447.863,384.828,0],\"to\":[0,-17.433,0],\"ti\":[0,17.434,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":8,\"s\":[447.863,332.525,0],\"to\":[0,-17.434,0],\"ti\":[0,17.433,0]},{\"i\":{\"x\":0.833,\"y\":0.9},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":9,\"s\":[447.863,280.225,0],\"to\":[0,-17.433,0],\"ti\":[0,10.506,0]},{\"i\":{\"x\":0.833,\"y\":0.876},\"o\":{\"x\":0.167,\"y\":0.489},\"t\":10,\"s\":[447.863,227.924,0],\"to\":[0,-10.506,0],\"ti\":[0,2.672,0]},{\"i\":{\"x\":0.833,\"y\":0.899},\"o\":{\"x\":0.167,\"y\":0.252},\"t\":11,\"s\":[447.863,217.188,0],\"to\":[0,-2.672,0],\"ti\":[0,0.902,0]},{\"i\":{\"x\":0.833,\"y\":0.644},\"o\":{\"x\":0.167,\"y\":0.477},\"t\":12,\"s\":[447.863,211.89,0],\"to\":[0,-0.902,0],\"ti\":[0,-0.593,0]},{\"i\":{\"x\":0.833,\"y\":0.79},\"o\":{\"x\":0.167,\"y\":0.109},\"t\":13,\"s\":[447.863,211.774,0],\"to\":[0,0.593,0],\"ti\":[0,-1.541,0]},{\"i\":{\"x\":0.833,\"y\":0.832},\"o\":{\"x\":0.167,\"y\":0.138},\"t\":14,\"s\":[447.863,215.447,0],\"to\":[0,1.541,0],\"ti\":[0,-1.87,0]},{\"i\":{\"x\":0.833,\"y\":0.852},\"o\":{\"x\":0.167,\"y\":0.165},\"t\":15,\"s\":[447.863,221.017,0],\"to\":[0,1.87,0],\"ti\":[0,-1.675,0]},{\"i\":{\"x\":0.833,\"y\":0.87},\"o\":{\"x\":0.167,\"y\":0.19},\"t\":16,\"s\":[447.863,226.669,0],\"to\":[0,1.675,0],\"ti\":[0,-1.143,0]},{\"i\":{\"x\":0.833,\"y\":0.898},\"o\":{\"x\":0.167,\"y\":0.232},\"t\":17,\"s\":[447.863,231.065,0],\"to\":[0,1.143,0],\"ti\":[0,-0.491,0]},{\"i\":{\"x\":0.833,\"y\":0.756},\"o\":{\"x\":0.167,\"y\":0.454},\"t\":18,\"s\":[447.863,233.526,0],\"to\":[0,0.491,0],\"ti\":[0,0.097,0]},{\"i\":{\"x\":0.833,\"y\":0.765},\"o\":{\"x\":0.167,\"y\":0.127},\"t\":19,\"s\":[447.863,234.01,0],\"to\":[0,-0.097,0],\"ti\":[0,0.501,0]},{\"i\":{\"x\":0.833,\"y\":0.825},\"o\":{\"x\":0.167,\"y\":0.129},\"t\":20,\"s\":[447.863,232.945,0],\"to\":[0,-0.501,0],\"ti\":[0,0.678,0]},{\"i\":{\"x\":0.833,\"y\":0.847},\"o\":{\"x\":0.167,\"y\":0.159},\"t\":21,\"s\":[447.863,231.004,0],\"to\":[0,-0.678,0],\"ti\":[0,0.649,0]},{\"i\":{\"x\":0.833,\"y\":0.865},\"o\":{\"x\":0.167,\"y\":0.184},\"t\":22,\"s\":[447.863,228.877,0],\"to\":[0,-0.649,0],\"ti\":[0,0.477,0]},{\"i\":{\"x\":0.833,\"y\":0.89},\"o\":{\"x\":0.167,\"y\":0.218},\"t\":23,\"s\":[447.863,227.112,0],\"to\":[0,-0.477,0],\"ti\":[0,0.241,0]},{\"i\":{\"x\":0.833,\"y\":0.852},\"o\":{\"x\":0.167,\"y\":0.343},\"t\":24,\"s\":[447.863,226.018,0],\"to\":[0,-0.241,0],\"ti\":[0,0.013,0]},{\"i\":{\"x\":0.833,\"y\":0.715},\"o\":{\"x\":0.167,\"y\":0.191},\"t\":25,\"s\":[447.863,225.668,0],\"to\":[0,-0.013,0],\"ti\":[0,-0.155,0]},{\"i\":{\"x\":0.833,\"y\":0.817},\"o\":{\"x\":0.167,\"y\":0.118},\"t\":26,\"s\":[447.863,225.938,0],\"to\":[0,0.155,0],\"ti\":[0,-0.241,0]},{\"i\":{\"x\":0.833,\"y\":0.843},\"o\":{\"x\":0.167,\"y\":0.153},\"t\":27,\"s\":[447.863,226.597,0],\"to\":[0,0.241,0],\"ti\":[0,-0.247,0]},{\"i\":{\"x\":0.833,\"y\":0.861},\"o\":{\"x\":0.167,\"y\":0.177},\"t\":28,\"s\":[447.863,227.384,0],\"to\":[0,0.247,0],\"ti\":[0,-0.194,0]},{\"i\":{\"x\":0.833,\"y\":0.882},\"o\":{\"x\":0.167,\"y\":0.207},\"t\":29,\"s\":[447.863,228.081,0],\"to\":[0,0.194,0],\"ti\":[0,-0.111,0]},{\"i\":{\"x\":0.833,\"y\":0.888},\"o\":{\"x\":0.167,\"y\":0.284},\"t\":30,\"s\":[447.863,228.551,0],\"to\":[0,0.111,0],\"ti\":[0,-0.024,0]},{\"i\":{\"x\":0.833,\"y\":0.646},\"o\":{\"x\":0.167,\"y\":0.328},\"t\":31,\"s\":[447.863,228.746,0],\"to\":[0,0.024,0],\"ti\":[0,0.044,0]},{\"i\":{\"x\":0.833,\"y\":0.806},\"o\":{\"x\":0.167,\"y\":0.109},\"t\":32,\"s\":[447.863,228.697,0],\"to\":[0,-0.044,0],\"ti\":[0,0.084,0]},{\"i\":{\"x\":0.833,\"y\":0.838},\"o\":{\"x\":0.167,\"y\":0.146},\"t\":33,\"s\":[447.863,228.481,0],\"to\":[0,-0.084,0],\"ti\":[0,0.093,0]},{\"i\":{\"x\":0.833,\"y\":0.856},\"o\":{\"x\":0.167,\"y\":0.171},\"t\":34,\"s\":[447.863,228.195,0],\"to\":[0,-0.093,0],\"ti\":[0,0.078,0]},{\"i\":{\"x\":0.833,\"y\":0.876},\"o\":{\"x\":0.167,\"y\":0.198},\"t\":35,\"s\":[447.863,227.924,0],\"to\":[0,-0.078,0],\"ti\":[0,0.049,0]},{\"i\":{\"x\":0.833,\"y\":0.899},\"o\":{\"x\":0.167,\"y\":0.252},\"t\":36,\"s\":[447.863,227.727,0],\"to\":[0,-0.049,0],\"ti\":[0,0.017,0]},{\"i\":{\"x\":0.833,\"y\":0.652},\"o\":{\"x\":0.167,\"y\":0.466},\"t\":37,\"s\":[447.863,227.63,0],\"to\":[0,-0.017,0],\"ti\":[0,-0.011,0]},{\"i\":{\"x\":0.833,\"y\":0.79},\"o\":{\"x\":0.167,\"y\":0.109},\"t\":38,\"s\":[447.863,227.628,0],\"to\":[0,0.011,0],\"ti\":[0,-0.028,0]},{\"i\":{\"x\":0.833,\"y\":0.832},\"o\":{\"x\":0.167,\"y\":0.138},\"t\":39,\"s\":[447.863,227.695,0],\"to\":[0,0.028,0],\"ti\":[0,-0.034,0]},{\"i\":{\"x\":0.833,\"y\":0.852},\"o\":{\"x\":0.167,\"y\":0.165},\"t\":40,\"s\":[447.863,227.797,0],\"to\":[0,0.034,0],\"ti\":[0,-0.031,0]},{\"i\":{\"x\":0.833,\"y\":0.87},\"o\":{\"x\":0.167,\"y\":0.19},\"t\":41,\"s\":[447.863,227.901,0],\"to\":[0,0.031,0],\"ti\":[0,-0.021,0]},{\"i\":{\"x\":0.833,\"y\":0.898},\"o\":{\"x\":0.167,\"y\":0.232},\"t\":42,\"s\":[447.863,227.982,0],\"to\":[0,0.021,0],\"ti\":[0,-0.009,0]},{\"i\":{\"x\":0.833,\"y\":0.761},\"o\":{\"x\":0.167,\"y\":0.446},\"t\":43,\"s\":[447.863,228.027,0],\"to\":[0,0.009,0],\"ti\":[0,0.002,0]},{\"i\":{\"x\":0.833,\"y\":0.765},\"o\":{\"x\":0.167,\"y\":0.127},\"t\":44,\"s\":[447.863,228.035,0],\"to\":[0,-0.002,0],\"ti\":[0,0.009,0]},{\"i\":{\"x\":0.833,\"y\":0.825},\"o\":{\"x\":0.167,\"y\":0.129},\"t\":45,\"s\":[447.863,228.016,0],\"to\":[0,-0.009,0],\"ti\":[0,0.012,0]},{\"i\":{\"x\":0.833,\"y\":0.847},\"o\":{\"x\":0.167,\"y\":0.159},\"t\":46,\"s\":[447.863,227.98,0],\"to\":[0,-0.012,0],\"ti\":[0,0.012,0]},{\"i\":{\"x\":0.833,\"y\":0.865},\"o\":{\"x\":0.167,\"y\":0.184},\"t\":47,\"s\":[447.863,227.941,0],\"to\":[0,-0.012,0],\"ti\":[0,0.009,0]},{\"i\":{\"x\":0.833,\"y\":0.89},\"o\":{\"x\":0.167,\"y\":0.218},\"t\":48,\"s\":[447.863,227.909,0],\"to\":[0,-0.009,0],\"ti\":[0,0.004,0]},{\"i\":{\"x\":0.833,\"y\":0.852},\"o\":{\"x\":0.167,\"y\":0.343},\"t\":49,\"s\":[447.863,227.889,0],\"to\":[0,-0.004,0],\"ti\":[0,0,0]},{\"i\":{\"x\":0.833,\"y\":0.713},\"o\":{\"x\":0.167,\"y\":0.192},\"t\":50,\"s\":[447.863,227.883,0],\"to\":[0,0,0],\"ti\":[0,-0.003,0]},{\"i\":{\"x\":0.833,\"y\":0.817},\"o\":{\"x\":0.167,\"y\":0.118},\"t\":51,\"s\":[447.863,227.888,0],\"to\":[0,0.003,0],\"ti\":[0,-0.004,0]},{\"i\":{\"x\":0.833,\"y\":0.843},\"o\":{\"x\":0.167,\"y\":0.153},\"t\":52,\"s\":[447.863,227.9,0],\"to\":[0,0.004,0],\"ti\":[0,-0.005,0]},{\"i\":{\"x\":0.833,\"y\":0.861},\"o\":{\"x\":0.167,\"y\":0.177},\"t\":53,\"s\":[447.863,227.914,0],\"to\":[0,0.005,0],\"ti\":[0,-0.004,0]},{\"i\":{\"x\":0.833,\"y\":0.882},\"o\":{\"x\":0.167,\"y\":0.207},\"t\":54,\"s\":[447.863,227.927,0],\"to\":[0,0.004,0],\"ti\":[0,-0.002,0]},{\"i\":{\"x\":0.833,\"y\":0.888},\"o\":{\"x\":0.167,\"y\":0.284},\"t\":55,\"s\":[447.863,227.935,0],\"to\":[0,0.002,0],\"ti\":[0,0,0]},{\"i\":{\"x\":0.833,\"y\":0.526},\"o\":{\"x\":0.167,\"y\":0.44},\"t\":56,\"s\":[447.863,227.939,0],\"to\":[0,0,0],\"ti\":[0,0.001,0]},{\"i\":{\"x\":0.833,\"y\":0.806},\"o\":{\"x\":0.167,\"y\":0.109},\"t\":57,\"s\":[447.863,227.938,0],\"to\":[0,-0.001,0],\"ti\":[0,0.002,0]},{\"i\":{\"x\":0.833,\"y\":0.838},\"o\":{\"x\":0.167,\"y\":0.146},\"t\":58,\"s\":[447.863,227.934,0],\"to\":[0,-0.002,0],\"ti\":[0,0.002,0]},{\"i\":{\"x\":0.833,\"y\":0.856},\"o\":{\"x\":0.167,\"y\":0.171},\"t\":59,\"s\":[447.863,227.929,0],\"to\":[0,-0.002,0],\"ti\":[0,0.001,0]},{\"i\":{\"x\":0.833,\"y\":0.876},\"o\":{\"x\":0.167,\"y\":0.198},\"t\":60,\"s\":[447.863,227.924,0],\"to\":[0,-0.001,0],\"ti\":[0,0.001,0]},{\"i\":{\"x\":0.833,\"y\":0.899},\"o\":{\"x\":0.167,\"y\":0.252},\"t\":61,\"s\":[447.863,227.92,0],\"to\":[0,-0.001,0],\"ti\":[0,0,0]},{\"i\":{\"x\":0.951,\"y\":0},\"o\":{\"x\":0.036,\"y\":1},\"t\":62,\"s\":[447.863,227.919,0],\"to\":[0,0,0],\"ti\":[0,0,0]},{\"i\":{\"x\":0.833,\"y\":0.79},\"o\":{\"x\":0.167,\"y\":0.109},\"t\":63,\"s\":[447.863,227.919,0],\"to\":[0,0,0],\"ti\":[0,-0.001,0]},{\"i\":{\"x\":0.833,\"y\":0.832},\"o\":{\"x\":0.167,\"y\":0.138},\"t\":64,\"s\":[447.863,227.92,0],\"to\":[0,0.001,0],\"ti\":[0,-0.001,0]},{\"i\":{\"x\":0.833,\"y\":0.852},\"o\":{\"x\":0.167,\"y\":0.165},\"t\":65,\"s\":[447.863,227.922,0],\"to\":[0,0.001,0],\"ti\":[0,-0.001,0]},{\"i\":{\"x\":0.833,\"y\":0.87},\"o\":{\"x\":0.167,\"y\":0.19},\"t\":66,\"s\":[447.863,227.924,0],\"to\":[0,0.001,0],\"ti\":[0,0,0]},{\"i\":{\"x\":0.833,\"y\":0.9},\"o\":{\"x\":0.167,\"y\":0.232},\"t\":67,\"s\":[447.863,227.925,0],\"to\":[0,0,0],\"ti\":[0,0,0]},{\"i\":{\"x\":0.833,\"y\":0.833},\"o\":{\"x\":0.167,\"y\":0.507},\"t\":68,\"s\":[447.863,227.926,0],\"to\":[0,0,0],\"ti\":[0,0,0]},{\"t\":69,\"s\":[447.863,227.926,0]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[109,109,100],\"ix\":6}},\"ao\":0,\"ef\":[{\"ty\":5,\"nm\":\"Position - Overshoot\",\"np\":3,\"mn\":\"ADBE Slider Control\",\"ix\":1,\"en\":1,\"ef\":[{\"ty\":0,\"nm\":\"Slider\",\"mn\":\"ADBE Slider Control-0001\",\"ix\":1,\"v\":{\"a\":0,\"k\":5,\"ix\":1,\"x\":\"var $bm_rt;\\n$bm_rt = clamp(value, 0, 100);\"}}]},{\"ty\":5,\"nm\":\"Position - Bounce\",\"np\":3,\"mn\":\"ADBE Slider Control\",\"ix\":2,\"en\":1,\"ef\":[{\"ty\":0,\"nm\":\"Slider\",\"mn\":\"ADBE Slider Control-0001\",\"ix\":1,\"v\":{\"a\":0,\"k\":40,\"ix\":1,\"x\":\"var $bm_rt;\\n$bm_rt = clamp(value, 0, 100);\"}}]},{\"ty\":5,\"nm\":\"Position - Friction\",\"np\":3,\"mn\":\"ADBE Slider Control\",\"ix\":3,\"en\":1,\"ef\":[{\"ty\":0,\"nm\":\"Slider\",\"mn\":\"ADBE Slider Control-0001\",\"ix\":1,\"v\":{\"a\":0,\"k\":80,\"ix\":1,\"x\":\"var $bm_rt;\\n$bm_rt = clamp(value, 0, 100);\"}}]}],\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[2.77,-4.707]],\"o\":[[0,0],[0,0]],\"v\":[[-57.374,58.954],[-51.741,67.969]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-1.937,1.162]],\"o\":[[0,0],[0,0]],\"v\":[[-89.719,8.636],[-87.205,4.104]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 2\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":15,\"s\":[{\"i\":[[0,0],[-13.691,2.73]],\"o\":[[0,0],[0,0]],\"v\":[[-155.145,65.198],[-137.32,53.849]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":18,\"s\":[{\"i\":[[0,0],[-13.691,2.73]],\"o\":[[0,0],[0,0]],\"v\":[[-154.395,60.948],[-136.57,49.599]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":22,\"s\":[{\"i\":[[0,0],[-13.691,2.73]],\"o\":[[0,0],[0,0]],\"v\":[[-155.145,65.198],[-137.32,53.849]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":26,\"s\":[{\"i\":[[0,0],[-13.691,2.73]],\"o\":[[0,0],[0,0]],\"v\":[[-154.395,60.948],[-136.57,49.599]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":30,\"s\":[{\"i\":[[0,0],[-13.691,2.73]],\"o\":[[0,0],[0,0]],\"v\":[[-155.145,65.198],[-137.32,53.849]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":34,\"s\":[{\"i\":[[0,0],[-13.691,2.73]],\"o\":[[0,0],[0,0]],\"v\":[[-154.395,60.948],[-136.57,49.599]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":38,\"s\":[{\"i\":[[0,0],[-13.691,2.73]],\"o\":[[0,0],[0,0]],\"v\":[[-155.145,65.198],[-137.32,53.849]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":42,\"s\":[{\"i\":[[0,0],[-13.691,2.73]],\"o\":[[0,0],[0,0]],\"v\":[[-154.395,60.948],[-136.57,49.599]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":46,\"s\":[{\"i\":[[0,0],[-13.691,2.73]],\"o\":[[0,0],[0,0]],\"v\":[[-155.145,65.198],[-137.32,53.849]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":50,\"s\":[{\"i\":[[0,0],[-13.691,2.73]],\"o\":[[0,0],[0,0]],\"v\":[[-154.395,60.948],[-136.57,49.599]],\"c\":false}]},{\"t\":54,\"s\":[{\"i\":[[0,0],[-13.691,2.73]],\"o\":[[0,0],[0,0]],\"v\":[[-155.145,65.198],[-137.32,53.849]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 3\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":15,\"s\":[{\"i\":[[0,0],[-3.051,-23.184],[-20.292,-9.472],[-1.114,-2.669]],\"o\":[[9.467,13.585],[0,0],[0,0],[0,0]],\"v\":[[-160.589,-4.662],[-137.996,53.849],[-77.031,57.491],[-74.419,60.803]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":18,\"s\":[{\"i\":[[0,0],[-3.051,-23.184],[-20.292,-9.472],[-1.114,-2.669]],\"o\":[[9.467,13.585],[0,0],[0,0],[0,0]],\"v\":[[-160.901,-8.85],[-138.308,49.662],[-77.344,53.303],[-74.732,56.616]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":22,\"s\":[{\"i\":[[0,0],[-3.051,-23.184],[-20.292,-9.472],[-1.114,-2.669]],\"o\":[[9.467,13.585],[0,0],[0,0],[0,0]],\"v\":[[-160.589,-4.662],[-137.996,53.849],[-77.031,57.491],[-74.419,60.803]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":26,\"s\":[{\"i\":[[0,0],[-3.051,-23.184],[-20.292,-9.472],[-1.114,-2.669]],\"o\":[[9.467,13.585],[0,0],[0,0],[0,0]],\"v\":[[-160.901,-8.85],[-138.308,49.662],[-77.344,53.303],[-74.732,56.616]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":30,\"s\":[{\"i\":[[0,0],[-3.051,-23.184],[-20.292,-9.472],[-1.114,-2.669]],\"o\":[[9.467,13.585],[0,0],[0,0],[0,0]],\"v\":[[-160.589,-4.662],[-137.996,53.849],[-77.031,57.491],[-74.419,60.803]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":34,\"s\":[{\"i\":[[0,0],[-3.051,-23.184],[-20.292,-9.472],[-1.114,-2.669]],\"o\":[[9.467,13.585],[0,0],[0,0],[0,0]],\"v\":[[-160.901,-8.85],[-138.308,49.662],[-77.344,53.303],[-74.732,56.616]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":38,\"s\":[{\"i\":[[0,0],[-3.051,-23.184],[-20.292,-9.472],[-1.114,-2.669]],\"o\":[[9.467,13.585],[0,0],[0,0],[0,0]],\"v\":[[-160.589,-4.662],[-137.996,53.849],[-77.031,57.491],[-74.419,60.803]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":42,\"s\":[{\"i\":[[0,0],[-3.051,-23.184],[-20.292,-9.472],[-1.114,-2.669]],\"o\":[[9.467,13.585],[0,0],[0,0],[0,0]],\"v\":[[-160.901,-8.85],[-138.308,49.662],[-77.344,53.303],[-74.732,56.616]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":46,\"s\":[{\"i\":[[0,0],[-3.051,-23.184],[-20.292,-9.472],[-1.114,-2.669]],\"o\":[[9.467,13.585],[0,0],[0,0],[0,0]],\"v\":[[-160.589,-4.662],[-137.996,53.849],[-77.031,57.491],[-74.419,60.803]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":50,\"s\":[{\"i\":[[0,0],[-3.051,-23.184],[-20.292,-9.472],[-1.114,-2.669]],\"o\":[[9.467,13.585],[0,0],[0,0],[0,0]],\"v\":[[-160.901,-8.85],[-138.308,49.662],[-77.344,53.303],[-74.732,56.616]],\"c\":false}]},{\"t\":54,\"s\":[{\"i\":[[0,0],[-3.051,-23.184],[-20.292,-9.472],[-1.114,-2.669]],\"o\":[[9.467,13.585],[0,0],[0,0],[0,0]],\"v\":[[-160.589,-4.662],[-137.996,53.849],[-77.031,57.491],[-74.419,60.803]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 13\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":15,\"s\":[{\"i\":[[-6.975,18.341],[-8.388,1.635],[-5.167,-39.266],[-17.825,-10.591],[7.233,-9.3],[9.041,17.05]],\"o\":[[0,0],[8.388,-1.635],[0,0],[0,0],[0,0],[-9.041,-17.05]],\"v\":[[-189.403,-5.566],[-176.867,-18.914],[-137.996,53.849],[-75.998,58.499],[-75.998,75.549],[-163.57,91.823]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":18,\"s\":[{\"i\":[[-6.975,18.341],[-8.388,1.635],[-5.167,-39.266],[-17.825,-10.591],[7.233,-9.3],[9.041,17.05]],\"o\":[[0,0],[8.388,-1.635],[0,0],[0,0],[0,0],[-9.041,-17.05]],\"v\":[[-189.403,-5.566],[-176.867,-18.914],[-137.996,53.849],[-77.248,52.999],[-76.998,68.799],[-163.57,91.823]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":22,\"s\":[{\"i\":[[-6.975,18.341],[-8.388,1.635],[-5.167,-39.266],[-17.825,-10.591],[7.233,-9.3],[9.041,17.05]],\"o\":[[0,0],[8.388,-1.635],[0,0],[0,0],[0,0],[-9.041,-17.05]],\"v\":[[-189.403,-5.566],[-176.867,-18.914],[-137.996,53.849],[-75.998,58.499],[-75.998,75.549],[-163.57,91.823]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":26,\"s\":[{\"i\":[[-6.975,18.341],[-8.388,1.635],[-5.167,-39.266],[-17.825,-10.591],[7.233,-9.3],[9.041,17.05]],\"o\":[[0,0],[8.388,-1.635],[0,0],[0,0],[0,0],[-9.041,-17.05]],\"v\":[[-189.403,-5.566],[-176.867,-18.914],[-137.996,53.849],[-77.248,52.999],[-76.998,68.799],[-163.57,91.823]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":30,\"s\":[{\"i\":[[-6.975,18.341],[-8.388,1.635],[-5.167,-39.266],[-17.825,-10.591],[7.233,-9.3],[9.041,17.05]],\"o\":[[0,0],[8.388,-1.635],[0,0],[0,0],[0,0],[-9.041,-17.05]],\"v\":[[-189.403,-5.566],[-176.867,-18.914],[-137.996,53.849],[-75.998,58.499],[-75.998,75.549],[-163.57,91.823]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":34,\"s\":[{\"i\":[[-6.975,18.341],[-8.388,1.635],[-5.167,-39.266],[-17.825,-10.591],[7.233,-9.3],[9.041,17.05]],\"o\":[[0,0],[8.388,-1.635],[0,0],[0,0],[0,0],[-9.041,-17.05]],\"v\":[[-189.403,-5.566],[-176.867,-18.914],[-137.996,53.849],[-77.248,52.999],[-76.998,68.799],[-163.57,91.823]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":38,\"s\":[{\"i\":[[-6.975,18.341],[-8.388,1.635],[-5.167,-39.266],[-17.825,-10.591],[7.233,-9.3],[9.041,17.05]],\"o\":[[0,0],[8.388,-1.635],[0,0],[0,0],[0,0],[-9.041,-17.05]],\"v\":[[-189.403,-5.566],[-176.867,-18.914],[-137.996,53.849],[-75.998,58.499],[-75.998,75.549],[-163.57,91.823]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":42,\"s\":[{\"i\":[[-6.975,18.341],[-8.388,1.635],[-5.167,-39.266],[-17.825,-10.591],[7.233,-9.3],[9.041,17.05]],\"o\":[[0,0],[8.388,-1.635],[0,0],[0,0],[0,0],[-9.041,-17.05]],\"v\":[[-189.403,-5.566],[-176.867,-18.914],[-137.996,53.849],[-77.248,52.999],[-76.998,68.799],[-163.57,91.823]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0.167},\"t\":46,\"s\":[{\"i\":[[-6.975,18.341],[-8.388,1.635],[-5.167,-39.266],[-17.825,-10.591],[7.233,-9.3],[9.041,17.05]],\"o\":[[0,0],[8.388,-1.635],[0,0],[0,0],[0,0],[-9.041,-17.05]],\"v\":[[-189.403,-5.566],[-176.867,-18.914],[-137.996,53.849],[-75.998,58.499],[-75.998,75.549],[-163.57,91.823]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":50,\"s\":[{\"i\":[[-6.975,18.341],[-8.388,1.635],[-5.167,-39.266],[-17.825,-10.591],[7.233,-9.3],[9.041,17.05]],\"o\":[[0,0],[8.388,-1.635],[0,0],[0,0],[0,0],[-9.041,-17.05]],\"v\":[[-189.403,-5.566],[-176.867,-18.914],[-137.996,53.849],[-77.248,52.999],[-76.998,68.799],[-163.57,91.823]],\"c\":true}]},{\"t\":54,\"s\":[{\"i\":[[-6.975,18.341],[-8.388,1.635],[-5.167,-39.266],[-17.825,-10.591],[7.233,-9.3],[9.041,17.05]],\"o\":[[0,0],[8.388,-1.635],[0,0],[0,0],[0,0],[-9.041,-17.05]],\"v\":[[-189.403,-5.566],[-176.867,-18.914],[-137.996,53.849],[-75.998,58.499],[-75.998,75.549],[-163.57,91.823]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.760784327984,0.364705890417,0.411764711142,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"hand 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-5.167,-5.554],[1.292,-0.517],[1.292,0.775],[5.167,1.292]],\"o\":[[0,0],[5.166,5.554],[-1.292,0.517],[-1.292,-0.775],[-5.167,-1.292]],\"v\":[[-75.998,58.499],[-55.848,60.178],[-52.232,68.315],[-60.24,68.315],[-78.089,69.924]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.933333337307,0.654901981354,0.556862771511,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":15,\"s\":[-78,64],\"to\":[0,-0.833],\"ti\":[0,0]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":18,\"s\":[-78,59],\"to\":[0,0],\"ti\":[0,0]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":22,\"s\":[-78,64],\"to\":[0,0],\"ti\":[0,0]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":26,\"s\":[-78,59],\"to\":[0,0],\"ti\":[0,0]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":30,\"s\":[-78,64],\"to\":[0,0],\"ti\":[0,0]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":34,\"s\":[-78,59],\"to\":[0,0],\"ti\":[0,-0.833]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0.005},\"t\":38,\"s\":[-78,64],\"to\":[0,0],\"ti\":[0,0]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":42,\"s\":[-78,59],\"to\":[0,0],\"ti\":[0,-0.833]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0.005},\"t\":46,\"s\":[-78,64],\"to\":[0,0],\"ti\":[0,0]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":50,\"s\":[-78,59],\"to\":[0,0],\"ti\":[0,-0.833]},{\"t\":54,\"s\":[-78,64]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[-78,64],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.833],\"y\":[0.833]},\"o\":{\"x\":[0.167],\"y\":[0.167]},\"t\":15,\"s\":[0]},{\"i\":{\"x\":[0.833],\"y\":[0.833]},\"o\":{\"x\":[0.167],\"y\":[0.167]},\"t\":18,\"s\":[-8]},{\"i\":{\"x\":[0.833],\"y\":[0.833]},\"o\":{\"x\":[0.167],\"y\":[0.167]},\"t\":22,\"s\":[0]},{\"i\":{\"x\":[0.833],\"y\":[0.833]},\"o\":{\"x\":[0.167],\"y\":[0.167]},\"t\":26,\"s\":[-8]},{\"i\":{\"x\":[0.833],\"y\":[0.833]},\"o\":{\"x\":[0.167],\"y\":[0.167]},\"t\":30,\"s\":[0]},{\"i\":{\"x\":[0.833],\"y\":[0.833]},\"o\":{\"x\":[0.167],\"y\":[0.167]},\"t\":34,\"s\":[-8]},{\"i\":{\"x\":[0.833],\"y\":[0.833]},\"o\":{\"x\":[0.167],\"y\":[-0.003]},\"t\":38,\"s\":[0]},{\"i\":{\"x\":[0.833],\"y\":[0.833]},\"o\":{\"x\":[0.167],\"y\":[0.167]},\"t\":42,\"s\":[-8]},{\"i\":{\"x\":[0.833],\"y\":[0.833]},\"o\":{\"x\":[0.167],\"y\":[-0.003]},\"t\":46,\"s\":[0]},{\"i\":{\"x\":[0.833],\"y\":[0.833]},\"o\":{\"x\":[0.167],\"y\":[0.167]},\"t\":50,\"s\":[-8]},{\"t\":54,\"s\":[0]}],\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"hand part 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":4,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-121.055,38.855],\"ix\":2},\"a\":{\"a\":0,\"k\":[-121.055,38.855],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Hand 1\",\"np\":4,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-3.637,-2.886]],\"o\":[[0,0],[0,0]],\"v\":[[-81.565,46.986],[-74.29,48.581]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 4\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":4,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-6.126,0.666]],\"o\":[[0,0],[0,0]],\"v\":[[-81.565,51.119],[-72.783,48.424]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 5\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":5,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[2.317,-19.218]],\"o\":[[0,0],[0,0]],\"v\":[[-91.562,-0.164],[-85.568,54.773]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.184313729405,0.023529412225,0.258823543787,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 6\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":6,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-0.283,-5.33]],\"o\":[[0,0],[0,0]],\"v\":[[-154.499,-63.621],[-149.955,-61.269]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"h1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-2.325,4.026],[4.632,0.009]],\"o\":[[0,0],[2.325,-4.026],[0,0]],\"v\":[[-148.17,-55.57],[-150.624,-59.939],[-152.949,-68.468]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"H \",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-6.523,1.808]],\"o\":[[0,0],[0,0]],\"v\":[[-121.205,-54.002],[-111.711,-51.677]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 24\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-2.583,-2.325],[2.841,0.129]],\"o\":[[0,0],[0,0],[0,0]],\"v\":[[-112.531,-68.468],[-109.321,-60.202],[-114.101,-58.781]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 25\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":4,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,-1.474],[0.892,0],[0,1.474],[-0.892,0]],\"o\":[[0,1.474],[-0.892,0],[0,-1.474],[0.892,0]],\"v\":[[-104.543,-70.32],[-106.157,-67.65],[-107.772,-70.32],[-106.157,-72.989]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 26\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":5,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,-1.474],[0.892,0],[0,1.474],[-0.892,0]],\"o\":[[0,1.474],[-0.892,0],[0,-1.474],[0.892,0]],\"v\":[[-124.046,-70.32],[-125.661,-67.65],[-127.275,-70.32],[-125.661,-72.989]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 27\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":6,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-1.421,-3.599]],\"o\":[[0,0],[0,0]],\"v\":[[-109.321,-78.508],[-102.993,-76.976]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 28\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":7,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-5.683,-2.841]],\"o\":[[0,0],[0,0]],\"v\":[[-130.375,-75.443],[-121.205,-77.639]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 29\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":8,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[5.339,-4.133],[-13.777,0.517]],\"o\":[[0,0],[-5.339,4.133],[0,0]],\"v\":[[-144.885,-64.895],[-155.907,-70.578],[-144.885,-52.323]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.933333337307,0.654901981354,0.556862771511,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 30\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":9,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[10.85,-1.894],[-2.928,3.961],[6.028,-1.206],[5.683,0.345],[0,0],[-4.78,-3.984],[5.854,9.644],[-7.922,20.15],[-19.805,1.206],[-3.789,4.133],[0,0],[14.639,-25.833],[9.644,-11.366]],\"o\":[[0,0],[0,0],[0,0],[0,0],[-5.683,-0.344],[0,0],[0,0],[-5.854,-9.644],[0,0],[0,0],[3.789,-4.133],[0,0],[0,0],[0,0]],\"v\":[[-108.459,-93.809],[-126.285,-81.256],[-125.424,-86.767],[-137.135,-78.672],[-141.268,-55.423],[-146.607,-65.067],[-143.838,-47.338],[-158.491,-53.184],[-161.762,-97.961],[-156.596,-104.161],[-156.423,-117.077],[-151.688,-108.294],[-114.747,-112.083],[-101.486,-109.327]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 31\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":10,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[11.539,0.001],[3.38,6.76],[-35.065,2.205]],\"o\":[[0,0],[-17.051,-0.001],[0,0],[27.383,-1.722]],\"v\":[[-99.53,-76.452],[-114.919,-35.758],[-147.974,-52.793],[-124.907,-96.755]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.933333337307,0.654901981354,0.556862771511,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 32\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":11,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[6.587,-5.296],[-0.459,-2.212],[-12.823,-1.384],[0,0]],\"o\":[[-0.088,0.071],[4.698,4.988],[-0.88,-5.536],[0,0]],\"v\":[[-145.488,-49.094],[-144.809,-45.379],[-117.865,-30.964],[-119.655,-43.54]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.933333337307,0.654901981354,0.556862771511,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 33\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":12,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[6.587,-5.296],[0.775,-9.171],[0.743,0.129],[0,0]],\"o\":[[-0.302,0.243],[0,0],[-0.743,-0.129],[0,0]],\"v\":[[-145.487,-49.094],[-142.258,-23.649],[-116.458,-24.424],[-119.655,-43.54]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.933333337307,0.654901981354,0.556862771511,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 34\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":13,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0.861,-21.699],[0,0],[0,0]],\"o\":[[0.517,-0.172],[-0.861,21.699],[0,0],[0,0]],\"v\":[[-108.891,-109.155],[-90.808,-91.933],[-104.586,-67.65],[-118.708,-100.027]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 35\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":14,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-131.834,-26.019],\"ix\":2},\"a\":{\"a\":0,\"k\":[-131.834,-26.019],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.833],\"y\":[0.833]},\"o\":{\"x\":[0.167],\"y\":[0.167]},\"t\":21,\"s\":[0]},{\"i\":{\"x\":[0.833],\"y\":[0.833]},\"o\":{\"x\":[0.167],\"y\":[0.167]},\"t\":27,\"s\":[5]},{\"i\":{\"x\":[0.833],\"y\":[0.953]},\"o\":{\"x\":[0.167],\"y\":[0.047]},\"t\":33,\"s\":[0]},{\"i\":{\"x\":[0.833],\"y\":[0.833]},\"o\":{\"x\":[0.167],\"y\":[0.167]},\"t\":40,\"s\":[0]},{\"i\":{\"x\":[0.833],\"y\":[0.833]},\"o\":{\"x\":[0.167],\"y\":[0.167]},\"t\":46,\"s\":[5]},{\"t\":52,\"s\":[0]}],\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Head\",\"np\":14,\"cix\":2,\"bm\":0,\"ix\":7,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[5.747,-1.633],[0.891,5.857],[-1.679,-5.173],[1.55,-6.458]],\"o\":[[0,0],[0,0],[0,0],[0,0]],\"v\":[[-118.708,-15.641],[-117.72,-30.064],[-110.613,-25.076],[-109.321,-5.695]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.184313729405,0.023529412225,0.258823543787,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 9\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":8,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-0.646,-9.041],[3.358,8.267],[-6.881,2.199]],\"o\":[[0,0],[0,0],[0,0],[0,0]],\"v\":[[-127.275,-17.062],[-136.446,-4.662],[-151.688,-23.649],[-142.423,-30.879]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 10\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":9,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[-9.79,0],[0,3.78],[0.941,1.004],[12.056,-0.585],[0,-0.696]],\"o\":[[9.79,0],[0,-1.034],[-6.772,0.126],[-0.438,0.696],[0,3.78]],\"v\":[[-126.637,-13.933],[-110.025,-21.926],[-111.492,-25.028],[-142.577,-24.029],[-143.25,-21.926]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.933333337307,0.654901981354,0.556862771511,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 11\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":10,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,5.659],[0.59,0.993],[14.767,-0.773],[0,-0.675],[-10.419,0]],\"o\":[[0,-1.1],[-5.999,0.096],[-0.229,0.639],[0,5.659],[10.419,0]],\"v\":[[-107.772,-21.927],[-108.689,-25.076],[-145.146,-23.899],[-145.503,-21.927],[-126.637,-11.68]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.760784327984,0.364705890417,0.411764711142,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 12\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":11,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-4.994,-3.1],[0,0],[2.378,6.427]],\"o\":[[0,0],[4.994,3.1],[0,0],[-2.755,-7.449]],\"v\":[[-50.017,56.407],[-57.226,66.507],[-38.971,67.196],[-36.043,60.178]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.933333337307,0.654901981354,0.556862771511,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"hand 2 part\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":12,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0]],\"o\":[[0,0]],\"v\":[[-20.561,121.823]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.364705890417,0.247058823705,0.419607847929,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 19\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":13,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":15,\"s\":[{\"i\":[[0,0],[-22.267,-20.239]],\"o\":[[15.019,12.789],[0,0]],\"v\":[[3.418,173.308],[59.212,222.544]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":21,\"s\":[{\"i\":[[0,0],[-22.267,-20.239]],\"o\":[[15.019,12.789],[0,0]],\"v\":[[7.418,170.308],[63.212,219.544]],\"c\":false}]},{\"t\":27,\"s\":[{\"i\":[[0,0],[-22.267,-20.239]],\"o\":[[15.019,12.789],[0,0]],\"v\":[[3.418,173.308],[59.212,222.544]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[1,1,1,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 20\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":14,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":15,\"s\":[{\"i\":[[0,0],[0,0],[11.023,0],[23.447,-1.378]],\"o\":[[0,0],[0,0],[-12.441,0],[0,0]],\"v\":[[52.357,162.88],[-10.41,96.376],[-36.966,78.563],[-98.664,81.174]],\"c\":false}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":21,\"s\":[{\"i\":[[0,0],[0,0],[11.023,0],[23.447,-1.378]],\"o\":[[0,0],[0,0],[-12.441,0],[0,0]],\"v\":[[54.357,162.38],[-8.41,95.876],[-34.966,78.063],[-96.664,80.674]],\"c\":false}]},{\"t\":27,\"s\":[{\"i\":[[0,0],[0,0],[11.023,0],[23.447,-1.378]],\"o\":[[0,0],[0,0],[-12.441,0],[0,0]],\"v\":[[52.357,162.88],[-10.41,96.376],[-36.966,78.563],[-98.664,81.174]],\"c\":false}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[1,1,1,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 21\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":15,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":15,\"s\":[{\"i\":[[0,0],[-41.34,-3.285],[0,0],[-84.858,-78.051],[-6.57,3.012],[0,0],[11.023,0],[23.447,-1.378]],\"o\":[[0,0],[41.34,3.285],[0,0],[0.806,0.741],[0,0],[0,0],[-12.441,0],[-29.188,1.715]],\"v\":[[-154.048,84.672],[-127.037,131.966],[-48.191,131.892],[80.475,242.633],[112.103,225.734],[-10.41,96.376],[-36.966,78.563],[-98.664,77.404]],\"c\":true}]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":21,\"s\":[{\"i\":[[0,0],[-41.34,-3.285],[0,0],[-84.858,-78.051],[-6.57,3.012],[0,0],[11.023,0],[23.447,-1.378]],\"o\":[[0,0],[41.34,3.285],[0,0],[0.806,0.741],[0,0],[0,0],[-12.441,0],[-29.188,1.715]],\"v\":[[-154.048,84.672],[-127.037,131.966],[-48.191,131.892],[85.225,240.133],[113.353,219.734],[-10.41,96.376],[-36.966,78.563],[-98.664,77.404]],\"c\":true}]},{\"t\":27,\"s\":[{\"i\":[[0,0],[-41.34,-3.285],[0,0],[-84.858,-78.051],[-6.57,3.012],[0,0],[11.023,0],[23.447,-1.378]],\"o\":[[0,0],[41.34,3.285],[0,0],[0.806,0.741],[0,0],[0,0],[-12.441,0],[-29.188,1.715]],\"v\":[[-154.048,84.672],[-127.037,131.966],[-48.191,131.892],[80.475,242.633],[112.103,225.734],[-10.41,96.376],[-36.966,78.563],[-98.664,77.404]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.364705890417,0.247058823705,0.419607847929,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-122,95],\"ix\":2},\"a\":{\"a\":0,\"k\":[-122,95],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"leg 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":16,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-17.911,2.756],[0,0],[0,-13.002],[0,0],[32.979,4.585]],\"o\":[[0,0],[17.911,-2.755],[0,0],[0,13.002],[0,0],[0,0]],\"v\":[[-181.567,-0.486],[-169.167,-21.841],[-106.157,-25.113],[-91.842,-12.799],[-88.742,74.085],[-154.184,83.88]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.760784327984,0.364705890417,0.411764711142,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"body\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":17,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":15,\"s\":[{\"i\":[[0,0],[-2.842,-27.383],[0,0],[-7.176,-8.008],[9.902,-0.167],[0,0]],\"o\":[[0,0],[0,0],[0,0],[7.175,8.008],[0,0],[0,0]],\"v\":[[-95.092,-21.345],[-76.256,26.983],[-72.783,48.424],[-44.424,52.816],[-52.232,68.315],[-88.742,74.085]],\"c\":true}]},{\"t\":27,\"s\":[{\"i\":[[0,0],[-2.842,-27.383],[0,0],[-7.176,-8.008],[9.902,-0.167],[0,0]],\"o\":[[0,0],[0,0],[0,0],[7.175,8.008],[0,0],[0,0]],\"v\":[[-95.092,-21.345],[-76.256,26.983],[-72.783,48.424],[-44.424,52.816],[-52.232,68.315],[-88.742,74.085]],\"c\":true}]}],\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.760784327984,0.364705890417,0.411764711142,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"hand 2\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":18,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[-13.78,2.008],[-18.069,-0.274],[-1.511,-9.012],[0,0],[1.059,2.177],[0,0],[19.164,9.035],[0,0]],\"o\":[[0,0],[18.069,0.274],[1.816,10.828],[0,0],[-30.005,-61.692],[0,0],[-19.164,-9.034],[0,0]],\"v\":[[-89.72,74.291],[14.79,70.641],[37.402,97.745],[54.186,239.768],[23.482,239.768],[-5.033,119.646],[-99.484,119.92],[-123.258,83.773]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.364705890417,0.247058823705,0.419607847929,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"leg 2\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":19,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[15.738,-7.088],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0]],\"v\":[[107.127,225.348],[142.517,226.063],[98.325,255.086],[89.254,237.086]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.760784327984,0.364705890417,0.411764711142,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":1,\"k\":[{\"i\":{\"x\":0.833,\"y\":0.886},\"o\":{\"x\":0.167,\"y\":0.114},\"t\":15,\"s\":[86.5,239],\"to\":[1.083,-1.167],\"ti\":[0,0]},{\"i\":{\"x\":0.833,\"y\":1},\"o\":{\"x\":0.167,\"y\":0},\"t\":21,\"s\":[93,232],\"to\":[0,0],\"ti\":[1.083,-1.167]},{\"t\":27,\"s\":[86.5,239]}],\"ix\":2},\"a\":{\"a\":0,\"k\":[94,235],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":-5.333,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"leg 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":20,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[17.046,2.715],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0]],\"v\":[[52.854,239.768],[82.043,259.793],[29.172,259.793],[31.472,239.768]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.760784327984,0.364705890417,0.411764711142,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 39\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":21,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[6.932,22.921],[106.29,-3.287],[8.837,-3.56],[-1.219,-19.55],[-9.752,-19.443],[-57.962,4.354],[-34.257,1.521]],\"o\":[[-75.404,-2.69],[-6.932,-22.921],[-12.436,0.385],[-10.347,10.926],[2.397,38.439],[10.845,21.623],[43.725,-3.284],[-9.047,-27.873]],\"v\":[[23.554,107.612],[-62.294,53.72],[-146.437,-37.954],[-178.182,-31.808],[-197.636,14.189],[-178.826,99.138],[-90.888,139.504],[62.189,131.199]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.937254905701,0.631372570992,0.443137258291,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-106.29,3.287],[-6.932,-22.921],[-75.404,-2.69],[12.348,-69.142],[0,0],[90.168,33.231]],\"o\":[[0.182,-3.094],[106.29,-3.287],[6.932,22.921],[0,0],[0,0],[0,0],[0,0]],\"v\":[[-217.356,103.082],[-146.437,-37.954],[-62.294,53.72],[23.554,107.612],[62.885,169.251],[55.786,237.133],[-189.505,236.699]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.937254905701,0.631372570992,0.443137258291,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 2\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Chair\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":22,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":0,\"op\":70,\"st\":0,\"bm\":0},{\"ddd\":0,\"ind\":3,\"ty\":4,\"nm\":\"Layer 15\",\"sr\":1,\"ks\":{\"o\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.38],\"y\":[1]},\"o\":{\"x\":[0.62],\"y\":[0]},\"t\":8,\"s\":[0]},{\"t\":15,\"s\":[100]}],\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[444.917,174.886,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[-2.703,-48.659,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[109,109,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,-1.546],[1.546,0],[0,1.546],[-1.546,0]],\"o\":[[0,1.546],[-1.546,0],[0,-1.546],[1.546,0]],\"v\":[[-34.213,-66.157],[-37.012,-63.358],[-39.81,-66.157],[-37.012,-68.955]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[1,1,1,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,-1.546],[1.546,0],[0,1.546],[-1.546,0]],\"o\":[[0,1.546],[-1.546,0],[0,-1.546],[1.546,0]],\"v\":[[-43.284,-66.157],[-46.082,-63.358],[-48.881,-66.157],[-46.082,-68.955]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[1,1,1,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 2\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,-1.546],[1.546,0],[0,1.546],[-1.546,0]],\"o\":[[0,1.546],[-1.546,0],[0,-1.546],[1.546,0]],\"v\":[[-52.354,-66.157],[-55.152,-63.358],[-57.951,-66.157],[-55.152,-68.955]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[1,1,1,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 3\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,-7.718],[0,0],[0.813,-1.773],[0.558,0.165],[0,1.817],[0,0],[7.033,0],[0,0],[0,0],[-0.004,0.157],[0,0]],\"o\":[[0,0],[0,2.092],[-0.579,-0.114],[0.676,-1.557],[0,0],[0,-7.033],[0,0],[0,0],[0,-0.158],[0,0],[7.717,0]],\"v\":[[-24.123,-67.341],[-24.123,-66.403],[-25.388,-60.56],[-27.094,-60.979],[-26.043,-66.077],[-26.043,-66.933],[-38.685,-79.615],[-40.788,-79.615],[-40.788,-80.786],[-40.782,-81.259],[-37.996,-81.259]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.176470592618,0.176470592618,0.176470592618,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":11,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 4\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":4,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,-7.033],[0,0],[0.676,-1.557],[5.215,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,7.034],[0,0],[-7.033,0],[0,0]],\"o\":[[0,0],[0,1.817],[-1.943,4.469],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-7.033,0],[0,0],[0,-7.033],[0,0],[7.033,0]],\"v\":[[-26.043,-66.933],[-26.043,-66.077],[-27.094,-60.979],[-38.685,-53.414],[-40.18,-53.414],[-50.947,-45.938],[-51.088,-45.84],[-48.567,-52.507],[-48.225,-53.414],[-52.789,-53.414],[-65.495,-66.077],[-65.495,-66.933],[-52.789,-79.615],[-38.685,-79.615]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.662745118141,0.686274528503,0.917647063732,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 5\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":5,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-51.309,-47.05],\"ix\":2},\"a\":{\"a\":0,\"k\":[-51.309,-47.05],\"ix\":1},\"s\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.667,0.667],\"y\":[1,1]},\"o\":{\"x\":[0.333,0.333],\"y\":[0,0]},\"t\":10,\"s\":[0,0]},{\"i\":{\"x\":[0.833,0.833],\"y\":[1,1]},\"o\":{\"x\":[0.333,0.333],\"y\":[0,0]},\"t\":15,\"s\":[100,100]},{\"i\":{\"x\":[0.667,0.667],\"y\":[1,1]},\"o\":{\"x\":[0.167,0.167],\"y\":[0,0]},\"t\":29,\"s\":[100,100]},{\"t\":33,\"s\":[0,0]}],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 7\",\"np\":5,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,-10.707],[0,0],[10.707,0],[0,0],[0,0],[0,0],[0,0],[1.227,0.244],[0.558,0.165],[0,8.788],[0,0],[-0.004,0.157],[-10.549,0],[0,0]],\"o\":[[0,0],[0,10.708],[0,0],[0,0],[0,0],[0,0],[-1.305,0],[-0.579,-0.114],[-7.971,-2.356],[0,0],[0,-0.158],[0.246,-10.488],[0,0],[10.707,0]],\"v\":[[19.187,-80.786],[19.187,-79.483],[-0.112,-60.188],[-7.062,-60.188],[-2.703,-48.659],[-19.309,-60.188],[-21.584,-60.188],[-25.388,-60.56],[-27.094,-60.979],[-40.788,-79.483],[-40.788,-80.786],[-40.782,-81.259],[-21.584,-100.138],[-0.112,-100.138]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.541176497936,0.458823531866,0.57647061348,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-3.5,-49],\"ix\":2},\"a\":{\"a\":0,\"k\":[-3.5,-49],\"ix\":1},\"s\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.667,0.667],\"y\":[1,1]},\"o\":{\"x\":[0.333,0.333],\"y\":[0,0]},\"t\":8,\"s\":[0,0]},{\"i\":{\"x\":[0.833,0.833],\"y\":[1,1]},\"o\":{\"x\":[0.333,0.333],\"y\":[0,0]},\"t\":13,\"s\":[100,100]},{\"i\":{\"x\":[0.667,0.667],\"y\":[1,1]},\"o\":{\"x\":[0.167,0.167],\"y\":[0,0]},\"t\":28,\"s\":[100,100]},{\"t\":32,\"s\":[0,0]}],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 6\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":78,\"op\":78,\"st\":8,\"bm\":0},{\"ddd\":0,\"ind\":4,\"ty\":4,\"nm\":\"Layer 8\",\"sr\":1,\"ks\":{\"o\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.38],\"y\":[1]},\"o\":{\"x\":[0.62],\"y\":[0]},\"t\":8,\"s\":[0]},{\"t\":15,\"s\":[100]}],\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[564.022,258.485,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[506.568,328.038,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[109,109,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[6.796,0],[1.085,0.305],[0,0],[-0.824,0],[0,4.932],[4.932,0],[0,0],[0,-6.796]],\"o\":[[-1.133,0],[0,0],[0.788,0.221],[4.932,0],[0,-4.932],[0,0],[6.796,0],[0,6.796]],\"v\":[[-4.491,12.324],[-7.833,11.866],[-6.92,8.611],[-4.491,8.945],[4.454,0],[-4.491,-8.945],[-4.491,-12.324],[7.833,0]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.937254905701,0.631372570992,0.443137258291,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[523.558,328.039],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":1,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0]],\"v\":[[-19.504,-19.025],[-13.562,19.025],[13.562,19.025],[19.504,-19.025]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.937254905701,0.631372570992,0.443137258291,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[501.248,328.038],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 2\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":8,\"op\":78,\"st\":8,\"bm\":0},{\"ddd\":0,\"ind\":5,\"ty\":4,\"nm\":\"Layer 7\",\"sr\":1,\"ks\":{\"o\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.38],\"y\":[1]},\"o\":{\"x\":[0.62],\"y\":[0]},\"t\":8,\"s\":[0]},{\"t\":15,\"s\":[100]}],\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[579.482,455.125,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[109,109,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0]],\"o\":[[0,0],[0,0]],\"v\":[[-10.968,0],[10.968,0]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[1,1,1,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":8,\"op\":78,\"st\":8,\"bm\":0},{\"ddd\":0,\"ind\":6,\"ty\":4,\"nm\":\"Layer 6\",\"sr\":1,\"ks\":{\"o\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.38],\"y\":[1]},\"o\":{\"x\":[0.62],\"y\":[0]},\"t\":8,\"s\":[0]},{\"t\":15,\"s\":[100]}],\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[578.367,292.831,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[109,109,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0]],\"o\":[[0,0],[0,0]],\"v\":[[-31.134,0],[31.134,0]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":8,\"op\":78,\"st\":8,\"bm\":0},{\"ddd\":0,\"ind\":7,\"ty\":4,\"nm\":\"Layer 5\",\"sr\":1,\"ks\":{\"o\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.38],\"y\":[1]},\"o\":{\"x\":[0.62],\"y\":[0]},\"t\":8,\"s\":[0]},{\"t\":15,\"s\":[100]}],\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[579.482,312.81,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[109,109,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0]],\"o\":[[0,0],[0,0]],\"v\":[[-10.968,0],[10.968,0]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[1,1,1,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":8,\"op\":78,\"st\":8,\"bm\":0},{\"ddd\":0,\"ind\":8,\"ty\":4,\"nm\":\"Layer 4\",\"sr\":1,\"ks\":{\"o\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.38],\"y\":[1]},\"o\":{\"x\":[0.62],\"y\":[0]},\"t\":8,\"s\":[0]},{\"t\":15,\"s\":[100]}],\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[579.482,383.968,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[109,109,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0]],\"v\":[[10.968,65.282],[-10.968,65.282],[-10.968,-65.282],[10.968,-65.282]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.254901975393,0.211764708161,0.309803932905,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":8,\"op\":78,\"st\":8,\"bm\":0},{\"ddd\":0,\"ind\":9,\"ty\":4,\"nm\":\"Layer 3\",\"sr\":1,\"ks\":{\"o\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.38],\"y\":[1]},\"o\":{\"x\":[0.62],\"y\":[0]},\"t\":8,\"s\":[0]},{\"t\":15,\"s\":[100]}],\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[579.482,465.114,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[109,109,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0]],\"v\":[[24.856,-9.165],[-24.856,-9.165],[-37.143,9.165],[37.143,9.165]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.184313729405,0.023529412225,0.258823543787,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":8,\"op\":78,\"st\":8,\"bm\":0},{\"ddd\":0,\"ind\":10,\"ty\":4,\"nm\":\"Layer 2\",\"sr\":1,\"ks\":{\"o\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.38],\"y\":[1]},\"o\":{\"x\":[0.62],\"y\":[0]},\"t\":8,\"s\":[0]},{\"t\":15,\"s\":[100]}],\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[579.482,302.821,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[109,109,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[1.251,0],[0,0],[0.697,1.039],[0,0],[-3.001,0],[0,0],[1.671,-2.493],[0,0]],\"o\":[[0,0],[-1.251,0],[0,0],[-1.671,-2.493],[0,0],[3.001,0],[0,0],[-0.697,1.039]],\"v\":[[22.854,9.165],[-22.854,9.165],[-25.971,7.502],[-33.227,-3.323],[-30.111,-9.165],[30.111,-9.165],[33.227,-3.323],[25.971,7.502]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.937254905701,0.631372570992,0.443137258291,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":8,\"op\":78,\"st\":8,\"bm\":0},{\"ddd\":0,\"ind\":11,\"ty\":4,\"nm\":\"Layer 1\",\"sr\":1,\"ks\":{\"o\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.38],\"y\":[1]},\"o\":{\"x\":[0.62],\"y\":[0]},\"t\":8,\"s\":[0]},{\"t\":15,\"s\":[100]}],\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[579.482,286.027,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[109,109,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0],[0,0],[0,0]],\"o\":[[0,0],[0,0],[0,0],[0,0]],\"v\":[[70.862,6.243],[-70.862,6.243],[-70.862,-6.243],[70.862,-6.243]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.937254905701,0.631372570992,0.443137258291,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":8,\"op\":78,\"st\":8,\"bm\":0},{\"ddd\":0,\"ind\":12,\"ty\":4,\"nm\":\"OBJECTS\",\"sr\":1,\"ks\":{\"o\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.38],\"y\":[1]},\"o\":{\"x\":[0.62],\"y\":[0]},\"t\":8,\"s\":[0]},{\"t\":15,\"s\":[100]}],\"ix\":11},\"r\":{\"a\":0,\"k\":0,\"ix\":10},\"p\":{\"a\":0,\"k\":[440.518,290.054,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[109,109,100],\"ix\":6}},\"ao\":0,\"shapes\":[{\"ty\":\"gr\",\"it\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0,0]],\"o\":[[0,0],[0,0]],\"v\":[[-252.273,139.615],[-186.907,139.615]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[1,1,1,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[2.266,0],[0,0],[0.447,2.222],[0,0],[-3.005,0],[0,0],[0.593,-2.946],[0,0]],\"o\":[[0,0],[-2.266,0],[0,0],[-0.593,-2.946],[0,0],[3.005,0],[0,0],[-0.447,2.222]],\"v\":[[-200.288,189.369],[-238.366,189.369],[-243.031,185.55],[-254.15,130.286],[-249.485,124.589],[-189.168,124.589],[-184.503,130.286],[-195.623,185.55]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.254901975393,0.211764708161,0.309803932905,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 2\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-219.327,156.979],\"ix\":2},\"a\":{\"a\":0,\"k\":[-219.327,156.979],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 6\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[5.585,-22.314]],\"o\":[[0,0],[0,0]],\"v\":[[-175.081,73.598],[-198.734,125.119]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[1,1,1,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[0.39,17.633],[-3.739,0.059]],\"o\":[[10.516,-6.64],[-0.189,-8.528],[0,0]],\"v\":[[-210.744,102.345],[-196.328,83.357],[-189.966,73.904]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 2\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[6.172,-11.634],[17.642,-5.384],[28.692,-8.364],[-10.516,6.64],[0.39,17.633],[-6.938,12.71]],\"o\":[[0,0],[-6.172,11.634],[-17.642,5.384],[-28.692,8.364],[10.516,-6.64],[-0.39,-17.633],[5.407,-9.905]],\"v\":[[-166.655,60.544],[-166.382,73.052],[-172.735,93.917],[-184.414,123.421],[-210.744,102.345],[-196.328,83.357],[-177.344,68.136]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.796078443527,0.75686275959,0.815686285496,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 3\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-202,126],\"ix\":2},\"a\":{\"a\":0,\"k\":[-202,126],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.667],\"y\":[1]},\"o\":{\"x\":[0.333],\"y\":[0]},\"t\":8,\"s\":[0]},{\"i\":{\"x\":[0.667],\"y\":[1]},\"o\":{\"x\":[0.333],\"y\":[0]},\"t\":19,\"s\":[-1]},{\"t\":32,\"s\":[0]}],\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 3\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-5.585,-22.314]],\"o\":[[0,0],[0,0]],\"v\":[[-264.165,75.418],[-240.512,126.939]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[1,1,1,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-0.39,17.633],[3.739,0.059]],\"o\":[[-10.516,-6.64],[0.189,-8.528],[0,0]],\"v\":[[-228.501,104.165],[-242.918,85.177],[-249.28,75.724]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[0.219607844949,0.196078434587,0.298039227724,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 2\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[-6.172,-11.634],[-17.642,-5.384],[-28.692,-8.364],[10.516,6.64],[-0.39,17.633],[6.938,12.71]],\"o\":[[0,0],[6.172,11.634],[17.642,5.384],[28.692,8.364],[-10.516,-6.64],[0.39,-17.633],[-5.407,-9.905]],\"v\":[[-272.591,62.365],[-272.864,74.873],[-266.511,95.737],[-254.832,125.241],[-228.501,104.165],[-242.918,85.177],[-261.902,69.956]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.796078443527,0.75686275959,0.815686285496,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 3\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-244,125],\"ix\":2},\"a\":{\"a\":0,\"k\":[-244,125],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.667],\"y\":[1]},\"o\":{\"x\":[0.333],\"y\":[0]},\"t\":8,\"s\":[0]},{\"i\":{\"x\":[0.667],\"y\":[1]},\"o\":{\"x\":[0.333],\"y\":[0]},\"t\":19,\"s\":[-5]},{\"t\":32,\"s\":[0]}],\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 4\",\"np\":3,\"cix\":2,\"bm\":0,\"ix\":3,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[0,0],[12.877,-102.831]],\"o\":[[0,0],[0,0]],\"v\":[[-224.153,17.172],[-222.269,136.653]],\"c\":false},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"st\",\"c\":{\"a\":0,\"k\":[1,1,1,1],\"ix\":3},\"o\":{\"a\":0,\"k\":100,\"ix\":4},\"w\":{\"a\":0,\"k\":0.5,\"ix\":5},\"lc\":1,\"lj\":1,\"ml\":10,\"bm\":0,\"nm\":\"Stroke 1\",\"mn\":\"ADBE Vector Graphic - Stroke\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 1\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":1,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"gr\",\"it\":[{\"ind\":0,\"ty\":\"sh\",\"ix\":1,\"ks\":{\"a\":0,\"k\":{\"i\":[[-27.743,24.537],[4.724,13.438],[-9.596,6.347],[-8.219,-7.393],[14.455,-31.972],[4.75,-34.795],[22.336,-0.015],[-8.101,21.175]],\"o\":[[0,0],[-4.724,-13.438],[9.596,-6.347],[8.219,7.393],[-14.455,31.972],[-4.751,34.795],[-22.336,0.015],[15.902,-41.566]],\"v\":[[-242.332,42.213],[-238.31,24.831],[-231.257,-9.835],[-223.222,4.888],[-201.102,44.684],[-178.067,85.115],[-216.186,136.703],[-246.925,106.455]],\"c\":true},\"ix\":2},\"nm\":\"Path 1\",\"mn\":\"ADBE Vector Shape - Group\",\"hd\":false},{\"ty\":\"fl\",\"c\":{\"a\":0,\"k\":[0.796078443527,0.75686275959,0.815686285496,1],\"ix\":4},\"o\":{\"a\":0,\"k\":100,\"ix\":5},\"r\":1,\"bm\":0,\"nm\":\"Fill 1\",\"mn\":\"ADBE Vector Graphic - Fill\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[0,0],\"ix\":2},\"a\":{\"a\":0,\"k\":[0,0],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":0,\"k\":0,\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 2\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":2,\"mn\":\"ADBE Vector Group\",\"hd\":false},{\"ty\":\"tr\",\"p\":{\"a\":0,\"k\":[-221,136],\"ix\":2},\"a\":{\"a\":0,\"k\":[-221,136],\"ix\":1},\"s\":{\"a\":0,\"k\":[100,100],\"ix\":3},\"r\":{\"a\":1,\"k\":[{\"i\":{\"x\":[0.667],\"y\":[1]},\"o\":{\"x\":[0.333],\"y\":[0]},\"t\":8,\"s\":[0]},{\"i\":{\"x\":[0.667],\"y\":[1]},\"o\":{\"x\":[0.333],\"y\":[0]},\"t\":19,\"s\":[2]},{\"t\":32,\"s\":[0]}],\"ix\":6},\"o\":{\"a\":0,\"k\":100,\"ix\":7},\"sk\":{\"a\":0,\"k\":0,\"ix\":4},\"sa\":{\"a\":0,\"k\":0,\"ix\":5},\"nm\":\"Transform\"}],\"nm\":\"Group 5\",\"np\":2,\"cix\":2,\"bm\":0,\"ix\":4,\"mn\":\"ADBE Vector Group\",\"hd\":false}],\"ip\":8,\"op\":78,\"st\":8,\"bm\":0}],\"markers\":[]}");
 
 },{}],"7TMuK":[function(require,module,exports,__globalThis) {
@@ -121520,6 +122461,8 @@ var _axiosInstanceJs = require("../../config/axiosInstance.js");
 var _axiosInstanceJsDefault = parcelHelpers.interopDefault(_axiosInstanceJs);
 var _reactHotToast = require("react-hot-toast");
 var _reactHotToastDefault = parcelHelpers.interopDefault(_reactHotToast);
+var _loadingAnimationJsx = require("../../components/LoadingAnimation.jsx");
+var _loadingAnimationJsxDefault = parcelHelpers.interopDefault(_loadingAnimationJsx);
 var _s = $RefreshSig$();
 const MarkAttendance = ()=>{
     _s();
@@ -121592,22 +122535,19 @@ const MarkAttendance = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Teacher/MarkAttendance.jsx",
-                lineNumber: 81,
+                lineNumber: 82,
                 columnNumber: 7
             }, undefined),
-            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "text-center",
-                children: "Loading..."
-            }, void 0, false, {
+            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationJsxDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Teacher/MarkAttendance.jsx",
-                lineNumber: 84,
+                lineNumber: 85,
                 columnNumber: 9
             }, undefined) : students.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "text-center",
                 children: "No students enrolled in this course."
             }, void 0, false, {
                 fileName: "src/pages/Teacher/MarkAttendance.jsx",
-                lineNumber: 86,
+                lineNumber: 87,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                 children: [
@@ -121622,7 +122562,7 @@ const MarkAttendance = ()=>{
                                         children: index + 1
                                     }, void 0, false, {
                                         fileName: "src/pages/Teacher/MarkAttendance.jsx",
-                                        lineNumber: 103,
+                                        lineNumber: 104,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -121634,20 +122574,20 @@ const MarkAttendance = ()=>{
                                                 className: "w-full h-full object-cover rounded-full border-4 border-white shadow-md"
                                             }, void 0, false, {
                                                 fileName: "src/pages/Teacher/MarkAttendance.jsx",
-                                                lineNumber: 109,
+                                                lineNumber: 110,
                                                 columnNumber: 19
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 className: `absolute bottom-0 right-0 w-5 h-5 rounded-full border-2 border-white ${attendance[student._id] === "Present" ? "bg-green-500" : attendance[student._id] === "Absent" ? "bg-red-500" : "bg-gray-400"}`
                                             }, void 0, false, {
                                                 fileName: "src/pages/Teacher/MarkAttendance.jsx",
-                                                lineNumber: 115,
+                                                lineNumber: 116,
                                                 columnNumber: 19
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Teacher/MarkAttendance.jsx",
-                                        lineNumber: 108,
+                                        lineNumber: 109,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -121655,7 +122595,7 @@ const MarkAttendance = ()=>{
                                         children: student.name
                                     }, void 0, false, {
                                         fileName: "src/pages/Teacher/MarkAttendance.jsx",
-                                        lineNumber: 127,
+                                        lineNumber: 128,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -121663,7 +122603,7 @@ const MarkAttendance = ()=>{
                                         children: student.email
                                     }, void 0, false, {
                                         fileName: "src/pages/Teacher/MarkAttendance.jsx",
-                                        lineNumber: 128,
+                                        lineNumber: 129,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -121671,18 +122611,18 @@ const MarkAttendance = ()=>{
                                         children: attendance[student._id] || "Click to Mark"
                                     }, void 0, false, {
                                         fileName: "src/pages/Teacher/MarkAttendance.jsx",
-                                        lineNumber: 133,
+                                        lineNumber: 134,
                                         columnNumber: 17
                                     }, undefined)
                                 ]
                             }, student._id, true, {
                                 fileName: "src/pages/Teacher/MarkAttendance.jsx",
-                                lineNumber: 91,
+                                lineNumber: 92,
                                 columnNumber: 15
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/pages/Teacher/MarkAttendance.jsx",
-                        lineNumber: 89,
+                        lineNumber: 90,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -121694,12 +122634,12 @@ const MarkAttendance = ()=>{
                             children: saving ? "Saving..." : "Save Attendance"
                         }, void 0, false, {
                             fileName: "src/pages/Teacher/MarkAttendance.jsx",
-                            lineNumber: 150,
+                            lineNumber: 151,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/pages/Teacher/MarkAttendance.jsx",
-                        lineNumber: 149,
+                        lineNumber: 150,
                         columnNumber: 11
                     }, undefined)
                 ]
@@ -121707,7 +122647,7 @@ const MarkAttendance = ()=>{
         ]
     }, void 0, true, {
         fileName: "src/pages/Teacher/MarkAttendance.jsx",
-        lineNumber: 80,
+        lineNumber: 81,
         columnNumber: 5
     }, undefined);
 };
@@ -121726,7 +122666,7 @@ $RefreshReg$(_c, "MarkAttendance");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../../config/axiosInstance.js":"gJ5tu","react-hot-toast":"gi0hv","react-router":"dXVwI"}],"2aDI3":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../../config/axiosInstance.js":"gJ5tu","react-hot-toast":"gi0hv","react-router":"dXVwI","../../components/LoadingAnimation.jsx":"1omCq"}],"2aDI3":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$2ea1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -121807,6 +122747,8 @@ var _loadingJson = require("../../assets/loading.json");
 var _loadingJsonDefault = parcelHelpers.interopDefault(_loadingJson);
 var _notFoundJson = require("../../assets/not_found.json");
 var _notFoundJsonDefault = parcelHelpers.interopDefault(_notFoundJson);
+var _loadingAnimation = require("../../components/LoadingAnimation");
+var _loadingAnimationDefault = parcelHelpers.interopDefault(_loadingAnimation);
 var _s = $RefreshSig$();
 const EnrollCourse = ()=>{
     _s();
@@ -121865,67 +122807,266 @@ const EnrollCourse = ()=>{
                 children: "Enroll in a Course"
             }, void 0, false, {
                 fileName: "src/pages/Student/EnrollCourse.jsx",
-                lineNumber: 70,
+                lineNumber: 71,
                 columnNumber: 7
             }, undefined),
-            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-[40%] mx-auto",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lottieReactDefault.default), {
-                    animationData: (0, _loadingJsonDefault.default)
-                }, void 0, false, {
-                    fileName: "src/pages/Student/EnrollCourse.jsx",
-                    lineNumber: 76,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
+            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Student/EnrollCourse.jsx",
-                lineNumber: 75,
+                lineNumber: 76,
                 columnNumber: 9
             }, undefined) : courses.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6",
                 children: courses.map((course)=>{
                     const isEnrolled = course.students.some((student)=>student === user._id);
+                    const rating = course.rating || 4.5; // Default rating if not available
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "border p-4 rounded-lg shadow-md",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                className: "text-lg font-semibold",
-                                children: course.course_name
-                            }, void 0, false, {
-                                fileName: "src/pages/Student/EnrollCourse.jsx",
-                                lineNumber: 87,
-                                columnNumber: 17
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-sm text-gray-500",
-                                children: [
-                                    "Instructor: ",
-                                    course.teacher_id?.name || "Unknown"
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/pages/Student/EnrollCourse.jsx",
-                                lineNumber: 88,
-                                columnNumber: 17
-                            }, undefined),
-                            isEnrolled ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "text-green-600 font-semibold block mt-2",
-                                children: "\u2705 Already Enrolled"
-                            }, void 0, false, {
-                                fileName: "src/pages/Student/EnrollCourse.jsx",
-                                lineNumber: 92,
-                                columnNumber: 19
-                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "mt-3 btn btn-primary btn-sm w-full",
-                                onClick: ()=>handleEnroll(course._id),
-                                disabled: enrolling === course._id,
-                                children: enrolling === course._id ? "Enrolling..." : "Enroll"
-                            }, void 0, false, {
-                                fileName: "src/pages/Student/EnrollCourse.jsx",
-                                lineNumber: 96,
-                                columnNumber: 19
-                            }, undefined)
-                        ]
-                    }, course._id, true, {
+                        className: "relative bg-green-400 shadow-2xl shadow-green-400 overflow-hidden border border-gray-200 p-6 rounded-2xl  hover:shadow-lg transition-all duration-300 hover:-translate-y-1.5 group ",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "space-y-3",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    className: "text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors line-clamp-2",
+                                    children: course.course_name
+                                }, void 0, false, {
+                                    fileName: "src/pages/Student/EnrollCourse.jsx",
+                                    lineNumber: 92,
+                                    columnNumber: 19
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center gap-2",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-medium",
+                                            children: course.teacher_id?.name?.charAt(0) || "U"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Student/EnrollCourse.jsx",
+                                            lineNumber: 98,
+                                            columnNumber: 21
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: "text-sm text-gray-600",
+                                            children: course.teacher_id?.name || "Unknown Instructor"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Student/EnrollCourse.jsx",
+                                            lineNumber: 101,
+                                            columnNumber: 21
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Student/EnrollCourse.jsx",
+                                    lineNumber: 97,
+                                    columnNumber: 19
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center gap-1",
+                                    children: [
+                                        [
+                                            ...Array(5)
+                                        ].map((_, i)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                className: `w-4 h-4 ${i < Math.floor(rating) ? "text-yellow-400 fill-current" : "text-gray-300"}`,
+                                                viewBox: "0 0 20 20",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                    d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Student/EnrollCourse.jsx",
+                                                    lineNumber: 118,
+                                                    columnNumber: 25
+                                                }, undefined)
+                                            }, i, false, {
+                                                fileName: "src/pages/Student/EnrollCourse.jsx",
+                                                lineNumber: 109,
+                                                columnNumber: 23
+                                            }, undefined)),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "text-xs text-gray-500 ml-1",
+                                            children: [
+                                                "(",
+                                                rating.toFixed(1),
+                                                ")"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/pages/Student/EnrollCourse.jsx",
+                                            lineNumber: 121,
+                                            columnNumber: 21
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Student/EnrollCourse.jsx",
+                                    lineNumber: 107,
+                                    columnNumber: 19
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center gap-2 text-sm text-gray-600",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                            className: "w-4 h-4 text-gray-500",
+                                            fill: "none",
+                                            stroke: "currentColor",
+                                            viewBox: "0 0 24 24",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                strokeLinecap: "round",
+                                                strokeLinejoin: "round",
+                                                strokeWidth: "2",
+                                                d: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Student/EnrollCourse.jsx",
+                                                lineNumber: 134,
+                                                columnNumber: 23
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Student/EnrollCourse.jsx",
+                                            lineNumber: 128,
+                                            columnNumber: 21
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            children: [
+                                                course.students.length,
+                                                " ",
+                                                course.students.length === 1 ? "student" : "students",
+                                                " ",
+                                                "enrolled"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/pages/Student/EnrollCourse.jsx",
+                                            lineNumber: 141,
+                                            columnNumber: 21
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Student/EnrollCourse.jsx",
+                                    lineNumber: 127,
+                                    columnNumber: 19
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "pt-2",
+                                    children: isEnrolled ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-green-50 text-green-700 font-medium",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                className: "w-5 h-5",
+                                                fill: "none",
+                                                stroke: "currentColor",
+                                                viewBox: "0 0 24 24",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                    strokeLinecap: "round",
+                                                    strokeLinejoin: "round",
+                                                    strokeWidth: "2",
+                                                    d: "M5 13l4 4L19 7"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Student/EnrollCourse.jsx",
+                                                    lineNumber: 158,
+                                                    columnNumber: 27
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Student/EnrollCourse.jsx",
+                                                lineNumber: 152,
+                                                columnNumber: 25
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                children: "Enrolled"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Student/EnrollCourse.jsx",
+                                                lineNumber: 165,
+                                                columnNumber: 25
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Student/EnrollCourse.jsx",
+                                        lineNumber: 151,
+                                        columnNumber: 23
+                                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        className: `w-full py-3 px-4 rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2 ${enrolling === course._id ? "bg-blue-400 text-white cursor-not-allowed" : "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white shadow-md hover:shadow-lg"}`,
+                                        onClick: ()=>handleEnroll(course._id),
+                                        disabled: enrolling === course._id,
+                                        children: enrolling === course._id ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                    className: "animate-spin h-5 w-5 text-white",
+                                                    viewBox: "0 0 24 24",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("circle", {
+                                                            className: "opacity-25",
+                                                            cx: "12",
+                                                            cy: "12",
+                                                            r: "10",
+                                                            stroke: "currentColor",
+                                                            strokeWidth: "4"
+                                                        }, void 0, false, {
+                                                            fileName: "src/pages/Student/EnrollCourse.jsx",
+                                                            lineNumber: 183,
+                                                            columnNumber: 31
+                                                        }, undefined),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                            className: "opacity-75",
+                                                            fill: "currentColor",
+                                                            d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                                        }, void 0, false, {
+                                                            fileName: "src/pages/Student/EnrollCourse.jsx",
+                                                            lineNumber: 191,
+                                                            columnNumber: 31
+                                                        }, undefined)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/pages/Student/EnrollCourse.jsx",
+                                                    lineNumber: 179,
+                                                    columnNumber: 29
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    children: "Enrolling..."
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Student/EnrollCourse.jsx",
+                                                    lineNumber: 197,
+                                                    columnNumber: 29
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                    className: "w-5 h-5",
+                                                    fill: "none",
+                                                    stroke: "currentColor",
+                                                    viewBox: "0 0 24 24",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                        strokeLinecap: "round",
+                                                        strokeLinejoin: "round",
+                                                        strokeWidth: "2",
+                                                        d: "M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Student/EnrollCourse.jsx",
+                                                        lineNumber: 207,
+                                                        columnNumber: 31
+                                                    }, undefined)
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Student/EnrollCourse.jsx",
+                                                    lineNumber: 201,
+                                                    columnNumber: 29
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    children: "Enroll Now"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Student/EnrollCourse.jsx",
+                                                    lineNumber: 214,
+                                                    columnNumber: 29
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true)
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Student/EnrollCourse.jsx",
+                                        lineNumber: 168,
+                                        columnNumber: 23
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/pages/Student/EnrollCourse.jsx",
+                                    lineNumber: 149,
+                                    columnNumber: 19
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/pages/Student/EnrollCourse.jsx",
+                            lineNumber: 90,
+                            columnNumber: 17
+                        }, undefined)
+                    }, course._id, false, {
                         fileName: "src/pages/Student/EnrollCourse.jsx",
                         lineNumber: 86,
                         columnNumber: 15
@@ -121933,7 +123074,7 @@ const EnrollCourse = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/pages/Student/EnrollCourse.jsx",
-                lineNumber: 79,
+                lineNumber: 78,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "w-[40%] mx-auto text-center",
@@ -121942,7 +123083,7 @@ const EnrollCourse = ()=>{
                         animationData: (0, _notFoundJsonDefault.default)
                     }, void 0, false, {
                         fileName: "src/pages/Student/EnrollCourse.jsx",
-                        lineNumber: 110,
+                        lineNumber: 227,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -121950,19 +123091,19 @@ const EnrollCourse = ()=>{
                         children: "No Courses Found"
                     }, void 0, false, {
                         fileName: "src/pages/Student/EnrollCourse.jsx",
-                        lineNumber: 111,
+                        lineNumber: 228,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Student/EnrollCourse.jsx",
-                lineNumber: 109,
+                lineNumber: 226,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/Student/EnrollCourse.jsx",
-        lineNumber: 69,
+        lineNumber: 70,
         columnNumber: 5
     }, undefined);
 };
@@ -121981,7 +123122,7 @@ $RefreshReg$(_c, "EnrollCourse");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../../config/axiosInstance":"gJ5tu","react-redux":"62sf7","react-hot-toast":"gi0hv","../../assets/loading.json":"4xszR","../../assets/not_found.json":"eymrH","lottie-react":"kSXtH"}],"fnh3P":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../../config/axiosInstance":"gJ5tu","react-redux":"62sf7","react-hot-toast":"gi0hv","../../assets/loading.json":"4xszR","../../assets/not_found.json":"eymrH","lottie-react":"kSXtH","../../components/LoadingAnimation":"1omCq"}],"fnh3P":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$5753 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -122054,11 +123195,11 @@ var _reactHotToast = require("react-hot-toast");
 var _reactHotToastDefault = parcelHelpers.interopDefault(_reactHotToast);
 var _lottieReact = require("lottie-react");
 var _lottieReactDefault = parcelHelpers.interopDefault(_lottieReact);
-var _loadingJson = require("../../assets/loading.json");
-var _loadingJsonDefault = parcelHelpers.interopDefault(_loadingJson);
 var _notFoundJson = require("../../assets/not_found.json");
 var _notFoundJsonDefault = parcelHelpers.interopDefault(_notFoundJson);
 var _fa = require("react-icons/fa");
+var _loadingAnimation = require("../../components/LoadingAnimation");
+var _loadingAnimationDefault = parcelHelpers.interopDefault(_loadingAnimation);
 var _s = $RefreshSig$();
 const MyCourses = ()=>{
     _s();
@@ -122093,81 +123234,366 @@ const MyCourses = ()=>{
                 children: "My Enrolled Courses"
             }, void 0, false, {
                 fileName: "src/pages/Student/MyCourses.jsx",
-                lineNumber: 37,
+                lineNumber: 45,
                 columnNumber: 7
             }, undefined),
-            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-[40%] mx-auto",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lottieReactDefault.default), {
-                    animationData: (0, _loadingJsonDefault.default)
-                }, void 0, false, {
-                    fileName: "src/pages/Student/MyCourses.jsx",
-                    lineNumber: 43,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
+            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Student/MyCourses.jsx",
-                lineNumber: 42,
+                lineNumber: 50,
                 columnNumber: 9
             }, undefined) : courses.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex flex-wrap gap-6",
-                children: courses.map((course)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "border p-5 rounded-lg shadow-2xl shadow-green-500 transition-transform transform hover:scale-105 duration-300  ",
+                className: "flex flex-wrap  gap-2",
+                children: courses.map((course)=>{
+                    console.log(course);
+                    const startDate = new Date(course.start_date);
+                    const endDate = new Date(course.end_date);
+                    const durationInWeeks = Math.ceil((endDate - startDate) / 604800000);
+                    const today = new Date();
+                    const totalDuration = endDate - startDate;
+                    const elapsedDuration = today - startDate;
+                    const progressPercentage = Math.min(100, Math.max(0, Math.round(elapsedDuration / totalDuration * 100)));
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "group w-80 relative overflow-hidden border border-gray-700 bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-blue-400 hover:-translate-y-1",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                className: "text-xl font-bold text-red-700 mb-2",
-                                children: course.course_name
-                            }, void 0, false, {
-                                fileName: "src/pages/Student/MyCourses.jsx",
-                                lineNumber: 53,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-gray-700 flex items-center gap-2",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex items-start justify-between mb-4",
                                 children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaChalkboardTeacher), {
-                                        className: "text-lg text-green-500"
-                                    }, void 0, false, {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "p-3 bg-gray-700 rounded-lg group-hover:bg-blue-900 transition-colors",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaBook), {
+                                                    className: "text-blue-400 text-xl"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Student/MyCourses.jsx",
+                                                    lineNumber: 77,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                lineNumber: 76,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                        className: "text-xl font-bold text-white mx-2 group-hover:text-blue-400 transition-colors",
+                                                        children: course.course_name
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                                        lineNumber: 80,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm text-gray-400 flex items-center gap-1 mt-1",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaChalkboardTeacher), {
+                                                                className: "text-blue-500"
+                                                            }, void 0, false, {
+                                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                                lineNumber: 84,
+                                                                columnNumber: 25
+                                                            }, undefined),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                                children: [
+                                                                    "Teacher ID: ",
+                                                                    course.teacher_id._id.slice(-6)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                                lineNumber: 85,
+                                                                columnNumber: 25
+                                                            }, undefined)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                                        lineNumber: 83,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                lineNumber: 79,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "src/pages/Student/MyCourses.jsx",
-                                        lineNumber: 59,
-                                        columnNumber: 17
+                                        lineNumber: 75,
+                                        columnNumber: 19
                                     }, undefined),
-                                    "Instructor:",
-                                    " ",
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: "font-medium text-green-300",
-                                        children: course.teacher_id?.name || "Unknown"
-                                    }, void 0, false, {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "bg-gray-700 text-blue-400 text-xs px-2 py-1 rounded-md",
+                                        children: [
+                                            "ID: ",
+                                            course._id.slice(-6).toUpperCase()
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "src/pages/Student/MyCourses.jsx",
-                                        lineNumber: 61,
-                                        columnNumber: 17
+                                        lineNumber: 91,
+                                        columnNumber: 19
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Student/MyCourses.jsx",
-                                lineNumber: 58,
-                                columnNumber: 15
+                                lineNumber: 74,
+                                columnNumber: 17
                             }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-gray-500 text-sm mt-5",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "grid grid-cols-2 gap-4 mb-5",
                                 children: [
-                                    "Course ID: ",
-                                    course._id
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "p-2 bg-gray-700 rounded-full",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaCalendarAlt), {
+                                                    className: "text-blue-400"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Student/MyCourses.jsx",
+                                                    lineNumber: 100,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                lineNumber: 99,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-xs text-gray-400",
+                                                        children: "Starts"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                                        lineNumber: 103,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm font-medium text-white",
+                                                        children: startDate.toLocaleDateString()
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                                        lineNumber: 104,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                lineNumber: 102,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                        lineNumber: 98,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "p-2 bg-gray-700 rounded-full",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaCalendarCheck), {
+                                                    className: "text-blue-400"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Student/MyCourses.jsx",
+                                                    lineNumber: 112,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                lineNumber: 111,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-xs text-gray-400",
+                                                        children: "Ends"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                                        lineNumber: 115,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm font-medium text-white",
+                                                        children: endDate.toLocaleDateString()
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                                        lineNumber: 116,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                lineNumber: 114,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                        lineNumber: 110,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "p-2 bg-gray-700 rounded-full",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaClock), {
+                                                    className: "text-blue-400"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Student/MyCourses.jsx",
+                                                    lineNumber: 124,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                lineNumber: 123,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-xs text-gray-400",
+                                                        children: "Duration"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                                        lineNumber: 127,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm font-medium text-white",
+                                                        children: [
+                                                            durationInWeeks,
+                                                            " weeks"
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                                        lineNumber: 128,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                lineNumber: 126,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                        lineNumber: 122,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "p-2 bg-gray-700 rounded-full",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaUsers), {
+                                                className: "text-green-400"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                lineNumber: 136,
+                                                columnNumber: 23
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Student/MyCourses.jsx",
+                                            lineNumber: 135,
+                                            columnNumber: 21
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                        lineNumber: 134,
+                                        columnNumber: 19
+                                    }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Student/MyCourses.jsx",
-                                lineNumber: 67,
-                                columnNumber: 15
+                                lineNumber: 97,
+                                columnNumber: 17
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "space-y-2",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center justify-between text-sm",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                className: "text-gray-400 flex items-center gap-1",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaPercent), {
+                                                        className: "text-blue-400"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                                        lineNumber: 145,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    "Progress"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                lineNumber: 144,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                className: "font-medium text-white",
+                                                children: [
+                                                    progressPercentage,
+                                                    "%"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                lineNumber: 148,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                        lineNumber: 143,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "w-full bg-gray-700 rounded-full h-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full",
+                                            style: {
+                                                width: `${progressPercentage}%`
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Student/MyCourses.jsx",
+                                            lineNumber: 153,
+                                            columnNumber: 21
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                        lineNumber: 152,
+                                        columnNumber: 19
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Student/MyCourses.jsx",
+                                lineNumber: 142,
+                                columnNumber: 17
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "absolute inset-0 bg-gradient-to-br from-blue-900/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                            }, void 0, false, {
+                                fileName: "src/pages/Student/MyCourses.jsx",
+                                lineNumber: 161,
+                                columnNumber: 17
                             }, undefined)
                         ]
                     }, course._id, true, {
                         fileName: "src/pages/Student/MyCourses.jsx",
-                        lineNumber: 48,
-                        columnNumber: 13
-                    }, undefined))
+                        lineNumber: 69,
+                        columnNumber: 15
+                    }, undefined);
+                })
             }, void 0, false, {
                 fileName: "src/pages/Student/MyCourses.jsx",
-                lineNumber: 46,
+                lineNumber: 52,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "w-[40%] mx-auto text-center",
@@ -122176,7 +123602,7 @@ const MyCourses = ()=>{
                         animationData: (0, _notFoundJsonDefault.default)
                     }, void 0, false, {
                         fileName: "src/pages/Student/MyCourses.jsx",
-                        lineNumber: 75,
+                        lineNumber: 168,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -122184,19 +123610,19 @@ const MyCourses = ()=>{
                         children: "You are not enrolled in any courses."
                     }, void 0, false, {
                         fileName: "src/pages/Student/MyCourses.jsx",
-                        lineNumber: 76,
+                        lineNumber: 169,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Student/MyCourses.jsx",
-                lineNumber: 74,
+                lineNumber: 167,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/Student/MyCourses.jsx",
-        lineNumber: 36,
+        lineNumber: 44,
         columnNumber: 5
     }, undefined);
 };
@@ -122215,7 +123641,7 @@ $RefreshReg$(_c, "MyCourses");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../../config/axiosInstance":"gJ5tu","react-redux":"62sf7","react-hot-toast":"gi0hv","lottie-react":"kSXtH","../../assets/loading.json":"4xszR","../../assets/not_found.json":"eymrH","react-icons/fa":"4Bs28"}],"kfZXm":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../../config/axiosInstance":"gJ5tu","react-redux":"62sf7","react-hot-toast":"gi0hv","lottie-react":"kSXtH","../../assets/not_found.json":"eymrH","react-icons/fa":"4Bs28","../../components/LoadingAnimation":"1omCq"}],"kfZXm":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$0a02 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -122802,6 +124228,8 @@ var _studentCardJsx = require("../../components/Admin/StudentCard.jsx");
 var _studentCardJsxDefault = parcelHelpers.interopDefault(_studentCardJsx);
 var _reactHotToast = require("react-hot-toast");
 var _reactHotToastDefault = parcelHelpers.interopDefault(_reactHotToast);
+var _loadingAnimationJsx = require("../../components/LoadingAnimation.jsx");
+var _loadingAnimationJsxDefault = parcelHelpers.interopDefault(_loadingAnimationJsx);
 var _s = $RefreshSig$();
 const AddStudent = ()=>{
     _s();
@@ -122885,16 +124313,16 @@ const AddStudent = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/Admin/ManageStudent.jsx",
-                        lineNumber: 79,
+                        lineNumber: 80,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "btn text-sm sm:text-md md:text-lg lg:text-xl btn-secondary btn-outline",
+                        className: "btn btn-outline border-2 border-blue-400/20 hover:border-blue-400/40 shadow-lg shadow-blue-400/20 hover:shadow-blue-400/30 text-bule-400 hover:text-blue-600  text-sm sm:text-md md:text-lg lg:text-xl ",
                         onClick: ()=>document.getElementById("student_modal").showModal(),
                         children: "Add Student"
                     }, void 0, false, {
                         fileName: "src/pages/Admin/ManageStudent.jsx",
-                        lineNumber: 82,
+                        lineNumber: 83,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("dialog", {
@@ -122910,12 +124338,12 @@ const AddStudent = ()=>{
                                         children: "\u2715"
                                     }, void 0, false, {
                                         fileName: "src/pages/Admin/ManageStudent.jsx",
-                                        lineNumber: 93,
+                                        lineNumber: 94,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/pages/Admin/ManageStudent.jsx",
-                                    lineNumber: 92,
+                                    lineNumber: 93,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -122923,7 +124351,7 @@ const AddStudent = ()=>{
                                     children: "Add New Student"
                                 }, void 0, false, {
                                     fileName: "src/pages/Admin/ManageStudent.jsx",
-                                    lineNumber: 97,
+                                    lineNumber: 98,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -122937,7 +124365,7 @@ const AddStudent = ()=>{
                                                     children: "Student Name"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageStudent.jsx",
-                                                    lineNumber: 100,
+                                                    lineNumber: 101,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -122950,13 +124378,13 @@ const AddStudent = ()=>{
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageStudent.jsx",
-                                                    lineNumber: 101,
+                                                    lineNumber: 102,
                                                     columnNumber: 17
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Admin/ManageStudent.jsx",
-                                            lineNumber: 99,
+                                            lineNumber: 100,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("fieldset", {
@@ -122967,7 +124395,7 @@ const AddStudent = ()=>{
                                                     children: "Student's Email"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageStudent.jsx",
-                                                    lineNumber: 112,
+                                                    lineNumber: 113,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -122980,13 +124408,13 @@ const AddStudent = ()=>{
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageStudent.jsx",
-                                                    lineNumber: 113,
+                                                    lineNumber: 114,
                                                     columnNumber: 17
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Admin/ManageStudent.jsx",
-                                            lineNumber: 111,
+                                            lineNumber: 112,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("fieldset", {
@@ -122997,7 +124425,7 @@ const AddStudent = ()=>{
                                                     children: "Password"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageStudent.jsx",
-                                                    lineNumber: 124,
+                                                    lineNumber: 125,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -123010,13 +124438,13 @@ const AddStudent = ()=>{
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageStudent.jsx",
-                                                    lineNumber: 125,
+                                                    lineNumber: 126,
                                                     columnNumber: 17
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Admin/ManageStudent.jsx",
-                                            lineNumber: 123,
+                                            lineNumber: 124,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("fieldset", {
@@ -123027,7 +124455,7 @@ const AddStudent = ()=>{
                                                     children: "Profile Image URL"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageStudent.jsx",
-                                                    lineNumber: 137,
+                                                    lineNumber: 138,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -123039,19 +124467,19 @@ const AddStudent = ()=>{
                                                     onChange: handleChange
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageStudent.jsx",
-                                                    lineNumber: 138,
+                                                    lineNumber: 139,
                                                     columnNumber: 17
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Admin/ManageStudent.jsx",
-                                            lineNumber: 136,
+                                            lineNumber: 137,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/pages/Admin/ManageStudent.jsx",
-                                    lineNumber: 98,
+                                    lineNumber: 99,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -123066,49 +124494,40 @@ const AddStudent = ()=>{
                                                 className: "ml-2 loading loading-dots loading-lg"
                                             }, void 0, false, {
                                                 fileName: "src/pages/Admin/ManageStudent.jsx",
-                                                lineNumber: 156,
+                                                lineNumber: 157,
                                                 columnNumber: 19
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Admin/ManageStudent.jsx",
-                                        lineNumber: 149,
+                                        lineNumber: 150,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/pages/Admin/ManageStudent.jsx",
-                                    lineNumber: 148,
+                                    lineNumber: 149,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/pages/Admin/ManageStudent.jsx",
-                            lineNumber: 91,
+                            lineNumber: 92,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/pages/Admin/ManageStudent.jsx",
-                        lineNumber: 90,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Admin/ManageStudent.jsx",
-                lineNumber: 78,
+                lineNumber: 79,
                 columnNumber: 7
             }, undefined),
-            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-[40%] mx-auto",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lottieReactDefault.default), {
-                    animationData: (0, _loadingJsonDefault.default)
-                }, void 0, false, {
-                    fileName: "src/pages/Admin/ManageStudent.jsx",
-                    lineNumber: 166,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
+            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationJsxDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Admin/ManageStudent.jsx",
-                lineNumber: 165,
+                lineNumber: 166,
                 columnNumber: 9
             }, undefined) : students.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-wrap pl-5 justify-center sm:justify-start",
@@ -123118,14 +124537,14 @@ const AddStudent = ()=>{
                         onDelete: handleDeleteStudent,
                         __source: {
                             fileName: "src/pages/Admin/ManageStudent.jsx",
-                            lineNumber: 171,
+                            lineNumber: 170,
                             columnNumber: 13
                         },
                         __self: undefined
                     }))
             }, void 0, false, {
                 fileName: "src/pages/Admin/ManageStudent.jsx",
-                lineNumber: 169,
+                lineNumber: 168,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "w-[40%] mx-auto",
@@ -123134,7 +124553,7 @@ const AddStudent = ()=>{
                         animationData: (0, _notFoundJsonDefault.default)
                     }, void 0, false, {
                         fileName: "src/pages/Admin/ManageStudent.jsx",
-                        lineNumber: 180,
+                        lineNumber: 179,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -123145,25 +124564,25 @@ const AddStudent = ()=>{
                                 className: "ml-2 loading loading-dots loading-lg"
                             }, void 0, false, {
                                 fileName: "src/pages/Admin/ManageStudent.jsx",
-                                lineNumber: 183,
+                                lineNumber: 182,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/Admin/ManageStudent.jsx",
-                        lineNumber: 181,
+                        lineNumber: 180,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Admin/ManageStudent.jsx",
-                lineNumber: 179,
+                lineNumber: 178,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/Admin/ManageStudent.jsx",
-        lineNumber: 77,
+        lineNumber: 78,
         columnNumber: 5
     }, undefined);
 };
@@ -123178,7 +124597,7 @@ $RefreshReg$(_c, "AddStudent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../../config/axiosInstance.js":"gJ5tu","lottie-react":"kSXtH","../../assets/loading.json":"4xszR","../../assets/not_found.json":"eymrH","../../components/Admin/StudentCard.jsx":"eJm4Y","react-hot-toast":"gi0hv"}],"eJm4Y":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../../config/axiosInstance.js":"gJ5tu","lottie-react":"kSXtH","../../assets/loading.json":"4xszR","../../assets/not_found.json":"eymrH","../../components/Admin/StudentCard.jsx":"eJm4Y","react-hot-toast":"gi0hv","../../components/LoadingAnimation.jsx":"1omCq"}],"eJm4Y":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$938e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -123366,6 +124785,8 @@ var _courseCardJsx = require("../../components/Admin/CourseCard.jsx");
 var _courseCardJsxDefault = parcelHelpers.interopDefault(_courseCardJsx);
 var _reactHotToast = require("react-hot-toast");
 var _reactHotToastDefault = parcelHelpers.interopDefault(_reactHotToast);
+var _loadingAnimationJsx = require("../../components/LoadingAnimation.jsx");
+var _loadingAnimationJsxDefault = parcelHelpers.interopDefault(_loadingAnimationJsx);
 var _s = $RefreshSig$();
 const ManageCourse = ()=>{
     _s();
@@ -123456,16 +124877,16 @@ const ManageCourse = ()=>{
                         children: "Manage Courses"
                     }, void 0, false, {
                         fileName: "src/pages/Admin/ManageCourse.jsx",
-                        lineNumber: 105,
+                        lineNumber: 106,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "btn btn-outline border-green-400/20 hover:border-green-400/40 shadow-lg shadow-green-400/20 hover:shadow-green-400/30 text-green-400 hover:text-white  text-sm sm:text-md md:text-lg lg:text-xl ",
+                        className: "btn btn-outline border-2 border-green-400/20 hover:border-green-400/40 shadow-lg shadow-green-400/20 hover:shadow-green-400/30 text-green-400 hover:text-white  text-sm sm:text-md md:text-lg lg:text-xl ",
                         onClick: ()=>document.getElementById("course_modal").showModal(),
                         children: "Add Course"
                     }, void 0, false, {
                         fileName: "src/pages/Admin/ManageCourse.jsx",
-                        lineNumber: 108,
+                        lineNumber: 109,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("dialog", {
@@ -123481,12 +124902,12 @@ const ManageCourse = ()=>{
                                         children: "\u2715"
                                     }, void 0, false, {
                                         fileName: "src/pages/Admin/ManageCourse.jsx",
-                                        lineNumber: 119,
+                                        lineNumber: 120,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/pages/Admin/ManageCourse.jsx",
-                                    lineNumber: 118,
+                                    lineNumber: 119,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -123494,7 +124915,7 @@ const ManageCourse = ()=>{
                                     children: "Add New Course"
                                 }, void 0, false, {
                                     fileName: "src/pages/Admin/ManageCourse.jsx",
-                                    lineNumber: 123,
+                                    lineNumber: 124,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -123508,7 +124929,7 @@ const ManageCourse = ()=>{
                                                     children: "Course Name"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageCourse.jsx",
-                                                    lineNumber: 126,
+                                                    lineNumber: 127,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -123521,13 +124942,13 @@ const ManageCourse = ()=>{
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageCourse.jsx",
-                                                    lineNumber: 127,
+                                                    lineNumber: 128,
                                                     columnNumber: 17
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Admin/ManageCourse.jsx",
-                                            lineNumber: 125,
+                                            lineNumber: 126,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("fieldset", {
@@ -123538,7 +124959,7 @@ const ManageCourse = ()=>{
                                                     children: "Select Teacher"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageCourse.jsx",
-                                                    lineNumber: 138,
+                                                    lineNumber: 139,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
@@ -123554,7 +124975,7 @@ const ManageCourse = ()=>{
                                                             children: "Select a Teacher"
                                                         }, void 0, false, {
                                                             fileName: "src/pages/Admin/ManageCourse.jsx",
-                                                            lineNumber: 146,
+                                                            lineNumber: 147,
                                                             columnNumber: 19
                                                         }, undefined),
                                                         teachers.map((teacher)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -123567,19 +124988,19 @@ const ManageCourse = ()=>{
                                                                 ]
                                                             }, teacher._id, true, {
                                                                 fileName: "src/pages/Admin/ManageCourse.jsx",
-                                                                lineNumber: 150,
+                                                                lineNumber: 151,
                                                                 columnNumber: 21
                                                             }, undefined))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "src/pages/Admin/ManageCourse.jsx",
-                                                    lineNumber: 139,
+                                                    lineNumber: 140,
                                                     columnNumber: 17
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Admin/ManageCourse.jsx",
-                                            lineNumber: 137,
+                                            lineNumber: 138,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("fieldset", {
@@ -123590,7 +125011,7 @@ const ManageCourse = ()=>{
                                                     children: "Start Date"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageCourse.jsx",
-                                                    lineNumber: 159,
+                                                    lineNumber: 160,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -123602,13 +125023,13 @@ const ManageCourse = ()=>{
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageCourse.jsx",
-                                                    lineNumber: 160,
+                                                    lineNumber: 161,
                                                     columnNumber: 17
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Admin/ManageCourse.jsx",
-                                            lineNumber: 158,
+                                            lineNumber: 159,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("fieldset", {
@@ -123619,7 +125040,7 @@ const ManageCourse = ()=>{
                                                     children: "End Date"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageCourse.jsx",
-                                                    lineNumber: 172,
+                                                    lineNumber: 173,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -123631,19 +125052,19 @@ const ManageCourse = ()=>{
                                                     required: true
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Admin/ManageCourse.jsx",
-                                                    lineNumber: 173,
+                                                    lineNumber: 174,
                                                     columnNumber: 17
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Admin/ManageCourse.jsx",
-                                            lineNumber: 171,
+                                            lineNumber: 172,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/pages/Admin/ManageCourse.jsx",
-                                    lineNumber: 124,
+                                    lineNumber: 125,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -123658,49 +125079,40 @@ const ManageCourse = ()=>{
                                                 className: "ml-2 loading loading-dots loading-lg"
                                             }, void 0, false, {
                                                 fileName: "src/pages/Admin/ManageCourse.jsx",
-                                                lineNumber: 191,
+                                                lineNumber: 192,
                                                 columnNumber: 19
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Admin/ManageCourse.jsx",
-                                        lineNumber: 184,
+                                        lineNumber: 185,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/pages/Admin/ManageCourse.jsx",
-                                    lineNumber: 183,
+                                    lineNumber: 184,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/pages/Admin/ManageCourse.jsx",
-                            lineNumber: 117,
+                            lineNumber: 118,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/pages/Admin/ManageCourse.jsx",
-                        lineNumber: 116,
+                        lineNumber: 117,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Admin/ManageCourse.jsx",
-                lineNumber: 104,
+                lineNumber: 105,
                 columnNumber: 7
             }, undefined),
-            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-[40%] mx-auto",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lottieReactDefault.default), {
-                    animationData: (0, _loadingJsonDefault.default)
-                }, void 0, false, {
-                    fileName: "src/pages/Admin/ManageCourse.jsx",
-                    lineNumber: 201,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
+            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationJsxDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Admin/ManageCourse.jsx",
-                lineNumber: 200,
+                lineNumber: 201,
                 columnNumber: 9
             }, undefined) : courses.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-wrap pl-5 justify-center sm:justify-start",
@@ -123710,14 +125122,14 @@ const ManageCourse = ()=>{
                         onDelete: handleDeleteCourse,
                         __source: {
                             fileName: "src/pages/Admin/ManageCourse.jsx",
-                            lineNumber: 206,
+                            lineNumber: 205,
                             columnNumber: 13
                         },
                         __self: undefined
                     }))
             }, void 0, false, {
                 fileName: "src/pages/Admin/ManageCourse.jsx",
-                lineNumber: 204,
+                lineNumber: 203,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "w-[40%] mx-auto",
@@ -123726,7 +125138,7 @@ const ManageCourse = ()=>{
                         animationData: (0, _notFoundJsonDefault.default)
                     }, void 0, false, {
                         fileName: "src/pages/Admin/ManageCourse.jsx",
-                        lineNumber: 215,
+                        lineNumber: 214,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -123737,25 +125149,25 @@ const ManageCourse = ()=>{
                                 className: "ml-2 loading loading-dots loading-lg"
                             }, void 0, false, {
                                 fileName: "src/pages/Admin/ManageCourse.jsx",
-                                lineNumber: 218,
+                                lineNumber: 217,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/Admin/ManageCourse.jsx",
-                        lineNumber: 216,
+                        lineNumber: 215,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Admin/ManageCourse.jsx",
-                lineNumber: 214,
+                lineNumber: 213,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/Admin/ManageCourse.jsx",
-        lineNumber: 103,
+        lineNumber: 104,
         columnNumber: 5
     }, undefined);
 };
@@ -123770,7 +125182,7 @@ $RefreshReg$(_c, "ManageCourse");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../../config/axiosInstance.js":"gJ5tu","lottie-react":"kSXtH","../../assets/loading.json":"4xszR","../../assets/not_found.json":"eymrH","../../components/Admin/CourseCard.jsx":"ctFqO","react-hot-toast":"gi0hv"}],"ctFqO":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../../config/axiosInstance.js":"gJ5tu","lottie-react":"kSXtH","../../assets/loading.json":"4xszR","../../assets/not_found.json":"eymrH","../../components/Admin/CourseCard.jsx":"ctFqO","react-hot-toast":"gi0hv","../../components/LoadingAnimation.jsx":"1omCq"}],"ctFqO":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$52eb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -123806,16 +125218,40 @@ const CourseCard = ({ course_name, teacher_id, students, _id, onDelete })=>{
                                     className: "flex items-center gap-2 mb-3",
                                     children: [
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "avatar placeholder",
+                                            className: "avatar",
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "w-8 rounded-full text-center align-middle bg-green-100 text-green-800",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                    className: "text-lg  font-bold align-middle",
-                                                    children: "T"
+                                                className: "w-8 rounded-full",
+                                                children: teacher_id?.imageUrl ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                                    src: teacher_id.imageUrl,
+                                                    alt: `${teacher_id.name}'s profile`,
+                                                    className: "object-cover",
+                                                    onError: (e)=>{
+                                                        e.currentTarget.onerror = null;
+                                                        e.currentTarget.src = ""; // Clear the error to prevent looping
+                                                        e.currentTarget.parentElement.innerHTML = `
+            <div class="w-full h-full rounded-full bg-green-100 flex items-center justify-center">
+              <span class="text-lg font-bold text-green-800">${teacher_id?.name?.charAt(0) || "T"}</span>
+            </div>
+          `;
+                                                    }
                                                 }, void 0, false, {
                                                     fileName: "src/components/Admin/CourseCard.jsx",
-                                                    lineNumber: 18,
-                                                    columnNumber: 19
+                                                    lineNumber: 19,
+                                                    columnNumber: 21
+                                                }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "w-full h-full rounded-full bg-green-100 flex items-center justify-center",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        className: "text-lg font-bold text-green-800",
+                                                        children: teacher_id?.name?.charAt(0) || "T"
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/Admin/CourseCard.jsx",
+                                                        lineNumber: 37,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                }, void 0, false, {
+                                                    fileName: "src/components/Admin/CourseCard.jsx",
+                                                    lineNumber: 36,
+                                                    columnNumber: 21
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/components/Admin/CourseCard.jsx",
@@ -123837,7 +125273,7 @@ const CourseCard = ({ course_name, teacher_id, students, _id, onDelete })=>{
                                                     children: teacher_id?.name || "No teacher assigned"
                                                 }, void 0, false, {
                                                     fileName: "src/components/Admin/CourseCard.jsx",
-                                                    lineNumber: 24,
+                                                    lineNumber: 47,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -123846,13 +125282,13 @@ const CourseCard = ({ course_name, teacher_id, students, _id, onDelete })=>{
                                                     children: teacher_id?.email || ""
                                                 }, void 0, false, {
                                                     fileName: "src/components/Admin/CourseCard.jsx",
-                                                    lineNumber: 30,
+                                                    lineNumber: 53,
                                                     columnNumber: 17
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/Admin/CourseCard.jsx",
-                                            lineNumber: 21,
+                                            lineNumber: 44,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
@@ -123883,12 +125319,12 @@ const CourseCard = ({ course_name, teacher_id, students, _id, onDelete })=>{
                                         d: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
                                     }, void 0, false, {
                                         fileName: "src/components/Admin/CourseCard.jsx",
-                                        lineNumber: 48,
+                                        lineNumber: 71,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Admin/CourseCard.jsx",
-                                    lineNumber: 41,
+                                    lineNumber: 64,
                                     columnNumber: 13
                                 }, undefined),
                                 students.length,
@@ -123897,7 +125333,7 @@ const CourseCard = ({ course_name, teacher_id, students, _id, onDelete })=>{
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Admin/CourseCard.jsx",
-                            lineNumber: 40,
+                            lineNumber: 63,
                             columnNumber: 11
                         }, undefined)
                     ]
@@ -123925,24 +125361,24 @@ const CourseCard = ({ course_name, teacher_id, students, _id, onDelete })=>{
                                     d: "M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
                                 }, void 0, false, {
                                     fileName: "src/components/Admin/CourseCard.jsx",
-                                    lineNumber: 71,
+                                    lineNumber: 94,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Admin/CourseCard.jsx",
-                                lineNumber: 64,
+                                lineNumber: 87,
                                 columnNumber: 13
                             }, undefined),
                             "Delete"
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Admin/CourseCard.jsx",
-                        lineNumber: 60,
+                        lineNumber: 83,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/Admin/CourseCard.jsx",
-                    lineNumber: 59,
+                    lineNumber: 82,
                     columnNumber: 9
                 }, undefined)
             ]
@@ -124031,7 +125467,7 @@ var _react = require("react");
 var _reactRouter = require("react-router");
 var _moment = require("moment");
 var _momentDefault = parcelHelpers.interopDefault(_moment);
-var _axiosInstanceJs = require("../../config/axiosInstance.js"); // Import API instance
+var _axiosInstanceJs = require("../../config/axiosInstance.js");
 var _axiosInstanceJsDefault = parcelHelpers.interopDefault(_axiosInstanceJs);
 var _lottieReact = require("lottie-react");
 var _lottieReactDefault = parcelHelpers.interopDefault(_lottieReact);
@@ -124039,20 +125475,24 @@ var _loadingJson = require("../../assets/loading.json");
 var _loadingJsonDefault = parcelHelpers.interopDefault(_loadingJson);
 var _notFoundJson = require("../../assets/not_found.json");
 var _notFoundJsonDefault = parcelHelpers.interopDefault(_notFoundJson);
+var _fa = require("react-icons/fa");
+var _loadingAnimationJsx = require("../../components/LoadingAnimation.jsx");
+var _loadingAnimationJsxDefault = parcelHelpers.interopDefault(_loadingAnimationJsx);
 var _s = $RefreshSig$();
 const DateSelector = ()=>{
     _s();
-    const { courseid } = (0, _reactRouter.useParams)(); // Get course ID from URL params
+    const { courseid } = (0, _reactRouter.useParams)();
     const [dates, setDates] = (0, _react.useState)([]);
     const [loading, setLoading] = (0, _react.useState)(true);
     const [error, setError] = (0, _react.useState)(null);
+    const [courseName, setCourseName] = (0, _react.useState)("");
     (0, _react.useEffect)(()=>{
         fetchCourseDates();
     }, []);
-    // Fetch course data and generate dates
     const fetchCourseDates = async ()=>{
         try {
-            const { data } = await (0, _axiosInstanceJsDefault.default).get(`/api/teacher/course/${courseid}`); // Fetch course data
+            const { data } = await (0, _axiosInstanceJsDefault.default).get(`/api/teacher/course/${courseid}`);
+            setCourseName(data.course.course_name);
             const { start_date, end_date } = data.course;
             generateDates(start_date, end_date);
         } catch (err) {
@@ -124062,18 +125502,16 @@ const DateSelector = ()=>{
             setLoading(false);
         }
     };
-    // Generate date range
     const generateDates = (start, end)=>{
         let currentDate = (0, _momentDefault.default)(start);
         let endMoment = (0, _momentDefault.default)(end);
         let dateArray = [];
         while(currentDate <= endMoment){
-            dateArray.push(currentDate.format("YYYY-MM-DD")); // Format: 2025-03-15
-            currentDate.add(1, "days"); // Move to next day
+            dateArray.push(currentDate.format("YYYY-MM-DD"));
+            currentDate.add(1, "days");
         }
         setDates(dateArray);
     };
-    // Group dates by month and generate full month grid
     const groupDatesByMonth = (dates)=>{
         return dates.reduce((acc, date)=>{
             const month = (0, _momentDefault.default)(date).format("MMMM YYYY");
@@ -124082,18 +125520,15 @@ const DateSelector = ()=>{
             return acc;
         }, {});
     };
-    // Generate a full month grid with disabled days outside the range
     const generateFullMonthGrid = (month, datesInMonth)=>{
         const startOfMonth = (0, _momentDefault.default)(month).startOf("month");
         const endOfMonth = (0, _momentDefault.default)(month).endOf("month");
         const monthGrid = [];
         let currentDate = startOfMonth.clone();
-        // Add empty days for the start of the month (if the month doesn't start on Sunday)
         for(let i = 0; i < currentDate.day(); i++)monthGrid.push({
             date: null,
             disabled: true
         });
-        // Fill in the days of the month
         while(currentDate <= endOfMonth){
             const formattedDate = currentDate.format("YYYY-MM-DD");
             const isDisabled = !datesInMonth.includes(formattedDate);
@@ -124105,7 +125540,6 @@ const DateSelector = ()=>{
         }
         return monthGrid;
     };
-    // Day headers for the calendar
     const dayHeaders = [
         "Sun",
         "Mon",
@@ -124117,122 +125551,226 @@ const DateSelector = ()=>{
     ];
     const groupedDates = groupDatesByMonth(dates);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "p-5",
+        className: "p-5 max-w-6xl mx-auto bg-transparent",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                className: "text-xl font-bold mb-4",
-                children: "Select a Date Attendance"
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex items-center gap-3 mb-6",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaCalendarAlt), {
+                        className: "text-blue-400 text-2xl"
+                    }, void 0, false, {
+                        fileName: "src/pages/Teacher/DateSelector.jsx",
+                        lineNumber: 88,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "text-2xl font-bold text-white",
+                        children: [
+                            "Select Date for ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "text-blue-400",
+                                children: courseName
+                            }, void 0, false, {
+                                fileName: "src/pages/Teacher/DateSelector.jsx",
+                                lineNumber: 90,
+                                columnNumber: 27
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/pages/Teacher/DateSelector.jsx",
+                        lineNumber: 89,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/pages/Teacher/DateSelector.jsx",
-                lineNumber: 92,
+                lineNumber: 87,
                 columnNumber: 7
             }, undefined),
             loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-[40%]  mx-auto",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lottieReactDefault.default), {
-                    animationData: (0, _loadingJsonDefault.default)
-                }, void 0, false, {
-                    fileName: "src/pages/Teacher/DateSelector.jsx",
-                    lineNumber: 96,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/pages/Teacher/DateSelector.jsx",
-                lineNumber: 95,
-                columnNumber: 9
-            }, undefined) : error ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "text-red-500 text-center",
+                className: "flex flex-col items-center justify-center min-h-[300px] bg-transparent",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lottieReactDefault.default), {
-                        animationData: (0, _notFoundJsonDefault.default)
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "w-48 mx-auto",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationJsxDefault.default), {}, void 0, false, {
+                            fileName: "src/pages/Teacher/DateSelector.jsx",
+                            lineNumber: 97,
+                            columnNumber: 13
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/pages/Teacher/DateSelector.jsx",
-                        lineNumber: 100,
+                        lineNumber: 96,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: error
-                    }, void 0, false, {
+                        className: "mt-4 text-gray-300 flex items-center gap-2",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaSpinner), {
+                                className: "animate-spin"
+                            }, void 0, false, {
+                                fileName: "src/pages/Teacher/DateSelector.jsx",
+                                lineNumber: 100,
+                                columnNumber: 13
+                            }, undefined),
+                            "Loading course dates..."
+                        ]
+                    }, void 0, true, {
                         fileName: "src/pages/Teacher/DateSelector.jsx",
-                        lineNumber: 101,
+                        lineNumber: 99,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Teacher/DateSelector.jsx",
-                lineNumber: 99,
+                lineNumber: 95,
+                columnNumber: 9
+            }, undefined) : error ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-col items-center justify-center min-h-[300px] bg-transparent",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "w-64 mx-auto",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _lottieReactDefault.default), {
+                            animationData: (0, _notFoundJsonDefault.default)
+                        }, void 0, false, {
+                            fileName: "src/pages/Teacher/DateSelector.jsx",
+                            lineNumber: 107,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/pages/Teacher/DateSelector.jsx",
+                        lineNumber: 106,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "mt-4 text-red-400 text-center max-w-md mx-auto",
+                        children: [
+                            error,
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                fileName: "src/pages/Teacher/DateSelector.jsx",
+                                lineNumber: 110,
+                                columnNumber: 21
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                                to: "/teacher/courses",
+                                className: "text-blue-400 hover:underline mt-2 inline-block",
+                                children: "Back to courses"
+                            }, void 0, false, {
+                                fileName: "src/pages/Teacher/DateSelector.jsx",
+                                lineNumber: 111,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/pages/Teacher/DateSelector.jsx",
+                        lineNumber: 109,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/Teacher/DateSelector.jsx",
+                lineNumber: 105,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex flex-wrap gap-4",
+                className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-transparent",
                 children: Object.entries(groupedDates).map(([month, datesInMonth])=>{
                     const monthGrid = generateFullMonthGrid(month, datesInMonth);
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "border-blue-400 border shadow-blue-400 p-4 rounded-lg shadow-md",
+                        className: "bg-gray-800/70 rounded-xl shadow-lg overflow-hidden border border-gray-700 hover:border-blue-400 hover:shadow-xl transition-all duration-300 backdrop-blur-sm",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                className: "text-lg font-bold mb-2",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "bg-gradient-to-r from-blue-900/80 to-blue-800/80 p-3 text-white font-bold text-center border-b border-gray-700",
                                 children: month
                             }, void 0, false, {
                                 fileName: "src/pages/Teacher/DateSelector.jsx",
-                                lineNumber: 113,
+                                lineNumber: 129,
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "grid grid-cols-7 gap-2",
+                                className: "p-4",
                                 children: [
-                                    dayHeaders.map((day)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "text-center font-bold text-gray-600",
-                                            children: day
-                                        }, day, false, {
-                                            fileName: "src/pages/Teacher/DateSelector.jsx",
-                                            lineNumber: 117,
-                                            columnNumber: 21
-                                        }, undefined)),
-                                    monthGrid.map(({ date, disabled }, index)=>date ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
-                                            to: `/teacher/courses/${courseid}/date/${date}/mark-attendance/`,
-                                            className: `p-3 text-center ${disabled ? "bg-gray-300 text-gray-500 cursor-not-allowed" : "bg-blue-500 text-white hover:bg-blue-700"} rounded-lg transition`,
-                                            style: {
-                                                pointerEvents: disabled ? "none" : "auto"
-                                            },
-                                            children: (0, _momentDefault.default)(date).format("DD")
-                                        }, date, false, {
-                                            fileName: "src/pages/Teacher/DateSelector.jsx",
-                                            lineNumber: 127,
-                                            columnNumber: 23
-                                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "p-2"
-                                        }, index, false, {
-                                            fileName: "src/pages/Teacher/DateSelector.jsx",
-                                            lineNumber: 140,
-                                            columnNumber: 23
-                                        }, undefined) // Empty cell for alignment
-                                    )
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "grid grid-cols-7 gap-1 mb-2",
+                                        children: dayHeaders.map((day)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "text-center text-xs font-semibold text-gray-400 py-1",
+                                                children: day[0]
+                                            }, day, false, {
+                                                fileName: "src/pages/Teacher/DateSelector.jsx",
+                                                lineNumber: 135,
+                                                columnNumber: 23
+                                            }, undefined))
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Teacher/DateSelector.jsx",
+                                        lineNumber: 133,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "grid grid-cols-7 gap-1",
+                                        children: monthGrid.map(({ date, disabled }, index)=>date ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                                                to: `/teacher/courses/${courseid}/date/${date}/mark-attendance/`,
+                                                className: `flex items-center justify-center aspect-square p-1 text-sm ${disabled ? "bg-gray-700/50 text-gray-500 cursor-not-allowed" : "bg-blue-900/30 text-blue-300 hover:bg-blue-800/50 hover:text-white font-medium"} rounded-full transition-all duration-200 relative group`,
+                                                style: {
+                                                    pointerEvents: disabled ? "none" : "auto"
+                                                },
+                                                children: [
+                                                    (0, _momentDefault.default)(date).format("D"),
+                                                    !disabled && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        className: "absolute -right-1 -bottom-1 bg-blue-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity",
+                                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaArrowRight), {
+                                                            size: 8
+                                                        }, void 0, false, {
+                                                            fileName: "src/pages/Teacher/DateSelector.jsx",
+                                                            lineNumber: 159,
+                                                            columnNumber: 31
+                                                        }, undefined)
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/DateSelector.jsx",
+                                                        lineNumber: 158,
+                                                        columnNumber: 29
+                                                    }, undefined)
+                                                ]
+                                            }, date, true, {
+                                                fileName: "src/pages/Teacher/DateSelector.jsx",
+                                                lineNumber: 146,
+                                                columnNumber: 25
+                                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "aspect-square p-1"
+                                            }, index, false, {
+                                                fileName: "src/pages/Teacher/DateSelector.jsx",
+                                                lineNumber: 164,
+                                                columnNumber: 25
+                                            }, undefined))
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Teacher/DateSelector.jsx",
+                                        lineNumber: 143,
+                                        columnNumber: 19
+                                    }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Teacher/DateSelector.jsx",
-                                lineNumber: 114,
+                                lineNumber: 132,
                                 columnNumber: 17
                             }, undefined)
                         ]
                     }, month, true, {
                         fileName: "src/pages/Teacher/DateSelector.jsx",
-                        lineNumber: 109,
+                        lineNumber: 125,
                         columnNumber: 15
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/pages/Teacher/DateSelector.jsx",
-                lineNumber: 104,
+                lineNumber: 120,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/Teacher/DateSelector.jsx",
-        lineNumber: 91,
+        lineNumber: 86,
         columnNumber: 5
     }, undefined);
 };
-_s(DateSelector, "FaTA0Grd6ipBMveDHFyUjUgXR8E=", false, function() {
+_s(DateSelector, "yOkrV6+H2RS3LHekFuYd7bqX16E=", false, function() {
     return [
         (0, _reactRouter.useParams)
     ];
@@ -124247,7 +125785,7 @@ $RefreshReg$(_c, "DateSelector");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router":"dXVwI","moment":"jwcsj","../../config/axiosInstance.js":"gJ5tu","lottie-react":"kSXtH","../../assets/loading.json":"4xszR","../../assets/not_found.json":"eymrH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jwcsj":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router":"dXVwI","moment":"jwcsj","../../config/axiosInstance.js":"gJ5tu","lottie-react":"kSXtH","../../assets/loading.json":"4xszR","../../assets/not_found.json":"eymrH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-icons/fa":"4Bs28","../../components/LoadingAnimation.jsx":"1omCq"}],"jwcsj":[function(require,module,exports,__globalThis) {
 //! moment.js
 //! version : 2.30.1
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
@@ -128019,6 +129557,8 @@ var _axiosInstanceJsDefault = parcelHelpers.interopDefault(_axiosInstanceJs);
 var _reactHotToast = require("react-hot-toast");
 var _reactHotToastDefault = parcelHelpers.interopDefault(_reactHotToast);
 var _fa = require("react-icons/fa");
+var _loadingAnimationJsx = require("../../components/LoadingAnimation.jsx");
+var _loadingAnimationJsxDefault = parcelHelpers.interopDefault(_loadingAnimationJsx);
 var _s = $RefreshSig$();
 const CoursesList = ()=>{
     _s();
@@ -128046,98 +129586,405 @@ const CoursesList = ()=>{
                 children: "Your Courses"
             }, void 0, false, {
                 fileName: "src/pages/Teacher/Reports.jsx",
-                lineNumber: 29,
+                lineNumber: 38,
                 columnNumber: 7
             }, undefined),
-            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "text-center",
-                children: "Loading..."
-            }, void 0, false, {
+            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationJsxDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Teacher/Reports.jsx",
-                lineNumber: 32,
+                lineNumber: 41,
                 columnNumber: 9
             }, undefined) : courses.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "text-center",
                 children: "No courses assigned."
             }, void 0, false, {
                 fileName: "src/pages/Teacher/Reports.jsx",
-                lineNumber: 34,
+                lineNumber: 43,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4",
-                children: courses.map((course)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "border border-blue-400 shadow-blue-400 p-5 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 duration-300",
-                        onClick: ()=>navigate(`/teacher/reports/${course._id}`),
+                children: courses.map((course)=>{
+                    const startDate = new Date(course.start_date);
+                    const endDate = new Date(course.end_date);
+                    const durationInWeeks = Math.ceil((endDate - startDate) / 604800000);
+                    const today = new Date();
+                    const totalDuration = endDate - startDate;
+                    const elapsedDuration = today - startDate;
+                    const progressPercentage = Math.min(100, Math.max(0, Math.round(elapsedDuration / totalDuration * 100)));
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouter.Link), {
+                        to: `/teacher/reports/${course._id}`,
+                        className: "group relative overflow-hidden border border-gray-700 bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-blue-400 hover:-translate-y-1",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                className: "text-md md:text-xl sm:text-lg lg:text-2xl font-bold text-blue-600 flex items-center gap-2",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex items-start justify-between mb-4",
                                 children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaBook), {
-                                        className: "text-blue-500"
-                                    }, void 0, false, {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "p-3 bg-gray-700 rounded-lg group-hover:bg-blue-900 transition-colors",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaBook), {
+                                                    className: "text-blue-400 text-xl"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Teacher/Reports.jsx",
+                                                    lineNumber: 69,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/Reports.jsx",
+                                                lineNumber: 68,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                        className: "text-xl font-bold text-white mx-2 group-hover:text-blue-400 transition-colors",
+                                                        children: course.course_name
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                                        lineNumber: 72,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm text-gray-400 flex items-center gap-1 mt-1",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaChalkboardTeacher), {
+                                                                className: "text-blue-500"
+                                                            }, void 0, false, {
+                                                                fileName: "src/pages/Teacher/Reports.jsx",
+                                                                lineNumber: 76,
+                                                                columnNumber: 25
+                                                            }, undefined),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                                children: [
+                                                                    "Teacher ID: ",
+                                                                    course.teacher_id.slice(-6)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "src/pages/Teacher/Reports.jsx",
+                                                                lineNumber: 77,
+                                                                columnNumber: 25
+                                                            }, undefined)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                                        lineNumber: 75,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/Reports.jsx",
+                                                lineNumber: 71,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "src/pages/Teacher/Reports.jsx",
-                                        lineNumber: 44,
-                                        columnNumber: 17
+                                        lineNumber: 67,
+                                        columnNumber: 19
                                     }, undefined),
-                                    " ",
-                                    course.course_name
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/pages/Teacher/Reports.jsx",
-                                lineNumber: 43,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-sm sm:text-base md:text-md lg:text-lg flex items-center gap-2 mt-4",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaUsers), {
-                                        className: "text-green-500"
-                                    }, void 0, false, {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "bg-gray-700 text-blue-400 text-xs px-2 py-1 rounded-md",
+                                        children: [
+                                            "ID: ",
+                                            course._id.slice(-6).toUpperCase()
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "src/pages/Teacher/Reports.jsx",
-                                        lineNumber: 47,
-                                        columnNumber: 17
-                                    }, undefined),
-                                    " Enrolled Students:",
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: "font-medium",
-                                        children: course.students.length
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Teacher/Reports.jsx",
-                                        lineNumber: 48,
-                                        columnNumber: 17
+                                        lineNumber: 81,
+                                        columnNumber: 19
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Teacher/Reports.jsx",
-                                lineNumber: 46,
-                                columnNumber: 15
+                                lineNumber: 66,
+                                columnNumber: 17
                             }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-gray-500 text-sm mt-4",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "grid grid-cols-2 gap-4 mb-5",
                                 children: [
-                                    "Course ID: ",
-                                    course._id
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "p-2 bg-gray-700 rounded-full",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaCalendarAlt), {
+                                                    className: "text-blue-400"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Teacher/Reports.jsx",
+                                                    lineNumber: 90,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/Reports.jsx",
+                                                lineNumber: 89,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-xs text-gray-400",
+                                                        children: "Starts"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                                        lineNumber: 93,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm font-medium text-white",
+                                                        children: startDate.toLocaleDateString()
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                                        lineNumber: 94,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/Reports.jsx",
+                                                lineNumber: 92,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                        lineNumber: 88,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "p-2 bg-gray-700 rounded-full",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaCalendarCheck), {
+                                                    className: "text-blue-400"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Teacher/Reports.jsx",
+                                                    lineNumber: 102,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/Reports.jsx",
+                                                lineNumber: 101,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-xs text-gray-400",
+                                                        children: "Ends"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                                        lineNumber: 105,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm font-medium text-white",
+                                                        children: endDate.toLocaleDateString()
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                                        lineNumber: 106,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/Reports.jsx",
+                                                lineNumber: 104,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                        lineNumber: 100,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "p-2 bg-gray-700 rounded-full",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaClock), {
+                                                    className: "text-blue-400"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Teacher/Reports.jsx",
+                                                    lineNumber: 114,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/Reports.jsx",
+                                                lineNumber: 113,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-xs text-gray-400",
+                                                        children: "Duration"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                                        lineNumber: 117,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm font-medium text-white",
+                                                        children: [
+                                                            durationInWeeks,
+                                                            " weeks"
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                                        lineNumber: 118,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/Reports.jsx",
+                                                lineNumber: 116,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                        lineNumber: 112,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "p-2 bg-gray-700 rounded-full",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaUsers), {
+                                                    className: "text-green-400"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Teacher/Reports.jsx",
+                                                    lineNumber: 126,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/Reports.jsx",
+                                                lineNumber: 125,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-xs text-gray-400",
+                                                        children: "Students"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                                        lineNumber: 129,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-sm font-medium text-white",
+                                                        children: course.students.length
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                                        lineNumber: 130,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/Reports.jsx",
+                                                lineNumber: 128,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                        lineNumber: 124,
+                                        columnNumber: 19
+                                    }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Teacher/Reports.jsx",
-                                lineNumber: 50,
-                                columnNumber: 15
+                                lineNumber: 87,
+                                columnNumber: 17
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "space-y-2",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center justify-between text-sm",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                className: "text-gray-400 flex items-center gap-1",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaPercent), {
+                                                        className: "text-blue-400"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                                        lineNumber: 141,
+                                                        columnNumber: 23
+                                                    }, undefined),
+                                                    "Progress"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/Reports.jsx",
+                                                lineNumber: 140,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                className: "font-medium text-white",
+                                                children: [
+                                                    progressPercentage,
+                                                    "%"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/Reports.jsx",
+                                                lineNumber: 144,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                        lineNumber: 139,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "w-full bg-gray-700 rounded-full h-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full",
+                                            style: {
+                                                width: `${progressPercentage}%`
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Teacher/Reports.jsx",
+                                            lineNumber: 149,
+                                            columnNumber: 21
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Teacher/Reports.jsx",
+                                        lineNumber: 148,
+                                        columnNumber: 19
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Teacher/Reports.jsx",
+                                lineNumber: 138,
+                                columnNumber: 17
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "absolute inset-0 bg-gradient-to-br from-blue-900/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                            }, void 0, false, {
+                                fileName: "src/pages/Teacher/Reports.jsx",
+                                lineNumber: 157,
+                                columnNumber: 17
                             }, undefined)
                         ]
                     }, course._id, true, {
                         fileName: "src/pages/Teacher/Reports.jsx",
-                        lineNumber: 38,
-                        columnNumber: 13
-                    }, undefined))
+                        lineNumber: 60,
+                        columnNumber: 15
+                    }, undefined);
+                })
             }, void 0, false, {
                 fileName: "src/pages/Teacher/Reports.jsx",
-                lineNumber: 36,
+                lineNumber: 45,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/Teacher/Reports.jsx",
-        lineNumber: 28,
+        lineNumber: 37,
         columnNumber: 5
     }, undefined);
 };
@@ -128156,7 +130003,7 @@ $RefreshReg$(_c, "CoursesList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router":"dXVwI","../../config/axiosInstance.js":"gJ5tu","react-hot-toast":"gi0hv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-icons/fa":"4Bs28"}],"kHBhE":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router":"dXVwI","../../config/axiosInstance.js":"gJ5tu","react-hot-toast":"gi0hv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-icons/fa":"4Bs28","../../components/LoadingAnimation.jsx":"1omCq"}],"kHBhE":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$3104 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -128173,7 +130020,18 @@ var _axiosInstanceJsDefault = parcelHelpers.interopDefault(_axiosInstanceJs);
 var _reactHotToast = require("react-hot-toast");
 var _reactHotToastDefault = parcelHelpers.interopDefault(_reactHotToast);
 var _recharts = require("recharts");
+var _fa = require("react-icons/fa");
+var _loadingAnimationJsx = require("../../components/LoadingAnimation.jsx");
+var _loadingAnimationJsxDefault = parcelHelpers.interopDefault(_loadingAnimationJsx);
 var _s = $RefreshSig$();
+const COLORS = [
+    "#3B82F6",
+    "#10B981",
+    "#F59E0B",
+    "#EF4444",
+    "#8B5CF6",
+    "#EC4899"
+];
 const ViewAttendance = ()=>{
     _s();
     const { courseId } = (0, _reactRouter.useParams)();
@@ -128194,212 +130052,506 @@ const ViewAttendance = ()=>{
             setLoading(false);
         }
     };
+    const calculateAverageAttendance = ()=>{
+        if (!report?.students?.length) return 0;
+        const total = report.students.reduce((sum, student)=>{
+            return sum + student.attended / student.total;
+        }, 0);
+        return Math.round(total / report.students.length * 100);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "p-5",
+        className: "p-5 max-w-7xl mx-auto bg-transparent",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                className: "text-xl font-bold mb-4",
-                children: "Attendance Report"
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex items-center gap-3 mb-6",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaChartBar), {
+                        className: "text-blue-400 text-2xl"
+                    }, void 0, false, {
+                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                        lineNumber: 67,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "text-2xl font-bold text-white",
+                        children: [
+                            "Attendance Analytics for",
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "text-blue-400",
+                                children: report?.course || "Course"
+                            }, void 0, false, {
+                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                lineNumber: 70,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                        lineNumber: 68,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                lineNumber: 40,
+                lineNumber: 66,
                 columnNumber: 7
             }, undefined),
-            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "text-center",
-                children: "Loading..."
-            }, void 0, false, {
+            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationJsxDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                lineNumber: 43,
+                lineNumber: 75,
                 columnNumber: 9
             }, undefined) : report ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "space-y-8",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                        className: "text-lg font-semibold",
-                        children: [
-                            "Course: ",
-                            report.course
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/pages/Teacher/CourseReport.jsx",
-                        lineNumber: 46,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: [
-                            "Total Classes: ",
-                            report.totalClasses
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/pages/Teacher/CourseReport.jsx",
-                        lineNumber: 47,
-                        columnNumber: 11
-                    }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex  gap-10 w-full",
+                        className: "grid grid-cols-1 md:grid-cols-3 gap-4",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "mt-6 w-1/2",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                        className: "text-lg  font-semibold",
-                                        children: "Student Attendance Overview"
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Teacher/CourseReport.jsx",
-                                        lineNumber: 51,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.ResponsiveContainer), {
-                                        width: "100%",
-                                        height: 300,
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.BarChart), {
-                                            data: report.students,
+                                className: "bg-gray-800/70 p-4 rounded-xl shadow-md border border-gray-700 backdrop-blur-sm",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center gap-3",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "p-3 bg-blue-900/30 rounded-full",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaUsers), {
+                                                className: "text-blue-400"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                lineNumber: 83,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Teacher/CourseReport.jsx",
+                                            lineNumber: 82,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.XAxis), {
-                                                    dataKey: "name"
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    className: "text-sm text-gray-400",
+                                                    children: "Total Students"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                    lineNumber: 56,
+                                                    lineNumber: 86,
                                                     columnNumber: 19
                                                 }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {}, void 0, false, {
-                                                    fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                    lineNumber: 57,
-                                                    columnNumber: 19
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
-                                                    fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                    lineNumber: 58,
-                                                    columnNumber: 19
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Bar), {
-                                                    dataKey: "attended",
-                                                    fill: "#4CAF50",
-                                                    name: "Classes Attended"
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    className: "text-2xl font-bold text-white",
+                                                    children: report.students.length
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                    lineNumber: 59,
-                                                    columnNumber: 19
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Bar), {
-                                                    dataKey: "total",
-                                                    fill: "#FF5733",
-                                                    name: "Total Classes"
-                                                }, void 0, false, {
-                                                    fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                    lineNumber: 64,
+                                                    lineNumber: 87,
                                                     columnNumber: 19
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Teacher/CourseReport.jsx",
-                                            lineNumber: 55,
+                                            lineNumber: 85,
                                             columnNumber: 17
                                         }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Teacher/CourseReport.jsx",
-                                        lineNumber: 54,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Teacher/CourseReport.jsx",
+                                    lineNumber: 81,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
                                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                                lineNumber: 50,
+                                lineNumber: 80,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "mt-6 w-1/2 ",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                        className: "text-lg font-semibold",
-                                        children: "Attendance Percentage"
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Teacher/CourseReport.jsx",
-                                        lineNumber: 71,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.ResponsiveContainer), {
-                                        width: "100%",
-                                        height: 300,
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.PieChart), {
+                                className: "bg-gray-800/70 p-4 rounded-xl shadow-md border border-gray-700 backdrop-blur-sm",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center gap-3",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "p-3 bg-green-900/30 rounded-full",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaCalendarAlt), {
+                                                className: "text-green-400"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                lineNumber: 97,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Teacher/CourseReport.jsx",
+                                            lineNumber: 96,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Pie), {
-                                                    data: report.students.map((s)=>({
-                                                            name: s.name,
-                                                            value: s.attended / s.total * 100
-                                                        })),
-                                                    dataKey: "value",
-                                                    cx: "50%",
-                                                    cy: "50%",
-                                                    outerRadius: 100,
-                                                    fill: "#8884d8",
-                                                    label: true,
-                                                    children: report.students.map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Cell), {
-                                                            fill: [
-                                                                "#4CAF50",
-                                                                "#FF5733",
-                                                                "#FFC107",
-                                                                "#2196F3"
-                                                            ][index % 4]
-                                                        }, index, false, {
-                                                            fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                            lineNumber: 87,
-                                                            columnNumber: 23
-                                                        }, undefined))
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    className: "text-sm text-gray-400",
+                                                    children: "Total Classes"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                    lineNumber: 74,
+                                                    lineNumber: 100,
                                                     columnNumber: 19
                                                 }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    className: "text-2xl font-bold text-white",
+                                                    children: report.totalClasses
+                                                }, void 0, false, {
                                                     fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                    lineNumber: 97,
-                                                    columnNumber: 19
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Legend), {}, void 0, false, {
-                                                    fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                    lineNumber: 98,
+                                                    lineNumber: 101,
                                                     columnNumber: 19
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Teacher/CourseReport.jsx",
-                                            lineNumber: 73,
+                                            lineNumber: 99,
                                             columnNumber: 17
                                         }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/pages/Teacher/CourseReport.jsx",
-                                        lineNumber: 72,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Teacher/CourseReport.jsx",
+                                    lineNumber: 95,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
                                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                                lineNumber: 70,
+                                lineNumber: 94,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "bg-gray-800/70 p-4 rounded-xl shadow-md border border-gray-700 backdrop-blur-sm",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex items-center gap-3",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "p-3 bg-purple-900/30 rounded-full",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaChartPie), {
+                                                className: "text-purple-400"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                lineNumber: 111,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Teacher/CourseReport.jsx",
+                                            lineNumber: 110,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    className: "text-sm text-gray-400",
+                                                    children: "Avg. Attendance"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                    lineNumber: 114,
+                                                    columnNumber: 19
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                    className: "text-2xl font-bold text-white",
+                                                    children: [
+                                                        calculateAverageAttendance(),
+                                                        "%"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                    lineNumber: 115,
+                                                    columnNumber: 19
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/pages/Teacher/CourseReport.jsx",
+                                            lineNumber: 113,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/Teacher/CourseReport.jsx",
+                                    lineNumber: 109,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                lineNumber: 108,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/Teacher/CourseReport.jsx",
-                        lineNumber: 48,
+                        lineNumber: 79,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "grid grid-cols-1 lg:grid-cols-2 gap-6",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "bg-gray-800/70 p-6 rounded-xl shadow-md border border-gray-700 backdrop-blur-sm",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-2 mb-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaChartBar), {
+                                                className: "text-blue-400"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                lineNumber: 128,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                className: "text-lg font-semibold text-white",
+                                                children: "Student Attendance"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                lineNumber: 129,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                        lineNumber: 127,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "h-[350px]",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.ResponsiveContainer), {
+                                            width: "100%",
+                                            height: "100%",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.BarChart), {
+                                                data: report.students,
+                                                margin: {
+                                                    top: 5,
+                                                    right: 30,
+                                                    left: 20,
+                                                    bottom: 60
+                                                },
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.CartesianGrid), {
+                                                        strokeDasharray: "3 3",
+                                                        stroke: "#374151"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                        lineNumber: 139,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.XAxis), {
+                                                        dataKey: "name",
+                                                        angle: -45,
+                                                        textAnchor: "end",
+                                                        height: 60,
+                                                        tick: {
+                                                            fontSize: 12,
+                                                            fill: "#9CA3AF"
+                                                        }
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                        lineNumber: 140,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {
+                                                        tick: {
+                                                            fill: "#9CA3AF"
+                                                        }
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                        lineNumber: 147,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {
+                                                        contentStyle: {
+                                                            background: "rgba(31, 41, 55, 0.9)",
+                                                            border: "1px solid #4B5563",
+                                                            borderRadius: "8px",
+                                                            padding: "12px",
+                                                            color: "#F3F4F6"
+                                                        }
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                        lineNumber: 148,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Bar), {
+                                                        dataKey: "attended",
+                                                        name: "Classes Attended",
+                                                        radius: [
+                                                            4,
+                                                            4,
+                                                            0,
+                                                            0
+                                                        ],
+                                                        children: report.students.map((entry, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Cell), {
+                                                                fill: COLORS[index % COLORS.length],
+                                                                stroke: "#1F2937",
+                                                                strokeWidth: 1
+                                                            }, `cell-${index}`, false, {
+                                                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                                lineNumber: 163,
+                                                                columnNumber: 25
+                                                            }, undefined))
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                        lineNumber: 157,
+                                                        columnNumber: 21
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                lineNumber: 135,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Teacher/CourseReport.jsx",
+                                            lineNumber: 134,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                        lineNumber: 133,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                lineNumber: 126,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "bg-gray-800/70 p-6 rounded-xl shadow-md border border-gray-700 backdrop-blur-sm",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center gap-2 mb-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaChartPie), {
+                                                className: "text-purple-400"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                lineNumber: 179,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                                className: "text-lg font-semibold text-white",
+                                                children: "Attendance Percentage"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                lineNumber: 180,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                        lineNumber: 178,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "h-[350px]",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.ResponsiveContainer), {
+                                            width: "100%",
+                                            height: "100%",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.PieChart), {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Pie), {
+                                                        data: report.students.map((s)=>({
+                                                                name: s.name,
+                                                                value: Math.round(s.attended / s.total * 100)
+                                                            })),
+                                                        cx: "50%",
+                                                        cy: "50%",
+                                                        labelLine: false,
+                                                        outerRadius: 120,
+                                                        fill: "#8884d8",
+                                                        dataKey: "value",
+                                                        label: ({ name, percent })=>`${name}: ${(percent * 100).toFixed(0)}%`,
+                                                        children: report.students.map((entry, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Cell), {
+                                                                fill: COLORS[index % COLORS.length],
+                                                                stroke: "#1F2937",
+                                                                strokeWidth: 1
+                                                            }, `cell-${index}`, false, {
+                                                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                                lineNumber: 203,
+                                                                columnNumber: 25
+                                                            }, undefined))
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                        lineNumber: 187,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {
+                                                        formatter: (value)=>[
+                                                                `${value}%`,
+                                                                "Attendance"
+                                                            ],
+                                                        contentStyle: {
+                                                            background: "rgba(31, 41, 55, 0.9)",
+                                                            border: "1px solid #4B5563",
+                                                            borderRadius: "8px",
+                                                            padding: "12px",
+                                                            color: "#F3F4F6"
+                                                        }
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                        lineNumber: 211,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Legend), {
+                                                        layout: "vertical",
+                                                        align: "right",
+                                                        verticalAlign: "middle",
+                                                        wrapperStyle: {
+                                                            paddingLeft: "20px",
+                                                            color: "#F3F4F6"
+                                                        }
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                        lineNumber: 221,
+                                                        columnNumber: 21
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                lineNumber: 186,
+                                                columnNumber: 19
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Teacher/CourseReport.jsx",
+                                            lineNumber: 185,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                                        lineNumber: 184,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/Teacher/CourseReport.jsx",
+                                lineNumber: 177,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/pages/Teacher/CourseReport.jsx",
+                        lineNumber: 124,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                lineNumber: 45,
+                lineNumber: 77,
                 columnNumber: 9
-            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "No attendance data available."
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "text-center py-10 text-gray-400",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: "No attendance data available for this course."
+                }, void 0, false, {
+                    fileName: "src/pages/Teacher/CourseReport.jsx",
+                    lineNumber: 238,
+                    columnNumber: 11
+                }, undefined)
             }, void 0, false, {
                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                lineNumber: 105,
+                lineNumber: 237,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/Teacher/CourseReport.jsx",
-        lineNumber: 39,
+        lineNumber: 65,
         columnNumber: 5
     }, undefined);
 };
@@ -128418,7 +130570,7 @@ $RefreshReg$(_c, "ViewAttendance");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router":"dXVwI","../../config/axiosInstance.js":"gJ5tu","react-hot-toast":"gi0hv","recharts":"7DnXL"}],"9Dru3":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router":"dXVwI","../../config/axiosInstance.js":"gJ5tu","react-hot-toast":"gi0hv","recharts":"7DnXL","react-icons/fa":"4Bs28","../../components/LoadingAnimation.jsx":"1omCq"}],"9Dru3":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$96d0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -128433,6 +130585,8 @@ var _axiosInstanceJs = require("../config/axiosInstance.js");
 var _axiosInstanceJsDefault = parcelHelpers.interopDefault(_axiosInstanceJs);
 var _reactHotToast = require("react-hot-toast");
 var _reactHotToastDefault = parcelHelpers.interopDefault(_reactHotToast);
+var _loadingAnimationJsx = require("../components/LoadingAnimation.jsx");
+var _loadingAnimationJsxDefault = parcelHelpers.interopDefault(_loadingAnimationJsx);
 var _s = $RefreshSig$();
 const Profile = ()=>{
     _s();
@@ -128445,6 +130599,7 @@ const Profile = ()=>{
         try {
             const response = await (0, _axiosInstanceJsDefault.default).get("/api/show-profile"); // Fetch user data with extra details
             setUser(response.data.user);
+            console.log(response.data.user);
         } catch (error) {
             console.error(error);
             (0, _reactHotToastDefault.default).error("Failed to load profile.");
@@ -128460,21 +130615,12 @@ const Profile = ()=>{
                 children: "My Profile"
             }, void 0, false, {
                 fileName: "src/pages/Profile.jsx",
-                lineNumber: 27,
+                lineNumber: 29,
                 columnNumber: 7
             }, undefined),
-            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-center items-center h-64",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"
-                }, void 0, false, {
-                    fileName: "src/pages/Profile.jsx",
-                    lineNumber: 31,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
+            loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationJsxDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Profile.jsx",
-                lineNumber: 30,
+                lineNumber: 32,
                 columnNumber: 9
             }, undefined) : user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "max-w-lg mx-auto  rounded-xl shadow-lg overflow-hidden",
@@ -128538,7 +130684,7 @@ const Profile = ()=>{
                                 className: "mb-6",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                                        className: "text-xl font-semibold text-gray-800 mb-3 flex items-center",
+                                        className: "text-xl font-semibold  mb-3 flex items-center",
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
                                                 xmlns: "http://www.w3.org/2000/svg",
@@ -128624,11 +130770,11 @@ const Profile = ()=>{
                                 className: "mb-6",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                                        className: "text-xl font-semibold text-gray-800 mb-3 flex items-center",
+                                        className: "text-xl font-semibold mb-4 flex items-center ",
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
                                                 xmlns: "http://www.w3.org/2000/svg",
-                                                className: "h-5 w-5 mr-2 text-blue-500",
+                                                className: "h-6 w-6 mr-2 text-blue-600",
                                                 viewBox: "0 0 20 20",
                                                 fill: "currentColor",
                                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
@@ -128651,22 +130797,29 @@ const Profile = ()=>{
                                         columnNumber: 17
                                     }, undefined),
                                     user.courses.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "space-y-2",
+                                        className: "space-y-3",
                                         children: user.courses.map((course)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "flex items-center p-3  rounded-lg",
+                                                className: "flex  hover:text-blue-500 items-center p-3 border border-gray-200 rounded-lg hover:bg-blue-50 transition-colors duration-200 shadow-sm",
                                                 children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                                        xmlns: "http://www.w3.org/2000/svg",
-                                                        className: "h-5 w-5 text-blue-500 mr-2",
-                                                        viewBox: "0 0 20 20",
-                                                        fill: "currentColor",
-                                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                            fillRule: "evenodd",
-                                                            d: "M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z",
-                                                            clipRule: "evenodd"
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                        className: "bg-blue-100 p-2 rounded-full mr-3  ",
+                                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                            xmlns: "http://www.w3.org/2000/svg",
+                                                            className: "h-5 w-5 text-blue-600",
+                                                            viewBox: "0 0 20 20",
+                                                            fill: "currentColor",
+                                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                                fillRule: "evenodd",
+                                                                d: "M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z",
+                                                                clipRule: "evenodd"
+                                                            }, void 0, false, {
+                                                                fileName: "src/pages/Profile.jsx",
+                                                                lineNumber: 130,
+                                                                columnNumber: 29
+                                                            }, undefined)
                                                         }, void 0, false, {
                                                             fileName: "src/pages/Profile.jsx",
-                                                            lineNumber: 129,
+                                                            lineNumber: 124,
                                                             columnNumber: 27
                                                         }, undefined)
                                                     }, void 0, false, {
@@ -128675,11 +130828,11 @@ const Profile = ()=>{
                                                         columnNumber: 25
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                        className: "font-medium",
-                                                        children: course.name
+                                                        className: "font-medium ",
+                                                        children: course.course_name
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Profile.jsx",
-                                                        lineNumber: 135,
+                                                        lineNumber: 137,
                                                         columnNumber: 25
                                                     }, undefined)
                                                 ]
@@ -128692,38 +130845,101 @@ const Profile = ()=>{
                                         fileName: "src/pages/Profile.jsx",
                                         lineNumber: 117,
                                         columnNumber: 19
-                                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        className: "text-gray-500 italic",
-                                        children: "No enrolled courses"
-                                    }, void 0, false, {
+                                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "p-4 text-center border border-gray-200 rounded-lg",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "text-gray-500",
+                                                children: "You haven't enrolled in any courses yet."
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Profile.jsx",
+                                                lineNumber: 145,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                className: "mt-2 text-blue-600 font-medium text-sm hover:underline",
+                                                children: "Browse Courses"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Profile.jsx",
+                                                lineNumber: 148,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 140,
+                                        lineNumber: 144,
                                         columnNumber: 19
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "mt-4 p-4 bg-blue-50 rounded-lg",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                            className: "text-blue-800 font-medium",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                    className: "font-bold",
-                                                    children: "Overall Attendance:"
+                                        className: "mt-6 p-4 bg-blue-50 rounded-lg border border-blue-100",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "flex items-center justify-between",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                        className: "text-blue-800 font-medium",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                                className: "font-bold",
+                                                                children: "Overall Attendance:"
+                                                            }, void 0, false, {
+                                                                fileName: "src/pages/Profile.jsx",
+                                                                lineNumber: 156,
+                                                                columnNumber: 23
+                                                            }, undefined),
+                                                            " ",
+                                                            user.attendancePercentage !== null ? `${user.attendancePercentage}%` : "N/A"
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "src/pages/Profile.jsx",
+                                                        lineNumber: 155,
+                                                        columnNumber: 21
+                                                    }, undefined),
+                                                    user.attendancePercentage !== null && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                        className: "w-12 h-12 rounded-full bg-white border-4 border-blue-100 flex items-center justify-center",
+                                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                            className: "text-blue-800 font-bold text-sm",
+                                                            children: [
+                                                                user.attendancePercentage,
+                                                                "%"
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "src/pages/Profile.jsx",
+                                                            lineNumber: 163,
+                                                            columnNumber: 25
+                                                        }, undefined)
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/Profile.jsx",
+                                                        lineNumber: 162,
+                                                        columnNumber: 23
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/Profile.jsx",
+                                                lineNumber: 154,
+                                                columnNumber: 19
+                                            }, undefined),
+                                            user.attendancePercentage !== null && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "mt-3 w-full bg-blue-100 rounded-full h-2",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "bg-blue-600 h-2 rounded-full",
+                                                    style: {
+                                                        width: `${user.attendancePercentage}%`
+                                                    }
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Profile.jsx",
-                                                    lineNumber: 144,
-                                                    columnNumber: 21
-                                                }, undefined),
-                                                " ",
-                                                user.attendancePercentage !== null ? `${user.attendancePercentage}%` : "N/A"
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/pages/Profile.jsx",
-                                            lineNumber: 143,
-                                            columnNumber: 19
-                                        }, undefined)
-                                    }, void 0, false, {
+                                                    lineNumber: 171,
+                                                    columnNumber: 23
+                                                }, undefined)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Profile.jsx",
+                                                lineNumber: 170,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 142,
+                                        lineNumber: 153,
                                         columnNumber: 17
                                     }, undefined)
                                 ]
@@ -128749,19 +130965,19 @@ const Profile = ()=>{
                                                     clipRule: "evenodd"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Profile.jsx",
-                                                    lineNumber: 162,
+                                                    lineNumber: 190,
                                                     columnNumber: 21
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/pages/Profile.jsx",
-                                                lineNumber: 156,
+                                                lineNumber: 184,
                                                 columnNumber: 19
                                             }, undefined),
                                             "Admin Controls"
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 155,
+                                        lineNumber: 183,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -128769,13 +130985,13 @@ const Profile = ()=>{
                                         children: "You have full access to manage users, courses, and system settings."
                                     }, void 0, false, {
                                         fileName: "src/pages/Profile.jsx",
-                                        lineNumber: 170,
+                                        lineNumber: 198,
                                         columnNumber: 17
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 154,
+                                lineNumber: 182,
                                 columnNumber: 15
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -128785,12 +131001,12 @@ const Profile = ()=>{
                                     children: "Edit Profile"
                                 }, void 0, false, {
                                     fileName: "src/pages/Profile.jsx",
-                                    lineNumber: 179,
+                                    lineNumber: 207,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/pages/Profile.jsx",
-                                lineNumber: 178,
+                                lineNumber: 206,
                                 columnNumber: 13
                             }, undefined)
                         ]
@@ -128820,12 +131036,12 @@ const Profile = ()=>{
                             d: "M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                         }, void 0, false, {
                             fileName: "src/pages/Profile.jsx",
-                            lineNumber: 194,
+                            lineNumber: 222,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/pages/Profile.jsx",
-                        lineNumber: 187,
+                        lineNumber: 215,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -128833,7 +131049,7 @@ const Profile = ()=>{
                         children: "No profile data available"
                     }, void 0, false, {
                         fileName: "src/pages/Profile.jsx",
-                        lineNumber: 201,
+                        lineNumber: 229,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -128841,19 +131057,19 @@ const Profile = ()=>{
                         children: "Please try again later or contact support"
                     }, void 0, false, {
                         fileName: "src/pages/Profile.jsx",
-                        lineNumber: 204,
+                        lineNumber: 232,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Profile.jsx",
-                lineNumber: 186,
+                lineNumber: 214,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/Profile.jsx",
-        lineNumber: 26,
+        lineNumber: 28,
         columnNumber: 5
     }, undefined);
 };
@@ -128868,6 +131084,6 @@ $RefreshReg$(_c, "Profile");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-hot-toast":"gi0hv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../config/axiosInstance.js":"gJ5tu"}],"irmnC":[function() {},{}]},["aQL8O","9mu7C","8lqZg"], "8lqZg", "parcelRequire94c2")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-hot-toast":"gi0hv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../config/axiosInstance.js":"gJ5tu","../components/LoadingAnimation.jsx":"1omCq"}],"irmnC":[function() {},{}]},["aQL8O","9mu7C","8lqZg"], "8lqZg", "parcelRequire94c2")
 
 //# sourceMappingURL=index.975ef6c8.js.map

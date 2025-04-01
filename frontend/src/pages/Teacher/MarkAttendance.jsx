@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import API from "../../config/axiosInstance.js";
 import toast from "react-hot-toast";
+import LoadingAnimation from "../../components/LoadingAnimation.jsx";
 
 const MarkAttendance = () => {
   const { courseid, date } = useParams();
@@ -81,7 +82,7 @@ const MarkAttendance = () => {
       <h2 className="text-xl font-bold mb-4">Mark Attendance for {date}</h2>
 
       {loading ? (
-        <p className="text-center">Loading...</p>
+        <LoadingAnimation />
       ) : students.length === 0 ? (
         <p className="text-center">No students enrolled in this course.</p>
       ) : (

@@ -5,6 +5,7 @@ import loading_animation from "../../assets/loading.json";
 import notfound_animation from "../../assets/not_found.json";
 import StudentCard from "../../components/Admin/StudentCard.jsx";
 import toast from "react-hot-toast";
+import LoadingAnimation from "../../components/LoadingAnimation.jsx";
 
 const AddStudent = () => {
   const [students, setStudents] = useState([]); // Store student data
@@ -80,7 +81,7 @@ const AddStudent = () => {
           Manage Students ({students.length}) {/* Show total students count */}
         </h2>
         <button
-          className="btn text-sm sm:text-md md:text-lg lg:text-xl btn-secondary btn-outline"
+          className="btn btn-outline border-2 border-blue-400/20 hover:border-blue-400/40 shadow-lg shadow-blue-400/20 hover:shadow-blue-400/30 text-bule-400 hover:text-blue-600  text-sm sm:text-md md:text-lg lg:text-xl "
           onClick={() => document.getElementById("student_modal").showModal()}
         >
           Add Student
@@ -162,9 +163,7 @@ const AddStudent = () => {
       </div>
 
       {loading ? (
-        <div className="w-[40%] mx-auto">
-          <Lottie animationData={loading_animation} />
-        </div>
+        <LoadingAnimation />
       ) : students.length > 0 ? (
         <div className="flex flex-wrap pl-5 justify-center sm:justify-start">
           {students.map((student) => (

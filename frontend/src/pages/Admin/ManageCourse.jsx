@@ -5,6 +5,7 @@ import loading_animation from "../../assets/loading.json";
 import notfound_animation from "../../assets/not_found.json";
 import CourseCard from "../../components/Admin/CourseCard.jsx";
 import toast from "react-hot-toast";
+import LoadingAnimation from "../../components/LoadingAnimation.jsx";
 
 const ManageCourse = () => {
   const [courses, setCourses] = useState([]); // Store course data
@@ -106,7 +107,7 @@ const ManageCourse = () => {
           Manage Courses
         </h2>
         <button
-          className="btn btn-outline border-green-400/20 hover:border-green-400/40 shadow-lg shadow-green-400/20 hover:shadow-green-400/30 text-green-400 hover:text-white  text-sm sm:text-md md:text-lg lg:text-xl "
+          className="btn btn-outline border-2 border-green-400/20 hover:border-green-400/40 shadow-lg shadow-green-400/20 hover:shadow-green-400/30 text-green-400 hover:text-white  text-sm sm:text-md md:text-lg lg:text-xl "
           onClick={() => document.getElementById("course_modal").showModal()}
         >
           Add Course
@@ -197,9 +198,7 @@ const ManageCourse = () => {
       </div>
 
       {loading ? (
-        <div className="w-[40%] mx-auto">
-          <Lottie animationData={loading_animation} />
-        </div>
+        <LoadingAnimation />
       ) : courses.length > 0 ? (
         <div className="flex flex-wrap pl-5 justify-center sm:justify-start">
           {courses.map((course) => (

@@ -76,117 +76,149 @@ const Login = () => {
   };
 
   return (
-    <div className="flex shadow-2xl rounded-2xl bg-gray-800 items-center mt-16 justify-center w-[75%] mx-auto">
+    <div className="flex bg-gray-800/50 shadow-2xl rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 items-center mt-5 justify-center w-[85%] mx-auto overflow-hidden border border-gray-700">
       {/* Left Side - Animation */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+        <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-gray-200 opacity-40 blur-xl"></div>
+        <div className="absolute bottom-10 left-[50%] w-60 h-60 rounded-full bg-purple-100 opacity-30 blur-xl"></div>
+        <div className="absolute top-1/3 right-1/4 w-32 h-32 rounded-full bg-blue-100 opacity-15 blur-xl"></div>
+      </div>
+
       <div className="w-1/2 hidden md:block">
-        <Lottie animationData={login_animation} />
+        <div className="relative">
+          <Lottie
+            animationData={login_animation}
+            className="relative z-10 transform hover:scale-105 transition-transform duration-500"
+          />
+        </div>
       </div>
 
       {/* Right Side - Form */}
-      <div className="w-full md:w-1/2 flex flex-col px-10 lg:px-16">
-        <form onSubmit={handleSubmit} className="mx-auto ">
+      <div className="w-full md:w-1/2 flex flex-col px-8 py-12 lg:px-12  backdrop-blur-sm">
+        <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+          Welcome Back
+        </h2>
+
+        <form onSubmit={handleSubmit} className="mx-auto w-full max-w-md">
           {/* Email Input */}
-          <label className="input validator ">
-            <svg
-              className="h-[1em] opacity-50"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <g
-                strokeLinejoin="round"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                fill="none"
-                stroke="currentColor"
+          <div className="mb-6">
+            <label className="flex items-center gap-3 px-4 py-3 bg-gray-700/50 rounded-lg border border-gray-600 hover:border-purple-400 transition-colors duration-300">
+              <svg
+                className="w-5 h-5 text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
               >
-                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-              </g>
-            </svg>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="text-base md:text-md lg:text-lg w-full"
-              placeholder="mail@site.com"
-              required
-            />
-          </label>
+                <g
+                  strokeLinejoin="round"
+                  strokeLinecap="round"
+                  strokeWidth="2"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </g>
+              </svg>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="flex-1 bg-transparent outline-none text-gray-200 placeholder-gray-500"
+                placeholder="mail@site.com"
+                required
+              />
+            </label>
+          </div>
+
           {/* Password Input */}
-          <label className="input validator mt-4">
-            <svg
-              className="h-[1em] opacity-50"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <g
-                strokeLinejoin="round"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                fill="none"
-                stroke="currentColor"
+          <div className="mb-6">
+            <label className="flex items-center gap-3 px-4 py-3 bg-gray-700/50 rounded-lg border border-gray-600 hover:border-purple-400 transition-colors duration-300">
+              <svg
+                className="w-5 h-5 text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
               >
-                <path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"></path>
-                <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
-              </g>
-            </svg>
-            <input
-              type="password"
-              required
-              name="password"
-              placeholder="Password"
-              value={formData.password}
-              onChange={handleChange}
-              minLength="8"
-              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-              title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
-            />
-          </label>
-          <p className="validator-hint hidden">
-            Must be more than 8 characters, including
-            <br />
-            At least one number
-            <br />
-            At least one lowercase letter
-            <br />
-            At least one uppercase letter
-          </p>
+                <g
+                  strokeLinejoin="round"
+                  strokeLinecap="round"
+                  strokeWidth="2"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"></path>
+                  <circle
+                    cx="16.5"
+                    cy="7.5"
+                    r=".5"
+                    fill="currentColor"
+                  ></circle>
+                </g>
+              </svg>
+              <input
+                type="password"
+                required
+                name="password"
+                placeholder="Password"
+                value={formData.password}
+                onChange={handleChange}
+                className="flex-1 bg-transparent outline-none text-gray-200 placeholder-gray-500"
+                minLength="8"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              />
+            </label>
+            <div className="mt-2 text-xs text-gray-400 px-4">
+              Must include: uppercase, lowercase, number (8+ chars)
+            </div>
+          </div>
+
           {/* Role Selection */}
-          <select
-            name="role"
-            value={formData.role} // Controlled component
-            onChange={handleRoleChange}
-            required
-            className="select mt-4"
-          >
-            <option value="" disabled>
-              Who Are You?
-            </option>
-            <option value="student">Student</option>
-            <option value="teacher">Teacher</option>
-            <option value="admin">Admin</option>
-          </select>
+          <div className="mb-8">
+            <select
+              name="role"
+              value={formData.role}
+              onChange={handleRoleChange}
+              required
+              className="w-full px-4 py-3 bg-gray-700/50 rounded-lg border border-gray-600 hover:border-purple-400 text-gray-200 outline-none transition-colors duration-300"
+            >
+              <option value="" disabled className="text-gray-500">
+                Who Are You?
+              </option>
+              <option value="student" className="bg-gray-800">
+                Student
+              </option>
+              <option value="teacher" className="bg-gray-800">
+                Teacher
+              </option>
+              <option value="admin" className="bg-gray-800">
+                Admin
+              </option>
+            </select>
+          </div>
 
           {/* Submit Button */}
-          <div className="flex justify-center ">
-            <button
-              type="submit"
-              className="text-base md:text-md lg:text-lg btn btn-outline btn-secondary w-fit mt-5 px-5"
-              disabled={loading}
-            >
-              {loading && (
-                <span className="loading loading-dots loading-md p-1"></span>
-              )}
-              Log In
-            </button>
-          </div>
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-red-500 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:from-purple-600 hover:to-pink-600 flex justify-center items-center"
+          >
+            {loading ? (
+              <span className="loading loading-spinner loading-md"></span>
+            ) : (
+              <span className="flex items-center gap-2">
+                Log In <span className="text-xl">→</span>
+              </span>
+            )}
+          </button>
         </form>
 
         {/* Sign-Up Link */}
-        <p className="mt-5 text-base md:text-md lg:text-lg">
+        <p className="mt-8 text-center text-gray-400">
           Don't have an account?{" "}
-          <Link to="/register" className="text-pink-500 hover:underline">
+          <Link
+            to="/register"
+            className="text-red-400 hover:text-red-300 underline underline-offset-4 transition-colors duration-200"
+          >
             Sign Up
           </Link>
         </p>

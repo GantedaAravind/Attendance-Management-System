@@ -13,7 +13,25 @@ import {
   Pie,
   Cell,
   Legend,
+  CartesianGrid,
 } from "recharts";
+import {
+  FaChartBar,
+  FaChartPie,
+  FaUsers,
+  FaCalendarAlt,
+  FaSpinner,
+} from "react-icons/fa";
+import LoadingAnimation from "../../components/LoadingAnimation.jsx";
+
+const COLORS = [
+  "#3B82F6",
+  "#10B981",
+  "#F59E0B",
+  "#EF4444",
+  "#8B5CF6",
+  "#EC4899",
+];
 
 const ViewAttendance = () => {
   const { courseId } = useParams();
@@ -35,74 +53,190 @@ const ViewAttendance = () => {
     }
   };
 
+  const calculateAverageAttendance = () => {
+    if (!report?.students?.length) return 0;
+    const total = report.students.reduce((sum, student) => {
+      return sum + student.attended / student.total;
+    }, 0);
+    return Math.round((total / report.students.length) * 100);
+  };
+
   return (
-    <div className="p-5">
-      <h2 className="text-xl font-bold mb-4">Attendance Report</h2>
+    <div className="p-5 max-w-7xl mx-auto bg-transparent">
+      <div className="flex items-center gap-3 mb-6">
+        <FaChartBar className="text-blue-400 text-2xl" />
+        <h2 className="text-2xl font-bold text-white">
+          Attendance Analytics for{" "}
+          <span className="text-blue-400">{report?.course || "Course"}</span>
+        </h2>
+      </div>
 
       {loading ? (
-        <p className="text-center">Loading...</p>
+        <LoadingAnimation />
       ) : report ? (
-        <div>
-          <h3 className="text-lg font-semibold">Course: {report.course}</h3>
-          <p>Total Classes: {report.totalClasses}</p>
-          <div className="flex  gap-10 w-full">
-            {/* 1️⃣ Bar Chart - Student Attendance */}
-            <div className="mt-6 w-1/2">
-              <h3 className="text-lg  font-semibold">
-                Student Attendance Overview
-              </h3>
-              <ResponsiveContainer width="100%" height={300}>
-                <BarChart data={report.students}>
-                  <XAxis dataKey="name" />
-                  <YAxis />
-                  <Tooltip />
-                  <Bar
-                    dataKey="attended"
-                    fill="#4CAF50"
-                    name="Classes Attended"
-                  />
-                  <Bar dataKey="total" fill="#FF5733" name="Total Classes" />
-                </BarChart>
-              </ResponsiveContainer>
+        <div className="space-y-8">
+          {/* Summary Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-gray-800/70 p-4 rounded-xl shadow-md border border-gray-700 backdrop-blur-sm">
+              <div className="flex items-center gap-3">
+                <div className="p-3 bg-blue-900/30 rounded-full">
+                  <FaUsers className="text-blue-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400">Total Students</p>
+                  <p className="text-2xl font-bold text-white">
+                    {report.students.length}
+                  </p>
+                </div>
+              </div>
             </div>
 
-            {/* 2️⃣ Pie Chart - Attendance Percentage */}
-            <div className="mt-6 w-1/2 ">
-              <h3 className="text-lg font-semibold">Attendance Percentage</h3>
-              <ResponsiveContainer width="100%" height={300}>
-                <PieChart>
-                  <Pie
-                    data={report.students.map((s) => ({
-                      name: s.name,
-                      value: (s.attended / s.total) * 100,
-                    }))}
-                    dataKey="value"
-                    cx="50%"
-                    cy="50%"
-                    outerRadius={100}
-                    fill="#8884d8"
-                    label
+            <div className="bg-gray-800/70 p-4 rounded-xl shadow-md border border-gray-700 backdrop-blur-sm">
+              <div className="flex items-center gap-3">
+                <div className="p-3 bg-green-900/30 rounded-full">
+                  <FaCalendarAlt className="text-green-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400">Total Classes</p>
+                  <p className="text-2xl font-bold text-white">
+                    {report.totalClasses}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-800/70 p-4 rounded-xl shadow-md border border-gray-700 backdrop-blur-sm">
+              <div className="flex items-center gap-3">
+                <div className="p-3 bg-purple-900/30 rounded-full">
+                  <FaChartPie className="text-purple-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400">Avg. Attendance</p>
+                  <p className="text-2xl font-bold text-white">
+                    {calculateAverageAttendance()}%
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Charts Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Bar Chart */}
+            <div className="bg-gray-800/70 p-6 rounded-xl shadow-md border border-gray-700 backdrop-blur-sm">
+              <div className="flex items-center gap-2 mb-4">
+                <FaChartBar className="text-blue-400" />
+                <h3 className="text-lg font-semibold text-white">
+                  Student Attendance
+                </h3>
+              </div>
+              <div className="h-[350px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart
+                    data={report.students}
+                    margin={{ top: 5, right: 30, left: 20, bottom: 60 }}
                   >
-                    {report.students.map((_, index) => (
-                      <Cell
-                        key={index}
-                        fill={
-                          ["#4CAF50", "#FF5733", "#FFC107", "#2196F3"][
-                            index % 4
-                          ]
-                        }
-                      />
-                    ))}
-                  </Pie>
-                  <Tooltip />
-                  <Legend />
-                </PieChart>
-              </ResponsiveContainer>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+                    <XAxis
+                      dataKey="name"
+                      angle={-45}
+                      textAnchor="end"
+                      height={60}
+                      tick={{ fontSize: 12, fill: "#9CA3AF" }}
+                    />
+                    <YAxis tick={{ fill: "#9CA3AF" }} />
+                    <Tooltip
+                      contentStyle={{
+                        background: "rgba(31, 41, 55, 0.9)",
+                        border: "1px solid #4B5563",
+                        borderRadius: "8px",
+                        padding: "12px",
+                        color: "#F3F4F6",
+                      }}
+                    />
+                    <Bar
+                      dataKey="attended"
+                      name="Classes Attended"
+                      radius={[4, 4, 0, 0]}
+                    >
+                      {report.students.map((entry, index) => (
+                        <Cell
+                          key={`cell-${index}`}
+                          fill={COLORS[index % COLORS.length]}
+                          stroke="#1F2937"
+                          strokeWidth={1}
+                        />
+                      ))}
+                    </Bar>
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+
+            {/* Pie Chart */}
+            <div className="bg-gray-800/70 p-6 rounded-xl shadow-md border border-gray-700 backdrop-blur-sm">
+              <div className="flex items-center gap-2 mb-4">
+                <FaChartPie className="text-purple-400" />
+                <h3 className="text-lg font-semibold text-white">
+                  Attendance Percentage
+                </h3>
+              </div>
+              <div className="h-[350px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart>
+                    <Pie
+                      data={report.students.map((s) => ({
+                        name: s.name,
+                        value: Math.round((s.attended / s.total) * 100),
+                      }))}
+                      cx="50%"
+                      cy="50%"
+                      labelLine={false}
+                      outerRadius={120}
+                      fill="#8884d8"
+                      dataKey="value"
+                      label={({ name, percent }) =>
+                        `${name}: ${(percent * 100).toFixed(0)}%`
+                      }
+                    >
+                      {report.students.map((entry, index) => (
+                        <Cell
+                          key={`cell-${index}`}
+                          fill={COLORS[index % COLORS.length]}
+                          stroke="#1F2937"
+                          strokeWidth={1}
+                        />
+                      ))}
+                    </Pie>
+                    <Tooltip
+                      formatter={(value) => [`${value}%`, "Attendance"]}
+                      contentStyle={{
+                        background: "rgba(31, 41, 55, 0.9)",
+                        border: "1px solid #4B5563",
+                        borderRadius: "8px",
+                        padding: "12px",
+                        color: "#F3F4F6",
+                      }}
+                    />
+                    <Legend
+                      layout="vertical"
+                      align="right"
+                      verticalAlign="middle"
+                      wrapperStyle={{
+                        paddingLeft: "20px",
+                        color: "#F3F4F6",
+                      }}
+                    />
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
             </div>
           </div>
         </div>
       ) : (
-        <p>No attendance data available.</p>
+        <div className="text-center py-10 text-gray-400">
+          <p>No attendance data available for this course.</p>
+        </div>
       )}
     </div>
   );

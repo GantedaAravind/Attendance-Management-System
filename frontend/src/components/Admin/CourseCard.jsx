@@ -13,9 +13,32 @@ const CourseCard = ({ course_name, teacher_id, students, _id, onDelete }) => {
               {course_name}
             </h2>
             <div className="flex items-center gap-2 mb-3">
-              <div className="avatar placeholder">
-                <div className="w-8 rounded-full text-center align-middle bg-green-100 text-green-800">
-                  <span className="text-lg  font-bold align-middle">T</span>
+              <div className="avatar">
+                <div className="w-8 rounded-full">
+                  {teacher_id?.imageUrl ? (
+                    <img
+                      src={teacher_id.imageUrl}
+                      alt={`${teacher_id.name}'s profile`}
+                      className="object-cover"
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = ""; // Clear the error to prevent looping
+                        e.currentTarget.parentElement.innerHTML = `
+            <div class="w-full h-full rounded-full bg-green-100 flex items-center justify-center">
+              <span class="text-lg font-bold text-green-800">${
+                teacher_id?.name?.charAt(0) || "T"
+              }</span>
+            </div>
+          `;
+                      }}
+                    />
+                  ) : (
+                    <div className="w-full h-full rounded-full bg-green-100 flex items-center justify-center">
+                      <span className="text-lg font-bold text-green-800">
+                        {teacher_id?.name?.charAt(0) || "T"}
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="min-w-0">
