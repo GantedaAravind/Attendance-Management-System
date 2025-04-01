@@ -103,6 +103,16 @@ router.get("/reports/:courseId", async (req, res) => {
       .populate("student_id", "name email")
       .select("student_id date status");
 
+    // Get total unique class days
+    const uniqueDates = [
+      ...new Set(
+        attendanceRecords.map(
+          (record) => record.date.toISOString().split("T")[0]
+        )
+      ),
+    ];
+    const totalClasses = uniqueDates.length;
+
     // Process attendance data
     const studentAttendance = {};
     attendanceRecords.forEach(({ student_id, status }) => {
@@ -120,7 +130,7 @@ router.get("/reports/:courseId", async (req, res) => {
     // Generate report data
     const report = {
       course: course.name,
-      totalClasses: attendanceRecords.length,
+      totalClasses: totalClasses,
       students: Object.values(studentAttendance).map((student) => ({
         ...student,
         percentage: ((student.attended / student.total) * 100).toFixed(2) + "%",
@@ -132,7 +142,6 @@ router.get("/reports/:courseId", async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-
 router.get("/course/:courseId", async (req, res) => {
   try {
     const { courseId } = req.params;

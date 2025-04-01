@@ -17,6 +17,10 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
 function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
@@ -194,7 +198,7 @@ router.get("/attendance/:courseId/:date", /*#__PURE__*/function () {
 }());
 router.get("/reports/:courseId", /*#__PURE__*/function () {
   var _ref4 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee4(req, res) {
-    var courseId, course, attendanceRecords, studentAttendance, report;
+    var courseId, course, attendanceRecords, uniqueDates, totalClasses, studentAttendance, report;
     return _regeneratorRuntime().wrap(function _callee4$(_context4) {
       while (1) switch (_context4.prev = _context4.next) {
         case 0:
@@ -221,7 +225,11 @@ router.get("/reports/:courseId", /*#__PURE__*/function () {
           }).populate("student_id", "name email").select("student_id date status");
         case 9:
           attendanceRecords = _context4.sent;
-          // Process attendance data
+          // Get total unique class days
+          uniqueDates = _toConsumableArray(new Set(attendanceRecords.map(function (record) {
+            return record.date.toISOString().split("T")[0];
+          })));
+          totalClasses = uniqueDates.length; // Process attendance data
           studentAttendance = {};
           attendanceRecords.forEach(function (_ref5) {
             var student_id = _ref5.student_id,
@@ -240,7 +248,7 @@ router.get("/reports/:courseId", /*#__PURE__*/function () {
           // Generate report data
           report = {
             course: course.name,
-            totalClasses: attendanceRecords.length,
+            totalClasses: totalClasses,
             students: Object.values(studentAttendance).map(function (student) {
               return _objectSpread(_objectSpread({}, student), {}, {
                 percentage: (student.attended / student.total * 100).toFixed(2) + "%"
@@ -250,19 +258,19 @@ router.get("/reports/:courseId", /*#__PURE__*/function () {
           res.status(200).json({
             report: report
           });
-          _context4.next = 19;
+          _context4.next = 21;
           break;
-        case 16:
-          _context4.prev = 16;
+        case 18:
+          _context4.prev = 18;
           _context4.t0 = _context4["catch"](0);
           res.status(500).json({
             error: _context4.t0.message
           });
-        case 19:
+        case 21:
         case "end":
           return _context4.stop();
       }
-    }, _callee4, null, [[0, 16]]);
+    }, _callee4, null, [[0, 18]]);
   }));
   return function (_x7, _x8) {
     return _ref4.apply(this, arguments);
