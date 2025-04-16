@@ -16,7 +16,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:1234"], // Allow local frontend
+    origin: ["https://smartattend365.web.app"], // Allow local frontend
     credentials: true, // Allow cookies to be sent
   })
 );

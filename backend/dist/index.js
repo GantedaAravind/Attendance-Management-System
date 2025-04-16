@@ -20,7 +20,7 @@ _dotenv["default"].config(); // Load environment variables
 
 var app = (0, _express["default"])();
 app.use((0, _cors["default"])({
-  origin: ["http://localhost:1234"],
+  origin: ["https://smartattend365.web.app"],
   // Allow local frontend
   credentials: true // Allow cookies to be sent
 }));
