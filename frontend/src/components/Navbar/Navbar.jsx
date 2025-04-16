@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router"; // ✅ Fixed import
-import fingerprint_icon from "../../assets/fingerprint_icon.svg";
 import NavItems from "./NavItems";
 import { useSelector, useDispatch } from "react-redux";
 import API from "../../config/axiosInstance";
@@ -52,11 +51,6 @@ const Navbar = () => {
             </label>
           </div>
           <Link className="mx-1 flex-1 px-2 flex items-center gap-2" to="/">
-            <img
-              src={fingerprint_icon}
-              className="w-8 md:w-9 lg:w-10"
-              alt="Attendance Management System"
-            />
             <p className="text-lg md:text-xl lg:text-2xl font-bold">AMS</p>
           </Link>
           <div className="hidden flex-none lg:block">
