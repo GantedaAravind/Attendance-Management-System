@@ -69093,7 +69093,7 @@ const Home = ()=>{
                             className: "w-full md:w-1/2 text-center md:text-left space-y-6",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "inline-block px-4 py-2 bg-red-400 text-white rounded-full text-sm font-medium mb-4 shadow-sm",
+                                    className: "inline-block px-4 py-2 bg-gray-400 text-white rounded-full text-sm font-medium mb-4 shadow-sm",
                                     children: "\uD83D\uDE80 New & Improved"
                                 }, void 0, false, {
                                     fileName: "src/pages/Home.jsx",
@@ -69186,18 +69186,17 @@ const Home = ()=>{
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             className: "text-sm text-gray-500",
                                             children: [
-                                                "Trusted by",
-                                                " ",
+                                                "Trusted by ",
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                    className: "font-medium text-gray-700",
-                                                    children: "500+"
+                                                    className: "font-medium text-white",
+                                                    children: "500+ "
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Home.jsx",
-                                                    lineNumber: 59,
-                                                    columnNumber: 17
+                                                    lineNumber: 58,
+                                                    columnNumber: 28
                                                 }, undefined),
                                                 " ",
-                                                "organizations"
+                                                "teachers"
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/pages/Home.jsx",
@@ -69225,7 +69224,7 @@ const Home = ()=>{
                                         className: "absolute top-10 -left-6 w-24 h-24 bg-red-100 rounded-full opacity-40 blur-lg"
                                     }, void 0, false, {
                                         fileName: "src/pages/Home.jsx",
-                                        lineNumber: 68,
+                                        lineNumber: 67,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -69235,12 +69234,12 @@ const Home = ()=>{
                                             className: "w-full h-auto"
                                         }, void 0, false, {
                                             fileName: "src/pages/Home.jsx",
-                                            lineNumber: 70,
+                                            lineNumber: 69,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/pages/Home.jsx",
-                                        lineNumber: 69,
+                                        lineNumber: 68,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -69250,7 +69249,7 @@ const Home = ()=>{
                                                 className: "w-3 h-3 bg-green-400 rounded-full mr-2"
                                             }, void 0, false, {
                                                 fileName: "src/pages/Home.jsx",
-                                                lineNumber: 76,
+                                                lineNumber: 75,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -69258,24 +69257,24 @@ const Home = ()=>{
                                                 children: "Live Tracking"
                                             }, void 0, false, {
                                                 fileName: "src/pages/Home.jsx",
-                                                lineNumber: 77,
+                                                lineNumber: 76,
                                                 columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Home.jsx",
-                                        lineNumber: 75,
+                                        lineNumber: 74,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Home.jsx",
-                                lineNumber: 67,
+                                lineNumber: 66,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/pages/Home.jsx",
-                            lineNumber: 66,
+                            lineNumber: 65,
                             columnNumber: 11
                         }, undefined)
                     ]
@@ -122689,12 +122688,9 @@ const MyAttendance = ()=>{
     (0, _react.useEffect)(()=>{
         const fetchAttendanceData = async ()=>{
             try {
-                const response = await (0, _axiosInstanceDefault.default).get("/api/attendance/student", {
-                    withCredentials: true
-                });
-                if (!response.ok) throw new Error("Failed to fetch attendance data");
-                const data = await response.json();
-                setAttendanceData(data);
+                const response = await (0, _axiosInstanceDefault.default).get("/api/attendance/student");
+                if (response.data?.success) setAttendanceData(response.data);
+                else throw new Error("Failed to fetch attendance data");
             } catch (err) {
                 setError(err.message);
             } finally{
@@ -122705,7 +122701,7 @@ const MyAttendance = ()=>{
     }, []);
     if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationDefault.default), {}, void 0, false, {
         fileName: "src/pages/Student/MyAttendance.jsx",
-        lineNumber: 48,
+        lineNumber: 45,
         columnNumber: 23
     }, undefined);
     if (error) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -122716,7 +122712,7 @@ const MyAttendance = ()=>{
         ]
     }, void 0, true, {
         fileName: "src/pages/Student/MyAttendance.jsx",
-        lineNumber: 50,
+        lineNumber: 47,
         columnNumber: 12
     }, undefined);
     if (!attendanceData) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -122724,7 +122720,7 @@ const MyAttendance = ()=>{
         children: "No attendance data available"
     }, void 0, false, {
         fileName: "src/pages/Student/MyAttendance.jsx",
-        lineNumber: 52,
+        lineNumber: 49,
         columnNumber: 12
     }, undefined);
     // Prepare data for Recharts
@@ -122746,25 +122742,25 @@ const MyAttendance = ()=>{
         className: "container mx-auto px-4 py-8",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "text-3xl font-bold text-gray-800 mb-8",
+                className: "text-3xl font-bold text-white mb-8",
                 children: "My Attendance Dashboard"
             }, void 0, false, {
                 fileName: "src/pages/Student/MyAttendance.jsx",
-                lineNumber: 72,
+                lineNumber: 69,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "grid grid-cols-1 md:grid-cols-2 gap-8 mb-8",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "bg-white p-6 rounded-lg shadow-md",
+                        className: "bg-gray-800/70 p-6 rounded-xl shadow-lg border border-gray-700 backdrop-blur-sm",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                className: "text-xl font-semibold mb-4 text-gray-700",
+                                className: "text-xl font-semibold mb-4 text-white",
                                 children: "Overall Attendance"
                             }, void 0, false, {
                                 fileName: "src/pages/Student/MyAttendance.jsx",
-                                lineNumber: 79,
+                                lineNumber: 76,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -122774,18 +122770,18 @@ const MyAttendance = ()=>{
                                         className: "mb-4 md:mb-0",
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                className: "text-4xl font-bold text-blue-600",
+                                                className: "text-4xl font-bold text-purple-300",
                                                 children: [
                                                     attendanceData.overallPercentage,
                                                     "%"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/Student/MyAttendance.jsx",
-                                                lineNumber: 84,
+                                                lineNumber: 81,
                                                 columnNumber: 15
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                className: "text-gray-600 mt-2",
+                                                className: "text-gray-300 mt-2",
                                                 children: [
                                                     attendanceData.totalPresent,
                                                     " present out of",
@@ -122795,13 +122791,13 @@ const MyAttendance = ()=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/Student/MyAttendance.jsx",
-                                                lineNumber: 87,
+                                                lineNumber: 84,
                                                 columnNumber: 15
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                        lineNumber: 83,
+                                        lineNumber: 80,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -122825,127 +122821,136 @@ const MyAttendance = ()=>{
                                                                 fill: index === 0 ? "#4ade80" : "#f87171"
                                                             }, `cell-${index}`, false, {
                                                                 fileName: "src/pages/Student/MyAttendance.jsx",
-                                                                lineNumber: 109,
+                                                                lineNumber: 106,
                                                                 columnNumber: 23
                                                             }, undefined))
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                                        lineNumber: 95,
+                                                        lineNumber: 92,
                                                         columnNumber: 19
                                                     }, undefined),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {
+                                                        contentStyle: {
+                                                            background: "rgba(17, 24, 39, 0.9)",
+                                                            border: "1px solid #4B5563",
+                                                            borderRadius: "8px",
+                                                            padding: "12px",
+                                                            color: "#F3F4F6",
+                                                            backdropFilter: "blur(4px)"
+                                                        }
+                                                    }, void 0, false, {
                                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                                        lineNumber: 115,
+                                                        lineNumber: 112,
                                                         columnNumber: 19
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/Student/MyAttendance.jsx",
-                                                lineNumber: 94,
+                                                lineNumber: 91,
                                                 columnNumber: 17
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/pages/Student/MyAttendance.jsx",
-                                            lineNumber: 93,
+                                            lineNumber: 90,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                        lineNumber: 92,
+                                        lineNumber: 89,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Student/MyAttendance.jsx",
-                                lineNumber: 82,
+                                lineNumber: 79,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/Student/MyAttendance.jsx",
-                        lineNumber: 78,
+                        lineNumber: 75,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "bg-white p-6 rounded-lg shadow-md",
+                        className: "bg-gray-800/70 p-6 rounded-xl shadow-lg border border-gray-700 backdrop-blur-sm",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                className: "text-xl font-semibold mb-4 text-gray-700",
+                                className: "text-xl font-semibold mb-4 text-white",
                                 children: "Recent Attendance"
                             }, void 0, false, {
                                 fileName: "src/pages/Student/MyAttendance.jsx",
-                                lineNumber: 124,
+                                lineNumber: 130,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                                 className: "space-y-3",
                                 children: attendanceData.recentRecords.map((record, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                        className: "flex justify-between items-center border-b pb-2",
+                                        className: "flex justify-between items-center border-b border-gray-700 pb-2",
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: [
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                        className: "font-medium",
+                                                        className: "font-medium text-white",
                                                         children: record.courseName
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                                        lineNumber: 134,
+                                                        lineNumber: 140,
                                                         columnNumber: 19
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                        className: "text-sm text-gray-500",
+                                                        className: "text-sm text-gray-400",
                                                         children: new Date(record.date).toLocaleDateString()
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                                        lineNumber: 135,
+                                                        lineNumber: 141,
                                                         columnNumber: 19
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/Student/MyAttendance.jsx",
-                                                lineNumber: 133,
+                                                lineNumber: 139,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                className: `px-3 py-1 rounded-full text-sm font-medium ${record.status === "present" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`,
+                                                className: `px-3 py-1 rounded-full text-sm font-medium ${record.status === "Present" ? "bg-green-500/20 text-green-400" : "bg-red-500/20 text-red-400"}`,
                                                 children: record.status
                                             }, void 0, false, {
                                                 fileName: "src/pages/Student/MyAttendance.jsx",
-                                                lineNumber: 139,
+                                                lineNumber: 145,
                                                 columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, index, true, {
                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                        lineNumber: 129,
+                                        lineNumber: 135,
                                         columnNumber: 15
                                     }, undefined))
                             }, void 0, false, {
                                 fileName: "src/pages/Student/MyAttendance.jsx",
-                                lineNumber: 127,
+                                lineNumber: 133,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/Student/MyAttendance.jsx",
-                        lineNumber: 123,
+                        lineNumber: 129,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Student/MyAttendance.jsx",
-                lineNumber: 76,
+                lineNumber: 73,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "bg-white p-6 rounded-lg shadow-md mb-8",
+                className: "bg-gray-800/70 p-6 rounded-xl shadow-lg border border-gray-700 backdrop-blur-sm mb-8",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        className: "text-xl font-semibold mb-4 text-gray-700",
+                        className: "text-xl font-semibold mb-4 text-white",
                         children: "Monthly Attendance Trend"
                     }, void 0, false, {
                         fileName: "src/pages/Student/MyAttendance.jsx",
-                        lineNumber: 156,
+                        lineNumber: 162,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -122963,80 +122968,108 @@ const MyAttendance = ()=>{
                                 },
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.CartesianGrid), {
-                                        strokeDasharray: "3 3"
+                                        strokeDasharray: "3 3",
+                                        stroke: "#4B5563"
                                     }, void 0, false, {
                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                        lineNumber: 170,
+                                        lineNumber: 176,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.XAxis), {
-                                        dataKey: "name"
+                                        dataKey: "name",
+                                        stroke: "#9CA3AF",
+                                        tick: {
+                                            fill: "#F3F4F6"
+                                        }
                                     }, void 0, false, {
                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                        lineNumber: 171,
+                                        lineNumber: 177,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.YAxis), {
                                         domain: [
                                             0,
                                             100
-                                        ]
+                                        ],
+                                        stroke: "#9CA3AF",
+                                        tick: {
+                                            fill: "#F3F4F6"
+                                        }
                                     }, void 0, false, {
                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                        lineNumber: 172,
+                                        lineNumber: 182,
                                         columnNumber: 15
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {}, void 0, false, {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {
+                                        contentStyle: {
+                                            background: "rgba(17, 24, 39, 0.9)",
+                                            border: "1px solid #4B5563",
+                                            borderRadius: "8px",
+                                            padding: "12px",
+                                            color: "#F3F4F6",
+                                            backdropFilter: "blur(4px)"
+                                        },
+                                        formatter: (value)=>[
+                                                `${value}%`,
+                                                "Attendance"
+                                            ]
+                                    }, void 0, false, {
                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                        lineNumber: 173,
+                                        lineNumber: 187,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Legend), {}, void 0, false, {
                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                        lineNumber: 174,
+                                        lineNumber: 198,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Bar), {
                                         dataKey: "attendance",
                                         name: "Attendance %",
-                                        fill: "#8884d8"
+                                        fill: "#8884d8",
+                                        radius: [
+                                            4,
+                                            4,
+                                            0,
+                                            0
+                                        ]
                                     }, void 0, false, {
                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                        lineNumber: 175,
+                                        lineNumber: 199,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Student/MyAttendance.jsx",
-                                lineNumber: 161,
+                                lineNumber: 167,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/pages/Student/MyAttendance.jsx",
-                            lineNumber: 160,
+                            lineNumber: 166,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/pages/Student/MyAttendance.jsx",
-                        lineNumber: 159,
+                        lineNumber: 165,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Student/MyAttendance.jsx",
-                lineNumber: 155,
+                lineNumber: 161,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "bg-white p-6 rounded-lg shadow-md",
+            attendanceData.byCourse && attendanceData.byCourse.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "bg-gray-800/70 p-6 rounded-xl shadow-lg border border-gray-700 backdrop-blur-sm",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        className: "text-xl font-semibold mb-4 text-gray-700",
+                        className: "text-xl font-semibold mb-4 text-white",
                         children: "Course-wise Attendance"
                     }, void 0, false, {
                         fileName: "src/pages/Student/MyAttendance.jsx",
-                        lineNumber: 183,
-                        columnNumber: 9
+                        lineNumber: 213,
+                        columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "h-80",
@@ -123059,55 +123092,63 @@ const MyAttendance = ()=>{
                                                 fill: COLORS[index % COLORS.length]
                                             }, `cell-${index}`, false, {
                                                 fileName: "src/pages/Student/MyAttendance.jsx",
-                                                lineNumber: 203,
-                                                columnNumber: 19
+                                                lineNumber: 233,
+                                                columnNumber: 21
                                             }, undefined))
                                     }, void 0, false, {
                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                        lineNumber: 189,
-                                        columnNumber: 15
+                                        lineNumber: 219,
+                                        columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {
+                                        contentStyle: {
+                                            background: "rgba(17, 24, 39, 0.9)",
+                                            border: "1px solid #4B5563",
+                                            borderRadius: "8px",
+                                            padding: "12px",
+                                            color: "#F3F4F6",
+                                            backdropFilter: "blur(4px)"
+                                        },
                                         formatter: (value)=>[
                                                 `${value}%`,
                                                 "Attendance"
                                             ]
                                     }, void 0, false, {
                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                        lineNumber: 209,
-                                        columnNumber: 15
+                                        lineNumber: 239,
+                                        columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Legend), {}, void 0, false, {
                                         fileName: "src/pages/Student/MyAttendance.jsx",
-                                        lineNumber: 210,
-                                        columnNumber: 15
+                                        lineNumber: 250,
+                                        columnNumber: 17
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Student/MyAttendance.jsx",
-                                lineNumber: 188,
-                                columnNumber: 13
+                                lineNumber: 218,
+                                columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/pages/Student/MyAttendance.jsx",
-                            lineNumber: 187,
-                            columnNumber: 11
+                            lineNumber: 217,
+                            columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/pages/Student/MyAttendance.jsx",
-                        lineNumber: 186,
-                        columnNumber: 9
+                        lineNumber: 216,
+                        columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Student/MyAttendance.jsx",
-                lineNumber: 182,
-                columnNumber: 7
+                lineNumber: 212,
+                columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/Student/MyAttendance.jsx",
-        lineNumber: 71,
+        lineNumber: 68,
         columnNumber: 5
     }, undefined);
 };
@@ -123641,6 +123682,7 @@ const MyCourses = ()=>{
                 const { data } = await (0, _axiosInstanceDefault.default).get("/api/student/courses", {
                     withCredentials: true
                 });
+                console.log(data.courses);
                 setCourses(data.courses || []); // Ensure courses is an array
             } catch (error) {
                 console.error("Error fetching enrolled courses:", error);
@@ -123661,17 +123703,16 @@ const MyCourses = ()=>{
                 children: "My Enrolled Courses"
             }, void 0, false, {
                 fileName: "src/pages/Student/MyCourses.jsx",
-                lineNumber: 45,
+                lineNumber: 46,
                 columnNumber: 7
             }, undefined),
             loading ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loadingAnimationDefault.default), {}, void 0, false, {
                 fileName: "src/pages/Student/MyCourses.jsx",
-                lineNumber: 50,
+                lineNumber: 51,
                 columnNumber: 9
             }, undefined) : courses.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-wrap  gap-2",
                 children: courses.map((course)=>{
-                    console.log(course);
                     const startDate = new Date(course.start_date);
                     const endDate = new Date(course.end_date);
                     const durationInWeeks = Math.ceil((endDate - startDate) / 604800000);
@@ -123679,27 +123720,30 @@ const MyCourses = ()=>{
                     const totalDuration = endDate - startDate;
                     const elapsedDuration = today - startDate;
                     const progressPercentage = Math.min(100, Math.max(0, Math.round(elapsedDuration / totalDuration * 100)));
+                    // Generate a unique gradient color based on course ID
+                    const gradientId = `gradient-${course._id}`;
+                    const hue = parseInt(course._id.slice(-6), 16) % 360;
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "group w-80 relative overflow-hidden border border-gray-700 bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-blue-400 hover:-translate-y-1",
+                        className: "group w-80 relative overflow-hidden border border-gray-700/50 bg-gray-900/60 p-6 rounded-2xl shadow-2xl hover:shadow-2xl transition-all duration-300 hover:border-blue-400/50 hover:-translate-y-1 backdrop-blur-sm",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "flex items-start justify-between mb-4",
+                                className: "relative z-10 flex items-start justify-between mb-4",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "flex items-center gap-3",
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "p-3 bg-gray-700 rounded-lg group-hover:bg-blue-900 transition-colors",
+                                                className: "p-3 bg-gray-800/80 rounded-lg group-hover:bg-blue-900/50 transition-all duration-300 shadow-md",
                                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaBook), {
-                                                    className: "text-blue-400 text-xl"
+                                                    className: "text-blue-400 text-xl group-hover:scale-110 transition-transform"
                                                 }, void 0, false, {
                                                     fileName: "src/pages/Student/MyCourses.jsx",
-                                                    lineNumber: 77,
+                                                    lineNumber: 81,
                                                     columnNumber: 23
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/pages/Student/MyCourses.jsx",
-                                                lineNumber: 76,
+                                                lineNumber: 80,
                                                 columnNumber: 21
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -123709,7 +123753,7 @@ const MyCourses = ()=>{
                                                         children: course.course_name
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Student/MyCourses.jsx",
-                                                        lineNumber: 80,
+                                                        lineNumber: 84,
                                                         columnNumber: 23
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -123719,230 +123763,153 @@ const MyCourses = ()=>{
                                                                 className: "text-blue-500"
                                                             }, void 0, false, {
                                                                 fileName: "src/pages/Student/MyCourses.jsx",
-                                                                lineNumber: 84,
+                                                                lineNumber: 88,
                                                                 columnNumber: 25
                                                             }, undefined),
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                                                 children: [
-                                                                    "Teacher ID: ",
-                                                                    course.teacher_id._id.slice(-6)
+                                                                    "Prof. ",
+                                                                    course.teacher_id.name.split(" ")[0]
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "src/pages/Student/MyCourses.jsx",
-                                                                lineNumber: 85,
+                                                                lineNumber: 89,
                                                                 columnNumber: 25
                                                             }, undefined)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "src/pages/Student/MyCourses.jsx",
-                                                        lineNumber: 83,
+                                                        lineNumber: 87,
                                                         columnNumber: 23
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/Student/MyCourses.jsx",
-                                                lineNumber: 79,
+                                                lineNumber: 83,
                                                 columnNumber: 21
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Student/MyCourses.jsx",
-                                        lineNumber: 75,
+                                        lineNumber: 79,
                                         columnNumber: 19
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "bg-gray-700 text-blue-400 text-xs px-2 py-1 rounded-md",
+                                        className: "bg-gray-800/80 text-blue-400 text-xs px-2 py-1 rounded-md backdrop-blur-sm shadow-md",
                                         children: [
                                             "ID: ",
                                             course._id.slice(-6).toUpperCase()
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Student/MyCourses.jsx",
-                                        lineNumber: 91,
+                                        lineNumber: 95,
                                         columnNumber: 19
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Student/MyCourses.jsx",
-                                lineNumber: 74,
+                                lineNumber: 78,
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "grid grid-cols-2 gap-4 mb-5",
+                                className: "relative z-10 grid grid-cols-2 gap-4 mb-5",
                                 children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    {
+                                        icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaCalendarAlt), {
+                                            className: "text-blue-400"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Student/MyCourses.jsx",
+                                            lineNumber: 104,
+                                            columnNumber: 29
+                                        }, undefined),
+                                        label: "Starts",
+                                        value: startDate.toLocaleDateString(),
+                                        color: "blue"
+                                    },
+                                    {
+                                        icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaCalendarCheck), {
+                                            className: "text-purple-400"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Student/MyCourses.jsx",
+                                            lineNumber: 110,
+                                            columnNumber: 29
+                                        }, undefined),
+                                        label: "Ends",
+                                        value: endDate.toLocaleDateString(),
+                                        color: "purple"
+                                    },
+                                    {
+                                        icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaClock), {
+                                            className: "text-amber-400"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Student/MyCourses.jsx",
+                                            lineNumber: 116,
+                                            columnNumber: 29
+                                        }, undefined),
+                                        label: "Duration",
+                                        value: `${durationInWeeks} weeks`,
+                                        color: "amber"
+                                    },
+                                    {
+                                        icon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaUsers), {
+                                            className: "text-emerald-400"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/Student/MyCourses.jsx",
+                                            lineNumber: 122,
+                                            columnNumber: 29
+                                        }, undefined),
+                                        label: "Students",
+                                        value: course.students?.length || 0,
+                                        color: "emerald"
+                                    }
+                                ].map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "flex items-center gap-3",
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "p-2 bg-gray-700 rounded-full",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaCalendarAlt), {
-                                                    className: "text-blue-400"
-                                                }, void 0, false, {
-                                                    fileName: "src/pages/Student/MyCourses.jsx",
-                                                    lineNumber: 100,
-                                                    columnNumber: 23
-                                                }, undefined)
+                                                className: `p-2 bg-gray-800/80 rounded-full shadow-md group-hover:bg-${item.color - 30} transition-all `,
+                                                children: item.icon
                                             }, void 0, false, {
                                                 fileName: "src/pages/Student/MyCourses.jsx",
-                                                lineNumber: 99,
-                                                columnNumber: 21
+                                                lineNumber: 129,
+                                                columnNumber: 23
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: [
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                                         className: "text-xs text-gray-400",
-                                                        children: "Starts"
+                                                        children: item.label
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Student/MyCourses.jsx",
-                                                        lineNumber: 103,
-                                                        columnNumber: 23
+                                                        lineNumber: 137,
+                                                        columnNumber: 25
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                                         className: "text-sm font-medium text-white",
-                                                        children: startDate.toLocaleDateString()
+                                                        children: item.value
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Student/MyCourses.jsx",
-                                                        lineNumber: 104,
-                                                        columnNumber: 23
+                                                        lineNumber: 138,
+                                                        columnNumber: 25
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
-                                                fileName: "src/pages/Student/MyCourses.jsx",
-                                                lineNumber: 102,
-                                                columnNumber: 21
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/pages/Student/MyCourses.jsx",
-                                        lineNumber: 98,
-                                        columnNumber: 19
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "flex items-center gap-3",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "p-2 bg-gray-700 rounded-full",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaCalendarCheck), {
-                                                    className: "text-blue-400"
-                                                }, void 0, false, {
-                                                    fileName: "src/pages/Student/MyCourses.jsx",
-                                                    lineNumber: 112,
-                                                    columnNumber: 23
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "src/pages/Student/MyCourses.jsx",
-                                                lineNumber: 111,
-                                                columnNumber: 21
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                        className: "text-xs text-gray-400",
-                                                        children: "Ends"
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/Student/MyCourses.jsx",
-                                                        lineNumber: 115,
-                                                        columnNumber: 23
-                                                    }, undefined),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                        className: "text-sm font-medium text-white",
-                                                        children: endDate.toLocaleDateString()
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/Student/MyCourses.jsx",
-                                                        lineNumber: 116,
-                                                        columnNumber: 23
-                                                    }, undefined)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/pages/Student/MyCourses.jsx",
-                                                lineNumber: 114,
-                                                columnNumber: 21
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/pages/Student/MyCourses.jsx",
-                                        lineNumber: 110,
-                                        columnNumber: 19
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "flex items-center gap-3",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "p-2 bg-gray-700 rounded-full",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaClock), {
-                                                    className: "text-blue-400"
-                                                }, void 0, false, {
-                                                    fileName: "src/pages/Student/MyCourses.jsx",
-                                                    lineNumber: 124,
-                                                    columnNumber: 23
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "src/pages/Student/MyCourses.jsx",
-                                                lineNumber: 123,
-                                                columnNumber: 21
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                        className: "text-xs text-gray-400",
-                                                        children: "Duration"
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/Student/MyCourses.jsx",
-                                                        lineNumber: 127,
-                                                        columnNumber: 23
-                                                    }, undefined),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                        className: "text-sm font-medium text-white",
-                                                        children: [
-                                                            durationInWeeks,
-                                                            " weeks"
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "src/pages/Student/MyCourses.jsx",
-                                                        lineNumber: 128,
-                                                        columnNumber: 23
-                                                    }, undefined)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/pages/Student/MyCourses.jsx",
-                                                lineNumber: 126,
-                                                columnNumber: 21
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/pages/Student/MyCourses.jsx",
-                                        lineNumber: 122,
-                                        columnNumber: 19
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "flex items-center gap-3",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "p-2 bg-gray-700 rounded-full",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaUsers), {
-                                                className: "text-green-400"
-                                            }, void 0, false, {
                                                 fileName: "src/pages/Student/MyCourses.jsx",
                                                 lineNumber: 136,
                                                 columnNumber: 23
                                             }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "src/pages/Student/MyCourses.jsx",
-                                            lineNumber: 135,
-                                            columnNumber: 21
-                                        }, undefined)
-                                    }, void 0, false, {
+                                        ]
+                                    }, index, true, {
                                         fileName: "src/pages/Student/MyCourses.jsx",
-                                        lineNumber: 134,
-                                        columnNumber: 19
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
+                                        lineNumber: 128,
+                                        columnNumber: 21
+                                    }, undefined))
+                            }, void 0, false, {
                                 fileName: "src/pages/Student/MyCourses.jsx",
-                                lineNumber: 97,
+                                lineNumber: 101,
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "space-y-2",
+                                className: "relative z-10 space-y-3 mt-6",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "flex items-center justify-between text-sm",
@@ -123954,14 +123921,14 @@ const MyCourses = ()=>{
                                                         className: "text-blue-400"
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Student/MyCourses.jsx",
-                                                        lineNumber: 145,
+                                                        lineNumber: 150,
                                                         columnNumber: 23
                                                     }, undefined),
-                                                    "Progress"
+                                                    "Course Progress"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/Student/MyCourses.jsx",
-                                                lineNumber: 144,
+                                                lineNumber: 149,
                                                 columnNumber: 21
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -123972,55 +123939,92 @@ const MyCourses = ()=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/Student/MyCourses.jsx",
-                                                lineNumber: 148,
+                                                lineNumber: 153,
                                                 columnNumber: 21
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/Student/MyCourses.jsx",
-                                        lineNumber: 143,
+                                        lineNumber: 148,
                                         columnNumber: 19
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "w-full bg-gray-700 rounded-full h-2",
+                                        className: "w-full bg-gray-800/80 rounded-full h-2.5 shadow-inner",
                                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full",
+                                            className: "bg-gradient-to-r from-blue-500 to-blue-600 h-2.5 rounded-full shadow-[0_0_8px_1px_rgba(59,130,246,0.3)] transition-all duration-500",
                                             style: {
                                                 width: `${progressPercentage}%`
                                             }
                                         }, void 0, false, {
                                             fileName: "src/pages/Student/MyCourses.jsx",
-                                            lineNumber: 153,
+                                            lineNumber: 158,
                                             columnNumber: 21
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/pages/Student/MyCourses.jsx",
-                                        lineNumber: 152,
+                                        lineNumber: 157,
+                                        columnNumber: 19
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex justify-between text-xs text-gray-400",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                children: startDate.toLocaleDateString()
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                lineNumber: 164,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                children: endDate.toLocaleDateString()
+                                            }, void 0, false, {
+                                                fileName: "src/pages/Student/MyCourses.jsx",
+                                                lineNumber: 165,
+                                                columnNumber: 21
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/Student/MyCourses.jsx",
+                                        lineNumber: 163,
                                         columnNumber: 19
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/Student/MyCourses.jsx",
-                                lineNumber: 142,
+                                lineNumber: 147,
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "absolute inset-0 bg-gradient-to-br from-blue-900/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                                className: "absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                             }, void 0, false, {
                                 fileName: "src/pages/Student/MyCourses.jsx",
-                                lineNumber: 161,
+                                lineNumber: 170,
+                                columnNumber: 17
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "absolute -inset-1 bg-blue-500/20 blur-lg group-hover:blur-xl transition-all duration-500"
+                                }, void 0, false, {
+                                    fileName: "src/pages/Student/MyCourses.jsx",
+                                    lineNumber: 174,
+                                    columnNumber: 19
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/pages/Student/MyCourses.jsx",
+                                lineNumber: 173,
                                 columnNumber: 17
                             }, undefined)
                         ]
                     }, course._id, true, {
                         fileName: "src/pages/Student/MyCourses.jsx",
-                        lineNumber: 69,
+                        lineNumber: 73,
                         columnNumber: 15
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/pages/Student/MyCourses.jsx",
-                lineNumber: 52,
+                lineNumber: 53,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "w-[40%] mx-auto text-center",
@@ -124029,7 +124033,7 @@ const MyCourses = ()=>{
                         animationData: (0, _notFoundJsonDefault.default)
                     }, void 0, false, {
                         fileName: "src/pages/Student/MyCourses.jsx",
-                        lineNumber: 168,
+                        lineNumber: 182,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -124037,19 +124041,19 @@ const MyCourses = ()=>{
                         children: "You are not enrolled in any courses."
                     }, void 0, false, {
                         fileName: "src/pages/Student/MyCourses.jsx",
-                        lineNumber: 169,
+                        lineNumber: 183,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/Student/MyCourses.jsx",
-                lineNumber: 167,
+                lineNumber: 181,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/Student/MyCourses.jsx",
-        lineNumber: 44,
+        lineNumber: 45,
         columnNumber: 5
     }, undefined);
 };
@@ -130839,21 +130843,21 @@ const ViewAttendance = ()=>{
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "bg-gray-800/70 p-6 rounded-xl shadow-md border border-gray-700 backdrop-blur-sm",
+                                className: "bg-gray-800/70 p-6 rounded-xl shadow-lg border border-gray-600 backdrop-blur-sm",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "flex items-center gap-2 mb-4",
+                                        className: "flex items-center gap-3 mb-4",
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fa.FaChartPie), {
-                                                className: "text-purple-400 text-xl"
+                                                className: "text-purple-400 text-2xl"
                                             }, void 0, false, {
                                                 fileName: "src/pages/Teacher/CourseReport.jsx",
                                                 lineNumber: 178,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                                className: "text-lg font-semibold text-white",
-                                                children: "Attendance Percentage"
+                                                className: "text-xl font-bold text-white",
+                                                children: "Student Attendance"
                                             }, void 0, false, {
                                                 fileName: "src/pages/Teacher/CourseReport.jsx",
                                                 lineNumber: 179,
@@ -130866,164 +130870,173 @@ const ViewAttendance = ()=>{
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "h-[350px]",
+                                        className: "h-[350px] relative",
                                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.ResponsiveContainer), {
                                             width: "100%",
                                             height: "100%",
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.PieChart), {
                                                 children: [
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("defs", {
-                                                        children: COLORS.map((color, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("filter", {
-                                                                id: `glow-${index}`,
-                                                                x: "-30%",
-                                                                y: "-30%",
-                                                                width: "160%",
-                                                                height: "160%",
+                                                        children: report.students.map((_, index)=>{
+                                                            const hue = index * (360 / report.students.length) % 360;
+                                                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("linearGradient", {
+                                                                id: `gradient-${index}`,
+                                                                x1: "0%",
+                                                                y1: "0%",
+                                                                x2: "100%",
+                                                                y2: "100%",
                                                                 children: [
-                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("feGaussianBlur", {
-                                                                        stdDeviation: "5",
-                                                                        result: "blur"
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("stop", {
+                                                                        offset: "0%",
+                                                                        stopColor: `hsl(${hue}, 80%, 60%)`
                                                                     }, void 0, false, {
                                                                         fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                                        lineNumber: 196,
-                                                                        columnNumber: 27
+                                                                        lineNumber: 200,
+                                                                        columnNumber: 29
                                                                     }, undefined),
-                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("feComposite", {
-                                                                        in: "SourceGraphic",
-                                                                        in2: "blur",
-                                                                        operator: "over"
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("stop", {
+                                                                        offset: "100%",
+                                                                        stopColor: `hsl(${hue}, 100%, 45%)`
                                                                     }, void 0, false, {
                                                                         fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                                        lineNumber: 197,
-                                                                        columnNumber: 27
+                                                                        lineNumber: 204,
+                                                                        columnNumber: 29
                                                                     }, undefined)
                                                                 ]
-                                                            }, `glow-${index}`, true, {
+                                                            }, `gradient-${index}`, true, {
                                                                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                                lineNumber: 188,
-                                                                columnNumber: 25
-                                                            }, undefined))
+                                                                lineNumber: 192,
+                                                                columnNumber: 27
+                                                            }, undefined);
+                                                        })
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                        lineNumber: 186,
+                                                        lineNumber: 187,
                                                         columnNumber: 21
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Pie), {
                                                         data: report.students.map((s)=>({
                                                                 name: s.name,
                                                                 class: s.class || "N/A",
-                                                                value: Math.round(s.attended / s.total * 100)
+                                                                value: Math.round(s.attended / s.total * 100),
+                                                                attended: s.attended,
+                                                                total: s.total
                                                             })),
                                                         cx: "50%",
                                                         cy: "50%",
-                                                        labelLine: false,
-                                                        outerRadius: 120,
+                                                        outerRadius: 140,
                                                         innerRadius: 60,
-                                                        fill: "#8884d8",
+                                                        paddingAngle: 2,
+                                                        cornerRadius: 8,
                                                         dataKey: "value",
                                                         animationDuration: 500,
-                                                        label: ({ name, percent })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("text", {
-                                                                x: 0,
-                                                                y: 0,
-                                                                fill: "white",
-                                                                textAnchor: "middle",
-                                                                dominantBaseline: "central",
-                                                                fontSize: 12,
-                                                                fontWeight: 500,
-                                                                children: [
-                                                                    name.split(" ")[0],
-                                                                    " "
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                                lineNumber: 221,
-                                                                columnNumber: 25
-                                                            }, void 0),
+                                                        animationEasing: "ease-out",
                                                         children: report.students.map((entry, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Cell), {
-                                                                fill: COLORS[index % COLORS.length],
+                                                                fill: `url(#gradient-${index})`,
                                                                 stroke: "#1F2937",
-                                                                strokeWidth: 1,
+                                                                strokeWidth: 2,
                                                                 style: {
-                                                                    cursor: "pointer"
+                                                                    cursor: "pointer",
+                                                                    transition: "all 0.3s ease",
+                                                                    filter: "drop-shadow(0px 4px 6px rgba(0,0,0,0.3))",
+                                                                    opacity: 0.95
                                                                 },
                                                                 onMouseEnter: (e)=>{
-                                                                    e.target.setAttribute("filter", `url(#glow-${index})`);
-                                                                    e.target.setAttribute("stroke-width", "2");
+                                                                    e.target.setAttribute("stroke", "#ffffff");
+                                                                    e.target.setAttribute("stroke-width", "3");
+                                                                    e.target.setAttribute("filter", "drop-shadow(0px 6px 12px rgba(0,0,0,0.4))");
                                                                 },
                                                                 onMouseLeave: (e)=>{
-                                                                    e.target.removeAttribute("filter");
-                                                                    e.target.setAttribute("stroke-width", "1");
+                                                                    e.target.setAttribute("stroke", "#1F2937");
+                                                                    e.target.setAttribute("stroke-width", "2");
+                                                                    e.target.setAttribute("filter", "drop-shadow(0px 4px 6px rgba(0,0,0,0.3))");
                                                                 }
                                                             }, `cell-${index}`, false, {
                                                                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                                lineNumber: 235,
+                                                                lineNumber: 232,
                                                                 columnNumber: 25
                                                             }, undefined))
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                        lineNumber: 206,
+                                                        lineNumber: 213,
                                                         columnNumber: 21
                                                     }, undefined),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _recharts.Tooltip), {
                                                         contentStyle: {
-                                                            background: "rgba(17, 24, 39, 0.9)",
-                                                            border: "1px solid #4B5563",
-                                                            borderRadius: "8px",
-                                                            padding: "12px",
+                                                            background: "rgba(17, 24, 39, 0.97)",
+                                                            border: "1px solid #7C3AED",
+                                                            borderRadius: "10px",
+                                                            padding: "16px",
                                                             color: "#F3F4F6",
-                                                            backdropFilter: "blur(4px)"
+                                                            backdropFilter: "blur(8px)",
+                                                            boxShadow: "0 8px 24px rgba(124, 58, 237, 0.25)"
                                                         },
                                                         formatter: (value, name, props)=>{
                                                             return [
                                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                                    className: "space-y-1",
+                                                                    className: "space-y-2",
                                                                     children: [
                                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                                            className: "font-bold text-purple-300",
+                                                                            className: "font-bold text-purple-300 text-lg",
                                                                             children: props.payload.name
                                                                         }, void 0, false, {
                                                                             fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                                            lineNumber: 268,
+                                                                            lineNumber: 276,
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                                            className: "text-lg font-semibold text-white",
+                                                                            className: "text-2xl font-bold text-white mt-1",
                                                                             children: [
                                                                                 value,
                                                                                 "%"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                                            lineNumber: 271,
+                                                                            lineNumber: 279,
+                                                                            columnNumber: 29
+                                                                        }, void 0),
+                                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                                            className: "text-xs text-gray-400 mt-1",
+                                                                            children: [
+                                                                                "(",
+                                                                                props.payload.attended,
+                                                                                "/",
+                                                                                props.payload.total,
+                                                                                " ",
+                                                                                "classes)"
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "src/pages/Teacher/CourseReport.jsx",
+                                                                            lineNumber: 282,
                                                                             columnNumber: 29
                                                                         }, void 0)
                                                                     ]
                                                                 }, "tooltip-content", true, {
                                                                     fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                                    lineNumber: 267,
+                                                                    lineNumber: 275,
                                                                     columnNumber: 27
                                                                 }, void 0)
                                                             ];
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                        lineNumber: 256,
+                                                        lineNumber: 263,
                                                         columnNumber: 21
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                                                lineNumber: 185,
+                                                lineNumber: 186,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/pages/Teacher/CourseReport.jsx",
-                                            lineNumber: 184,
+                                            lineNumber: 185,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/pages/Teacher/CourseReport.jsx",
-                                        lineNumber: 183,
+                                        lineNumber: 184,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
@@ -131049,12 +131062,12 @@ const ViewAttendance = ()=>{
                     children: "No attendance data available for this course."
                 }, void 0, false, {
                     fileName: "src/pages/Teacher/CourseReport.jsx",
-                    lineNumber: 286,
+                    lineNumber: 298,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/pages/Teacher/CourseReport.jsx",
-                lineNumber: 285,
+                lineNumber: 297,
                 columnNumber: 9
             }, undefined)
         ]

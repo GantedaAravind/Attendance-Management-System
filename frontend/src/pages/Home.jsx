@@ -18,7 +18,7 @@ const Home = () => {
         <div className="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col-reverse md:flex-row items-center">
           {/* Left Side - Enhanced Content */}
           <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
-            <div className="inline-block px-4 py-2 bg-red-400 text-white rounded-full text-sm font-medium mb-4 shadow-sm">
+            <div className="inline-block px-4 py-2 bg-gray-400 text-white rounded-full text-sm font-medium mb-4 shadow-sm">
               🚀 New & Improved
             </div>
 
@@ -55,9 +55,8 @@ const Home = () => {
                 ))}
               </div>
               <div className="text-sm text-gray-500">
-                Trusted by{" "}
-                <span className="font-medium text-gray-700">500+</span>{" "}
-                organizations
+                Trusted by <span className="font-medium text-white">500+ </span>{" "}
+                teachers
               </div>
             </div>
           </div>

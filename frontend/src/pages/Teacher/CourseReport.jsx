@@ -173,34 +173,41 @@ const ViewAttendance = () => {
               </div>
             </div>
 
-            <div className="bg-gray-800/70 p-6 rounded-xl shadow-md border border-gray-700 backdrop-blur-sm">
-              <div className="flex items-center gap-2 mb-4">
-                <FaChartPie className="text-purple-400 text-xl" />
-                <h3 className="text-lg font-semibold text-white">
-                  Attendance Percentage
+            <div className="bg-gray-800/70 p-6 rounded-xl shadow-lg border border-gray-600 backdrop-blur-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <FaChartPie className="text-purple-400 text-2xl" />
+                <h3 className="text-xl font-bold text-white">
+                  Student Attendance
                 </h3>
               </div>
-              <div className="h-[350px]">
+
+              <div className="h-[350px] relative">
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <defs>
-                      {COLORS.map((color, index) => (
-                        <filter
-                          id={`glow-${index}`}
-                          key={`glow-${index}`}
-                          x="-30%"
-                          y="-30%"
-                          width="160%"
-                          height="160%"
-                        >
-                          <feGaussianBlur stdDeviation="5" result="blur" />
-                          <feComposite
-                            in="SourceGraphic"
-                            in2="blur"
-                            operator="over"
-                          />
-                        </filter>
-                      ))}
+                      {report.students.map((_, index) => {
+                        const hue =
+                          (index * (360 / report.students.length)) % 360;
+                        return (
+                          <linearGradient
+                            id={`gradient-${index}`}
+                            key={`gradient-${index}`}
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="100%"
+                          >
+                            <stop
+                              offset="0%"
+                              stopColor={`hsl(${hue}, 80%, 60%)`}
+                            />
+                            <stop
+                              offset="100%"
+                              stopColor={`hsl(${hue}, 100%, 45%)`}
+                            />
+                          </linearGradient>
+                        );
+                      })}
                     </defs>
 
                     <Pie
@@ -208,46 +215,46 @@ const ViewAttendance = () => {
                         name: s.name,
                         class: s.class || "N/A",
                         value: Math.round((s.attended / s.total) * 100),
+                        attended: s.attended,
+                        total: s.total,
                       }))}
                       cx="50%"
                       cy="50%"
-                      labelLine={false}
-                      outerRadius={120}
+                      outerRadius={140}
                       innerRadius={60}
-                      fill="#8884d8"
+                      paddingAngle={2}
+                      cornerRadius={8}
                       dataKey="value"
                       animationDuration={500}
-                      label={({ name, percent }) => (
-                        <text
-                          x={0}
-                          y={0}
-                          fill="white"
-                          textAnchor="middle"
-                          dominantBaseline="central"
-                          fontSize={12}
-                          fontWeight={500}
-                        >
-                          {name.split(" ")[0]} {/* Show only first name */}
-                        </text>
-                      )}
+                      animationEasing="ease-out"
                     >
                       {report.students.map((entry, index) => (
                         <Cell
                           key={`cell-${index}`}
-                          fill={COLORS[index % COLORS.length]}
+                          fill={`url(#gradient-${index})`}
                           stroke="#1F2937"
-                          strokeWidth={1}
-                          style={{ cursor: "pointer" }}
+                          strokeWidth={2}
+                          style={{
+                            cursor: "pointer",
+                            transition: "all 0.3s ease",
+                            filter: "drop-shadow(0px 4px 6px rgba(0,0,0,0.3))",
+                            opacity: 0.95,
+                          }}
                           onMouseEnter={(e) => {
+                            e.target.setAttribute("stroke", "#ffffff");
+                            e.target.setAttribute("stroke-width", "3");
                             e.target.setAttribute(
                               "filter",
-                              `url(#glow-${index})`
+                              "drop-shadow(0px 6px 12px rgba(0,0,0,0.4))"
                             );
-                            e.target.setAttribute("stroke-width", "2");
                           }}
                           onMouseLeave={(e) => {
-                            e.target.removeAttribute("filter");
-                            e.target.setAttribute("stroke-width", "1");
+                            e.target.setAttribute("stroke", "#1F2937");
+                            e.target.setAttribute("stroke-width", "2");
+                            e.target.setAttribute(
+                              "filter",
+                              "drop-shadow(0px 4px 6px rgba(0,0,0,0.3))"
+                            );
                           }}
                         />
                       ))}
@@ -255,21 +262,26 @@ const ViewAttendance = () => {
 
                     <Tooltip
                       contentStyle={{
-                        background: "rgba(17, 24, 39, 0.9)",
-                        border: "1px solid #4B5563",
-                        borderRadius: "8px",
-                        padding: "12px",
+                        background: "rgba(17, 24, 39, 0.97)",
+                        border: "1px solid #7C3AED",
+                        borderRadius: "10px",
+                        padding: "16px",
                         color: "#F3F4F6",
-                        backdropFilter: "blur(4px)",
+                        backdropFilter: "blur(8px)",
+                        boxShadow: "0 8px 24px rgba(124, 58, 237, 0.25)",
                       }}
                       formatter={(value, name, props) => {
                         return [
-                          <div key="tooltip-content" className="space-y-1">
-                            <div className="font-bold text-purple-300">
+                          <div key="tooltip-content" className="space-y-2">
+                            <div className="font-bold text-purple-300 text-lg">
                               {props.payload.name}
                             </div>
-                            <div className="text-lg font-semibold text-white">
+                            <div className="text-2xl font-bold text-white mt-1">
                               {value}%
+                            </div>
+                            <div className="text-xs text-gray-400 mt-1">
+                              ({props.payload.attended}/{props.payload.total}{" "}
+                              classes)
                             </div>
                           </div>,
                         ];

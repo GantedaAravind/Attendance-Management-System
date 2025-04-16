@@ -25,16 +25,13 @@ const MyAttendance = () => {
   useEffect(() => {
     const fetchAttendanceData = async () => {
       try {
-        const response = await API.get("/api/attendance/student", {
-          withCredentials: true,
-        });
+        const response = await API.get("/api/attendance/student");
 
-        if (!response.ok) {
+        if (response.data?.success) {
+          setAttendanceData(response.data);
+        } else {
           throw new Error("Failed to fetch attendance data");
         }
-
-        const data = await response.json();
-        setAttendanceData(data);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -69,22 +66,22 @@ const MyAttendance = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-gray-800 mb-8">
+      <h1 className="text-3xl font-bold text-white mb-8">
         My Attendance Dashboard
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         {/* Overall Stats */}
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold mb-4 text-gray-700">
+        <div className="bg-gray-800/70 p-6 rounded-xl shadow-lg border border-gray-700 backdrop-blur-sm">
+          <h2 className="text-xl font-semibold mb-4 text-white">
             Overall Attendance
           </h2>
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-4 md:mb-0">
-              <p className="text-4xl font-bold text-blue-600">
+              <p className="text-4xl font-bold text-purple-300">
                 {attendanceData.overallPercentage}%
               </p>
-              <p className="text-gray-600 mt-2">
+              <p className="text-gray-300 mt-2">
                 {attendanceData.totalPresent} present out of{" "}
                 {attendanceData.totalClasses} classes
               </p>
@@ -112,7 +109,16 @@ const MyAttendance = () => {
                       />
                     ))}
                   </Pie>
-                  <Tooltip />
+                  <Tooltip
+                    contentStyle={{
+                      background: "rgba(17, 24, 39, 0.9)",
+                      border: "1px solid #4B5563",
+                      borderRadius: "8px",
+                      padding: "12px",
+                      color: "#F3F4F6",
+                      backdropFilter: "blur(4px)",
+                    }}
+                  />
                 </PieChart>
               </ResponsiveContainer>
             </div>
@@ -120,27 +126,27 @@ const MyAttendance = () => {
         </div>
 
         {/* Recent Attendance */}
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold mb-4 text-gray-700">
+        <div className="bg-gray-800/70 p-6 rounded-xl shadow-lg border border-gray-700 backdrop-blur-sm">
+          <h2 className="text-xl font-semibold mb-4 text-white">
             Recent Attendance
           </h2>
           <ul className="space-y-3">
             {attendanceData.recentRecords.map((record, index) => (
               <li
                 key={index}
-                className="flex justify-between items-center border-b pb-2"
+                className="flex justify-between items-center border-b border-gray-700 pb-2"
               >
                 <div>
-                  <p className="font-medium">{record.courseName}</p>
-                  <p className="text-sm text-gray-500">
+                  <p className="font-medium text-white">{record.courseName}</p>
+                  <p className="text-sm text-gray-400">
                     {new Date(record.date).toLocaleDateString()}
                   </p>
                 </div>
                 <span
                   className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    record.status === "present"
-                      ? "bg-green-100 text-green-800"
-                      : "bg-red-100 text-red-800"
+                    record.status === "Present"
+                      ? "bg-green-500/20 text-green-400"
+                      : "bg-red-500/20 text-red-400"
                   }`}
                 >
                   {record.status}
@@ -152,8 +158,8 @@ const MyAttendance = () => {
       </div>
 
       {/* Monthly Attendance Chart */}
-      <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-        <h2 className="text-xl font-semibold mb-4 text-gray-700">
+      <div className="bg-gray-800/70 p-6 rounded-xl shadow-lg border border-gray-700 backdrop-blur-sm mb-8">
+        <h2 className="text-xl font-semibold mb-4 text-white">
           Monthly Attendance Trend
         </h2>
         <div className="h-80">
@@ -167,51 +173,86 @@ const MyAttendance = () => {
                 bottom: 5,
               }}
             >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis domain={[0, 100]} />
-              <Tooltip />
+              <CartesianGrid strokeDasharray="3 3" stroke="#4B5563" />
+              <XAxis
+                dataKey="name"
+                stroke="#9CA3AF"
+                tick={{ fill: "#F3F4F6" }}
+              />
+              <YAxis
+                domain={[0, 100]}
+                stroke="#9CA3AF"
+                tick={{ fill: "#F3F4F6" }}
+              />
+              <Tooltip
+                contentStyle={{
+                  background: "rgba(17, 24, 39, 0.9)",
+                  border: "1px solid #4B5563",
+                  borderRadius: "8px",
+                  padding: "12px",
+                  color: "#F3F4F6",
+                  backdropFilter: "blur(4px)",
+                }}
+                formatter={(value) => [`${value}%`, "Attendance"]}
+              />
               <Legend />
-              <Bar dataKey="attendance" name="Attendance %" fill="#8884d8" />
+              <Bar
+                dataKey="attendance"
+                name="Attendance %"
+                fill="#8884d8"
+                radius={[4, 4, 0, 0]}
+              />
             </BarChart>
           </ResponsiveContainer>
         </div>
       </div>
 
       {/* Course-wise Attendance */}
-      <div className="bg-white p-6 rounded-lg shadow-md">
-        <h2 className="text-xl font-semibold mb-4 text-gray-700">
-          Course-wise Attendance
-        </h2>
-        <div className="h-80">
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={attendanceData.byCourse}
-                cx="50%"
-                cy="50%"
-                labelLine={false}
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="attendancePercentage"
-                nameKey="courseName"
-                label={({ name, percent }) =>
-                  `${name}: ${(percent * 100).toFixed(0)}%`
-                }
-              >
-                {attendanceData.byCourse.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={COLORS[index % COLORS.length]}
-                  />
-                ))}
-              </Pie>
-              <Tooltip formatter={(value) => [`${value}%`, "Attendance"]} />
-              <Legend />
-            </PieChart>
-          </ResponsiveContainer>
+      {attendanceData.byCourse && attendanceData.byCourse.length > 0 && (
+        <div className="bg-gray-800/70 p-6 rounded-xl shadow-lg border border-gray-700 backdrop-blur-sm">
+          <h2 className="text-xl font-semibold mb-4 text-white">
+            Course-wise Attendance
+          </h2>
+          <div className="h-80">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={attendanceData.byCourse}
+                  cx="50%"
+                  cy="50%"
+                  labelLine={false}
+                  outerRadius={80}
+                  fill="#8884d8"
+                  dataKey="attendancePercentage"
+                  nameKey="courseName"
+                  label={({ name, percent }) =>
+                    `${name}: ${(percent * 100).toFixed(0)}%`
+                  }
+                >
+                  {attendanceData.byCourse.map((entry, index) => (
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={COLORS[index % COLORS.length]}
+                    />
+                  ))}
+                </Pie>
+                <Tooltip
+                  contentStyle={{
+                    background: "rgba(17, 24, 39, 0.9)",
+                    border: "1px solid #4B5563",
+                    borderRadius: "8px",
+                    padding: "12px",
+                    color: "#F3F4F6",
+                    backdropFilter: "blur(4px)",
+                  }}
+                  formatter={(value) => [`${value}%`, "Attendance"]}
+                />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
